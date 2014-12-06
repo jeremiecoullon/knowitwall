@@ -1,0 +1,10 @@
+.boxed{
+	border: 1px solid black;
+	padding: 25px;
+	margin-top: 25px;
+}
+.boxed_invisible{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+}
