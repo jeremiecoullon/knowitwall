@@ -8,3 +8,8 @@
 	padding-right: 25px;
 	padding-top: 5px;
 }
+.displayed{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
