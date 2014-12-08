@@ -2,6 +2,8 @@ extends ./base.jade
 block content 
     .row
         h2.text-center Science
+                   
+    span#top
     .row
         img.displayed(src='/static/Images/Jupiter_and_Ganymede.jpg', width='700', alt=' photo Jup_and_Gan.jpg')
     .row
@@ -28,9 +30,12 @@ block content
                     input#sound_bar(type='range', min='0', max='100', value='100')      
                     span#sound_text 100
 
-    .row
-        .col-md-8.boxed
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
+    .row 
+        span#transcript
+        .col-md-8.boxed 
+
+            h3 Aliens in the Solar System
+            p science_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
@@ -50,14 +55,27 @@ block content
                 img(src='/static/Images/Mehdi.jpg', alt='some text', width='200')
             .row.text-center.boxed_invisible
                 p Medhi is a Ph.D. researcher in Space Physics at Imperial College London. When his head is not up above the clouds, he enjoys exploring underground cave systems. Also, he is Tunisian – and yes, it’s a real country. 
-         .row
-        h4.text-center please leave some feedback on the audio-doc
-        .row
-                .ss-form
-                    form#ss-form(action='https://docs.google.com/forms/d/1fts-arfgkip8gIvuELhk0SBbOKB7aVTT2XuSTSnFYps/formResponse', method='POST', target='_self', onsubmit='')
-                        ol.ss-question-list(role='list', style='padding-left: 300px; padding-right: 300px')
-                            .ss-form-entry
-                                textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
-                            input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
+    .row
+         
+            h4.text-center please leave some feedback on the audio-doc
+    .row
+        .ss-form
+            form#ss-form(action='https://docs.google.com/forms/d/1fts-arfgkip8gIvuELhk0SBbOKB7aVTT2XuSTSnFYps/formResponse', method='POST', target='_self', onsubmit='')
+                ol.ss-question-list(role='list', style='padding-left: 300px; padding-right: 300px')
+                    .ss-form-entry
+                        textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
+                    input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
+    .row
+        span#feedback
+    block foot
+        p.text-center
+            a(href="{{url_for('index')}}") Home 
+            | 
+            a(href='#transcript') &nbsp Transcript
+            | 
+            a(href='#feedback') &nbsp Feedback
+            | 
+            a(href='#Top') &nbsp Back to Top
                 
+        
     
