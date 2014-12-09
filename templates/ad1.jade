@@ -1,9 +1,32 @@
 extends ./base.jade
-block content 
+block content
+
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
+            // Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-center
+                    a.navbar-brand(href="#transcript") Transcript
+                    a.navbar-brand(href="#feedback") Feedback
+                ul.nav.navbar-nav.navbar-right
+                    .ss-form.navbar-form
+                        form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
+                            input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
+                            input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
+            // /.navbar-collapse
+            // /.container-fluid
+ 
     .row
+
         h2.text-center Science
-                   
-    span#top
     .row
         img.displayed(src='/static/Images/Jupiter_and_Ganymede.jpg', width='700', alt=' photo Jup_and_Gan.jpg')
     .row
@@ -29,9 +52,11 @@ block content
                 #sound_box
                     input#sound_bar(type='range', min='0', max='100', value='100')      
                     span#sound_text 100
-
-    .row 
+    .row
         span#transcript
+        | 
+        p &nbsp
+    .row 
         .col-md-8.boxed 
 
             h3 Aliens in the Solar System
@@ -67,15 +92,7 @@ block content
                     input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
     .row
         span#feedback
-    block foot
-        p.text-center
-            a(href="{{url_for('index')}}") Home 
-            | 
-            a(href='#transcript') &nbsp Transcript
-            | 
-            a(href='#feedback') &nbsp Feedback
-            | 
-            a(href='#Top') &nbsp Back to Top
+        
                 
         
     

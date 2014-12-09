@@ -1,5 +1,29 @@
 extends ./base.jade
 block content
+	nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+		.container
+			// Brand and toggle get grouped for better mobile display
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
+			// Collect the nav links, forms, and other content for toggling
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-center
+					a.navbar-brand(href="#about") About
+					a.navbar-brand(href="#contribute") Contribute
+				ul.nav.navbar-nav.navbar-right
+					.ss-form.navbar-form
+						form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
+							input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
+							input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
+			// /.navbar-collapse
+			// /.container-fluid
+
+
 	.row
 		h2.text-center learn with the smarty-est 
 	.row
@@ -76,22 +100,23 @@ block content
 							h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
 	.row
 		span#about
+		| 
+		p &nbsp
+
+	.row
+		
 		h3 About Smartycrap
 		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
 	.row
 		span#contribute
+		| 
+		p &nbsp
+	.row
 		h3 Contribute to Smartycrap
 		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
 	.row
 		h3 Contact Smartcyrap
 		p smarycrapemailandstuff
-	block foot
-		p.text-center 
-			a(href="{{url_for('index')}}") Home 
-			| 
-			a(href='#about') &nbsp About
-			| 
-			a(href='#contribute') &nbsp Contribute
             
             
             

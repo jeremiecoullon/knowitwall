@@ -10,26 +10,8 @@ html(lang="en")
     body
         // .container is a class (don't touch this)
         .wrapper
-            nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
-                .container
-                    // Brand and toggle get grouped for better mobile display
-                    .navbar-header
-                        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                            span.sr-only Toggle navigation
-                            span.icon-bar
-                            span.icon-bar
-                            span.icon-bar
-                        a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
-                    // Collect the nav links, forms, and other content for toggling
-                    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                        ul.nav.navbar-nav.navbar-center
-                        ul.nav.navbar-nav.navbar-right
-                            .ss-form.navbar-form
-                                form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
-                                    input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
-                                    input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
-                    // /.navbar-collapse
-                  // /.container-fluid
+            
+                
             .container
                 .row
                     &nbsp
@@ -47,11 +29,9 @@ html(lang="en")
                     callbackBefore: function ( toggle, anchor ) {},     // Function to run before scrolling
                     callbackAfter: function ( toggle, anchor ) {}       // Function to run after scrolling
                 });
-        .row
-            &b
-        .push
-        .footer
-            block foot
+//        .push
+//        .footer
+//            block foot
 //            p.text-center SmartyCrap: 
 //                a(href="{{url_for('index')}}") Home 
 //                | 
