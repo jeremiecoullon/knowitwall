@@ -1,4 +1,4 @@
-var audio = document.getElementById("audio_controls").getElementsByTagName("audio")[0];
+ var audio = document.getElementById("audio_controls").getElementsByTagName("audio")[0];
 
 document.getElementById("play_button").addEventListener("click", function() {
   audio.play();
@@ -43,4 +43,13 @@ document.getElementById("sound_box_outer").addEventListener("mouseout", function
 
 document.getElementById("sound_box").addEventListener("mouseover", function(){
   document.getElementById("sound_box_outer").style.display = "block";
+}, false);
+
+document.getElementById("sound_bar").addEventListener("mouseover", function(){
+  document.getElementById("sound_box_outer").style.display = "block";
+}, false);
+
+document.getElementById("sound_bar").addEventListener("change", function(){
+  audio.volume = this.value / 100;
+  document.getElementById("sound_text").innerHTML = this.value;
 }, false);

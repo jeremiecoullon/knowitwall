@@ -1,6 +1,7 @@
 extends ./base.jade
 block content
 
+
     nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
         .container
             // Brand and toggle get grouped for better mobile display
@@ -14,8 +15,8 @@ block content
             // Collect the nav links, forms, and other content for toggling
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
                 ul.nav.navbar-nav.navbar-center
-                    a.navbar-brand(href="#transcript") Transcript
-                    a.navbar-brand(href="#feedback") Feedback
+                    a.navbar-brand(data-scroll='', href="#transcript") Transcript
+                    a.navbar-brand(data-scroll='', href="#feedback") Feedback
                 ul.nav.navbar-nav.navbar-right
                     .ss-form.navbar-form
                         form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
@@ -27,16 +28,19 @@ block content
     .row
 
         h2.text-center Science
+            div(name='top') 
     .row
         img.displayed(src='/static/Images/Jupiter_and_Ganymede.jpg', width='700', alt=' photo Jup_and_Gan.jpg')
     .row
+        &nbsp
+    .row
         #audio_controls
             audio
-                source(src="science_ganymede.mp3", type='audio/mp3')
+                source(src="/static/audio/science_ganymede.mp3", type='audio/mp3')
             button#play_button
-                span#play_icon 
+                span#play_icon
             button#pause_button
-                span#pause_icon
+                span#pause_icon   
             span#sound
                 span     
                 span  
@@ -44,10 +48,10 @@ block content
                 span  
                 span  
                 span
-            span#progress_bar 
+            span#progress_bar   
             input#progress(type='range', min='0', max='400', value='1')
             button#sound_button
-                span#sound_icon
+                span#sound_icon   
             #sound_box_outer
                 #sound_box
                     input#sound_bar(type='range', min='0', max='100', value='100')      
@@ -91,7 +95,9 @@ block content
                         textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
                     input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
     .row
+        a(data-scroll='', href='#top')  Go to top 
         span#feedback
+    
         
                 
         

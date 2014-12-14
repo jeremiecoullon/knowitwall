@@ -3,15 +3,17 @@
 html(lang="en")
     head
         title= pageTitle
+        link(href='/static/css/audioplayer.css', rel='stylesheet')
         link(href='/static/css/bootstrap.min.css', rel='stylesheet')
         link(href='/static/css/sticky_footer.css', rel='stylesheet')
         link(href='/static/css/textbox.css', rel='stylesheet')
-        link(href='/static/css/audioplayer.css', rel='stylesheet')
+        link(href='/static/css/smarty_crap.css', rel='stylesheet')
+
+
+
     body
         // .container is a class (don't touch this)
         .wrapper
-            
-                
             .container
                 .row
                     &nbsp
@@ -19,30 +21,14 @@ html(lang="en")
                     &nbsp
                 .row
                     block content
-                script(src='static/js/audioplayer.js')
-                script(src='static/js/smooth-scroll.js')
-                smoothScroll.init({
-                    speed: 500,                    // Integer. How fast to complete the scroll in milliseconds
-                    easing: 'easeInOutCubic',      // Easing pattern to use
-                    updateURL: true,               // Boolean. Whether or not to update the URL with the anchor hash on scroll
-                    offset: 0,                     // Integer. How far to offset the scrolling anchor location in pixels
-                    callbackBefore: function ( toggle, anchor ) {},     // Function to run before scrolling
-                    callbackAfter: function ( toggle, anchor ) {}       // Function to run after scrolling
-                });
-//        .push
-//        .footer
-//            block foot
-//            p.text-center SmartyCrap: 
-//                a(href="{{url_for('index')}}") Home 
-//                | 
-//                a(href="{{url_for('about')}}") About
-//                |    
-//                a(href="{{url_for('contribute')}}") Contribute
-//                |    
-//                a(href="{{url_for('contact')}}") Contact
-        
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='/static/js/audioplayer.js')
+    script(src='/static/js/smooth-scroll.js')
+    script.
+        smoothScroll.init();
 
 
-                    
-        
-            
+
+
+
+
