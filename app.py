@@ -16,12 +16,12 @@ def index():
 @app.route('/about/')
 def about():
     return render_template('about.jade')
-    
+
 """ for academic contributors"""
 @app.route('/contribute/')
 def contribute():
     return render_template('contribute.jade')
-    
+
 """ contact information """
 @app.route('/contact/')
 def contact():
@@ -30,8 +30,11 @@ def contact():
 """ audio-doc 1 (science)"""
 @app.route('/ad1/')
 def ad1():
-    return render_template('ad1.jade')
-    
+    print "@@@@@@@@@"
+    with open("static/texts/science_ganymede.txt", "r") as f:
+        transcript = f.read()
+    return render_template('ad1.jade', transcript=transcript)
+
 """ audio-doc 2 (humanities) """
 @app.route('/ad2/')
 def ad2():
