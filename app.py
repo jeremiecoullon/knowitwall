@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, json
 from flask import render_template
 
 app = Flask(__name__)
@@ -11,7 +11,10 @@ def index():
     """
     This method is a controller. a method is function with side-effects. python just has methods.
     """
-    return render_template('index.jade')
+    obj = [[1,2,3],123,123.123,'abc',{'key1':(1,2,3),'key2':(4,5,6)}]
+    json_string = json.dumps(obj)
+    new_obj = json.loads(json_string)
+    return render_template('index.jade', json=json_string, obj = new_obj, bige=obj)
 
 @app.route('/about/')
 def about():
@@ -30,7 +33,6 @@ def contact():
 """ audio-doc 1 (science)"""
 @app.route('/ad1/')
 def ad1():
-    print "@@@@@@@@@"
     with open("static/texts/science_ganymede.txt", "r") as f:
         transcript = f.read()
     return render_template('ad1.jade', transcript=transcript)
