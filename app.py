@@ -11,10 +11,19 @@ def index():
     """
     This method is a controller. a method is function with side-effects. python just has methods.
     """
-    obj = [[1,2,3],123,123.123,'abc',{'key1':(1,2,3),'key2':(4,5,6)}]
-    json_string = json.dumps(obj)
-    new_obj = json.loads(json_string)
-    return render_template('index.jade', json=json_string, obj = new_obj, bige=obj)
+    class Struct(dict):
+        def __getattr__(self, name):
+            return self[name]
+
+        def __setattr__(self, name, value):
+            self[name] = value
+
+        def __delattr__(self, name):
+            del self[name]
+
+    with open('ganymede.json') as json_file:
+        ganymede = json.load(json_file, object_hook=Struct)
+    return render_template('index.jade', json=ganymede.b)
 
 @app.route('/about/')
 def about():
