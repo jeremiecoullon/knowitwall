@@ -17,7 +17,7 @@ def index():
 "----------------------------------------------------------------------------------------------------"
 
 """ audio-doc 1 (science)"""
-@app.route('/ad1/')
+@app.route('/science/')
 def ad1():
 
     class Struct(dict):
@@ -53,7 +53,7 @@ def ad1():
 "----------------------------------------------------------------------------------------------------"
 
 """ audio-doc 2 (humanities) """
-@app.route('/ad2/')
+@app.route('/humanities/')
 def ad2():
 
     class Struct(dict):
