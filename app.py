@@ -46,7 +46,7 @@ def ad1():
         author_bio = f.read()
 
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline)
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
 
 
 
@@ -82,7 +82,7 @@ def ad2():
         author_bio = f.read()
 
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline)
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
 
 
 

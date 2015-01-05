@@ -7,7 +7,9 @@
 
     "topic_image": "/static/Images/Jupiter_and_Ganymede.jpg",
     "transcript": "static/texts/ganymede_transcript.txt",
-    "audio": "/static/audio/science_ganymede.mp3"
+    "audio": "/static/audio/science_ganymede.mp3",
+
+    "form": "https://docs.google.com/forms/d/1fts-arfgkip8gIvuELhk0SBbOKB7aVTT2XuSTSnFYps/formResponse"
 
 
 }

@@ -7,7 +7,7 @@
 
     "topic_image": "/static/Images/Tate_Creed.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio": "/static/audio/tate.mp3"
+    "audio": "/static/audio/tate.mp3",
 
-
+    "form": "https://docs.google.com/forms/d/1b9guLbqnlmILJu1h38yRKWM4hor8eOD4mcm1EekWqqI/formResponse"
 }

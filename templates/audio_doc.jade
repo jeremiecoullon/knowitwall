@@ -75,13 +75,14 @@ block content
             h4.text-center please leave some feedback on the audio-doc
     .row
         .ss-form
-            form#ss-form(action='https://docs.google.com/forms/d/1fts-arfgkip8gIvuELhk0SBbOKB7aVTT2XuSTSnFYps/formResponse', method='POST', target='_self', onsubmit='')
+            form#ss-form(action='{{form}}', method='POST', target='_self', onsubmit='')
                 ol.ss-question-list(role='list', style='padding-left: 300px; padding-right: 300px')
                     .ss-form-entry
                         textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
                     input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
+
     .row
-        a(data-scroll='', href='#top')  Go to top
+        a(data-scroll='', href='#top')  back to top
         span#feedback
 
 
