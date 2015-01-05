@@ -24,13 +24,14 @@ block content
                             input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
             // /.navbar-collapse
             // /.container-fluid
-
+    .row
+        h2 {{bige}}
     .row
 
-        h2.text-center Science
+        h2.text-center {{discipline}}
             div(name='top')
     .row
-        img.displayed(src='/static/Images/Jupiter_and_Ganymede.jpg', width='700', alt=' photo Jup_and_Gan.jpg')
+        img.displayed(src='{{topic_image}}', width='700', alt=' topic image')
     .row
         &nbsp
     //.row
@@ -66,12 +67,11 @@ block content
         .col-md-1
         .col-md-3.boxed
             .row.text-center
-                h3.text-center Mehdi Ben Slama
-                img(src='/static/Images/Mehdi.jpg', alt='some text', width='200')
+                h3.text-center {{author_name}}
+                img(src='{{author_image}}', alt='contributor image', width='200')
             .row.text-center.boxed_invisible
-                p Medhi is a Ph.D. researcher in Space Physics at Imperial College London. When his head is not up above the clouds, he enjoys exploring underground cave systems. Also, he is Tunisian – and yes, it’s a real country.
+                {{author_bio}}
     .row
-
             h4.text-center please leave some feedback on the audio-doc
     .row
         .ss-form

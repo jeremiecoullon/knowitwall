@@ -1,0 +1,13 @@
+{
+    "discipline": "Science",
+
+    "author_name": "Mehdi Ben Slama",
+    "author_image": "/static/Images/Mehdi.jpg",
+    "author_bio": "static/texts/ganymede_author_bio.txt",
+
+    "topic_image": "/static/Images/Jupiter_and_Ganymede.jpg",
+    "transcript": "static/texts/ganymede_transcript.txt",
+    "audio": "/static/audio/science_ganymede.mp3"
+
+
+}

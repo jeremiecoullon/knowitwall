@@ -1,0 +1,13 @@
+{
+    "discipline": "Humanities",
+
+    "author_name": "Miguel F Dos Santos",
+    "author_image": "/static/Images/Miguel.jpg",
+    "author_bio": "static/texts/tate_author_bio.txt",
+
+    "topic_image": "/static/Images/Tate_Creed.jpg",
+    "transcript": "static/texts/tate_transcript.txt",
+    "audio": "/static/audio/tate.mp3"
+
+
+}

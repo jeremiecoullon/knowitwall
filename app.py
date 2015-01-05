@@ -11,6 +11,15 @@ def index():
     """
     This method is a controller. a method is function with side-effects. python just has methods.
     """
+    return render_template('index.jade')
+
+
+"----------------------------------------------------------------------------------------------------"
+
+""" audio-doc 1 (science)"""
+@app.route('/ad1/')
+def ad1():
+
     class Struct(dict):
         def __getattr__(self, name):
             return self[name]
@@ -21,45 +30,62 @@ def index():
         def __delattr__(self, name):
             del self[name]
 
-    with open('ganymede.json') as json_file:
-        ganymede = json.load(json_file, object_hook=Struct)
-    return render_template('index.jade', json=ganymede.b)
+    """
+    To change audio-doc, simply create a new json file with the links to images,audio etc..
+    Then replace the following path with the path to the new json file
+    """
+    with open('json_files/ganymede.json') as json_file:
+        ad = json.load(json_file, object_hook=Struct)
 
-@app.route('/about/')
-def about():
-    return render_template('about.jade')
-
-""" for academic contributors"""
-@app.route('/contribute/')
-def contribute():
-    return render_template('contribute.jade')
-
-""" contact information """
-@app.route('/contact/')
-def contact():
-    return render_template('contact.jade')
-
-""" audio-doc 1 (science)"""
-@app.route('/ad1/')
-def ad1():
-    with open("static/texts/science_ganymede.txt", "r") as f:
+    transcript_path=ad.transcript
+    with open(transcript_path, "r") as f:
         transcript = f.read()
-    return render_template('ad1.jade', transcript=transcript)
+
+    bio_path=ad.author_bio
+    with open(bio_path, "r") as f:
+        author_bio = f.read()
+
+    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline)
+
+
+
+"----------------------------------------------------------------------------------------------------"
 
 """ audio-doc 2 (humanities) """
 @app.route('/ad2/')
 def ad2():
-    return render_template('ad2.jade')
 
-'''@app.route('/test/')
-def test():
-        return render_template('test')
-    '''
-""" comment box for user feedback"""
-@app.route('/comment/', methods=['POST'])
-def comment():
-    print("@@@@@@@@@@@@@@@@@@")
-    print(request.form)
+    class Struct(dict):
+        def __getattr__(self, name):
+            return self[name]
+
+        def __setattr__(self, name, value):
+            self[name] = value
+
+        def __delattr__(self, name):
+            del self[name]
+
+    """
+    To change audio-doc, simply create a new json file with the links to images,audio etc..
+    Then replace the following path with the path to the new json file
+    """
+    with open('json_files/tate.json') as json_file:
+        ad = json.load(json_file, object_hook=Struct)
+
+    transcript_path=ad.transcript
+    with open(transcript_path, "r") as f:
+        transcript = f.read()
+
+    bio_path=ad.author_bio
+    with open(bio_path, "r") as f:
+        author_bio = f.read()
+
+    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline)
+
+
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
