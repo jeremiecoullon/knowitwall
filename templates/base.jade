@@ -23,6 +23,13 @@ html(lang="en")
                     block content
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='/static/js/audioplayer.js')
+    script(src="http://osvaldas.info/examples/main.js")
+    script(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audioplayer.js")
+    script
+        $( function()
+        {
+        $( 'audio' ).audioPlayer();
+        });
     script(src='/static/js/smooth-scroll.js')
     script.
         smoothScroll.init();

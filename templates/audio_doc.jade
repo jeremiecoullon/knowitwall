@@ -26,41 +26,32 @@ block content
             // /.navbar-collapse
             // /.container-fluid
     .row
-        h2 {{bige}}
-    .row
-
         h2.text-center {{discipline}}
             div(name='top')
     .row
         img.displayed(src='{{topic_image}}', width='700', alt=' topic image')
     .row
+        audio(controls="")
+            source(src="/static/audio/science_ganymede.mp3", type="audio/mp")
+
+        //audio(preload="auto", controls="")
+            source(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3")
+
+
+
+
+
+
+
+
+
+
+
+    .row
         &nbsp
-    //.row
-        #audio_controls
-            audio
-                source(src="/static/audio/science_ganymede.mp3", type='audio/mp3')
-            button#play_button
-                span#play_icon
-            button#pause_button
-                span#pause_icon
-            span#sound
-                span
-                span
-                span
-                span
-                span
-                span
-            span#progress_bar
-            input#progress(type='range', min='0', max='400', value='1')
-            button#sound_button
-                span#sound_icon
-            #sound_box_outer
-                #sound_box
-                    input#sound_bar(type='range', min='0', max='100', value='100')
-                    span#sound_text 100
     .row
         span#transcript
-        p &nbsp
+        &nbsp
     .row
         .col-md-8.boxed
             {{transcript}}
@@ -85,5 +76,7 @@ block content
     .row
         a(data-scroll='', href='#top')  back to top
         span#feedback
+    .rows
+        &nbsp
 
 

@@ -1,4 +1,4 @@
 smartycrap
 ==========
 
-smartycrap webapp 
+smartycrap webapp

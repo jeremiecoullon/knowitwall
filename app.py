@@ -5,6 +5,11 @@ from flask import render_template
 app = Flask(__name__)
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
+
+"----------------------------------------------------------------------------------------------------"
+"index page"
+
+
 @app.route('/')
 @app.route('/index/')
 def index():
@@ -15,8 +20,10 @@ def index():
 
 
 "----------------------------------------------------------------------------------------------------"
+"science page"
 
-""" audio-doc 1 (science)"""
+
+
 @app.route('/science/')
 def ad1():
 
@@ -51,8 +58,10 @@ def ad1():
 
 
 "----------------------------------------------------------------------------------------------------"
+"humanities page"
 
-""" audio-doc 2 (humanities) """
+
+
 @app.route('/humanities/')
 def ad2():
 
