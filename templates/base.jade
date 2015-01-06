@@ -3,11 +3,12 @@
 html(lang="en")
     head
         title= pageTitle
-        link(href='/static/css/audioplayer.css', rel='stylesheet')
+        //link(href='/static/css/audioplayer.css', rel='stylesheet')
         link(href='/static/css/bootstrap.min.css', rel='stylesheet')
         link(href='/static/css/sticky_footer.css', rel='stylesheet')
         link(href='/static/css/textbox.css', rel='stylesheet')
         link(href='/static/css/smarty_crap.css', rel='stylesheet')
+        link(href='/static/css/shorten_text.css', rel='stylesheet')
 
 
 
@@ -22,10 +23,11 @@ html(lang="en")
                 .row
                     block content
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    script(src='/static/js/audioplayer.js')
-    script(src="http://osvaldas.info/examples/main.js")
-    script(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audioplayer.js")
-    script
+    //script(src='/static/js/audioplayer.js')
+    //script(src="http://osvaldas.info/examples/main.js")
+    //script(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audioplayer.js")
+    //script(src='/static/js/shorten_text.js')
+    //script
         $( function()
         {
         $( 'audio' ).audioPlayer();
