@@ -1,4 +1,0 @@
-smartycrap
-==========
-
-smartycrap webapp 

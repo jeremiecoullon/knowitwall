@@ -7,6 +7,15 @@ app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 
 
+@app.route('/bige/')
+def bige():
+    """
+    This method is a controller. a method is function with side-effects. python just has methods.
+    """
+    return render_template('deepmind_index.html')
+
+
+
 "----------------------------------------------------------------------------------------------------"
 "index page"
 

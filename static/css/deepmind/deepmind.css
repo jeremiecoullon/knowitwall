@@ -8,9 +8,24 @@
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%}
+
+/*-------------------------------------------------*/
+
+
+ /*this lines makes sure the background colour doesn't spill over on
+    the edges of the other blocks. */
+
 body {
     margin: 0;
 }
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 1: this section doesn't seem to do anything. */
+/*
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
@@ -146,9 +161,24 @@ table {
 td, th {
     padding: 0;
 }
+
+*/
+
+/*-------------------------------------------------*/
+/* This changes the colour of the whole background. As every block is added on top of the
+    other, this only changes the colour of the first one (ie: the 'who we are' section) */
+
 html {
-    background-color: #000;
+    background-color: #0000FF;
 }
+
+/*-------------------------------------------------*/
+
+/*  This section organised the text in nice blocks. (though without this they are
+    still centered; just not at all as nice) */
+
+/*
+
 html body {
     -webkit-transition: opacity cubic-bezier(0.24, .8, .55, .94);
     -webkit-transition-delay: .2s;
@@ -218,6 +248,15 @@ html body .button:hover a {
 body {
     min-width: 200px;
 }
+
+*/
+
+
+/*-------------------------------------------------*/
+
+
+
+
 @media only screen and (min-width:1441px) {
     body {
     font-size: 125%}
@@ -236,6 +275,10 @@ body {
 }@media only screen and (max-width:640px) {
     body {
     font-size: 35%}
+
+
+
+
 }body a {
     color: #2e90f2;
     text-decoration: none;
