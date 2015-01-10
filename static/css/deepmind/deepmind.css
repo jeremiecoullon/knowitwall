@@ -9,10 +9,24 @@
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%}
 
+/* What I need:
+-section 1
+-section 3
+-section 4
+-section 5
+-section 7
+-section 11
+-section 13
+-section
+
+   */
+
+
+
 /*-------------------------------------------------*/
 
 
- /*this lines makes sure the background colour doesn't spill over on
+ /*SECTION 1: this lines makes sure the background colour doesn't spill over on
     the edges of the other blocks. */
 
 body {
@@ -23,7 +37,7 @@ body {
 
 /*-------------------------------------------------*/
 
-/* SECTION 1: this section doesn't seem to do anything. */
+/* SECTION 2: this section doesn't seem to do anything. */
 /*
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -165,7 +179,7 @@ td, th {
 */
 
 /*-------------------------------------------------*/
-/* This changes the colour of the whole background. As every block is added on top of the
+/* SECTION 3: This changes the colour of the whole background. As every block is added on top of the
     other, this only changes the colour of the first one (ie: the 'who we are' section) */
 
 html {
@@ -174,7 +188,7 @@ html {
 
 /*-------------------------------------------------*/
 
-/*  This section organised the text in nice blocks. (though without this they are
+/*  SECTION 4: This section organised the text in nice blocks. (though without this they are
     still centered; just not at all as nice) */
 
 /*
@@ -255,8 +269,10 @@ body {
 /*-------------------------------------------------*/
 
 
+ /* SECTION 5: This changes the font size depending on how big your
+    screen is. */
 
-
+/*
 @media only screen and (min-width:1441px) {
     body {
     font-size: 125%}
@@ -275,18 +291,45 @@ body {
 }@media only screen and (max-width:640px) {
     body {
     font-size: 35%}
+*/
 
 
+/*-------------------------------------------------*/
 
+/* SECTION 6: dunno what this does  */
 
 }body a {
     color: #2e90f2;
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/* SECTION 7: This makes the nav bar links light up when you're on that
+    page. */
+
 body a.active {
-    color: #2e90f2;
+    color: #FF0000;
 }
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 8: creates the sticky header. The nav bar links are still there and aligned though  */
+
+/*
 body footer, body>header {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -322,6 +365,24 @@ body>header a {
 body>header a:hover {
     color: #dfdfdf!important;
 }
+
+*/
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 9: Aligns the nav bar links */
+
+
+/*
+
 @media only screen and (min-width:1441px) {
     body>header {
     font-size: .8em;
@@ -393,7 +454,19 @@ body>header>ul li {
     body>header>ul li {
     font-size: 13px;
 }
-}body>header>ul li a:hover {
+}
+
+*/
+
+/*-------------------------------------------------*/
+
+
+/*  SECTION 10: more header and footer stuff  */
+
+
+/*
+
+body>header>ul li a:hover {
     color: #2e90f2;
 }
 body>header>ul>li {
@@ -474,6 +547,17 @@ body>footer ul li:last-child {
 body>footer ul li.copyright {
     color: gray;
 }
+
+*/
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 11: Defines the article class. This is a nice centered box where the info of the different
+    blocks go.  */
+
+/*
+
 body>section.main-content article {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -484,6 +568,12 @@ body>section.main-content article {
     font-size: 1.25em;
     font-weight: 400;
 }
+
+*/
+
+/* Details about the 'article' class  */
+
+/*
 body>section.main-content article h1 {
     display: -moz-inline-stack;
     display: inline-block;
@@ -544,11 +634,36 @@ body>section.main-content article .scroll {
     cursor: pointer;
     margin-top: -20px;
 }
+
+*/
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 12 doesnt seem to do anything. At this stage, the different blocks still take
+    up the whole window and the scrolly thing aligns well (with 1 exception )with the
+    edges (the colour changes)   */
+
+/*
 @media only screen and (min-width:1441px) {
     body>section.main-content article .scroll {
     font-size: .52em;
 }
-}body>section.main-content article .scroll i {
+}
+
+*/
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: this creates the nice centered arrows for the scrolly thing  */
+
+
+
+/*
+
+body>section.main-content article .scroll i {
     width: 2.5em;
     height: 2.5em;
     font-size: 1.8em;
@@ -571,6 +686,30 @@ body>section.main-content article .scroll {
     background-color: #2e90f2;
     border-color: #2e90f2;
     background-size: 100%}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: Now define the attributes of the individual blocks. These add
+    a different coloured block over the background. I'm guessing the 'media' elements
+    make sure that the edges of the block always fit the screen.
+
+    This is the 'main content' block */
+
+
+
+
 body>section.main-content article[data-id=who-we-are] {
     background: url(images/section--press-release.jpg) center center no-repeat;
     background-size: cover;
@@ -617,6 +756,20 @@ body>section.main-content article[data-id=who-we-are] .signature {
     color: #fff;
     font-weight: 700;
 }
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: 'our mission' block.  */
+
+
+
 body>section.main-content article[data-id=our-mission] {
     background-color: #f2f1f1;
     color: #666;
@@ -654,6 +807,21 @@ body>section.main-content article[data-id=our-mission] ul {
 }body>section.main-content article[data-id=our-mission] h1 {
     color: #999;
 }
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: 'work with us' block.  */
+
+
+
 body>section.main-content article[data-id=work-with-us] {
     background-color: #dfdfdf;
     color: #666;
@@ -691,6 +859,23 @@ body>section.main-content article[data-id=work-with-us] ul {
 }body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] h1 b {
     color: #999;
 }
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: 'press enquiries' block.  */
+
+
+
+
 body>section.main-content article[data-id=press-enquiries] {
     background-color: #333;
     color: #ccc;
@@ -731,6 +916,21 @@ body>section.main-content article[data-id=press-enquiries] ul {
 }body>section.main-content article[data-id=press-enquiries] h1 {
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+/* SECTION 13: 'privacy policy' block.  */
+
+
+
 body>section.main-content article[data-id=privacy-policy], body>section.main-content article[data-id=terms-and-conditions] {
     background-color: #333;
 }
@@ -794,6 +994,13 @@ body>section.main-content article[data-id=privacy-policy] ul li p, body>section.
 body>section.main-content article[data-id=terms-and-conditions] ul {
     margin-top: 150px;
 }
+
+
+
+
+
+
+
 @media only screen and (max-width:640px) {
     body>header {
     height: 75px;
