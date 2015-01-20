@@ -1,136 +1,125 @@
 extends ./base.jade
 block content
-	nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+	.wrapper
 		.container
-			// Brand and toggle get grouped for better mobile display
-			.navbar-header
-				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
-			// Collect the nav links, forms, and other content for toggling
-			#bs-example-navbar-collapse-1.collapse.navbar-collapse
-				ul.nav.navbar-nav.navbar-center
-					a.navbar-brand(data-scroll='', href="#about") About
-					a.navbar-brand(data-scroll='', href="#contribute") Contribute
-				ul.nav.navbar-nav.navbar-right
-					.ss-form.navbar-form
-						form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
-							input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
-							input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
-			// /.navbar-collapse
-			// /.container-fluid
-	.row
-		h2.text-center
-	.row
-		.col-md-5
-			h2.text-center Science
-			.mainwrapper
-				.box
-					a(href="{{url_for('ad1')}}")
-						link(href='/static/css/audiodoc_box.css', rel='stylesheet')
-						img(src='/static/Images/Jupiter_and_Ganymede.jpg', width='500', alt=' photo Jupiter_and_Ganymede.jpg')
-						.caption.fade-caption
-							h2 Aliens in the solar system
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
-		.col-md-2
-		.col-md-5
-			h2.text-center Humanites
-			.mainwrapper
-				.box
-					a(href="{{url_for('ad2')}}")
-						link(href='/static/css/audiodoc_box.css', rel='stylesheet')
-						img(src='/static/Images/Tate_Creed.jpg', width='500', height='375', alt='photo_Creed_Tate.jpg')
-						.caption.fade-caption
-							h2 It's at Tate but is it Art?
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							br
-							h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
-	.row
-		span#about
+			.row
+				&nbsp
+			.row
+				&nbsp
+			nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+				.container
+					// Brand and toggle get grouped for better mobile display
+					.navbar-header
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
+					// Collect the nav links, forms, and other content for toggling
+					#bs-example-navbar-collapse-1.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-center
+							a.navbar-brand(data-scroll='', href="#about") About
+							a.navbar-brand(data-scroll='', href="#contribute") Contribute
+						ul.nav.navbar-nav.navbar-right
+							.ss-form.navbar-form
+								form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
+									input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
+									input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
+					// /.navbar-collapse
+					// /.container-fluid
+			.row
+				h2.text-center
+			.row
+				.col-md-5
+					h2.text-center Science
+					.mainwrapper
+						.box
+							a(href="{{url_for('ad1')}}")
+								link(href='/static/css/audiodoc_box.css', rel='stylesheet')
+								img(src='/static/Images/Jupiter_and_Ganymede.jpg', width='500', alt=' photo Jupiter_and_Ganymede.jpg')
+								.caption.fade-caption
+									h2 Aliens in the solar system
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
+				.col-md-2
+				.col-md-5
+					h2.text-center Humanites
+					.mainwrapper
+						.box
+							a(href="{{url_for('ad2')}}")
+								link(href='/static/css/audiodoc_box.css', rel='stylesheet')
+								img(src='/static/Images/Tate_Creed.jpg', width='500', height='375', alt='photo_Creed_Tate.jpg')
+								.caption.fade-caption
+									h2 It's at Tate but is it Art?
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									br
+									h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
+			.row
+				span#about
 
-		p &nbsp
+				p &nbsp
 
+			.row
+				h3 About Smartycrap
+				p bige posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi.
+			.row
+				span#contribute
 
-	//.row
-		section.main-content
-			article#our-mission.page(data-id="our-mission")
-				div(data-id="container")
-					ul
-						li.page-title
-							| Our Mission
-						li
-							h1
-								| Solve Intelligence
-						li
-							p We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.
-
-
-
-
-	.row
-		h3 About Smartycrap
-		p bige posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi.
-	.row
-		span#contribute
-
-		p &nbsp
-	.row
-		h3 Contribute to Smartycrap
-		p aucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
-	.row
-		h3 Contact Smartcyrap
-		p smarycrapemailandstuff
+				p &nbsp
+			.row
+				h3 Contribute to Smartycrap
+				p Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque. Praesent aliquet ipsum ac elementum pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique, arcu ut porta egestas, nulla tortor blandit est, in vehicula metus tellus at dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae nulla id turpis convallis varius sed ac dolor. Sed dignissim elementum neque. Fusce consectetur eleifend est. Etiam vel erat tortor. Nulla facilisi. Etiam in condimentum nunc. Donec vulputate ipsum ut erat accumsan volutpat. Phasellus eu malesuada massa, et sagittis est. Suspendisse ullamcorper varius ultricies. Praesent aliquet ipsum ac elementum pellentesque.
+			.row
+				h3 Contact Smartcyrap
+				p smarycrapemailandstuff
 
 
 

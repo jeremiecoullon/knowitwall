@@ -17,7 +17,7 @@
 -section 7
 -section 11
 -section 13
--section
+-section 14-18 (defining the different blocks)
 
    */
 
@@ -191,7 +191,7 @@ html {
 /*  SECTION 4: This section organised the text in nice blocks. (though without this they are
     still centered; just not at all as nice) */
 
-/*
+
 
 html body {
     -webkit-transition: opacity cubic-bezier(0.24, .8, .55, .94);
@@ -263,7 +263,7 @@ body {
     min-width: 200px;
 }
 
-*/
+
 
 
 /*-------------------------------------------------*/
@@ -272,7 +272,7 @@ body {
  /* SECTION 5: This changes the font size depending on how big your
     screen is. */
 
-/*
+
 @media only screen and (min-width:1441px) {
     body {
     font-size: 125%}
@@ -291,19 +291,20 @@ body {
 }@media only screen and (max-width:640px) {
     body {
     font-size: 35%}
-*/
+
 
 
 /*-------------------------------------------------*/
 
-/* SECTION 6: dunno what this does  */
+/* SECTION 6: dunno what this does but it's important!!  */
+
+
 
 }body a {
     color: #2e90f2;
     text-decoration: none;
     cursor: pointer;
 }
-
 
 
 
@@ -556,7 +557,7 @@ body>footer ul li.copyright {
 /* SECTION 11: Defines the article class. This is a nice centered box where the info of the different
     blocks go.  */
 
-/*
+
 
 body>section.main-content article {
     -webkit-box-sizing: border-box;
@@ -569,11 +570,11 @@ body>section.main-content article {
     font-weight: 400;
 }
 
-*/
+
 
 /* Details about the 'article' class  */
 
-/*
+
 body>section.main-content article h1 {
     display: -moz-inline-stack;
     display: inline-block;
@@ -635,7 +636,7 @@ body>section.main-content article .scroll {
     margin-top: -20px;
 }
 
-*/
+
 
 
 
@@ -661,7 +662,7 @@ body>section.main-content article .scroll {
 
 
 
-/*
+
 
 body>section.main-content article .scroll i {
     width: 2.5em;
@@ -687,7 +688,7 @@ body>section.main-content article .scroll i {
     border-color: #2e90f2;
     background-size: 100%}
 
-*/
+
 
 
 
@@ -701,7 +702,7 @@ body>section.main-content article .scroll i {
 
 /*-------------------------------------------------*/
 
-/* SECTION 13: Now define the attributes of the individual blocks. These add
+/* SECTION 14: Now define the attributes of the individual blocks. These add
     a different coloured block over the background. I'm guessing the 'media' elements
     make sure that the edges of the block always fit the screen.
 
@@ -766,7 +767,7 @@ body>section.main-content article[data-id=who-we-are] .signature {
 
 /*-------------------------------------------------*/
 
-/* SECTION 13: 'our mission' block.  */
+/* SECTION 15: 'our mission' block.  */
 
 
 
@@ -818,7 +819,7 @@ body>section.main-content article[data-id=our-mission] ul {
 
 /*-------------------------------------------------*/
 
-/* SECTION 13: 'work with us' block.  */
+/* SECTION 16: 'work with us' block.  */
 
 
 
@@ -871,7 +872,7 @@ body>section.main-content article[data-id=work-with-us] ul {
 
 /*-------------------------------------------------*/
 
-/* SECTION 13: 'press enquiries' block.  */
+/* SECTION 17: 'press enquiries' block.  */
 
 
 
@@ -927,7 +928,7 @@ body>section.main-content article[data-id=press-enquiries] ul {
 
 /*-------------------------------------------------*/
 
-/* SECTION 13: 'privacy policy' block.  */
+/* SECTION 18: 'privacy policy' block.  */
 
 
 
@@ -998,7 +999,12 @@ body>section.main-content article[data-id=terms-and-conditions] ul {
 
 
 
+/*-------------------------------------------------*/
 
+/* SECTION 19: more media stuff  */
+
+
+/*
 
 
 @media only screen and (max-width:640px) {
@@ -1191,3 +1197,6 @@ body>section.main-content article[data-id=terms-and-conditions] ul {
     display: none!important;
 }
 }
+
+
+*/

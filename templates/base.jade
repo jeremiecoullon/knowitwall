@@ -4,24 +4,15 @@ html(lang="en")
         title= pageTitle
         //link(href='/static/css/audioplayer.css', rel='stylesheet')
         link(href='/static/css/bootstrap.min.css', rel='stylesheet')
-        link(href='/static/css/sticky_footer.css', rel='stylesheet')
         link(href='/static/css/textbox.css', rel='stylesheet')
-        link(href='/static/css/smarty_crap.css', rel='stylesheet')
-        link(href='/static/css/shorten_text.css', rel='stylesheet')
+        //link(href='/static/css/smarty_crap.css', rel='stylesheet')
+        //link(href='/static/css/shorten_text.css', rel='stylesheet')
 
 
 
 
-    body
-        // .container is a class (don't touch this)
-        .wrapper
-            .container
-                .row
-                    &nbsp
-                .row
-                    &nbsp
-                .row
-                    block content
+        block content
+
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     //script(src='/static/js/audioplayer.js')
     //script(src="http://osvaldas.info/examples/main.js")
@@ -35,6 +26,11 @@ html(lang="en")
     script(src='/static/js/smooth-scroll.js')
     script.
         smoothScroll.init();
+
+    //deepmind stuff!!
+    //script(src="/static/js/app.js")
+    //script(type="text/javascript", src="//use.typekit.net/azt5qxp.js")
+
 
 
 

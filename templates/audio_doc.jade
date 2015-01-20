@@ -1,78 +1,79 @@
 extends ./base.jade
 block content
+    body
+        .wrapper
+            .container
+                nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+                    .container
+                        span#top
+                        // Brand and toggle get grouped for better mobile display
+                        .navbar-header
+                            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                                span.sr-only Toggle navigation
+                                span.icon-bar
+                                span.icon-bar
+                                span.icon-bar
+                            a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
+                        // Collect the nav links, forms, and other content for toggling
+                        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                            ul.nav.navbar-nav.navbar-center
+                                a.navbar-brand(data-scroll='', href="#transcript") Transcript
+                                a.navbar-brand(data-scroll='', href="#feedback") Feedback
+                            ul.nav.navbar-nav.navbar-right
+                                .ss-form.navbar-form
+                                    form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
+                                        input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
+                                        input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
+                        // /.navbar-collapse
+                        // /.container-fluid
+                .row
+                    h2.text-center {{discipline}}
+                        div(name='top')
+                .row
+                    img.displayed(src='{{topic_image}}', width='700', alt=' topic image')
+                .row
+
+                    //audio(controls="")
+                        source(src="/static/audio/science_ganymede.mp3", type="audio/mpeg")
+
+                    //audio(preload="auto", controls="")
+                        source(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3")
+
+                    //audio(controls="")
+                        source(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3", type="audio/mpeg")
 
 
-    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
-        .container
-            span#top
-            // Brand and toggle get grouped for better mobile display
-            .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a.navbar-brand(href="{{url_for('index')}}") SmartyCrap
-            // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav.navbar-center
-                    a.navbar-brand(data-scroll='', href="#transcript") Transcript
-                    a.navbar-brand(data-scroll='', href="#feedback") Feedback
-                ul.nav.navbar-nav.navbar-right
-                    .ss-form.navbar-form
-                        form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
-                            input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
-                            input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
-            // /.navbar-collapse
-            // /.container-fluid
-    .row
-        h2.text-center {{discipline}}
-            div(name='top')
-    .row
-        img.displayed(src='{{topic_image}}', width='700', alt=' topic image')
-    .row
 
-        audio(controls="")
-            source(src="/static/audio/science_ganymede.mp3", type="audio/mpeg")
+                .row
+                    &nbsp
+                .row
+                    span#transcript
+                    &nbsp
+                .row
+                    .col-md-8.boxed
+                        {{transcript}}
 
-        //audio(preload="auto", controls="")
-            source(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3")
+                    .col-md-1
+                    .col-md-3.boxed
+                        .row.text-center
+                            h3.text-center {{author_name}}
+                            img(src='{{author_image}}', alt='contributor image', width='200')
+                        .row.text-center.boxed_invisible
+                            {{author_bio}}
+                .row
+                        h4.text-center please leave some feedback on the audio-doc
+                .row
+                    .ss-form
+                        form#ss-form(action='{{form}}', method='POST', target='_self', onsubmit='')
+                            ol.ss-question-list(role='list', style='padding-left: 300px; padding-right: 300px')
+                                .ss-form-entry
+                                    textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
+                                input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
 
-        //audio(controls="")
-            source(src="http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3", type="audio/mpeg")
-
-
-
-    .row
-        &nbsp
-    .row
-        span#transcript
-        &nbsp
-    .row
-        .col-md-8.boxed
-            {{transcript}}
-
-        .col-md-1
-        .col-md-3.boxed
-            .row.text-center
-                h3.text-center {{author_name}}
-                img(src='{{author_image}}', alt='contributor image', width='200')
-            .row.text-center.boxed_invisible
-                {{author_bio}}
-    .row
-            h4.text-center please leave some feedback on the audio-doc
-    .row
-        .ss-form
-            form#ss-form(action='{{form}}', method='POST', target='_self', onsubmit='')
-                ol.ss-question-list(role='list', style='padding-left: 300px; padding-right: 300px')
-                    .ss-form-entry
-                        textarea.form-control#entry_755159605.ss-q-long(name='entry.755159605', rows='8', cols='0', dir='auto', aria-label='Comments  ', placeholder="comments")
-                    input#ss-submit.jfk-button.jfk-button-action.btn.btn-success.btn-lg.btn-block(type='submit', name='submit', value='Submit')
-
-    .row
-        a(data-scroll='', href='#top')  back to top
-        span#feedback
-    .rows
-        &nbsp
+                .row
+                    a(data-scroll='', href='#top')  back to top
+                    span#feedback
+                .rows
+                    &nbsp
 
 

@@ -1,0 +1,153 @@
+doctype html
+html.no-js
+head
+    link(href="/static/css/smarty_crap.css", rel="stylesheet", type="text/css")
+    link(href="/static/css/bootstrap.min.css", rel="stylesheet", type="text/css")
+body#home
+    .wrapper
+        .container
+            .row
+                &nbsp
+            .row
+                &nbsp
+            nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+                .container
+                    // Brand and toggle get grouped for better mobile display
+                    .navbar-header
+                        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(data-scroll='', href="#home") Smartycrap
+                    // Collect the nav links, forms, and other content for toggling
+                    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                        ul.nav.navbar-nav.navbar-center
+                            a.navbar-brand(data-scroll='', href="#about") About
+                            a.navbar-brand(data-scroll='', href="#contribute") Contribute
+                            a.navbar-brand(data-scroll='', href="#lalala") Lalala
+                        ul.nav.navbar-nav.navbar-right
+                            .ss-form.navbar-form
+                                form#ss-form(action='https://docs.google.com/forms/d/1K8BYGUtYWzgzfWv-LzDYP9ByrWfmN0MWmzTItsxJTqw/formResponse', method='POST', target='_self', onsubmit='')
+                                    input#entry_238733277.ss-q-short.form-control(type='text', name='entry.238733277', value='', dir='auto', aria-label='Would you like to be updated about new audio-docs?  ', title='', placeholder="email address")
+                                    input#ss-submit.jfk-button.jfk-button-action.btn-success.btn(type='submit', name='submit', value='stay informed')
+
+    section.main-content
+        article#who-we-are.page(data-id="who-we-are")
+            div(data-id="container")
+                .row
+                    h2.text-center
+                .row
+                    .col-md-5
+                        h2.text-center Science
+                        .mainwrapper
+                            .box
+                                a(href="{{url_for('ad1')}}")
+                                    link(href='/static/css/audiodoc_box.css', rel='stylesheet')
+                                    img(src='/static/Images/Jupiter_and_Ganymede.jpg', width='500', alt=' photo Jupiter_and_Ganymede.jpg')
+                                    .caption.fade-caption
+                                        h2 Aliens in the solar system
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
+                    .col-md-2
+                    .col-md-5
+                        h2.text-center Humanites
+                        .mainwrapper
+                            .box
+                                a(href="{{url_for('ad2')}}")
+                                    link(href='/static/css/audiodoc_box.css', rel='stylesheet')
+                                    img(src='/static/Images/Tate_Creed.jpg', width='500', height='375', alt='photo_Creed_Tate.jpg')
+                                    .caption.fade-caption
+                                        h2 It's at Tate but is it Art?
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        br
+                                        h6.text-left 6.20 min  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 days remaining
+
+
+
+
+                figure.scroll(data-id="scroll-down")
+                    i.icon.icon-DownArrow
+                    div Scroll Down
+        span#about
+        article#our-mission.page(data-id="our-mission")
+            div(data-id="container")
+                ul
+                    li.page-title
+                        | About
+                    li
+                        p SmartyCrap is a bit of a crappy name...
+
+                figure.scroll(data-id="scroll-down")
+                    i.icon.icon-DownArrow
+                    div
+        span#contribute
+        article#work-with-us.page(data-id="work-with-us")
+            div(data-id="container")
+                ul
+                    li.page-title Contribute
+                    li
+                        p but you should still contribute to it!
+                figure.scroll(data-id="scroll-down")
+                    i.icon.icon-DownArrow
+                    div
+        span#lalala
+        article#press-enquiries.page(data-id="press-enquiries")
+            div(data-id="container")
+                ul
+                    li.page-title lalala
+                figure.scroll(data-id="scroll-top")
+                    i.icon.icon-UpArrow
+                    div Top
+script(type="text/javascript", src="//use.typekit.net/azt5qxp.js")
+script(src="/static/js/app.js")
+script(src='/static/js/smooth-scroll.js')
+script.
+    smoothScroll.init();
