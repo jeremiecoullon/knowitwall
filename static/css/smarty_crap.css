@@ -299,7 +299,7 @@ body>section.main-content article .scroll i {
 
 
 body>section.main-content article[data-id=who-we-are] {
-    background: url(images/section--press-release.jpg) center center no-repeat;
+
     background-size: cover;
     color: #ccc;
 }
