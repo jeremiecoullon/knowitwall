@@ -172,7 +172,7 @@ body a.active {
 
 
 
-body>section.main-content article {
+body>section.homepage article {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -188,7 +188,7 @@ body>section.main-content article {
 /* Details about the 'article' class  */
 
 
-body>section.main-content article h1 {
+body>section.homepage article h1 {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
@@ -199,18 +199,18 @@ body>section.main-content article h1 {
     line-height: 1em;
     margin-top: .1em;
 }
-body>section.main-content article h1 b {
+body>section.homepage article h1 b {
     color: #2e90f2;
     letter-spacing: 0;
 }
-body>section.main-content article p b a {
+body>section.homepage article p b a {
     color: #fff;
 }
-body>section.main-content article ul {
+body>section.homepage article ul {
     max-width: 850px;
     margin: auto;
 }
-body>section.main-content article ul li:not(:last-child):after {
+body>section.homepage article ul li:not(:last-child):after {
     content: "";
     width: 75px;
     display: block;
@@ -220,19 +220,19 @@ body>section.main-content article ul li:not(:last-child):after {
     margin-left: auto;
     margin-right: auto;
 }
-body>section.main-content article ul li:first-child:after {
+body>section.homepage article ul li:first-child:after {
     margin-top: 1.5em;
 }
-body>section.main-content article ul li p {
+body>section.homepage article ul li p {
     line-height: 1.5em;
 }
-body>section.main-content article ul li.page-title {
+body>section.homepage article ul li.page-title {
     text-transform: uppercase;
     font-size: .85em;
     font-weight: 700;
     color: #666;
 }
-body>section.main-content article .scroll {
+body>section.homepage article .scroll {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -260,7 +260,7 @@ body>section.main-content article .scroll {
 
 
 
-body>section.main-content article .scroll i {
+body>section.homepage article .scroll i {
     width: 2.5em;
     height: 2.5em;
     font-size: 1.8em;
@@ -275,10 +275,10 @@ body>section.main-content article .scroll i {
     transition-duration: .2s;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article .scroll i {
+    body>section.homepage article .scroll i {
     font-size: 1.8em;
 }
-}body>section.main-content article .scroll i:hover {
+}body>section.homepage article .scroll i:hover {
     color: #fff;
     background-color: #2e90f2;
     border-color: #2e90f2;
@@ -293,53 +293,53 @@ body>section.main-content article .scroll i {
     a different coloured block over the background. I'm guessing the 'media' elements
     make sure that the edges of the block always fit the screen.
 
-    This is the 'main content' block */
+    This is the 'who we are' block */
 
 
 
 
-body>section.main-content article[data-id=who-we-are] {
+body>section.homepage article[data-id=who-we-are] {
 
     background-size: cover;
     color: #ccc;
 }
-body>section.main-content article[data-id=who-we-are] ul li:not(:last-child):after {
+body>section.homepage article[data-id=who-we-are] ul li:not(:last-child):after {
     border-color: #666;
 }
-body>section.main-content article[data-id=who-we-are] ul li.page-title {
+body>section.homepage article[data-id=who-we-are] ul li.page-title {
     color: #ccc;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=who-we-are] h1, body>section.main-content article[data-id=who-we-are] ul {
+    body>section.homepage article[data-id=who-we-are] h1, body>section.homepage article[data-id=who-we-are] ul {
     max-width: 850px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=who-we-are] h1, body>section.main-content article[data-id=who-we-are] ul {
+    body>section.homepage article[data-id=who-we-are] h1, body>section.homepage article[data-id=who-we-are] ul {
     max-width: 775px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=who-we-are] h1, body>section.main-content article[data-id=who-we-are] ul {
+    body>section.homepage article[data-id=who-we-are] h1, body>section.homepage article[data-id=who-we-are] ul {
     max-width: 775px;
 }
 }@media only screen and (min-width:751px) and (max-width:1025px) {
-    body>section.main-content article[data-id=who-we-are] h1, body>section.main-content article[data-id=who-we-are] ul {
+    body>section.homepage article[data-id=who-we-are] h1, body>section.homepage article[data-id=who-we-are] ul {
     max-width: 500px;
 }
 }@media only screen and (min-width:641px) and (max-width:750px) {
-    body>section.main-content article[data-id=who-we-are] h1, body>section.main-content article[data-id=who-we-are] ul {
+    body>section.homepage article[data-id=who-we-are] h1, body>section.homepage article[data-id=who-we-are] ul {
     max-width: 500px;
 }
 }@media only screen and (max-width:640px) {
-    body>section.main-content article[data-id=who-we-are] h1 {
+    body>section.homepage article[data-id=who-we-are] h1 {
     max-width: 700px;
 }
-body>section.main-content article[data-id=who-we-are] ul {
+body>section.homepage article[data-id=who-we-are] ul {
     max-width: 300px;
 }
-}body>section.main-content article[data-id=who-we-are] h1 {
+}body>section.homepage article[data-id=who-we-are] h1 {
     color: #fff;
 }
-body>section.main-content article[data-id=who-we-are] .signature {
+body>section.homepage article[data-id=who-we-are] .signature {
     text-align: right;
     color: #fff;
     font-weight: 700;
@@ -354,41 +354,41 @@ body>section.main-content article[data-id=who-we-are] .signature {
 
 
 
-body>section.main-content article[data-id=our-mission] {
+body>section.homepage article[data-id=our-mission] {
     background-color: #f2f1f1;
     color: #666;
 }
-body>section.main-content article[data-id=our-mission] ul li:not(:last-child):after {
+body>section.homepage article[data-id=our-mission] ul li:not(:last-child):after {
     border-color: #ccc;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=our-mission] h1, body>section.main-content article[data-id=our-mission] ul {
+    body>section.homepage article[data-id=our-mission] h1, body>section.homepage article[data-id=our-mission] ul {
     max-width: 1200px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=our-mission] h1, body>section.main-content article[data-id=our-mission] ul {
+    body>section.homepage article[data-id=our-mission] h1, body>section.homepage article[data-id=our-mission] ul {
     max-width: 950px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=our-mission] h1, body>section.main-content article[data-id=our-mission] ul {
+    body>section.homepage article[data-id=our-mission] h1, body>section.homepage article[data-id=our-mission] ul {
     max-width: 950px;
 }
 }@media only screen and (min-width:751px) and (max-width:1025px) {
-    body>section.main-content article[data-id=our-mission] h1, body>section.main-content article[data-id=our-mission] ul {
+    body>section.homepage article[data-id=our-mission] h1, body>section.homepage article[data-id=our-mission] ul {
     max-width: 950px;
 }
 }@media only screen and (min-width:641px) and (max-width:750px) {
-    body>section.main-content article[data-id=our-mission] h1, body>section.main-content article[data-id=our-mission] ul {
+    body>section.homepage article[data-id=our-mission] h1, body>section.homepage article[data-id=our-mission] ul {
     max-width: 600px;
 }
 }@media only screen and (max-width:640px) {
-    body>section.main-content article[data-id=our-mission] h1 {
+    body>section.homepage article[data-id=our-mission] h1 {
     max-width: 285px;
 }
-body>section.main-content article[data-id=our-mission] ul {
+body>section.homepage article[data-id=our-mission] ul {
     max-width: 300px;
 }
-}body>section.main-content article[data-id=our-mission] h1 {
+}body>section.homepage article[data-id=our-mission] h1 {
     color: #999;
 }
 
@@ -403,41 +403,41 @@ body>section.main-content article[data-id=our-mission] ul {
 
 
 
-body>section.main-content article[data-id=work-with-us] {
+body>section.homepage article[data-id=work-with-us] {
     background-color: #dfdfdf;
     color: #666;
 }
-body>section.main-content article[data-id=work-with-us] ul li:not(:last-child):after {
+body>section.homepage article[data-id=work-with-us] ul li:not(:last-child):after {
     border-color: #ccc;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] ul {
+    body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] ul {
     max-width: 1200px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] ul {
+    body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] ul {
     max-width: 950px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] ul {
+    body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] ul {
     max-width: 950px;
 }
 }@media only screen and (min-width:751px) and (max-width:1025px) {
-    body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] ul {
+    body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] ul {
     max-width: 800px;
 }
 }@media only screen and (min-width:641px) and (max-width:750px) {
-    body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] ul {
+    body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] ul {
     max-width: 600px;
 }
 }@media only screen and (max-width:640px) {
-    body>section.main-content article[data-id=work-with-us] h1 {
+    body>section.homepage article[data-id=work-with-us] h1 {
     max-width: 700px;
 }
-body>section.main-content article[data-id=work-with-us] ul {
+body>section.homepage article[data-id=work-with-us] ul {
     max-width: 300px;
 }
-}body>section.main-content article[data-id=work-with-us] h1, body>section.main-content article[data-id=work-with-us] h1 b {
+}body>section.homepage article[data-id=work-with-us] h1, body>section.homepage article[data-id=work-with-us] h1 b {
     color: #999;
 }
 
@@ -457,44 +457,44 @@ body>section.main-content article[data-id=work-with-us] ul {
 
 
 
-body>section.main-content article[data-id=press-enquiries] {
+body>section.homepage article[data-id=press-enquiries] {
     background-color: #333;
     color: #ccc;
 }
-body>section.main-content article[data-id=press-enquiries] ul li:not(:last-child):after {
+body>section.homepage article[data-id=press-enquiries] ul li:not(:last-child):after {
     border-color: #454545;
 }
-body>section.main-content article[data-id=press-enquiries] ul li a {
+body>section.homepage article[data-id=press-enquiries] ul li a {
     font-weight: 700;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=press-enquiries] h1, body>section.main-content article[data-id=press-enquiries] ul {
+    body>section.homepage article[data-id=press-enquiries] h1, body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 900px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=press-enquiries] h1, body>section.main-content article[data-id=press-enquiries] ul {
+    body>section.homepage article[data-id=press-enquiries] h1, body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 800px;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=press-enquiries] h1, body>section.main-content article[data-id=press-enquiries] ul {
+    body>section.homepage article[data-id=press-enquiries] h1, body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 800px;
 }
 }@media only screen and (min-width:751px) and (max-width:1025px) {
-    body>section.main-content article[data-id=press-enquiries] h1, body>section.main-content article[data-id=press-enquiries] ul {
+    body>section.homepage article[data-id=press-enquiries] h1, body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 700px;
 }
 }@media only screen and (min-width:641px) and (max-width:750px) {
-    body>section.main-content article[data-id=press-enquiries] h1, body>section.main-content article[data-id=press-enquiries] ul {
+    body>section.homepage article[data-id=press-enquiries] h1, body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 600px;
 }
 }@media only screen and (max-width:640px) {
-    body>section.main-content article[data-id=press-enquiries] h1 {
+    body>section.homepage article[data-id=press-enquiries] h1 {
     max-width: 700px;
 }
-body>section.main-content article[data-id=press-enquiries] ul {
+body>section.homepage article[data-id=press-enquiries] ul {
     max-width: 300px;
 }
-}body>section.main-content article[data-id=press-enquiries] h1 {
+}body>section.homepage article[data-id=press-enquiries] h1 {
     color: #fff;
 }
 
@@ -512,67 +512,67 @@ body>section.main-content article[data-id=press-enquiries] ul {
 
 
 
-body>section.main-content article[data-id=privacy-policy], body>section.main-content article[data-id=terms-and-conditions] {
+body>section.homepage article[data-id=privacy-policy], body>section.homepage article[data-id=terms-and-conditions] {
     background-color: #333;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=privacy-policy] h1, body>section.main-content article[data-id=terms-and-conditions] h1 {
+    body>section.homepage article[data-id=privacy-policy] h1, body>section.homepage article[data-id=terms-and-conditions] h1 {
     font-size: 2.2em;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=privacy-policy] h1, body>section.main-content article[data-id=terms-and-conditions] h1 {
+    body>section.homepage article[data-id=privacy-policy] h1, body>section.homepage article[data-id=terms-and-conditions] h1 {
     font-size: 2.25em;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=privacy-policy] h1, body>section.main-content article[data-id=terms-and-conditions] h1 {
+    body>section.homepage article[data-id=privacy-policy] h1, body>section.homepage article[data-id=terms-and-conditions] h1 {
     font-size: 2.25em;
 }
-}body>section.main-content article[data-id=privacy-policy] ul li:not(:last-child):after, body>section.main-content article[data-id=terms-and-conditions] ul li:not(:last-child):after {
+}body>section.homepage article[data-id=privacy-policy] ul li:not(:last-child):after, body>section.homepage article[data-id=terms-and-conditions] ul li:not(:last-child):after {
     border-color: #666;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
 }
-body>section.main-content article[data-id=privacy-policy] ul, body>section.main-content article[data-id=terms-and-conditions] ul {
+body>section.homepage article[data-id=privacy-policy] ul, body>section.homepage article[data-id=terms-and-conditions] ul {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=privacy-policy] ul, body>section.main-content article[data-id=terms-and-conditions] ul {
+    body>section.homepage article[data-id=privacy-policy] ul, body>section.homepage article[data-id=terms-and-conditions] ul {
     width: 75%}
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=privacy-policy] ul, body>section.main-content article[data-id=terms-and-conditions] ul {
+    body>section.homepage article[data-id=privacy-policy] ul, body>section.homepage article[data-id=terms-and-conditions] ul {
     width: 75%}
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=privacy-policy] ul, body>section.main-content article[data-id=terms-and-conditions] ul {
+    body>section.homepage article[data-id=privacy-policy] ul, body>section.homepage article[data-id=terms-and-conditions] ul {
     width: 75%}
 }@media only screen and (min-width:751px) and (max-width:1025px) {
-    body>section.main-content article[data-id=privacy-policy] ul, body>section.main-content article[data-id=terms-and-conditions] ul {
+    body>section.homepage article[data-id=privacy-policy] ul, body>section.homepage article[data-id=terms-and-conditions] ul {
     width: 75%}
-}body>section.main-content article[data-id=privacy-policy] ul li h1, body>section.main-content article[data-id=privacy-policy] ul li p strong, body>section.main-content article[data-id=terms-and-conditions] ul li h1, body>section.main-content article[data-id=terms-and-conditions] ul li p strong {
+}body>section.homepage article[data-id=privacy-policy] ul li h1, body>section.homepage article[data-id=privacy-policy] ul li p strong, body>section.homepage article[data-id=terms-and-conditions] ul li h1, body>section.homepage article[data-id=terms-and-conditions] ul li p strong {
     color: #fff;
 }
-body>section.main-content article[data-id=privacy-policy] ul li p, body>section.main-content article[data-id=terms-and-conditions] ul li p {
+body>section.homepage article[data-id=privacy-policy] ul li p, body>section.homepage article[data-id=terms-and-conditions] ul li p {
     text-align: justify;
     font-size: .95em;
     color: #ccc;
 }
 @media only screen and (min-width:1441px) {
-    body>section.main-content article[data-id=privacy-policy] ul li p, body>section.main-content article[data-id=terms-and-conditions] ul li p {
+    body>section.homepage article[data-id=privacy-policy] ul li p, body>section.homepage article[data-id=terms-and-conditions] ul li p {
     font-size: .75em;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) {
-    body>section.main-content article[data-id=privacy-policy] ul li p, body>section.main-content article[data-id=terms-and-conditions] ul li p {
+    body>section.homepage article[data-id=privacy-policy] ul li p, body>section.homepage article[data-id=terms-and-conditions] ul li p {
     font-size: .85em;
 }
 }@media only screen and (min-width:1026px) and (max-width:1440px) and (min--moz-device-pixel-ratio:1.3), (-o-min-device-pixel-ratio:2.6 / 2), (-webkit-min-device-pixel-ratio:1.3), (min-device-pixel-ratio:1.3), (min-resolution:1.3dppx) {
-    body>section.main-content article[data-id=privacy-policy] ul li p, body>section.main-content article[data-id=terms-and-conditions] ul li p {
+    body>section.homepage article[data-id=privacy-policy] ul li p, body>section.homepage article[data-id=terms-and-conditions] ul li p {
     font-size: .85em;
 }
-}body>section.main-content article[data-id=privacy-policy] ul li p a, body>section.main-content article[data-id=terms-and-conditions] ul li p a {
+}body>section.homepage article[data-id=privacy-policy] ul li p a, body>section.homepage article[data-id=terms-and-conditions] ul li p a {
     font-weight: 700;
 }
-body>section.main-content article[data-id=terms-and-conditions] ul {
+body>section.homepage article[data-id=terms-and-conditions] ul {
     margin-top: 150px;
 }
 

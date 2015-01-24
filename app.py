@@ -13,7 +13,7 @@ def bige():
 
 @app.route('/test/')
 def test():
-    return render_template('index.jade')
+    return render_template('/index/test_index.jade')
 
 
 
@@ -27,7 +27,7 @@ def index():
     """
     This method is a controller. a method is function with side-effects. python just has methods.
     """
-    return render_template('test_index.jade')
+    return render_template('/index/properindex.html')
 
 
 "----------------------------------------------------------------------------------------------------"
