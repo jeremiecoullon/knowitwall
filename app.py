@@ -6,14 +6,10 @@ app = Flask(__name__)
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 
-@app.route('/bige/')
-def bige():
-    return render_template('deepmind_index.html')
-
 
 @app.route('/test/')
 def test():
-    return render_template('/index/test_index.jade')
+    return render_template('/index/properindex.html')
 
 
 
@@ -27,7 +23,7 @@ def index():
     """
     This method is a controller. a method is function with side-effects. python just has methods.
     """
-    return render_template('/index/properindex.html')
+    return render_template('/index/fixedHeaders.html')
 
 
 "----------------------------------------------------------------------------------------------------"
