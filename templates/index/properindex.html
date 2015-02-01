@@ -1,0 +1,73 @@
+<!-- SToent from deepmind!!! This is recreating the index page in html, and nicely seperating the content from the style  -->
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,100' rel='stylesheet' type='text/css'>
+<link href="/static/css/gonna_delete.css"     rel="stylesheet" type="text/css" />
+</head>
+    <body id="home">      <!-- id=home is in the app.js file. This seperates everthing into blocks-->
+        <span id="home"></span>
+
+
+
+
+        <section class="nav-bar">
+                <nav role='navigation'>
+                    <ul>
+                        <li>
+                            <a class="home" data-scroll="" href="#home">SmartyCrap</a>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a class="link1" data-scroll="" href="#about">About</a>
+                                </li>
+                                <li>
+                                    <a class="link2" data-scroll="" href="#contribute">Contribute</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+        </section>
+
+        <section class="homepage">           <!-- class=main-content is also refences by app.js. helps center block into whole screen -->
+                <article class="page" data-id="podcasts" id="podcasts">
+                        <div class="container"> <!-- id=bige references app.js file this centers the content -->
+                            <h1>Smartycrap</h1>
+                        </div>
+                        <figure class="scroll" data-id="scroll-down">
+                            <div>Scroll Down</div>
+                        </figure>
+
+                </article>
+            <span id="about"></span>
+            <article class="page" data-id="about" id="about">
+                <div data-id="container">
+                    <h1>About</h1>
+                    <hr/>
+                    <p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... </p>
+                    <figure class="scroll" data-id="scroll-down">
+                        <div>down</div>
+                    </figure>
+                </div>
+            </article>
+            <span id="contribute"></span>
+            <article class="page" data-id="contribute" id="contribute">
+                <div data-id="container">
+                    <h1>Contribute</h1>
+                    <hr/>
+                    <p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... </p>
+                    <figure class="scroll" data-id="scroll-top">
+                        <div>Top</div>
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </body>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/nav-bar.js"></script>
+    <script src="/static/js/smooth-scroll.js"></script>
+    <script>smoothScroll.init();</script>
+</html>
