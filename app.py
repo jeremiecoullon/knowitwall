@@ -1,8 +1,8 @@
 import os
 from flask import Flask, json
-from flask import render_template
+from flask import render_template, send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 
@@ -22,11 +22,13 @@ def index():
 "----------------------------------------------------------------------------------------------------"
 "science page"
 
-
-
+@app.route('/static/ganymede_transcript')
+def send_file(ganymede_transcript):
+    return send_from_directory(app.static_folder, ganymede_transcript.txt)
 
 
 @app.route('/science/')
+
 def ad1():
 
     class Struct(dict):
@@ -46,15 +48,20 @@ def ad1():
     with open('json_files/ganymede.json') as json_file:
         ad = json.load(json_file, object_hook=Struct)
 
+    """
     transcript_path=ad.transcript
     with open(transcript_path, "r") as f:
         transcript = f.read()
+    """
+    ganymede_transcript="/static/texts/ganymede_transcript.txt"
+
+
 
     bio_path=ad.author_bio
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
-    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
+    return render_template('audio_doc.jade', transcript=ganymede_transcript, author_image=ad.author_image, topic_image=ad.topic_image,
         author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
 
 
@@ -83,14 +90,15 @@ def ad2():
     """
     with open('json_files/tate.json') as json_file:
         ad = json.load(json_file, object_hook=Struct)
+    bio_path=ad.author_bio
+
+    with open(bio_path, "r") as f:
+        author_bio = f.read()
 
     transcript_path=ad.transcript
     with open(transcript_path, "r") as f:
         transcript = f.read()
 
-    bio_path=ad.author_bio
-    with open(bio_path, "r") as f:
-        author_bio = f.read()
 
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
         author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
