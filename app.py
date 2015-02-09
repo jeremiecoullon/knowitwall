@@ -60,9 +60,11 @@ def ad1():
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
-    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
+    return render_template('audio_doc.html', transcript=transcript)
+    """
+    , transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
         author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form, bige=bige)
-
+    """
 
 
 "----------------------------------------------------------------------------------------------------"
