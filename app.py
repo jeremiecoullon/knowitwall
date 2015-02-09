@@ -8,6 +8,14 @@ app = Flask(__name__, static_folder='static')
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 
+"""----------------------------------------------------------------------------------------------------
+
+To change audio-doc:
+1) change path to audio in 'sending files partially' section
+2) change path to json file in the relevant audio-doc section
+
+----------------------------------------------------------------------------------------------------"""
+
 
 
 @app.after_request
@@ -67,10 +75,8 @@ def send_file_partial(path):
 "----------------------------------------------------------------------------------------------------"
 "sending files partially"
 
-
+@app.route('/audio/humanities_tate.mp3')
 @app.route('/audio/science_ganymede.mp3')
-@app.route('/ganymede_transcript.txt')
-@app.route('/Mehdi.jpg')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -117,14 +123,12 @@ def ad1():
     with open(transcript_path, "r") as f:
         transcript = f.read()
 
-    bige='bige!!'
-
     bio_path=ad.author_bio
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form, bige=bige)
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
 
 
 
@@ -161,9 +165,10 @@ def ad2():
     with open(transcript_path, "r") as f:
         transcript = f.read()
 
-
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
         author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
+
+
 
 
 
