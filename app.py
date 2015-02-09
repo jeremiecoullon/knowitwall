@@ -1,6 +1,6 @@
 import os
 from flask import Flask, json
-from flask import render_template, send_from_directory
+from flask import render_template, request, send_from_directory
 
 app = Flask(__name__, static_folder='static')
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
@@ -19,16 +19,18 @@ def index():
     return render_template('/index/index.html')
 
 
+@app.route('/audio/science_ganymede.mp3')
+@app.route('/ganymede_transcript.txt')
+@app.route('/Mehdi.jpg')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
+
+
+
 "----------------------------------------------------------------------------------------------------"
 "science page"
 
-@app.route('/static/ganymede_transcript')
-def send_file(ganymede_transcript):
-    return send_from_directory(app.static_folder, ganymede_transcript.txt)
-
-
 @app.route('/science/')
-
 def ad1():
 
     class Struct(dict):
@@ -48,21 +50,18 @@ def ad1():
     with open('json_files/ganymede.json') as json_file:
         ad = json.load(json_file, object_hook=Struct)
 
-    """
     transcript_path=ad.transcript
     with open(transcript_path, "r") as f:
         transcript = f.read()
-    """
-    ganymede_transcript="/static/texts/ganymede_transcript.txt"
 
-
+    bige='bige!!'
 
     bio_path=ad.author_bio
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
-    return render_template('audio_doc.jade', transcript=ganymede_transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
+    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
+        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form, bige=bige)
 
 
 
