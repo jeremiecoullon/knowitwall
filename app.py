@@ -41,8 +41,6 @@ def send_file_partial(path):
     if not range_header: return send_from_directory(app.static_folder, path)
 
     new_path=os.path.join('static/',path)
-    print new_path
-
 
     size = os.path.getsize(new_path)
     byte1, byte2 = 0, None
