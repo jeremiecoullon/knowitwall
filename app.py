@@ -79,6 +79,12 @@ def static_from_root():
     return send_file_partial(request.path[1:])
 
 
+@app.route('/help/')
+def help():
+    return render_template('help.html')
+
+
+
 
 "----------------------------------------------------------------------------------------------------"
 "index page"
