@@ -79,12 +79,6 @@ def static_from_root():
     return send_file_partial(request.path[1:])
 
 
-@app.route('/help/')
-def help():
-    return render_template('help.html')
-
-
-
 
 "----------------------------------------------------------------------------------------------------"
 "index page"
@@ -134,6 +128,8 @@ def ad1():
     return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
         author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
 
+""" I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
+than define the Struct class. the second option is safer (if the key doesn't exist) """
 
 
 "----------------------------------------------------------------------------------------------------"
