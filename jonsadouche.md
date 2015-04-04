@@ -2,6 +2,11 @@
 
 I've put in some variables, like {{author\_name}}, and {{author\_bio}}. When the client requests the index page, the server returns index.html with these variables filled in. I've also included the variable {{audio}} in the first audio tag: the server passes to this variable the link to the .mp3 file at "https://jeremiestest.herokuapp.com/audio/science_ganymede.mp3". It does this because of the partial content thing that wasn't working before. When we put it up on your server, we'll replace this link (check out /json\_files/ganymede.json) with "static/audio/science\_ganymede.mp3" and it should work hopefully!
 
+## stuff missing
+
+- stylise the players (obvs). I put audio tags, so whats left is styling it like that link we liked.
+- the smooth scroll isn't working for some reason. Also, I wasn't a huge fan of the scrolling speed (I dislike that way of scrolling that's very slow at first, then speeds up. it annoys me on other sites). anyways I'm guessing thats easy to change (I have a smooth scroll javascript thing in earlier commits).
+
 ## nav bar
 
 The highlighting is cool (to tell you where you are!), but it spazes out a bit when you change, and sometimes highlights home when you're actually scrolled down.
