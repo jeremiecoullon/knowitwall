@@ -2,5 +2,3 @@ Knowitwall
 ==========
 
 Knowitwall webapp
-
-lala
