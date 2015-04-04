@@ -30,7 +30,7 @@ And if line numbers aren't enabled by default then set that to true as well :)
 - **Nested tags:** When creating nested tags, put *one* indent only. Don't pull any of this shit:
 
 
-```
+```html
 <div class="col-lg-12">
 						<audio id="music" preload="true">
 						<source src="http://www.alexkatz.me/codepen/music/interlude.mp3">
