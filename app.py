@@ -5,30 +5,22 @@ from flask import Flask, json
 from flask import render_template, request, send_from_directory, Response
 
 app = Flask(__name__, static_folder='static')
-app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
+
 
 
 """----------------------------------------------------------------------------------------------------
-
 To change audio-doc:
 1) change path to audio in 'sending files partially' section
 2) change path to json file in the relevant audio-doc section
-
 ----------------------------------------------------------------------------------------------------"""
-
-
 
 @app.after_request
 def after_request(response):
     response.headers.add('Accept-Ranges', 'bytes')
     return response
 
-
-
 "----------------------------------------------------------------------------------------------------"
 "send_file_partial function"
-
-
 
 def send_file_partial(path):
     """
@@ -68,8 +60,6 @@ def send_file_partial(path):
 
     return rv
 
-
-
 "----------------------------------------------------------------------------------------------------"
 "sending files partially"
 
@@ -80,94 +70,34 @@ def static_from_root():
 
 
 
-"----------------------------------------------------------------------------------------------------"
-"index page"
 
+
+"----------------------------------------------------------------------------------------------------"
+"home page"
 
 @app.route('/')
-@app.route('/index/')
 def index():
-    """
-    This method is a controller. a method is function with side-effects. python just has methods.
-    """
-    return render_template('/index/index.html')
-
-
-
-"----------------------------------------------------------------------------------------------------"
-"science page"
-
-@app.route('/science/')
-def ad1():
-
-    class Struct(dict):
-        def __getattr__(self, name):
-            return self[name]
-
-        def __setattr__(self, name, value):
-            self[name] = value
-
-        def __delattr__(self, name):
-            del self[name]
 
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then replace the following path with the path to the new json file
     """
     with open('json_files/ganymede.json') as json_file:
-        ad = json.load(json_file, object_hook=Struct)
+        ad = json.load(json_file)
 
-    transcript_path=ad.transcript
+    transcript_path=ad.get('transcript')
     with open(transcript_path, "r") as f:
         transcript = f.read()
 
-    bio_path=ad.author_bio
+    bio_path=ad.get('author_bio')
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
-    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
+    return render_template('index.html', transcript=transcript, author_image=ad.get('author_image'), topic_image=ad.get('topic_image'),
+        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'))
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
-than define the Struct class. the second option is safer (if the key doesn't exist) """
-
-
-"----------------------------------------------------------------------------------------------------"
-"humanities page"
-
-
-
-@app.route('/humanities/')
-def ad2():
-
-    class Struct(dict):
-        def __getattr__(self, name):
-            return self[name]
-
-        def __setattr__(self, name, value):
-            self[name] = value
-
-        def __delattr__(self, name):
-            del self[name]
-
-    """
-    To change audio-doc, simply create a new json file with the links to images,audio etc..
-    Then replace the following path with the path to the new json file
-    """
-    with open('json_files/tate.json') as json_file:
-        ad = json.load(json_file, object_hook=Struct)
-    bio_path=ad.author_bio
-
-    with open(bio_path, "r") as f:
-        author_bio = f.read()
-
-    transcript_path=ad.transcript
-    with open(transcript_path, "r") as f:
-        transcript = f.read()
-
-    return render_template('audio_doc.jade', transcript=transcript, author_image=ad.author_image, topic_image=ad.topic_image,
-        author_bio=author_bio, author_name=ad.author_name, audio=ad.audio, discipline=ad.discipline, form=ad.form)
-
+than define the Struct class. the second option is safer (if the key doesnt exist) """
 
 
 

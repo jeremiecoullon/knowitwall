@@ -1,4 +1,4 @@
-smartycrap
+Knowitwall
 ==========
 
-betweenworlds webapp
+Knowitwall webapp
