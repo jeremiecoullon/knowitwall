@@ -13,7 +13,7 @@ Do something else  | Click on 'podcasts'. The Ganymede one isn't there anymore; 
 
 - The first section of the index doesn't say what it is about. Need a catch phrase, smaller 'Ganymede' title, and maybe a text box: 'newest audio-doc', so it's obvious that the podcast is simply the recent one and not the whole story. Also a short description of the podcast as well (one line).
 
-##5th April 2015: Gaelle Coullon
+##5th April 2015: Gaelle Coullon (just finished her phd)
 
 Task                  | Response
 :--------------------:|:-----------:
@@ -27,9 +27,10 @@ Now do something | She scrolls down manually to see what's going on below before
 
 ###Her suggestions/thoughts:
 
-- I asked what she thought if it was 'audio-doc' rather than 'podcast': confused about what that would mean. People know what 'podcast' means.
+- I asked what she thought if it was 'audio-doc' rather than 'podcast': confused about what that would mean. She says people know what 'podcast' means and is much clearer.
 - 'released into the wild': this got a chuckles (getting a laugh is good :) )
-- Saying explicity 'you must have a phd to contribute' sounds douchy. (So I then wrote it more implicitly)
+- **in contribute section:** Saying explicity 'you must have a phd to contribute' sounds douchy. (So I then wrote it more implicitly)
 - She suggested as a catchphrase: 'Experts unplugged: podcasts from academic researchers'
 - keep thinks as simple as possible (ex: audio-documentary. complicates things unnecessarily)
 - She suggests title as 'The Knowit Wall'. Elsewhere write 'knowitwall' or 'knowit wall' but might pronounce it 'the knowit wall' (I agree with this)
+- 'Contribute' vs 'Get involved': prefers 'contribute' but not too bothered
