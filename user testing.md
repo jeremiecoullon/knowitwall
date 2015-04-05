@@ -13,4 +13,3 @@ Do something else  | Click on 'podcasts'. The Ganymede one isn't there anymore; 
 
 - The first section of the index doesn't say what it is about. Need a catch phrase, smaller 'Ganymede' title, and maybe a text box: 'newest audio-doc', so it's obvious that the podcast is simply the recent one and not the whole story. Also a short description of the podcast as well (one line).
 
-

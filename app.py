@@ -94,7 +94,7 @@ def index():
         author_bio = f.read()
 
     return render_template('index.html', transcript=transcript, author_image=ad.get('author_image'), topic_image=ad.get('topic_image'),
-        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'))
+        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'))
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
