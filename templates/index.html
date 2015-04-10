@@ -11,6 +11,8 @@
 
   <title>Know it Wall</title>
 
+  <link href="/static/css/audioplayer.css" rel="stylesheet">
+
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,12 +57,16 @@
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
+<!--
           <li class="page-scroll">
             <a href="#page-top">Home</a>
           </li>
+-->
+<!--
           <li class="page-scroll">
-            <a href="#Podcasts">Podcasts</a>
+            <a href="#episodes">episodes</a>
           </li>
+-->
           <li class="page-scroll">
             <a href="#about">About</a>
           </li>
@@ -85,35 +91,29 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-            
+
           <img class="img-responsive" src="{{topic_image}}" alt="">
           <div class="intro-text">
             <h3>Our newest audio-doc: {{topic_name}} </h3>
             <!--<span class="name"> Oceans on Ganymede </span> -->
-            <span class="skills">The search for liquid on Jupiter's moon could reveal a habitat suitable for life </span>
+            <span class="skills">{{topic_description}} </span>
           </div>
         </div>
 
         <div class="col-lg-12">
 
 
-<audio preload="auto" controls>
-    
-    <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" />
-    <source src="audio.wav" />
-    <source src="audio.mp3" />
-</audio>
 
-<script src="jquery.js"></script>
-<script src="audioplayer.js"></script>
-<script>
-    $( function()
-    {
-        $( 'audio' ).audioPlayer();
-    });
-</script>
+
           
             
+
+          <audio preload="auto" controls>
+            <source src="{{ audio }}" type="audio/mpeg">
+            <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+
         </div>
 
         <!-- Author -->
@@ -131,17 +131,20 @@
     </div>
   </header>
 
-  <!-- Previous Podcasts Section -->
-  <section id="Podcasts">
+
+  <!-- Previous episodes Section; I put loads of comments on the left to comment out the previous episodes -->
+
+  <section id="episodes">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2>Even more Podcasts!</h2>
+          <h2>Even more episodes!</h2>
           <hr class="star-primary">
         </div>
 
-        <!-- Individual Podcasts -->
+        <!-- Individual episodes -->
         <!-- Description -->
+
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <h2>The History of the Yen</h2>
           <p>Something about the podcast. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
@@ -163,10 +166,10 @@
                   <div id="playhead"></div>
                 </div>
             </div>
-          -->
         </div>
 
         <!-- Author -->
+
         <div class="author-bio">
           <div class="col-md-4 col-md-offset-2">
             <h3 style="text-align:right;">James Baylin</h3>
@@ -177,12 +180,16 @@
         </div>
       </div>
       <!-- Podcast Divider -->
+
+
       <div class="col-lg-12">
         <hr class="break-line">
       </div>
       <!-- CLOSE - Podcast Divider - CLOSE-->
 
       <!-- Description -->
+
+
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <h2>The Dark side of Black holes</h2>
         <p>Something about the podcast. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident </p>
@@ -193,21 +200,10 @@
           <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
-        <!--
-        <audio id="music" preload="true">
-          <source src="http://www.alexkatz.me/codepen/music/interlude.mp3">
-          <source src="http://www.alexkatz.me/codepen/music/interlude.ogg">
-        </audio>
-        <div id="audioplayer">
-          <button id="pButton" class="play" onclick="play()"></button>
-          <div id="timeline">
-            <div id="playhead"></div>
-          </div>
-        </div>
-        -->
       </div>
 
       <!-- Author -->
+
       <div class="col-md-4 col-md-offset-2">
         <h3 style="text-align:right;">Maureen Johnson</h3>
       </div>
@@ -217,10 +213,12 @@
       </div>
 
         <!-- Podcast Divider -->
+
       <div class="col-lg-12">
         <hr class="break-line">
       </div>
         <!-- CLOSE - Podcast Divider - CLOSE-->
+
     </div>
   </section>
 
@@ -233,7 +231,6 @@
           <hr class="star-light">
         </div>
       </div>
-
       <div class="col-lg-4 col-lg-offset-2">
         <p>We are a group of fun loving academics who want to capture that pub chat experience for the entire world. Get an insight into the exciting world of academic research with our short 'audio-documentaries' on physics, history, philosophy, and many more subjects.</p>
       </div>
@@ -251,12 +248,11 @@
           <h2>Contribute</h2>
           <hr class="star-primary">
         </div>
-        <div class="col-md-4 col-md-offset-2 ">
+        <div class="col-lg-4 col-lg-offset-2 ">
           <p> Are you an academic or PhD student who is interested in reaching out to the public? Do you feel that your research is too interesting to be bound to academic journals, and that it must be released into the wild?<p>
-          </br>
         </div>
-        <div class="col-md-4 col-md-offset-1 ">
-          <p> If so, then please get in touch. Fill in the contact form below with your name, email, and field of research/PhD topic and we will get back to you with more details.<p>
+        <div class="col-lg-4">
+          <p> If so, then please get in touch. Fill in the contact form below with your name, email, and field of research/PhD topic and we will get back to you with more details.</p>
         </div>
       </div>
     </div>
@@ -374,10 +370,15 @@
   <!-- Custom Theme JavaScript -->
   <script src="/static/js/knowitwall.js"></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-    <script src="//raw.github.com/fryn/html5slider/master/html5slider.js"></script>
-    <script src="//raw.github.com/WilliamRandol/bootstrap-player/master/js/bootstrap-player.js"></script>
+  <script src="/static/js/audioplayer.js"></script>
+
+
+  <script>
+    $( function()
+    {
+        $( 'audio' ).audioPlayer();
+    });
+  </script>
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 import re
 import mimetypes
 from flask import Flask, json
@@ -82,7 +81,7 @@ def index():
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then replace the following path with the path to the new json file
     """
-    with open('json_files/ganymede.json') as json_file:
+    with open('json_files/tate.json') as json_file:
         ad = json.load(json_file)
 
     transcript_path=ad.get('transcript')
@@ -94,11 +93,10 @@ def index():
         author_bio = f.read()
 
     return render_template('index.html', transcript=transcript, author_image=ad.get('author_image'), topic_image=ad.get('topic_image'),
-        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'))
+        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'), topic_description=ad.get('topic_description'))
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
-
 
 
 
