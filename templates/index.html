@@ -46,7 +46,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#page-top">
                     <img src="/static/Images/KIW-logo-286px.png" alt="Know It Wall">
         </a>
       </div>
@@ -61,12 +61,11 @@
           <li class="page-scroll">
             <a href="#page-top">Home</a>
           </li>
--->
-<!--
+        -->
           <li class="page-scroll">
             <a href="#episodes">episodes</a>
           </li>
--->
+
           <li class="page-scroll">
             <a href="#about">About</a>
           </li>
@@ -85,50 +84,42 @@
 
   <!-- Most Recent Podcast Section -->
   <header>
-    <div id="header-bg"  >
-            <h1> The best minds in one place </h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
+      <div id="header-bg"  >
+              <h1> The best minds in one place </h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
 
-          <img class="img-responsive" src="{{topic_image}}" alt="">
-          <div class="intro-text">
-            <h3>Our newest audio-doc: {{topic_name}} </h3>
-            <!--<span class="name"> Oceans on Ganymede </span> -->
-            <span class="skills">{{topic_description}} </span>
+            <img class="img-responsive" src="{{topic_image}}" alt="">
+            <div class="intro-text">
+              <h3>Our newest audio-doc: {{topic_name}} </h3>
+              <!--<span class="name"> Oceans on Ganymede </span> -->
+              <span class="skills">{{topic_description}} </span>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-12">
-
-
-
-
-          
-            
-
-          <audio preload="auto" controls>
-            <source src="{{ audio }}" type="audio/mpeg">
-            <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-          </audio>
-
-        </div>
-
-        <!-- Author -->
-        <div class="author-bio">
-          <div class="col-md-4 col-md-offset-2">
-            <h2 style="text-align:right;"> {{author_name}} </h2>
-
-            <img class="img-responsive" src="{{author_image}}" alt = "author image">
+          <div class="col-lg-12">
+            <audio preload="auto" controls>
+              <source src="{{ audio }}" type="audio/mpeg">
+              <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio>
           </div>
-          <div class="col-lg-4 offset-2">
-            <p> {{ author_bio }} </p>
+
+          <!-- Author -->
+          <div class="author-bio">
+            <div class="col-md-4 col-md-offset-2">
+              <h2 style="text-align:right;"> {{author_name}} </h2>
+
+              <img class="img-responsive" src="{{author_image}}" alt = "author image">
+            </div>
+            <div class="col-lg-4 offset-2">
+              <p> {{ author_bio }} </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </header>
 
 
