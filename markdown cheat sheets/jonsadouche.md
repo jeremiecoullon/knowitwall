@@ -1,3 +1,5 @@
+
+
 ## Passing Variables:
 
 I've put in some variables, like {{author\_name}}, and {{author\_bio}}. When the client requests the index page, the server returns index.html with these variables filled in. I've also included the variable {{audio}} in the first audio tag: the server passes to this variable the link to the .mp3 file at "https://jeremiestest.herokuapp.com/audio/science_ganymede.mp3". It does this because of the partial content thing that wasn't working before. When we put it up on your server, we'll replace this link (check out /json\_files/ganymede.json) with "static/audio/science\_ganymede.mp3" and it should work hopefully!
