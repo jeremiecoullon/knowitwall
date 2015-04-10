@@ -101,6 +101,13 @@ than define the Struct class. the second option is safer (if the key doesnt exis
 
 
 
+"----------------------------------------------------------------------------------------------------"
+"bootstrap test index"
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 
 
 if __name__ == '__main__':
