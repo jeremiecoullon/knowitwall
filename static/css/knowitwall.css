@@ -101,10 +101,21 @@ header {
     background: #0E6B77;
 }
 
+#header-bg {
+
+    color:#0E6B77;
+    padding-top: 200px;
+    background-image: url("/static/Images/header-bg.png");
+    background-color:#fff; 
+    padding-bottom: 200px;
+}
+
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
 }
+
+
 
 header img {
     display: block;
