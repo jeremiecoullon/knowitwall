@@ -1,13 +1,12 @@
 {
     "discipline": "Humanities",
-
+    "topic_name": "It's at Tate but is it Art?",
+    "topic_description": "How does the art world decide if an object is art or not?",
     "author_name": "Miguel F Dos Santos",
     "author_image": "/static/Images/Miguel.jpg",
     "author_bio": "static/texts/tate_author_bio.txt",
 
-    "topic_image": "/static/Images/Tate_Creed.jpg",
+    "topic_image": "/static/Images/Tate.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio": "https://jeremiestest.herokuapp.com/audio/humanities_tate.mp3",
-
-    "form": "https://docs.google.com/forms/d/1b9guLbqnlmILJu1h38yRKWM4hor8eOD4mcm1EekWqqI/formResponse"
+    "audio": "https://jeremiestest.herokuapp.com/audio/humanities_tate.mp3"
 }
