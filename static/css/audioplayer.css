@@ -4,13 +4,13 @@
 
 .audioplayer
 {
-    height: 2.5em; /* 40 */
-    color: #fff;
-    text-shadow: 1px 1px 0 #000;
-    border: 1px solid #222;
-    position: relative;
-    z-index: 1;
-    background: #333;
+    height: 2.5em;
+  color: #0C565F;
+  text-shadow: 1px 1px 0 #E7E7E7;
+  border: 1px solid #D5D5D5;
+  position: relative;
+  z-index: 1;
+  background: rgba(223, 222, 222, 0.76);
 }
 
 
@@ -64,16 +64,16 @@
         }
         .audioplayer-stopped .audioplayer-playpause a
         {
-            width: 0;
-            height: 0;
-            border: 0.5em solid transparent; /* 8 */
-            border-right: none;
-            border-left-color: #fff;
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -0.5em 0 0 -0.25em; /* 8 4 */
+              width: 0;
+              height: 0;
+              border: 0.5em solid transparent;
+              border-right: none;
+              border-left-color: #0C565F;
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin: -0.5em 0 0 -0.25em;/* 8 4 */
         }
         .audioplayer-playing .audioplayer-playpause a
         {
@@ -139,7 +139,7 @@
     .audioplayer-bar
     {
         height: 0.875em; /* 14 */
-        background-color: #222;
+        background-color: #848181;
         cursor: pointer;
         z-index: 1;
         top: 50%;
@@ -161,12 +161,12 @@
         }
         .audioplayer-bar-loaded
         {
-            background-color: #333;
+            background-color: #A3A3A3;
             z-index: 1;
         }
         .audioplayer-bar-played
         {
-            background: #007fd1;
+            background: #0C565F;
             z-index: 2;
         }
 
@@ -200,7 +200,7 @@
             {
                 width: 0.313em; /* 5 */
                 height: 0.375em; /* 6 */
-                background-color: #fff;
+                background-color: #0C565F;
                 display: block;
                 position: relative;
                 z-index: 1;
@@ -219,7 +219,7 @@
                     height: 0;
                     border: 0.5em solid transparent; /* 8 */
                     border-left: none;
-                    border-right-color: #fff;
+                    border-right-color: #0C565F;
                     z-index: 2;
                     top: 50%;
                     right: -0.25em;
@@ -230,7 +230,7 @@
                     /* "volume" icon by Nicolas Gallagher, http://nicolasgallagher.com/pure-css-gui-icons */
                     width: 0.313em; /* 5 */
                     height: 0.313em; /* 5 */
-                    border: 0.25em double #fff; /* 4 */
+                    border: 0.25em double #0C565F; /* 4 */
                     border-width: 0.25em 0.25em 0 0; /* 4 */
                     left: 0.563em; /* 9 */
                     top: -0.063em; /* 1 */
@@ -372,6 +372,7 @@
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         border-radius: 2px;
+        margin: 30px;
     }
     .audioplayer-volume-adjust
     {

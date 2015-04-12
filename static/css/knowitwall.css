@@ -96,18 +96,20 @@ hr.star-primary:after {
 }
 
 header {
-    text-align: center;
-    color: #fff;
-    background: #0E6B77;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient( rgba(12, 86, 95, 0.30), rgba(12, 86, 95, 0.30) ), 
+  bottom, url("/static/Images/Tate.jpg") no-repeat center center fixed;
 }
 
 #header-bg {
 
-    color:#0E6B77;
-    padding-top: 200px;
-    background-image: url("/static/Images/header-bg.png");
-    background-color:#fff;
-    padding-bottom: 200px;
+
+  color: #0E6B77;
+  padding-top: 150px;
+  background: linear-gradient( rgba(253, 253, 253, 0.81), rgba(255, 255, 255, 0.81) ), bottom, url("/static/Images/header-image.png");
+  background-color: #FFF;
+  padding-bottom: 350px;
 }
 
 header .container {
@@ -153,11 +155,11 @@ background-color:#6399A0;
 }
 
 
-
+.
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
+        padding-top: 80px;
         padding-bottom: 100px;
     }
 
