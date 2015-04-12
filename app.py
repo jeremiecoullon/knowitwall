@@ -1,5 +1,4 @@
-import re
-import mimetypes
+import mimetypes, re, os
 from flask import Flask, json
 from flask import render_template, request, send_from_directory, Response
 
@@ -81,7 +80,7 @@ def index():
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then replace the following path with the path to the new json file
     """
-    with open('json_files/tate.json') as json_file:
+    with open('json_files/ganymede.json') as json_file:
         ad = json.load(json_file)
 
     transcript_path=ad.get('transcript')
