@@ -139,7 +139,7 @@
     .audioplayer-bar
     {
         height: 0.875em; /* 14 */
-        background-color: #848181;
+        background-color: #848181f;
         cursor: pointer;
         z-index: 1;
         top: 50%;

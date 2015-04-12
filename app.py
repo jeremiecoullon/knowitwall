@@ -1,5 +1,4 @@
-import re
-import mimetypes
+import mimetypes, re, os
 from flask import Flask, json
 from flask import render_template, request, send_from_directory, Response
 
