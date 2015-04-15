@@ -4,6 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+
 body {
     overflow-x: hidden;
 	color:#0E6B77;
@@ -33,7 +35,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'PT Serif', serif;
     font-weight: 700;
 }
 
@@ -102,14 +104,20 @@ header {
   bottom, url("/static/Images/Tate.jpg") no-repeat center center fixed;
 }
 
+.author-bio {
+    text-align:left;
+}
+
+
+
 #header-bg {
 
 
-  color: #0E6B77;
+  color: #7B9699;
   padding-top: 150px;
-  background: linear-gradient( rgba(253, 253, 253, 0.81), rgba(255, 255, 255, 0.81) ), bottom, url("/static/Images/header-image.png");
+  background: linear-gradient( rgba(12, 86, 95, 1), rgba(12, 86, 95, 1) ), bottom, url("/static/Images/header-image.png");
   background-color: #FFF;
-  padding-bottom: 350px;
+  
 }
 
 header .container {
@@ -150,8 +158,14 @@ header .intro-text .skills {
   padding: 0px 15px 20.5px;
 }
 
+.navbar-default .navbar-toggle {
+  border-color: #FFFFFF;
+}
 
-.
+.nav-container {
+    background:#7B9699;
+}
+
 
 @media(min-width:768px) {
     header .container {
@@ -173,6 +187,7 @@ header .intro-text .skills {
 .navbar-default {
   background-color: rgba(14, 107, 119, 0.86);
   border-color: transparent;
+   
 }
 
     .navbar-fixed-top {
@@ -207,7 +222,7 @@ header .intro-text .skills {
 
 .navbar-default {
   background-color: #0E6B77;
-  border-color: transparent;
+  
 }
 .navbar a:focus {
     outline: 0;
@@ -221,10 +236,7 @@ header .intro-text .skills {
     outline: 0;
 }
 
-.navbar-default,
-.navbar-inverse {
-    border: 0;
-}
+
 
 section {
     padding: 100px 0;
@@ -397,6 +409,7 @@ footer {
 
 footer h3 {
     margin-bottom: 30px;
+
 }
 
 footer .footer-above {
@@ -516,6 +529,24 @@ footer .footer-below {
 }
 
 
-/* Even more Podcasts */
+/* Comments and Transcript reveal*/
+.disqus-reveal, .disqus-collapse {
+    cursor: pointer;
+    margin: 5px 0;
+    visibility: visible;
+}
+.reveal:hover, .disqus-collapse:hover {
+    color: #44F;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+  max-height: 150px;
+}
+
+.top-border-ireg {
+
+}
 
 
