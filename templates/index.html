@@ -33,12 +33,13 @@
   <![endif]-->
 
 </head>
+{{transcript}}
 
 <body id="page-top" class="index">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
-    
+
 
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -117,7 +118,7 @@
         </ul>
       <!-- /.navbar-collapse -->
       </div>
-      
+
     <!-- /.container-fluid -->
 
     </div>
@@ -129,7 +130,7 @@
 
     <div id="header-bg"  >
 
-    
+
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
           <g id="layer1_1_" transform="translate(-241.83035,-280.77737)">
@@ -149,19 +150,19 @@
 
 
 <div class="col-lg-12">
-                
 
 
 
-         <h1> The best minds in one place </h1> 
 
-            
+         <h1> The best minds in one place </h1>
+
+
     </div>
 
     <canvas id="waves"> </canvas>
   </div>
 
-    
+
 
     <div class="container">
       <div class="row">
@@ -173,7 +174,6 @@
              <h2>{{topic_name}}</h2>
             <!--<span class="name"> Oceans on Ganymede </span> -->
             <span class="skills">{{topic_description}} </span>
-
           </div>
 
           <div class="col-lg-12">
@@ -191,8 +191,8 @@
             <div class="col-md-3">
               <h2 style="text-align:right;"> {{author_name}} </h2>
             </div>
-              
-    
+
+
             <div class="col-md-6">
               <p> {{ author_bio }} </p>
             </div>
@@ -203,33 +203,28 @@
 
 
 
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Comments</button>
+      <div id="demo" class="collapse">
+        <div id="disqus_thread"></div>
+                  <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES * * */
+                    var disqus_shortname = 'knowitwall';
 
-
-<div class="disqus-reveal">Comments</div>
-<div style="display:none;">
- 
-
-  <div id="disqus_thread"></div>
-            <script type="text/javascript">
-              /* * * CONFIGURATION VARIABLES * * */
-              var disqus_shortname = 'knowitwall';
-
-              /* * * DON'T EDIT BELOW THIS LINE * * */
-              (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-              })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-             <div class="disqus-collapse" style="display:none;">Collapse Text</div>
-</div>
-
-      
-
-
-
-          </div>
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                   <div class="disqus-collapse" style="display:none;">Collapse Text</div>
+      </div>
+      </div>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#transcript">Transcript</button>
+      <div id="transcript" class="collapse">
+      {{transcript}}
+      </div>
   </header>
 <!-- Disqus -->
 
@@ -281,8 +276,8 @@
             <div class="col-md-3">
               <h2 style="text-align:right;"> {{author_name}} </h2>
             </div>
-              
-    
+
+
             <div class="col-md-6">
               <p> {{ author_bio }} </p>
             </div>
@@ -320,8 +315,8 @@
             <div class="col-md-3">
               <h2 style="text-align:right;"> {{author_name}} </h2>
             </div>
-              
-    
+
+
             <div class="col-md-6">
               <p> {{ author_bio }} </p>
             </div>
@@ -507,26 +502,26 @@ $('.disqus-collapse').click(function() {
     $(this).slideUp(100);
     $(this).prev().slideToggle();
     $(".disqus-reveal").slideDown(100);
-}); 
- 
+});
+
 </script>
 
 <script>
 function SineWaveGenerator(options) {
   $.extend(this, options || {});
-  
+
   if(!this.el) { throw "No Canvas Selected"; }
   this.ctx = this.el.getContext('2d');
-  
+
   if(!this.waves.length) { throw "No waves specified"; }
-  
+
   // Internal
   this._resizeWidth();
   window.addEventListener('resize', this._resizeWidth.bind(this));
   // User
   this.resizeEvent();
   window.addEventListener('resize', this.resizeEvent.bind(this));
-  
+
   if(typeof this.initialize === 'function') {
     this.initialize.call(this);
   }
@@ -548,12 +543,12 @@ SineWaveGenerator.prototype.resizeEvent = function() {};
 // fill the screen
 SineWaveGenerator.prototype._resizeWidth = function() {
   this.dpr = window.devicePixelRatio || 1;
-  
+
   this.width = this.el.width = window.innerWidth * this.dpr;
   this.height = this.el.height = window.innerHeight * this.dpr;
   this.el.style.width = window.innerWidth + 'px';
   this.el.style.height = window.innerHeight + 'px';
-  
+
   this.waveWidth = this.width * 0.95;
   this.waveLeft = this.width * 0.025;
 }
@@ -564,7 +559,7 @@ SineWaveGenerator.prototype.clear = function () {
 
 SineWaveGenerator.prototype.time = 0;
 
-SineWaveGenerator.prototype.update = function(time) {  
+SineWaveGenerator.prototype.update = function(time) {
   this.time = this.time - 0.007;
   if(typeof time === 'undefined') {
     time = this.time;
@@ -596,43 +591,43 @@ SineWaveGenerator.prototype.drawSine = function(time, options) {
   lineWidth = options.lineWidth || this.lineWidth;
   strokeStyle = options.strokeStyle || this.strokeStyle;
   segmentLength = options.segmentLength || this.segmentLength;
-  
+
   var x = time;
-  var y = 0;  
+  var y = 0;
   var amp = this.amplitude;
- 
+
   // Center the waves
-  var yAxis = this.height / 2; 
-  
+  var yAxis = this.height / 2;
+
   // Styles
   this.ctx.lineWidth = lineWidth * this.dpr;
   this.ctx.strokeStyle = strokeStyle;
   this.ctx.lineCap = 'round';
   this.ctx.lineJoin = 'round';
   this.ctx.beginPath();
-  
+
   // Starting Line
   this.ctx.moveTo(0, yAxis);
   this.ctx.lineTo(this.waveLeft, yAxis);
-  
+
   for(var i = 0; i < this.waveWidth; i += segmentLength) {
-    x = (time * this.speed) + (-yAxis + i) / wavelength; 
-    y = Math.sin(x); 
-    
+    x = (time * this.speed) + (-yAxis + i) / wavelength;
+    y = Math.sin(x);
+
     // Easing
-    amp = this.ease(i / this.waveWidth, amplitude); 
-    
+    amp = this.ease(i / this.waveWidth, amplitude);
+
     this.ctx.lineTo(i + this.waveLeft, amp * y + yAxis);
-    
+
     amp = void 0;
   }
-  
+
   // Ending Line
   this.ctx.lineTo(this.width, yAxis);
-  
+
   // Stroke it
   this.ctx.stroke();
-  
+
   // Clean up
   options = void 0;
   amplitude = void 0;
@@ -642,20 +637,20 @@ SineWaveGenerator.prototype.drawSine = function(time, options) {
   segmentLength = void 0;
   x = void 0;
   y = void 0;
-} 
+}
 
 SineWaveGenerator.prototype.loop = function() {
   this.clear();
   this.update();
-  
+
   window.requestAnimationFrame(this.loop.bind(this));
 }
 
 new SineWaveGenerator({
   el: document.getElementById('waves'),
-  
+
   speed: 8,
-  
+
   waves: [
     {
       timeModifier: 1,
@@ -665,25 +660,25 @@ new SineWaveGenerator({
       segmentLength: 20,
 //       strokeStyle: 'rgba(255, 255, 255, 0.5)'
     }
-    
+
   ],
-  
+
   initialize: function (){
 
   },
-  
+
   resizeEvent: function() {
     var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
     gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
     gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
     gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
-    
+
     var index = -1;
     var length = this.waves.length;
     while(++index < length){
       this.waves[index].strokeStyle = gradient;
     }
-    
+
     // Clean Up
     index = void 0;
     length = void 0;
