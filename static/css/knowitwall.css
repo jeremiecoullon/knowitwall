@@ -100,7 +100,7 @@ hr.star-primary:after {
 header {
   text-align: center;
   color: #fff;
-  background: linear-gradient( rgba(12, 86, 95, 0.30), rgba(12, 86, 95, 0.30) ), 
+  background: linear-gradient( rgba(12, 86, 95, 0.30), rgba(12, 86, 95, 0.30) ),
   bottom, url("/static/Images/Tate.jpg") no-repeat center center fixed;
 }
 
@@ -117,7 +117,7 @@ header {
   padding-top: 150px;
   background: linear-gradient( rgba(12, 86, 95, 1), rgba(12, 86, 95, 1) ), bottom, url("/static/Images/header-image.png");
   background-color: #FFF;
-  
+
 }
 
 header .container {
@@ -187,7 +187,7 @@ header .intro-text .skills {
 .navbar-default {
   background-color: rgba(14, 107, 119, 0.86);
   border-color: transparent;
-   
+
 }
 
     .navbar-fixed-top {
@@ -222,7 +222,7 @@ header .intro-text .skills {
 
 .navbar-default {
   background-color: #0E6B77;
-  
+
 }
 .navbar a:focus {
     outline: 0;
@@ -549,4 +549,10 @@ audio, canvas, progress, video {
 
 }
 
+/* collapse comments button */
+.btn-info {
+  color: #ffffff;
+  background-color: #717679;
+  border-color: #717679;
+}
 
