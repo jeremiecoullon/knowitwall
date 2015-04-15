@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Know it Wall</title>
+
+  <link href="/static/css/audioplayer.css" rel="stylesheet">
+
+
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/static/css/knowitwallredux.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="286px" height="60px" viewBox="0 0 286 60" enable-background="new 0 0 286 60" xml:space="preserve">
+<g>
+  <path fill="#FFFFFF" d="M39.539,51.791H25.884l4.552-3.401c-1.081-2.825-2.181-5.649-3.296-8.476
+    c-1.256-3.209-2.478-5.945-3.662-8.214l-2.878,5.65l0.314,10.255l4.708,2.981H12.49l4.081-2.878v-33.43l-4.237-3.297h13.393
+    l-5.021,3.61l0.209,15.747l8.422-15.747l-2.877-3.034l11.406,0.104l-5.912,3.401L26.25,25.841l8.894,22.758L39.539,51.791z"/>
+  <path fill="#FFFFFF" d="M66.848,11.977l-4.5,2.773l-0.312,37.303h-1.937L46.968,19.824v27.623l3.976,3.035l-11.404,0.104l4.76-3.19
+    l-0.053-33.798l-4.812-3.14l8.214,0.211c2.755,6.591,6.836,16.113,12.242,28.564l-0.209-24.746l-3.924-2.93l11.091,0.104V11.977z"
+    />
+  <path fill="#FFFFFF" d="M88.141,28.666c0,7.011-1.238,12.713-3.715,17.108c-1.778,3.174-4.098,4.761-6.958,4.761
+    c-1.745,0-3.374-0.637-4.892-1.91c-1.517-1.272-2.66-2.99-3.427-5.153c-1.569-4.568-2.354-9.032-2.354-13.394
+    c0-4.115,0.732-7.882,2.197-11.3c2.372-5.476,5.022-8.405,7.953-8.79c0.348-0.033,0.68-0.052,0.993-0.052
+    c3.454,0,6.104,2.599,7.952,7.795C86.867,19.895,87.617,23.539,88.141,28.666z M82.438,42.06c0.838-3.801,1.256-7.587,1.256-11.354
+    c0-4.882-0.698-9.712-2.092-14.491c-0.42-0.802-0.838-1.587-1.256-2.354c-0.419-0.628-1.099-0.941-2.041-0.941
+    c-0.453,0-0.994,0.052-1.621,0.157c-1.187,0.453-2.303,2.092-3.349,4.917c-1.36,3.628-1.988,8.458-1.884,14.492
+    c0.069,4.813,0.227,7.795,0.471,8.946c0.732,4.012,2.477,6.313,5.232,6.906c1.674,0,2.93-0.732,3.767-2.197
+    C81.409,44.779,81.914,43.42,82.438,42.06z"/>
+  <path fill="#FFFFFF" d="M118.328,12.291l-3.559,2.512c-1.046,5.092-2.162,11.3-3.349,18.625
+    c-0.977,6.242-1.971,12.486-2.982,18.729l-2.036-0.209l-5.324-26.714L96.882,50.85l-2.254-0.001l-6.226-35.21l-5.075-4.133
+    l12.347,0.262l-3.548,3.602l4.496,23.622l3.552-21.415l-3.977-3.82l11.092-0.052l-3.191,3.179l3.699,24.033l4.4-25.964
+    l-3.758-2.766L118.328,12.291z"/>
+  <path fill="#FFFFFF" d="M144.59,48.18h-12.242c1.221-1.15,2.477-2.266,3.767-3.348l-0.104-33.85l-4.081-3.139l12.295,0.104
+    l-4.29,3.505l0.313,33.536L144.59,48.18z"/>
+  <path fill="#FFFFFF" d="M165.777,27.201l-4.237-12.504h-4.133L157.25,47.5l3.609,3.61l-11.353-0.052l4.028-3.191l0.053-33.064
+    l-4.918-0.471l-3.871,12.241l0.418-15.591l20.194,0.419L165.777,27.201z"/>
+  <path fill="#FFFFFF" d="M214.85,12.291l-3.557,2.512c-1.047,5.092-2.163,11.3-3.35,18.625c-0.977,6.242-1.971,12.486-2.982,18.729
+    l-2.036-0.209L197.6,25.233l-4.195,25.616l-2.254-0.001l-6.226-35.21l-5.075-4.133l12.348,0.262l-3.549,3.602l4.496,23.622
+    l3.552-21.415l-3.977-3.82l11.092-0.052l-3.191,3.179l3.699,24.033l4.4-25.964l-3.758-2.766L214.85,12.291z"/>
+  <path fill="#FFFFFF" d="M231.434,51.529l-12.765-0.105l4.552-3.139l-1.988-10.986l-7.848,0.052L211.188,47.5l3.087,2.878
+    l-10.621,0.157l4.709-2.617l7.115-34.79l-5.702-2.669l10.516,0.42l6.853,36.988L231.434,51.529z M220.604,34.107l-2.981-17.37
+    l-3.348,17.37H220.604z"/>
+  <path fill="#FFFFFF" d="M251,33.898l-0.471,14.857h-19.934l4.5-3.191l0.418-33.169l-4.604-3.505l13.551,0.313l-5.127,2.982
+    l-0.157,33.221l8.004-0.104L251,33.898z"/>
+  <path fill="#FFFFFF" d="M271.193,33.898l-0.471,14.857h-19.934l4.5-3.191l0.418-33.169l-4.604-3.505l13.551,0.313l-5.127,2.982
+    l-0.158,33.221l8.005-0.104L271.193,33.898z"/>
+</g>
+</svg>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+<!--
+          <li class="page-scroll">
+            <a href="#page-top">Home</a>
+          </li>
+        -->
+          <li class="page-scroll">
+            <a href="#about">About</a>
+          </li>
+
+          <li class="page-scroll">
+            <a href="#episodes">episodes</a>
+          </li>
+
+          <li class="page-scroll">
+            <a href="#contribute">Contribute</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      <!-- /.navbar-collapse -->
+      </div>
+      
+    <!-- /.container-fluid -->
+
+    </div>
+
+  </nav>
+
+  <!-- Most Recent Podcast Section -->
+  <header>
+
+    
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+
+          <div class="intro-text">
+            <h2>THE BEST MINDS IN ONE PLACE</h2>
+            <h3> Let world renowned researchers inspire you through short audio documentaries</h3>
+             
+
+          <div class="col-lg-12">
+         
+         </div>
+        </div>  
+       </div> 
+      </div>
+     </div> 
+
+          
+  </header>
+
+
+
+
+  <!-- About Section -->
+  <section class="success" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>What are we about?</h2>
+          
+        </div>
+      </div>
+      
+
+
+            <div class="col-md-4">
+              <div class="vertical-line">
+              <p>We are a group of fun loving academics who want to capture that pub chat experience for the entire world. Get an insight into the exciting world of academic research with our short 'audio-documentaries' on physics, history, philosophy, and many more subjects.</p>
+            </br>
+            
+              <p>All audio-docs were written by experts in the subject at hand (PhD students, lecturers, professors) at some of the UK's top universities. They provide first hand accounts of their discipline, and show us what makes it great.</p>
+        
+            </div>
+      </div>      
+    </div>
+  </section>
+
+
+
+
+<!-- Disqus -->
+
+
+  <!-- Previous episodes Section; I put loads of comments on the left to comment out the previous episodes -->
+
+  <section id="episodes">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Even more episodes!</h2>
+          <hr class="star-primary">
+        </div>
+
+        <!-- Individual episodes -->
+        <!-- Description -->
+
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2>It's at the Tate but is it art?</h2>
+          <p>How does the art world decide if an object is art or not?</p>
+        </div>
+
+        <div class="col-lg-12">
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'life-on-ganymede';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <!-- Author -->
+
+        <div class="author-bio">
+            <div class="col-md-3">
+              <img class="img-responsive" src="{{author_image}}" alt = "author image">
+            </div>
+            <div class="col-md-3">
+              <h2 style="text-align:right;"> {{author_name}} </h2>
+            </div>
+              
+    
+            <div class="col-md-6">
+              <p> {{ author_bio }} </p>
+            </div>
+          </div>
+      </div>
+      <!-- Podcast Divider -->
+
+
+      <div class="col-lg-12">
+        <hr class="break-line">
+      </div>
+      <!-- CLOSE - Podcast Divider - CLOSE-->
+
+      <!-- Description -->
+
+
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2>The Dark side of Black holes</h2>
+        <p>Something about the podcast. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident </p>
+      </div>
+
+      <div class="col-lg-12">
+        <audio controls>
+          <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Author -->
+
+      <div class="author-bio">
+            <div class="col-md-3">
+              <img class="img-responsive" src="{{author_image}}" alt = "author image">
+            </div>
+            <div class="col-md-3">
+              <h2 style="text-align:right;"> {{author_name}} </h2>
+            </div>
+              
+    
+            <div class="col-md-6">
+              <p> {{ author_bio }} </p>
+            </div>
+          </div>
+
+        <!-- Podcast Divider -->
+
+      <div class="col-lg-12">
+        <hr class="break-line">
+      </div>
+        <!-- CLOSE - Podcast Divider - CLOSE-->
+
+    </div>
+  </section>
+
+  
+  <!-- Contribute Section -->
+  <section id="contribute">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Contribute</h2>
+          <hr class="star-primary">
+        </div>
+        <div class="col-lg-4 col-lg-offset-2 ">
+          <p> Are you an academic or PhD student who is interested in reaching out to the public? Do you feel that your research is too interesting to be bound to academic journals, and that it must be released into the wild?<p>
+        </div>
+        <div class="col-lg-4">
+          <p> If so, then please get in touch. Fill in the contact form below with your name, email, and field of research/PhD topic and we will get back to you with more details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Contact</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Message</label>
+                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
+            <br>
+            <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4 col-md-offset-4 ">
+            <h3>We're social too</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            Copyright &copy; Know it Wall 2015
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+
+
+  <!-- jQuery -->
+  <script src="/static/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/static/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/static/js/jquery.easing.min.js"></script>
+
+
+  <script src="/static/js/classie.js"></script>
+  <script src="/static/js/cbpAnimatedHeader.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="/static/js/jqBootstrapValidation.js"></script>
+  <script src="/static/js/contact_me.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="/static/js/knowitwall.js"></script>
+
+  <script src="/static/js/audioplayer.js"></script>
+
+
+  <script>
+    $( function()
+    {
+        $( 'audio' ).audioPlayer();
+    });
+  </script>
+
+<script>
+$('.disqus-reveal').click(function() {
+    $(this).slideUp(100);
+    $(this).next().slideToggle();
+    $(".disqus-collapse").slideDown(100);
+});
+$('.disqus-collapse').click(function() {
+    $(this).slideUp(100);
+    $(this).prev().slideToggle();
+    $(".disqus-reveal").slideDown(100);
+}); 
+ 
+</script>
+
+<script>
+function SineWaveGenerator(options) {
+  $.extend(this, options || {});
+  
+  if(!this.el) { throw "No Canvas Selected"; }
+  this.ctx = this.el.getContext('2d');
+  
+  if(!this.waves.length) { throw "No waves specified"; }
+  
+  // Internal
+  this._resizeWidth();
+  window.addEventListener('resize', this._resizeWidth.bind(this));
+  // User
+  this.resizeEvent();
+  window.addEventListener('resize', this.resizeEvent.bind(this));
+  
+  if(typeof this.initialize === 'function') {
+    this.initialize.call(this);
+  }
+  // Start the magic
+  this.loop();
+}
+
+// Defaults
+SineWaveGenerator.prototype.speed = 1;
+SineWaveGenerator.prototype.amplitude = 30;
+SineWaveGenerator.prototype.wavelength = 50;
+SineWaveGenerator.prototype.segmentLength = 10;
+
+SineWaveGenerator.prototype.lineWidth = 2;
+SineWaveGenerator.prototype.strokeStyle  = 'rgba(255, 255, 255, 0.2)';
+
+SineWaveGenerator.prototype.resizeEvent = function() {};
+
+// fill the screen
+SineWaveGenerator.prototype._resizeWidth = function() {
+  this.dpr = window.devicePixelRatio || 1;
+  
+  this.width = this.el.width = window.innerWidth * this.dpr;
+  this.height = this.el.height = window.innerHeight * this.dpr;
+  this.el.style.width = window.innerWidth + 'px';
+  this.el.style.height = window.innerHeight + 'px';
+  
+  this.waveWidth = this.width * 0.95;
+  this.waveLeft = this.width * 0.025;
+}
+
+SineWaveGenerator.prototype.clear = function () {
+  this.ctx.clearRect(0, 0, this.width, this.height);
+}
+
+SineWaveGenerator.prototype.time = 0;
+
+SineWaveGenerator.prototype.update = function(time) {  
+  this.time = this.time - 0.007;
+  if(typeof time === 'undefined') {
+    time = this.time;
+  }
+
+  var index = -1;
+  var length = this.waves.length;
+
+  while(++index < length) {
+    var timeModifier = this.waves[index].timeModifier || 1;
+    this.drawSine(time * timeModifier, this.waves[index]);
+  }
+  index = void 0;
+  length = void 0;
+}
+
+// Constants
+var PI2 = Math.PI * 2;
+var HALFPI = Math.PI / 2;
+
+SineWaveGenerator.prototype.ease = function(percent, amplitude) {
+  return amplitude * (Math.sin(percent * PI2 - HALFPI) + 1) * 0.5;
+}
+
+SineWaveGenerator.prototype.drawSine = function(time, options) {
+  options = options || {};
+  amplitude = options.amplitude || this.amplitude;
+  wavelength = options.wavelength || this.wavelength;
+  lineWidth = options.lineWidth || this.lineWidth;
+  strokeStyle = options.strokeStyle || this.strokeStyle;
+  segmentLength = options.segmentLength || this.segmentLength;
+  
+  var x = time;
+  var y = 0;  
+  var amp = this.amplitude;
+ 
+  // Center the waves
+  var yAxis = this.height / 2; 
+  
+  // Styles
+  this.ctx.lineWidth = lineWidth * this.dpr;
+  this.ctx.strokeStyle = strokeStyle;
+  this.ctx.lineCap = 'round';
+  this.ctx.lineJoin = 'round';
+  this.ctx.beginPath();
+  
+  // Starting Line
+  this.ctx.moveTo(0, yAxis);
+  this.ctx.lineTo(this.waveLeft, yAxis);
+  
+  for(var i = 0; i < this.waveWidth; i += segmentLength) {
+    x = (time * this.speed) + (-yAxis + i) / wavelength; 
+    y = Math.sin(x); 
+    
+    // Easing
+    amp = this.ease(i / this.waveWidth, amplitude); 
+    
+    this.ctx.lineTo(i + this.waveLeft, amp * y + yAxis);
+    
+    amp = void 0;
+  }
+  
+  // Ending Line
+  this.ctx.lineTo(this.width, yAxis);
+  
+  // Stroke it
+  this.ctx.stroke();
+  
+  // Clean up
+  options = void 0;
+  amplitude = void 0;
+  wavelength = void 0;
+  lineWidth = void 0;
+  strokeStyle = void 0;
+  segmentLength = void 0;
+  x = void 0;
+  y = void 0;
+} 
+
+SineWaveGenerator.prototype.loop = function() {
+  this.clear();
+  this.update();
+  
+  window.requestAnimationFrame(this.loop.bind(this));
+}
+
+new SineWaveGenerator({
+  el: document.getElementById('waves'),
+  
+  speed: 8,
+  
+  waves: [
+    {
+      timeModifier: 1,
+      lineWidth: 20,
+      amplitude: 150,
+      wavelength: 200,
+      segmentLength: 20,
+//       strokeStyle: 'rgba(255, 255, 255, 0.5)'
+    }
+    
+  ],
+  
+  initialize: function (){
+
+  },
+  
+  resizeEvent: function() {
+    var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+    gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
+    gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
+    
+    var index = -1;
+    var length = this.waves.length;
+    while(++index < length){
+      this.waves[index].strokeStyle = gradient;
+    }
+    
+    // Clean Up
+    index = void 0;
+    length = void 0;
+    gradient = void 0;
+  }
+});
+          </script>
+
+  <!-- Disqus script -->
+<!--
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'knowitwall';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+  </script>
+-->
+
+</body>
+</html>
