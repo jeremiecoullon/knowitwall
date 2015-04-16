@@ -101,7 +101,7 @@ header {
   text-align: center;
   color: #fff;
   background: url("/static/Images/header-bg");
-  background-size: 100%;
+  background-size: cover;
 }
 
 .author-bio {
@@ -208,6 +208,10 @@ font-size:3em;
 
     color:#fff;
     background:#33353D;
+    background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ), 
+    bottom, url("/static/Images/contribute-bg.jpg");
+  
+    background-size:cover;
 }
 
 #contribute-left {
@@ -258,10 +262,11 @@ padding:40px;
 }
 
 .btn-success {
-  color: #ffffff;
+  color: #33353D;
   background-color: transparent;
-  border-color: #ffffff;
-  border-width:2px;
+  border-color: #33353D;
+  border-width: 2px;
+  border-radius: 0;
 
 }
 
@@ -418,7 +423,9 @@ section.success {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #33353D;
+    border-left: 2px solid #33353D;
+    border-right: 2px solid #33353D;
 }
 
 .floating-label-form-group input,
@@ -454,7 +461,7 @@ section.success {
 
 .floating-label-form-group::not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #33353D;
 }
 
 .floating-label-form-group-with-value label {
@@ -472,7 +479,7 @@ color:#33353d;
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
+    border-top: 2px solid #33353D;
 }
 
 footer {
@@ -495,7 +502,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    background-color: #33353D;
 }
 
 .btn-social {
