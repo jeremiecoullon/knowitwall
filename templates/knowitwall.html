@@ -38,7 +38,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
-    
+
 
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -259,7 +259,7 @@
         </ul>
       <!-- /.navbar-collapse -->
       </div>
-      
+
     <!-- /.container-fluid -->
 
     </div>
@@ -269,8 +269,8 @@
   <!-- Most Recent Podcast Section -->
   <header>
 
-    
-    
+
+
 
     <div class="container">
       <div class="row">
@@ -284,21 +284,21 @@
         </div>
           <div class="col-md-8">
 
-          <div id="tagline-2"> 
+          <div id="tagline-2">
             Let world renowned researchers inspire you through short audio documentaries
-          </div>  
+          </div>
 
         </div>
 
-          
-         
-         
-          
-        
-      </div>
-     </div> 
 
-          
+
+
+
+
+      </div>
+     </div>
+
+
   </header>
 
 
@@ -313,20 +313,20 @@
           <h2> What are we about? </h2>
           </div>
         </div>
-      
-      
+
+
 
 
             <div class="col-md-6">
               <div class="vertical-line">
               <p>We are a group of fun loving academics who want to capture that pub chat experience for the entire world. Get an insight into the exciting world of academic research with our short 'audio-documentaries' on physics, history, philosophy, and many more subjects.</p>
             </br>
-            
+
               <p>All audio-docs were written by experts in the subject at hand (PhD students, lecturers, professors) at some of the UK's top universities. They provide first hand accounts of their discipline, and show us what makes it great.</p>
-        
+
             </div>
-      </div>  
-    </div>    
+      </div>
+    </div>
     </div>
   </section>
 
@@ -340,7 +340,7 @@
   <section id="episodes">
     <div class="container">
       <div class="row">
-        
+
 
 <!-- Individual episodes -->
         <!-- Description -->
@@ -349,17 +349,17 @@
           <div class="episode-title">
             It's at the Tate but is it art?
           </div>
-          
+
           <p>How does the art world decide if an object is art or not?</p>
         </div>
 
         <div class="col-lg-12">
           <audio controls>
-            <source src="http://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg">
+            <source src="{{audio}}" type="audio/ogg">
             Your browser does not support the audio element.
           </audio>
 
-          
+
         <!-- Author -->
 
         <div class="author-bio">
@@ -369,8 +369,8 @@
             <div class="col-md-3">
               <h2 style="text-align:right;"> {{author_name}} </h2>
             </div>
-              
-    
+
+
             <div class="col-md-6">
               <div class="vertical-line">
               <p> {{ author_bio }} </p>
@@ -379,7 +379,7 @@
           </div>
       </div>
   <div class="col-md-12">
-    
+
 
     <div class="comments-button">
       <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Comments</button>
@@ -398,21 +398,21 @@
                   </script>
                   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                    <div class="disqus-collapse" style="display:none;">Collapse Text</div>
-    </div>               
+    </div>
       </div>
-      
+
     <div class="transcript-button">
       <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#transcript">Transcript</button>
       <div id="transcript" class="collapse">
       {{transcript}}
       </div>
-     </div> 
-      
+     </div>
+
 </div>
-      
+
   </section>
 
-  
+
   <!-- Contribute Section -->
   <section id="contribute">
     <div class="container">
@@ -422,8 +422,8 @@
           <h2> Contribute </h2>
           </div>
         </div>
-      
-      
+
+
 
 
             <div class="col-md-6">
@@ -431,12 +431,12 @@
               <p>
                 Are you an academic or PhD student who is interested in reaching out to the public? Do you feel that your research is too interesting to be bound to academic journals, and that it must be released into the wild?</p>
             </br>
-            
+
               <p>If so, then please get in touch. Fill in the contact form below with your name, email, and field of research/PhD topic and we will get back to you with more details.</p>
-        
+
             </div>
-      </div>  
-    </div>    
+      </div>
+    </div>
     </div>
   </section>
 
@@ -447,7 +447,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2>Contact</h2>
-          
+
         </div>
       </div>
       <div class="row">
@@ -523,7 +523,7 @@
         </div>
       </div>
     </div>
-  </footer> 
+  </footer>
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-top page-scroll visible-xs visble-sm">
@@ -574,26 +574,26 @@ $('.disqus-collapse').click(function() {
     $(this).slideUp(100);
     $(this).prev().slideToggle();
     $(".disqus-reveal").slideDown(100);
-}); 
- 
+});
+
 </script>
 
 <script>
 function SineWaveGenerator(options) {
   $.extend(this, options || {});
-  
+
   if(!this.el) { throw "No Canvas Selected"; }
   this.ctx = this.el.getContext('2d');
-  
+
   if(!this.waves.length) { throw "No waves specified"; }
-  
+
   // Internal
   this._resizeWidth();
   window.addEventListener('resize', this._resizeWidth.bind(this));
   // User
   this.resizeEvent();
   window.addEventListener('resize', this.resizeEvent.bind(this));
-  
+
   if(typeof this.initialize === 'function') {
     this.initialize.call(this);
   }
@@ -615,12 +615,12 @@ SineWaveGenerator.prototype.resizeEvent = function() {};
 // fill the screen
 SineWaveGenerator.prototype._resizeWidth = function() {
   this.dpr = window.devicePixelRatio || 1;
-  
+
   this.width = this.el.width = window.innerWidth * this.dpr;
   this.height = this.el.height = window.innerHeight * this.dpr;
   this.el.style.width = window.innerWidth + 'px';
   this.el.style.height = window.innerHeight + 'px';
-  
+
   this.waveWidth = this.width * 0.95;
   this.waveLeft = this.width * 0.025;
 }
@@ -631,7 +631,7 @@ SineWaveGenerator.prototype.clear = function () {
 
 SineWaveGenerator.prototype.time = 0;
 
-SineWaveGenerator.prototype.update = function(time) {  
+SineWaveGenerator.prototype.update = function(time) {
   this.time = this.time - 0.007;
   if(typeof time === 'undefined') {
     time = this.time;
@@ -663,43 +663,43 @@ SineWaveGenerator.prototype.drawSine = function(time, options) {
   lineWidth = options.lineWidth || this.lineWidth;
   strokeStyle = options.strokeStyle || this.strokeStyle;
   segmentLength = options.segmentLength || this.segmentLength;
-  
+
   var x = time;
-  var y = 0;  
+  var y = 0;
   var amp = this.amplitude;
- 
+
   // Center the waves
-  var yAxis = this.height / 2; 
-  
+  var yAxis = this.height / 2;
+
   // Styles
   this.ctx.lineWidth = lineWidth * this.dpr;
   this.ctx.strokeStyle = strokeStyle;
   this.ctx.lineCap = 'round';
   this.ctx.lineJoin = 'round';
   this.ctx.beginPath();
-  
+
   // Starting Line
   this.ctx.moveTo(0, yAxis);
   this.ctx.lineTo(this.waveLeft, yAxis);
-  
+
   for(var i = 0; i < this.waveWidth; i += segmentLength) {
-    x = (time * this.speed) + (-yAxis + i) / wavelength; 
-    y = Math.sin(x); 
-    
+    x = (time * this.speed) + (-yAxis + i) / wavelength;
+    y = Math.sin(x);
+
     // Easing
-    amp = this.ease(i / this.waveWidth, amplitude); 
-    
+    amp = this.ease(i / this.waveWidth, amplitude);
+
     this.ctx.lineTo(i + this.waveLeft, amp * y + yAxis);
-    
+
     amp = void 0;
   }
-  
+
   // Ending Line
   this.ctx.lineTo(this.width, yAxis);
-  
+
   // Stroke it
   this.ctx.stroke();
-  
+
   // Clean up
   options = void 0;
   amplitude = void 0;
@@ -709,20 +709,20 @@ SineWaveGenerator.prototype.drawSine = function(time, options) {
   segmentLength = void 0;
   x = void 0;
   y = void 0;
-} 
+}
 
 SineWaveGenerator.prototype.loop = function() {
   this.clear();
   this.update();
-  
+
   window.requestAnimationFrame(this.loop.bind(this));
 }
 
 new SineWaveGenerator({
   el: document.getElementById('waves'),
-  
+
   speed: 8,
-  
+
   waves: [
     {
       timeModifier: 1,
@@ -732,25 +732,25 @@ new SineWaveGenerator({
       segmentLength: 20,
 //       strokeStyle: 'rgba(255, 255, 255, 0.5)'
     }
-    
+
   ],
-  
+
   initialize: function (){
 
   },
-  
+
   resizeEvent: function() {
     var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
     gradient.addColorStop(0,"rgba(0, 0, 0, 0)");
     gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
     gradient.addColorStop(1,"rgba(0, 0, 0, 0)");
-    
+
     var index = -1;
     var length = this.waves.length;
     while(++index < length){
       this.waves[index].strokeStyle = gradient;
     }
-    
+
     // Clean Up
     index = void 0;
     length = void 0;
