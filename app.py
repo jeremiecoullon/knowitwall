@@ -5,7 +5,6 @@ from flask import render_template, request, send_from_directory, Response
 app = Flask(__name__, static_folder='static')
 
 
-lala= 'testing branches'
 
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
