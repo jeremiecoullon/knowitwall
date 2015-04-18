@@ -76,6 +76,8 @@ def static_from_root():
 @app.route('/')
 def index():
 
+
+
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then replace the following path with the path to the new json file
