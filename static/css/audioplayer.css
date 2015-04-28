@@ -360,30 +360,12 @@
     }
     */
 
-    .audioplayer-bar,
-    .audioplayer-bar div,
-    .audioplayer-volume-adjust div
-    {
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-    }
     .audioplayer
     {
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        margin: 30px;
+       
+        margin: 60px;
     }
-    .audioplayer-volume-adjust
-    {
-        -webkit-border-top-left-radius: 2px;
-        -webkit-border-top-right-radius: 2px;
-        -moz-border-radius-topleft: 2px;
-        -moz-border-radius-topright: 2px;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-    }
+    
 
 
 

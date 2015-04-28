@@ -5,7 +5,10 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=PT+Serif);
-
+@font-face {
+    font-family: "GeosansLight";
+    src: url("../fonts/GeosansLight.ttf");
+}
 body {
     overflow-x: hidden;
 	color:#33353d;
@@ -35,7 +38,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
+    font-family: 'GeosansLight';
     font-weight: 700;
 }
 
@@ -92,9 +95,10 @@ hr.star-primary:after {
 /* Clip Path */
 
 .clip-circle {
-  clip-path: circle(60px at center);
-  /* OLD VALUE example: circle(245px, 140px, 50px); */
-  /* Yep, even the new clip-path has deprecated stuff. */
+  
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+
 }
 
 header {
@@ -102,6 +106,7 @@ header {
   color: #fff;
   background: url("/static/Images/header-bg");
   background-size: cover;
+  background-color: #5C5D62;
 }
 
 .author-bio {
@@ -135,7 +140,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: GeoMontserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -147,11 +152,11 @@ header .intro-text .skills {
 
 #tagline-1 {
  
- font-size:4em;
+ font-size:3.2em;
+ font-family: GeosansLight;
  color:#33353d;   
  background-color: rgba(255, 194, 28, 0.8);
- padding-left: 20px;
- margin-left: -150px;
+ 
   
 
 
@@ -162,12 +167,21 @@ header .intro-text .skills {
 text-align: left;
 font-size:3em;
  color:#fff; 
- padding-left: 100px;
- margin-left: -150px;
+ padding-left: 1%;
+ margin-left: 4%;
  margin-top: 20px; 
 }
 
+.navbar-default .navbar-nav>li>a {
+    color:#d2d2d2;
 
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #27282D;
+  background-color: #FFC21C;
+
+  }
 
 /*--ABOUT--*/
 
@@ -200,6 +214,12 @@ font-size:3em;
     
 }
 
+.btn-info:focus {
+
+  color: #464655;
+  background-color: #FFFFFF;
+  border-color: #454654;
+}
 
 
 /*--CONTRIBUTE--*/
@@ -207,7 +227,6 @@ font-size:3em;
 #contribute {
 
     color:#fff;
-    background:#33353D;
     background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ), 
     bottom, url("/static/Images/contribute-bg.jpg");
   
@@ -226,6 +245,7 @@ font-size:3em;
 .episode-title {
  
  font-size:4em;
+  font-family: GeosansLight;
  color:#33353d;   
  background-color: rgba(255, 194, 28, 1);
  margin-bottom: 20px;
@@ -389,6 +409,7 @@ section.success {
 @media(max-width:767px) {
     section {
         padding: 75px 0;
+        background-color: #fff;
     }
 
     section.first {
@@ -483,8 +504,9 @@ section.success {
 }
 
 #contact {
-background-color:#fff;
+background-color: #FFC21C;
 color:#33353d;
+padding: 100px 5% 100px 5%;
 }
 
 form .row:first-child .floating-label-form-group {
