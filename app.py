@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 import mimetypes, re, os
 from flask import Flask, json
 from flask import render_template, request, send_from_directory, Response
 
 app = Flask(__name__, static_folder='static')
-
 
 
 """----------------------------------------------------------------------------------------------------
@@ -61,11 +61,10 @@ def send_file_partial(path):
 "----------------------------------------------------------------------------------------------------"
 "sending files partially"
 
-@app.route('/audio/vidish_demo_tate_prototype.mp3')
+@app.route('/audio/its_at_tate.mp3')
 @app.route('/audio/science_ganymede.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
-
 
 
 
@@ -92,6 +91,7 @@ def index():
     bio_path=ad.get('author_bio')
     with open(bio_path, "r") as f:
         author_bio = f.read()
+
 
     return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'), topic_image=ad.get('topic_image'),
         author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'), topic_description=ad.get('topic_description'))

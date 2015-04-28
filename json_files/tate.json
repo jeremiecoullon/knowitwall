@@ -1,12 +1,12 @@
 {
     "discipline": "Humanities",
     "topic_name": "It's at Tate but is it art?",
-    "topic_description": "How does the art world decide if an object is art or not?",
+    "topic_description": "For many people, contemporary art is a strange place where artists are charlatans who take us for fools. But are they really, or should we take them seriously? Miguel Dos Santos tackles the issue.",
     "author_name": "Miguel F Dos Santos",
     "author_image": "/static/Images/Miguel_FDS.jpg",
     "author_bio": "static/texts/tate_author_bio.txt",
 
     "topic_image": "/static/Images/Tate.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio": "https://jeremiestest.herokuapp.com/audio/vidish_demo_tate_prototype.mp3"
+    "audio": "https://jeremiestest.herokuapp.com/audio/its_at_tate.mp3"
 }

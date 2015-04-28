@@ -1,5 +1,7 @@
 #github
 
+***Skip to the 4 steps below to save your work/merge etc...***
+
 Here is a nice [glossary](https://help.github.com/articles/github-glossary/) with the different terms that Github uses.
 
 The important ones are:
@@ -15,25 +17,27 @@ The important ones are:
 
 Here are the steps to save your work to github:
 
-###1. check the status of your local repo; is it in synch with the remote?
+**To check the status of your local repo: is it in synch with the remote? (you don't have to do this)**
 
 type 'git status'
 
 this will tell you if you have made changes that you need to commit to the remote. (you don't have to do this by the way)
 
-###2. declare that you're going to add some shit:
+##To save and merge your work:
+
+###1. declare that you're going to add some shit:
 
 type 'git add .'
 
 
 note: If you removed a file or directory since the last commit, you need to type 'git add --all' to commit the fact that you removed something.
 
-###3. commit your shit with a message explaining breifly what you've done since the last commit (useful if you want to backtrack later):
+###2. commit your shit with a message explaining breifly what you've done since the last commit (useful if you want to backtrack later):
 
 type: "git commit -m 'type your message here' "
 
 
-###4. pull changes to your local repo (in case someone changes something recently!!). get in the habit of always doing this!
+###3. pull changes to your local repo (in case someone changes something recently!!). get in the habit of always doing this!
 
 type: 'git pull'
 
@@ -47,7 +51,7 @@ summary of how to use it:
 - press 'esc' (to escape insert mode)
 - type :wq (to save and exit)
 
-###5. push to remote:
+###4. push to remote:
 
 type: 'git push'
 
