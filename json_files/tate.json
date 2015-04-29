@@ -8,5 +8,5 @@
 
     "topic_image": "/static/Images/Tate.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio": "https://jeremiestest.herokuapp.com/audio/its_at_tate.mp3"
+    "audio": "/static/audio/its_at_tate.mp3"
 }
