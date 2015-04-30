@@ -97,7 +97,7 @@ def index():
 
     return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
         topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
-        audio=ad.get('audio'),
+        audio_mp3=ad.get('audio_mp3'),
         discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'),
         topic_description=ad.get('topic_description'))
 
