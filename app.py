@@ -62,6 +62,8 @@ def send_file_partial(path):
 "sending files partially"
 
 @app.route('/audio/its_at_tate.mp3')
+@app.route('/audio/its_at_tate.ogg')
+@app.route('/audio/its_at_tate.wav')
 @app.route('/audio/science_ganymede.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
@@ -93,8 +95,11 @@ def index():
         author_bio = f.read()
 
 
-    return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'), topic_image=ad.get('topic_image'),
-        author_bio=author_bio, author_name=ad.get('author_name'), audio=ad.get('audio'), discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'), topic_description=ad.get('topic_description'))
+    return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
+        topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
+        audio_mp3=ad.get('audio_mp3'), audio_wav=ad.get('audio_wav'), audio_ogg=ad.get('audio_ogg'),
+        discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'),
+        topic_description=ad.get('topic_description'))
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
