@@ -55,3 +55,7 @@ target/
 
 # Virtual Env
 flask/
+venv/
+
+#gunicorn config file
+gunicorn.conf.py
