@@ -8,5 +8,5 @@
 
     "topic_image": "/static/Images/Jupiter_and_Ganymede.jpg",
     "transcript": "static/texts/ganymede_transcript.txt",
-    "audio": "http://178.62.102.130/audio/science_ganymede.mp3"
+    "audio": "/static/audio/science_ganymede.mp3"
 }

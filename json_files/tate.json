@@ -8,7 +8,5 @@
 
     "topic_image": "/static/Images/Tate.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio_mp3": "http://178.62.102.130/audio/its_at_tate.mp3",
-    "audio_wav": "http://178.62.102.130/audio/its_at_tate.wav",
-    "audio_ogg": "http://178.62.102.130/audio/its_at_tate.ogg"
+    "audio": "/static/audio/its_at_tate.mp3"
 }
