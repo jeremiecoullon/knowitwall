@@ -1,5 +1,7 @@
 <?php
+
 // Check for empty fields
+
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['phone']) 		||
@@ -23,4 +25,6 @@ $headers = "From: noreply@gmail.com\n"; // This is the email address the generat
 $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);
 return true;
+
+</form>
 ?>
