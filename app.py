@@ -1,13 +1,23 @@
 # -*- coding: utf-8 -*-
 import mimetypes, re, os
-from flask import Flask, json
+from flask import Flask, json, url_for
 from flask import render_template, request, send_from_directory, Response
+
+# contact form stuff
 from forms import ContactForm
+import smtplib
+
+
 
 app = Flask(__name__, static_folder='static')
 
-# to prevent a CSRF attack
+# contact form method 1 (using ContactForm) to prevent a CSRF attack
 app.secret_key = 'fdsj3klj53pnw3jkl432j'
+
+
+
+
+
 
 
 """----------------------------------------------------------------------------------------------------
@@ -82,7 +92,6 @@ def static_from_root():
 def index():
 
 
-
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then replace the following path with the path to the new json file
@@ -98,21 +107,54 @@ def index():
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
-    form=ContactForm()
-
     return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
         topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
         audio_mp3=ad.get('audio_mp3'), audio_wav=ad.get('audio_wav'), audio_ogg=ad.get('audio_ogg'),
-        discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'),
+        discipline=ad.get('discipline'), topic_name=ad.get('topic_name'),
         topic_description=ad.get('topic_description'))
-
-
-
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
 
 
+
+"----------------------------------------------------------------------------------------------------"
+"email test"
+@app.route('/email')
+def email():
+
+
+    sender = 'jeremie.coullon@gmail.com'
+    receivers = ['theknowitwall@gmail.com']
+
+    message = """From: From Person <jeremie.coullon@gmail.com>
+    To: To Person <theknowitwall@gmail.com>
+    Subject: SMTP e-mail test
+
+    This is a test e-mail message.
+    """
+
+    try:
+       smtpObj = smtplib.SMTP('localhost')
+       smtpObj.sendmail(sender, receivers, message)
+       print "Successfully sent email"
+    except smtplib.SMTPException:
+       print "Error: unable to send email"
+
+
+
+"----------------------------------------------------------------------------------------------------"
+"contact form test"
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+  form = ContactForm()
+
+  if request.method == 'POST':
+    return 'Form posted.'
+
+  elif request.method == 'GET':
+    return render_template('contact.html', form=form)
 
 
 if __name__ == '__main__':
