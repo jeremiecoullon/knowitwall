@@ -3,20 +3,7 @@ import mimetypes, re, os
 from flask import Flask, json, url_for
 from flask import render_template, request, send_from_directory, Response
 
-# contact form stuff
-from forms import ContactForm
-import smtplib
-
-
-
 app = Flask(__name__, static_folder='static')
-
-# contact form method 1 (using ContactForm) to prevent a CSRF attack
-app.secret_key = 'fdsj3klj53pnw3jkl432j'
-
-
-
-
 
 
 
@@ -117,44 +104,6 @@ def index():
 than define the Struct class. the second option is safer (if the key doesnt exist) """
 
 
-
-"----------------------------------------------------------------------------------------------------"
-"email test"
-@app.route('/email')
-def email():
-
-
-    sender = 'jeremie.coullon@gmail.com'
-    receivers = ['theknowitwall@gmail.com']
-
-    message = """From: From Person <jeremie.coullon@gmail.com>
-    To: To Person <theknowitwall@gmail.com>
-    Subject: SMTP e-mail test
-
-    This is a test e-mail message.
-    """
-
-    try:
-       smtpObj = smtplib.SMTP('localhost')
-       smtpObj.sendmail(sender, receivers, message)
-       print "Successfully sent email"
-    except smtplib.SMTPException:
-       print "Error: unable to send email"
-
-
-
-"----------------------------------------------------------------------------------------------------"
-"contact form test"
-
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-  form = ContactForm()
-
-  if request.method == 'POST':
-    return 'Form posted.'
-
-  elif request.method == 'GET':
-    return render_template('contact.html', form=form)
 
 
 if __name__ == '__main__':

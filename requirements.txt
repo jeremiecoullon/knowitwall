@@ -1,10 +1,14 @@
 Flask==0.10.1
-Flask-SQLAlchemy==1.0
 Jinja2==2.7.3
 MarkupSafe==0.23
 SQLAlchemy==0.9.6
 Werkzeug==0.9.6
 gunicorn==19.0.0
 itsdangerous==0.24
-wsgiref==0.1.2
+keyring==5.3
+lxml==3.4.4
 pyjade==3.0.0
+requests==2.6.2
+six==1.9.0
+wsgiref==0.1.2
+yagmail==0.3.1
