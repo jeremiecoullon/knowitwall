@@ -2,8 +2,12 @@
 import mimetypes, re, os
 from flask import Flask, json
 from flask import render_template, request, send_from_directory, Response
+from forms import ContactForm
 
 app = Flask(__name__, static_folder='static')
+
+# to prevent a CSRF attack
+app.secret_key = 'fdsj3klj53pnw3jkl432j'
 
 
 """----------------------------------------------------------------------------------------------------
@@ -94,12 +98,16 @@ def index():
     with open(bio_path, "r") as f:
         author_bio = f.read()
 
+    form=ContactForm()
 
     return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
         topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
         audio=ad.get('audio'),
-        discipline=ad.get('discipline'), form=ad.get('form'), topic_name=ad.get('topic_name'),
+        discipline=ad.get('discipline'), topic_name=ad.get('topic_name'),
         topic_description=ad.get('topic_description'))
+
+
+
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
