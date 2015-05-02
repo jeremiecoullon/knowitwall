@@ -120,7 +120,7 @@ def contactform():
     print name, email, message
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('theknowitwall@gmail.com',
         'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
-        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "--------------------------------------------------------")
+        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
     return name
 
 
