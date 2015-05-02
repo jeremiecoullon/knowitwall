@@ -365,6 +365,15 @@
        
         margin: 60px;
     }
+
+@media only screen and ( max-width: 991px ){
+    .audioplayer
+    {
+       
+        margin: 60px 0 10px 0;
+    }
+
+}
     
 
 

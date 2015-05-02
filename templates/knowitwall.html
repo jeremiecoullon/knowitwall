@@ -38,6 +38,7 @@
 </head>
 
 <body id="page-top" class="index">
+  <div class="overflow">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -54,7 +55,7 @@
         </button>
         <a class="navbar-brand" href="#page-top">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="302.5px" height="52.5px" viewBox="0 0 302.5 52.5" enable-background="new 0 0 302.5 52.5" xml:space="preserve">
+   width="100%" height="52.5px" viewBox="0 0 302.5 52.5" enable-background="new 0 0 302.5 52.5" xml:space="preserve">
 <g>
   <g id="layer1_1_" transform="translate(-241.83035,-280.77737)">
     <path id="text2413_1_" fill="#FFFFFF" d="M277.766,299.816c-0.913,6.336-1.37,10.757-1.37,13.264c0,5.216,1.341,7.824,4.022,7.824
@@ -368,12 +369,17 @@
         <!-- Author -->
 
         <div class="author-bio">
+          
             <div class="col-md-3">
+
               <img class="clip-circle"class="img-responsive" src="{{author_image}}" style="max-height:140px;" alt = "author image">
-            </div>
+            
+          </div>
             <div class="col-md-3">
+              <div class="author-name">
               <h2 style="text-align:right;"> {{author_name}} </h2>
             </div>
+          </div>
 
 
             <div class="col-md-6">
@@ -385,7 +391,7 @@
       </div>
   <div class="col-md-12">
 
-
+<div class="drop-downs">
     <div class="comments-button">
       <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> Join the Discussion</button>
       <div id="demo" class="collapse">
@@ -421,6 +427,7 @@
       </div>
      </div>
 
+</div>
 </div>
 
   </section>
@@ -790,6 +797,6 @@ new SineWaveGenerator({
       }());
   </script>
 -->
-
+</div> <!-- overflow fix -->
 </body>
 </html>
