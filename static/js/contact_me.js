@@ -18,14 +18,9 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "forms.py",
+                url: "/contactform",
                 type: "POST",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
+                data: $('form').serialize(),
                 cache: false,
                 success: function() {
                     // Success message

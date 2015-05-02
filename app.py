@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-import mimetypes, re, os
+import mimetypes
+import re
+import os
+import yagmail
 from flask import Flask, json, url_for
 from flask import render_template, request, send_from_directory, Response
 
@@ -102,6 +105,25 @@ def index():
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
+
+
+
+
+"----------------------------------------------------------------------------------------------------"
+"method for AJAX contact form "
+
+@app.route('/contactform', methods=['POST'])
+def contactform():
+    name =  request.form['name'];
+    email = request.form['email'];
+    message = request.form['message'];
+    print name, email, message
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('theknowitwall@gmail.com',
+        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
+        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "--------------------------------------------------------")
+    return name
+
+
 
 
 
