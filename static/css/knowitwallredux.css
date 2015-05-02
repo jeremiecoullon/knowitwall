@@ -107,21 +107,26 @@ text-align: left;
 
 .clip-circle {
   
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 100% 100%, 0 90%);
-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 100% 100%, 0 90%);
+  -webkit-clip-path: circle(50.0% at 50% 50%);
+clip-path: circle(50.0% at 50% 50%);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 
     }
 
-@media(max-width:991px) {
+@media(min-width:1200px) {
   .clip-circle {
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 100% 100%, 0 90%);
-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 100% 100%, 0 90%);
+    width: 70%;
+    margin-left:60px;
   }
 }
 
+@media only screen and (max-width:991px) {
+  .clip-circle {
+    display:none;
+  }
+}
 
 header {
   text-align: center;
@@ -327,6 +332,12 @@ text-align: left;
  margin-bottom: 20px;
 }
 
+@media(max-width:561px) {
+  .episode-title {
+    font-size:3em;
+  }
+}
+
 .contact-title {
  
   font-size: 1.5em;
@@ -338,6 +349,17 @@ text-align: left;
   margin-left: auto;
 
 
+}
+
+@media(max-width:768px) {
+.contact-title {
+ 
+  font-size: 1em;
+  width:100%;
+  
+
+
+}
 }
 
 /*--BUTTONS--*/
