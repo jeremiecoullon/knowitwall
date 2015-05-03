@@ -18,5 +18,4 @@
 
 - **never** merge things on the server. 
 - **never** modfiy files on the server.
-- get the master branch on github to how you want it, and fast-forwards the server branch (pull origin/master to server)
-- can put a different test branch from origin to server to try it out (so you can switch from the master to the test branch in the server)
+- create a mastertest branch (clone of master), merge stuff to it, pull to server. The server now has 2 branches: *master* and *mastertest*; you can test that the mastertest works properly.
