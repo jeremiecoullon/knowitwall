@@ -117,22 +117,14 @@ def contactform():
     name =  request.form['name'];
     email = request.form['email'];
     message = request.form['message'];
-    print name, email, message
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('theknowitwall@gmail.com',
-        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
-        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('mfdsantos86@gmail.com',
-        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
-        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('jeremie.coullon@gmail.com',
-        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
-        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('anguswaite@gmail.com',
-        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
-        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
+    jeremie ='jeremie.coullon@gmail.com'
+    miguel = 'mfdsantos86@gmail.com'
+    KIW = 'theknowitwall@gmail.com'
+    angus = 'anguswaite@gmail.com'
+    subject = 'Knowitwall contact form, message by: '+str(name)
+    body = "Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: " + str(name)+ "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------"
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, angus, KIW], subject, body)
     return name
-
-mfdsantos86@gmail.com
 
 
 if __name__ == '__main__':
