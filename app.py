@@ -3,7 +3,7 @@ import mimetypes
 import re
 import os
 import yagmail
-from flask import Flask, json, url_for
+from flask import Flask, json, url_for, send_file
 from flask import render_template, request, send_from_directory, Response
 
 app = Flask(__name__, static_folder='static')
@@ -122,9 +122,6 @@ def contactform():
         'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
         + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
     return name
-
-
-
 
 
 
