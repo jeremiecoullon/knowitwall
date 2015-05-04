@@ -121,8 +121,18 @@ def contactform():
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('theknowitwall@gmail.com',
         'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
         + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('mfdsantos86@gmail.com',
+        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
+        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('jeremie.coullon@gmail.com',
+        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
+        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send('anguswaite@gmail.com',
+        'Knowitwall contact form, message by: '+str(name), """Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: """ + str(name)
+        + "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------")
     return name
 
+mfdsantos86@gmail.com
 
 
 if __name__ == '__main__':
