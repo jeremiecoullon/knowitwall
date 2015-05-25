@@ -95,8 +95,8 @@ def index():
 
     bio_path=ad.get('author_bio')
     with open(bio_path, "r") as f:
-        author_bio = f.read()
-
+        author_bio = f.read
+    testvar = u"bige&@£$%^&*',`bige"
     return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
         topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
         audio_mp3=ad.get('audio_mp3'), audio_wav=ad.get('audio_wav'), audio_ogg=ad.get('audio_ogg'),
