@@ -419,38 +419,38 @@
             </div>
           </div>
       </div>
+
   <div class="col-md-12">
+    <div class="drop-downs">
+        <div class="comments-button">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> Join the Discussion</button>
+          <div id="demo" class="collapse">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'knowitwall';
+              var disqus_identifier = 'its_at_tate';
 
-<div class="drop-downs">
-    <div class="comments-button">
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> Join the Discussion</button>
-      <div id="demo" class="collapse">
-        <div id="disqus_thread"></div>
-                  <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES * * */
-                    var disqus_shortname = 'knowitwall';
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+             <div class="disqus-collapse" style="display:none;">Collapse Text</div>
+          </div>
+        </div>
+        <div class="transcript-button">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#transcript">Read the Transcript</button>
+          <div id="transcript" class="collapse">
+            {{ audiodocs[0].transcript | safe }}
+          </div>
+         </div>
 
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                  </script>
-                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-                   <div class="disqus-collapse" style="display:none;">Collapse Text</div>
     </div>
-      </div>
-    <div class="transcript-button">
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#transcript">Read the Transcript</button>
-      <div id="transcript" class="collapse">
-        {{ audiodocs[0].transcript | safe }}
-      </div>
-     </div>
-
-</div>
-</div>
-
+  </div>
   </section>
 
 
