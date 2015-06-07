@@ -84,24 +84,26 @@ def index():
 
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
-    Then replace the following path with the path to the new json file
+    Then add it to the audiodoc_list
     """
-    with open('json_files/tate.json') as json_file:
-        ad = json.load(json_file)
+    audiodoc_list = ['tate.json']
+    audiodocs =[]
+    for audiodoc_json in audiodoc_list:
 
-    transcript_path=ad.get('transcript')
-    with open(transcript_path, "r") as f:
-        transcript = f.read().decode('utf-8')
+        with open('json_files/' + audiodoc_json, "r") as json_file:
+            ad_dictionary = json.load(json_file)
 
-    bio_path=ad.get('author_bio')
-    with open(bio_path, "r") as f:
-        author_bio = f.read().decode('utf-8')
+        with open(ad_dictionary.get('author_bio'), "r") as f:
+            author_bio = f.read().decode('utf-8')
+        ad_dictionary['author_bio'] = author_bio
 
-    return render_template('knowitwall.html', transcript=transcript, author_image=ad.get('author_image'),
-        topic_image=ad.get('topic_image'), author_bio=author_bio, author_name=ad.get('author_name'),
-        audio_mp3=ad.get('audio_mp3'), audio_wav=ad.get('audio_wav'), audio_ogg=ad.get('audio_ogg'),
-        discipline=ad.get('discipline'), topic_name=ad.get('topic_name'),
-        topic_description=ad.get('topic_description'))
+        with open(ad_dictionary.get('transcript'), "r") as f:
+            transcript = f.read().decode('utf-8')
+        ad_dictionary['transcript'] = transcript
+
+        audiodocs.append(ad_dictionary.copy())
+
+    return render_template('knowitwall.html', audiodocs=audiodocs)
 
 """ I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
 than define the Struct class. the second option is safer (if the key doesnt exist) """
