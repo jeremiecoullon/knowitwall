@@ -106,7 +106,7 @@ text-align: left;
 /* Clip Path */
 
 .clip-circle {
-  
+
   -webkit-clip-path: circle(50.0% at 50% 50%);
 clip-path: circle(50.0% at 50% 50%);
   margin-left: auto;
@@ -156,7 +156,7 @@ header {
   padding-top: 150px;
   background: linear-gradient( rgba(12, 86, 95, 1), rgba(12, 86, 95, 1) ), bottom, url("/static/Images/header-image.png");
   background-color: #FFF;
-  
+
 }
 
 header .container {
@@ -185,13 +185,13 @@ header .intro-text .skills {
 }
 
 #tagline-1 {
- 
+
  font-size:3.2em;
  font-family: GeosansLight;
- color:#33353d;   
+ color:#33353d;
  background-color: rgba(255, 194, 28, 0.8);
- 
-  
+
+
 
 
 }
@@ -203,7 +203,7 @@ text-align: left;
   color: #fff;
   padding-left: 1%;
   margin-left: 4%;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 
@@ -223,7 +223,7 @@ text-align: left;
   @media(max-width:440px) {
 
 #tagline-1 {
- 
+
  font-size:2.2em;
 
 
@@ -233,7 +233,7 @@ text-align: left;
 
 
   font-size: 1.5em;
-  
+
 }
 
   header .container {
@@ -258,9 +258,9 @@ text-align: left;
 
  @media(max-width:768px) {
 #about-left {
- 
+
  font-size: 1em
-  
+
 }
 }
 
@@ -271,8 +271,8 @@ text-align: left;
     width:90%;
     margin-right: auto;
     margin-left:auto;
-    
-    
+
+
 }
 
 .transcript-button {
@@ -280,7 +280,7 @@ text-align: left;
     margin-right: auto;
     margin-left:auto;
     margin-top: 20px;
-    
+
 }
 
 .btn-info:focus {
@@ -298,9 +298,9 @@ text-align: left;
 #contribute {
 
     color:#fff;
-    background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ), 
+    background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ),
     bottom, url("/static/Images/contribute-bg.jpg");
-  
+
     background-size:cover;
 }
 
@@ -316,18 +316,18 @@ text-align: left;
 @media(max-width:768px) {
 #contribute-left {
 
-    
+
     font-size:1em;
     margin-top:0px;
-    
+
 }
 }
 
 .episode-title {
- 
+
  font-size:4em;
   font-family: GeosansLight;
- color:#33353d;   
+ color:#33353d;
  background-color: rgba(255, 194, 28, 1);
  margin-bottom: 20px;
 }
@@ -339,7 +339,7 @@ text-align: left;
 }
 
 .contact-title {
- 
+
   font-size: 1.5em;
   color: #33353d;
   background-color: rgba(255, 194, 28, 1);
@@ -353,10 +353,10 @@ text-align: left;
 
 @media(max-width:768px) {
 .contact-title {
- 
+
   font-size: 1em;
   width:100%;
-  
+
 
 
 }
@@ -373,7 +373,8 @@ text-align: left;
   width:100%;
 font-size: 1.5em;
 }
-#transcript{
+
+.transcript{
 padding: 40px;
 }
 
@@ -448,7 +449,7 @@ padding:40px;
 .navbar-default {
   background-color: rgba(14, 107, 119, 0.86);
   border-color: transparent;
-   
+
 }
 
     .navbar-fixed-top {
@@ -468,7 +469,7 @@ padding:40px;
     @media (max-width: 991px) {
 .navbar-fixed-top .navbar-brand {
   font-size: 1.5em;
-  
+
 
 }
 }
@@ -490,7 +491,7 @@ padding:40px;
 
 @media (max-width: 993px){
 .navbar-right {
-  
+
   font-size: .8em;
 }
 }
@@ -498,7 +499,7 @@ padding:40px;
 .navbar-default {
     background: none;
 
-  
+
 }
 
 
@@ -508,7 +509,7 @@ padding:40px;
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
-   
+
 }
 }
 

@@ -131,9 +131,15 @@ def contactform():
 
 @app.route('/test')
 def test():
-    return render_template('test.html')    
+    d_identifier = 'test_disqus'
+    d_url = 'http://localhost:5000/test'
+    return render_template('test.html', d_identifier=d_identifier, d_url=d_url)
 
 
+
+@app.route('/test2')
+def test2():
+    return render_template('test2.html')
 
 
 if __name__ == '__main__':
