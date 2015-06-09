@@ -1,12 +1,17 @@
 {
+    "unique_id": "BenSlama_Ganymede",
+    "disqus_collapse": "disquscollapse_BenSlama_Ganymede",
+    "transcript_collapse": "transcriptcollapse_BenSlama_Ganymede",
     "discipline": "Science",
-    "topic_name": "Oceans in the Solar System",
-    "topic_description": "The search for liquid on Jupiter's moon could reveal a habitat suitable for life",
+    "topic_name": "Could there be life around Jupiter?",
+    "topic_description": "The search for liquid water on Jupiter's moon could reveal a habitat suitable for life",
     "author_name": "Mehdi Ben Slama",
     "author_image": "/static/Images/Mehdi.jpg",
     "author_bio": "static/texts/ganymede_author_bio.txt",
+    "music_credits": "Addam Farmer, Debbie Miller and Mark Petrie",
+    "narration_credits": "Vidish Athavale",
 
     "topic_image": "/static/Images/Jupiter_and_Ganymede.jpg",
     "transcript": "static/texts/ganymede_transcript.txt",
-    "audio_mp3": "/static/audio/science_ganymede.mp3"
+    "audio_mp3": "http://178.62.102.130/audio/could_there_be_life_around_Jupiter.mp3"
 }

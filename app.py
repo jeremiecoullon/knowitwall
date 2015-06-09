@@ -68,7 +68,7 @@ def send_file_partial(path):
 @app.route('/audio/its_at_tate.mp3')
 @app.route('/audio/its_at_tate.ogg')
 @app.route('/audio/its_at_tate.wav')
-@app.route('/audio/science_ganymede.mp3')
+@app.route('/audio/could_there_be_life_around_Jupiter.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -86,7 +86,7 @@ def index():
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then add it to the audiodoc_list
     """
-    audiodoc_list = ['tate.json']
+    audiodoc_list = ['ganymede.json']
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
 
