@@ -425,13 +425,13 @@
         <div class="comments-button">
           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#comment1" onclick="loadDisqus(jQuery(this), 'test_disqus', 'http://localhost:5000/test');"> Join the Discussion</button>
           <div id="test_disqus" class="collapse">
-            <!-- jquery should place Disqus here -->
+            <!-- jquery should place Disqus here, but it actually places it above <div id=test_disqus> -->
              <div class="disqus-collapse" style="display:none;">Collapse Text</div>
           </div>
         </div>
         <div class="transcript-button">
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#bige">Read the Transcript</button>
-          <div id="bige" class="collapse transcript"> <!-- transcript class gives the padding -->
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[0].unique_id}}">Read the Transcript</button>
+          <div id="{{audiodocs[0].unique_id}}" class="collapse transcript"> <!-- transcript class gives the padding -->
             {{ audiodocs[0].transcript | safe }}
           </div>
          </div>
@@ -447,8 +447,8 @@
           </div>
         </div>
         <div class="transcript-button">
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tate">Read the Transcript</button>
-          <div id="tate" class="collapse transcript">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#extraaudiodoc">Read the Transcript</button>
+          <div id="extraaudiodoc" class="collapse transcript">
             lala
           </div>
          </div>
