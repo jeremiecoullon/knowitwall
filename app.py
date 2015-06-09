@@ -86,7 +86,7 @@ def index():
     To change audio-doc, simply create a new json file with the links to images,audio etc..
     Then add it to the audiodoc_list
     """
-    audiodoc_list = ['ganymede.json']
+    audiodoc_list = ['ganymede.json', 'tate.json']
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
 

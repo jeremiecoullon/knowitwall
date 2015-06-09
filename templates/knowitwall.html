@@ -369,12 +369,8 @@
   <!-- Previous episodes Section -->
 
   <section id="episodes">
-    <div class="container">
+    <div class="container previous-audiodoc">
       <div class="row">
-
-
-<!-- Individual episodes -->
-        <!-- Description -->
 
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <div class="episode-title">
@@ -382,10 +378,9 @@
           </div>
 
           <p style="font-size:1.6em;">{{audiodocs[0].topic_description}}</p>
-          <p style="font-style:italic;">narrated by Vidish Athavale</p>
-          <p style="font-style:italic;">music by Addam Farmer, Debbie Miller and Mark Petrie</p>
+          <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
+          <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
         </div>
-
 
         <div class="col-lg-12">
           <audio controls>
@@ -432,7 +427,76 @@
                </div>
           </div>
         </div>
-  </section>
+      </div>
+    </div> <!-- container -->
+
+<!-- SECOND AUDIODOC!! -->
+
+<br>
+<br>
+    <div class="container previous-audiodoc">
+      <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <div class="episode-title">
+            {{audiodocs[1].topic_name}}
+          </div>
+
+          <p style="font-size:1.6em;">{{audiodocs[1].topic_description}}</p>
+          <p style="font-style:italic;">narrated by {{ audiodocs[1].narration_credits }}</p>
+          <p style="font-style:italic;">music by {{ audiodocs[1].music_credits }}</p>
+        </div>
+
+        <div class="col-lg-12">
+          <audio controls>
+            <source src="{{audiodocs[1].audio_mp3}}" type="audio/mpeg">
+            <source src="{{audiodocs[1].audio_ogg}}" type="audio/ogg">
+            <source src="{{audiodocs[1].audio_wav}}" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+
+
+        <!-- Author -->
+
+          <div class="author-bio">
+            <div class="col-md-3">
+              <img class="clip-circle"class="img-responsive" src="{{audiodocs[1].author_image}}"  alt = "author image">
+            </div>
+            <div class="col-md-3">
+              <div class="author-name">
+              <h2 style="text-align:right;"> {{ audiodocs[1].author_name }} </h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="vertical-line">
+              <p> {{ audiodocs[1].author_bio }} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="drop-downs">
+              <div class="comments-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[1].disqus_collapse}}', '{{audiodocs[1].unique_id}}', 'http://localhost:5000/test2');"> Join the Discussion</button>
+                <div id="{{audiodocs[1].disqus_collapse}}" class="collapse">
+                  <!-- jquery should place Disqus here, but it actually places it above <div id=test_disqus> -->
+                   <div class="disqus-collapse" style="display:none;">Collapse Text</div>
+                </div>
+              </div>
+              <div class="transcript-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].transcript_collapse}}">Read the Transcript</button>
+                <div id="{{audiodocs[1].transcript_collapse}}" class="collapse transcript"> <!-- transcript class gives the padding -->
+                  {{ audiodocs[1].transcript | safe }}
+                </div>
+               </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- container -->
+
+
+  </section> <!-- end of episodes -->
 
 
   <!-- Contribute Section -->
@@ -506,6 +570,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
 
@@ -812,6 +877,6 @@ new SineWaveGenerator({
   }
   };
   </script>
-</div> <!-- overflow fix -->
+
 </body>
 </html>
