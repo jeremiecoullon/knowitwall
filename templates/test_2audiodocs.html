@@ -406,9 +406,9 @@
         <div class="col-md-12">
           <div class="drop-downs">
               <div class="comments-button">
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[0].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[0].disqus_collapse}}', '{{audiodocs[0].unique_id}}', 'http://localhost:5000/test');"> Join the Discussion</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[0].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[0].disqus_collapse}}', '{{audiodocs[0].unique_id}}', 'http://knowitwall.com/{{audiodocs[0].unique_id}}', '{{audiodocs[0].unique_id}}' );"> Join the Discussion</button>
                 <div id="{{audiodocs[0].disqus_collapse}}" class="collapse">
-                  <!-- jquery should place Disqus here, but it actually places it above <div id=test_disqus> -->
+                  <!-- the function loadDisqus() places the Disqus thread here -->
                    <div class="disqus-collapse" style="display:none;">Collapse Text</div>
                 </div>
               </div>
@@ -471,9 +471,9 @@
         <div class="col-md-12">
           <div class="drop-downs">
               <div class="comments-button">
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[1].disqus_collapse}}', '{{audiodocs[1].unique_id}}', 'http://localhost:5000/test2');"> Join the Discussion</button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[1].disqus_collapse}}', '{{audiodocs[1].unique_id}}', 'http://knowitwall.com/{{audiodocs[1].unique_id}}', '{{audiodocs[1].unique_id}}');"> Join the Discussion</button>
                 <div id="{{audiodocs[1].disqus_collapse}}" class="collapse">
-                  <!-- jquery should place Disqus here, but it actually places it above <div id=test_disqus> -->
+                  <!-- the function loadDisqus() places the Disqus thread here  -->
                    <div class="disqus-collapse" style="display:none;">Collapse Text</div>
                 </div>
               </div>
@@ -643,20 +643,59 @@
   </script>
 
 
-<!-- disqus reveal and collapse -->
-<script>
-$('.disqus-reveal').click(function() {
-    $(this).slideUp(100);
-    $(this).next().slideToggle();
-    $(".disqus-collapse").slideDown(100);
-});
-$('.disqus-collapse').click(function() {
-    $(this).slideUp(100);
-    $(this).prev().slideToggle();
-    $(".disqus-reveal").slideDown(100);
-});
+  <!-- disqus reveal and collapse -->
+  <script>
+  $('.disqus-reveal').click(function() {
+      $(this).slideUp(100);
+      $(this).next().slideToggle();
+      $(".disqus-collapse").slideDown(100);
+  });
+  $('.disqus-collapse').click(function() {
+      $(this).slideUp(100);
+      $(this).prev().slideToggle();
+      $(".disqus-reveal").slideDown(100);
+  });
 
-</script>
+  </script>
+
+  <!-- script to reload disqus at different points of the page. takes 4 variables:
+    1. Where to place <div id="disqus_thread"></div>: Namely within the <div id="audiodocs[i].disqus_collapse" class="collapse">
+    2. disqus_identifier
+    3. disqus_url
+    4. disqus_title
+
+  -->
+  <script type="text/javascript">
+  var disqus_shortname = 'knowitwall';
+  var disqus_identifier; //made of post id and guid
+  var disqus_url; //post permalink
+  var disqus_title; // title of comment thread
+
+  function loadDisqus(source, identifier, url, title) {
+  if (window.DISQUS) {
+     jQuery('#disqus_thread').prependTo('#' + source); //append the HTML within <div id="audiodocs[i].disqus_collapse" class="collapse">
+     //if Disqus exists, call it's reset method with new parameters
+     DISQUS.reset({
+        reload: true,
+        config: function () {
+        this.page.identifier = identifier;
+        this.page.url = url;
+        this.page.title = title;
+        }
+     });
+  } else {
+     //insert a wrapper in HTML within d<div id="audiodocs[i].disqus_collapse" class="collapse">
+     jQuery('<div id="disqus_thread"></div>').prependTo('#' + source);
+     disqus_identifier = identifier; //set the identifier argument
+     disqus_url = url; //set the permalink argument
+     disqus_title = title;
+     //append the Disqus embed script to HTML
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+     jQuery('head').append(dsq);
+  }
+  };
+  </script>
 
 
 </body>

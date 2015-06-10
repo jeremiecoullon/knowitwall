@@ -163,11 +163,14 @@ def contactform():
     return name
 
 
-@app.route('/test')
-def test():
-    d_identifier = 'test_disqus'
-    d_url = 'http://localhost:5000/test'
-    return render_template('test.html', d_identifier=d_identifier, d_url=d_url)
+"----------------------------------------------------------------------------------------------------"
+" to define disqus form: change the disqus_id and disqus_url in the html, then change app.route to unique_id of audiodoc"
+
+
+@app.route('/BenSlama_Ganymede')
+def BenSlama_Ganymede():
+
+    return render_template('define_disqus.html')
 
 
 
