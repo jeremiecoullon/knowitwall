@@ -165,18 +165,13 @@ def contactform():
 
 "----------------------------------------------------------------------------------------------------"
 " to define disqus form: change the disqus_id and disqus_url in the html, then change app.route to unique_id of audiodoc"
-
-
+"""
 @app.route('/BenSlama_Ganymede')
 def BenSlama_Ganymede():
 
     return render_template('define_disqus.html')
 
-
-
-@app.route('/test2')
-def test2():
-    return render_template('test2.html')
+"""
 
 
 if __name__ == '__main__':
