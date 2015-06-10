@@ -1,5 +1,5 @@
 {
-    "unique_id": "", 
+    "unique_id": "",
     "disqus_collapse": "disquscollapse_DosSantos_Tate",
     "transcript_collapse": "transcriptcollapse_DosSantos_Tate",
     "discipline": "Humanities",
@@ -14,7 +14,5 @@
 
     "topic_image": "/static/Images/Tate.jpg",
     "transcript": "static/texts/tate_transcript.txt",
-    "audio_mp3": "http://178.62.102.130/audio/its_at_tate.mp3",
-    "audio_ogg": "http://178.62.102.130/audio/its_at_tate.ogg",
-    "audio_wav": "http://178.62.102.130/audio/its_at_tate.wav"
+    "audio_mp3": "http://178.62.102.130/audio/its_at_tate.mp3"
 }
