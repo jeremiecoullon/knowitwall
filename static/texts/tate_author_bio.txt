@@ -1,1 +1,6 @@
-Miguel teaches and does research in philosophy at UCL. When he is not trying to solve the problem of what art is and several other philosophical puzzles, he enjoys learning about theoretical physics and how the universe works. No less important, he is a big supporter of Real Madrid.
+<html>
+<p class = 'justify'>Miguel teaches and does research in philosophy at UCL. When he is not trying to solve the problem of
+what art is and several other philosophical puzzles, he enjoys learning about theoretical physics and
+how the universe works. No less important, he is a big supporter of Real Madrid.
+</p>
+</html>
