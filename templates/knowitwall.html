@@ -344,9 +344,9 @@
 
             <div class="col-md-6">
               <div class="vertical-line">
-              <p>We’re a bunch of young academics trying to change the way academia interacts with the public. If you have more interests than you can keep track of, you’re in the right place.</p>
+              <p class = 'justify'>We’re a bunch of young academics trying to change the way academia interacts with the public. If you have more interests than you can keep track of, you’re in the right place.</p>
               <br>
-              <p>We make short audio documentaries, written by academics, for the enjoyment of everyone else. From space to spider monkeys, pyramids to Pythagoras – there’s no limit to what you could be learning.</p>
+              <p class = 'justify'>We make short audio documentaries, written by academics, for the enjoyment of everyone else. From space to spider monkeys, pyramids to Pythagoras – there’s no limit to what you could be learning.</p>
 
             </div>
       </div>
@@ -359,15 +359,11 @@
 
 
 
-  <!-- Previous episodes Section; I put loads of comments on the left to comment out the previous episodes -->
+  <!-- Audiodocs. The first is the most recent one -->
 
   <section id="episodes">
-    <div class="container">
+    <div class="container previous-audiodoc">
       <div class="row">
-
-
-<!-- Individual episodes -->
-        <!-- Description -->
 
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <div class="episode-title">
@@ -375,74 +371,123 @@
           </div>
 
           <p style="font-size:1.6em;">{{audiodocs[0].topic_description}}</p>
-          <p style="font-style:italic;">narrated by Vidish Athavale</p>
-          <p style="font-style:italic;">music by Addam Farmer, Debbie Miller and Mark Petrie</p>
+          <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
+          <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
         </div>
-
 
         <div class="col-lg-12">
           <audio controls>
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
+            <source src="{{audiodocs[0].audio_ogg}}" type="audio/ogg">
+            <source src="{{audiodocs[0].audio_wav}}" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
 
 
         <!-- Author -->
 
-        <div class="author-bio">
-
+          <div class="author-bio">
             <div class="col-md-3">
-
               <img class="clip-circle"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image">
-
-          </div>
+            </div>
             <div class="col-md-3">
               <div class="author-name">
               <h2 style="text-align:right;"> {{ audiodocs[0].author_name }} </h2>
+              </div>
             </div>
-          </div>
-
-
             <div class="col-md-6">
               <div class="vertical-line">
-              <p> {{ audiodocs[0].author_bio }} </p>
+              <p> {{ audiodocs[0].author_bio | safe}} </p>
               </div>
             </div>
           </div>
-      </div>
-  <div class="col-md-12">
+        </div>
 
-<div class="drop-downs">
-    <div class="comments-button">
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> Join the Discussion</button>
-      <div id="demo" class="collapse">
-        <div id="disqus_thread"></div>
-                  <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES * * */
-                    var disqus_shortname = 'knowitwall';
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                  </script>
-                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <div class="col-md-12">
+          <div class="drop-downs">
+              <div class="comments-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[0].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[0].disqus_collapse}}', '{{audiodocs[0].unique_id}}', 'http://knowitwall.com/{{audiodocs[0].unique_id}}', '{{audiodocs[0].unique_id}}' );"> Join the Discussion</button>
+                <div id="{{audiodocs[0].disqus_collapse}}" class="collapse">
+                  <!-- the function loadDisqus() places the Disqus thread here -->
                    <div class="disqus-collapse" style="display:none;">Collapse Text</div>
-    </div>
+                </div>
+              </div>
+              <div class="transcript-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[0].transcript_collapse}}">Read the Transcript</button>
+                <div id="{{audiodocs[0].transcript_collapse}}" class="collapse transcript"> <!-- transcript class gives the padding -->
+                  {{ audiodocs[0].transcript | safe }}
+                </div>
+               </div>
+          </div>
+        </div>
       </div>
-    <div class="transcript-button">
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#transcript">Read the Transcript</button>
-      <div id="transcript" class="collapse">
-        {{ audiodocs[0].transcript | safe }}
+    </div> <!-- container -->
+
+<!-- SECOND AUDIODOC!! -->
+
+<br>
+<br>
+    <div class="container previous-audiodoc">
+      <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <div class="episode-title">
+            {{audiodocs[1].topic_name}}
+          </div>
+
+          <p style="font-size:1.6em;">{{audiodocs[1].topic_description}}</p>
+          <p style="font-style:italic;">narrated by {{ audiodocs[1].narration_credits }}</p>
+          <p style="font-style:italic;">music by {{ audiodocs[1].music_credits }}</p>
+        </div>
+
+        <div class="col-lg-12">
+          <audio controls>
+            <source src="{{audiodocs[1].audio_mp3}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+
+
+        <!-- Author -->
+
+          <div class="author-bio">
+            <div class="col-md-3">
+              <img class="clip-circle"class="img-responsive" src="{{audiodocs[1].author_image}}"  alt = "author image">
+            </div>
+            <div class="col-md-3">
+              <div class="author-name">
+              <h2 style="text-align:right;"> {{ audiodocs[1].author_name }} </h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="vertical-line">
+              <p> {{ audiodocs[1].author_bio | safe}} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="drop-downs">
+              <div class="comments-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].disqus_collapse}}" onclick="loadDisqus('{{audiodocs[1].disqus_collapse}}', '{{audiodocs[1].unique_id}}', 'http://knowitwall.com/{{audiodocs[1].unique_id}}', '{{audiodocs[1].unique_id}}');"> Join the Discussion</button>
+                <div id="{{audiodocs[1].disqus_collapse}}" class="collapse">
+                  <!-- the function loadDisqus() places the Disqus thread here  -->
+                   <div class="disqus-collapse" style="display:none;">Collapse Text</div>
+                </div>
+              </div>
+              <div class="transcript-button">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{audiodocs[1].transcript_collapse}}">Read the Transcript</button>
+                <div id="{{audiodocs[1].transcript_collapse}}" class="collapse transcript"> <!-- transcript class gives the padding -->
+                  {{ audiodocs[1].transcript | safe }}
+                </div>
+               </div>
+          </div>
+        </div>
       </div>
-     </div>
+    </div> <!-- container -->
 
-</div>
-</div>
 
-  </section>
+  </section> <!-- end of episodes -->
 
 
   <!-- Contribute Section -->
@@ -454,8 +499,12 @@
           <h2> Contribute </h2>
           </div>
               <div class="vertical-line">
-              <p>
-                If you think your research is too interesting to be confined to academic circles, then just get in touch. Our community of academics spans PhDs in mathematics to lecturers in philosophy – there’s really no subject we’re not interested in. The process is simple: you send the text, we do the rest. So drop us a line below with your details, institution and area of research.</p>
+              <p class = 'justify'>
+                If you think your research is too interesting to be confined to academic circles, then just get in touch.
+                Our community of academics spans PhDs in mathematics to lecturers in philosophy – there’s really no subject
+                we’re not interested in. The process is simple: you send the text, we do the rest. So drop us a line below
+                with your details, institution and area of research.
+              </p>
             </div>
       </div>
     </div>
@@ -516,6 +565,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
 
@@ -595,21 +645,60 @@
   </script>
 
 
-<!-- disqus reveal and collapse -->
-<script>
-$('.disqus-reveal').click(function() {
-    $(this).slideUp(100);
-    $(this).next().slideToggle();
-    $(".disqus-collapse").slideDown(100);
-});
-$('.disqus-collapse').click(function() {
-    $(this).slideUp(100);
-    $(this).prev().slideToggle();
-    $(".disqus-reveal").slideDown(100);
-});
+  <!-- disqus reveal and collapse -->
+  <script>
+  $('.disqus-reveal').click(function() {
+      $(this).slideUp(100);
+      $(this).next().slideToggle();
+      $(".disqus-collapse").slideDown(100);
+  });
+  $('.disqus-collapse').click(function() {
+      $(this).slideUp(100);
+      $(this).prev().slideToggle();
+      $(".disqus-reveal").slideDown(100);
+  });
 
-</script>
+  </script>
 
-</div> <!-- overflow fix -->
+  <!-- script to reload disqus at different points of the page. takes 4 variables:
+    1. Where to place <div id="disqus_thread"></div>: Namely within the <div id="audiodocs[i].disqus_collapse" class="collapse">
+    2. disqus_identifier
+    3. disqus_url
+    4. disqus_title
+
+  -->
+  <script type="text/javascript">
+  var disqus_shortname = 'knowitwall';
+  var disqus_identifier; //made of post id and guid
+  var disqus_url; //post permalink
+  var disqus_title; // title of comment thread
+
+  function loadDisqus(source, identifier, url, title) {
+  if (window.DISQUS) {
+     jQuery('#disqus_thread').prependTo('#' + source); //append the HTML within <div id="audiodocs[i].disqus_collapse" class="collapse">
+     //if Disqus exists, call it's reset method with new parameters
+     DISQUS.reset({
+        reload: true,
+        config: function () {
+        this.page.identifier = identifier;
+        this.page.url = url;
+        this.page.title = title;
+        }
+     });
+  } else {
+     //insert a wrapper in HTML within d<div id="audiodocs[i].disqus_collapse" class="collapse">
+     jQuery('<div id="disqus_thread"></div>').prependTo('#' + source);
+     disqus_identifier = identifier; //set the identifier argument
+     disqus_url = url; //set the permalink argument
+     disqus_title = title;
+     //append the Disqus embed script to HTML
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+     jQuery('head').append(dsq);
+  }
+  };
+  </script>
+
+
 </body>
 </html>
