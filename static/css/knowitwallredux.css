@@ -341,6 +341,7 @@ text-align: left;
 @media(max-width:561px) {
   .episode-title {
     font-size:3em;
+    white-space: normal;
   }
 }
 
