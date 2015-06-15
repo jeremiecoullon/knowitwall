@@ -115,14 +115,15 @@ than define the Struct class. the second option is safer (if the key doesnt exis
 def contactform():
     name =  request.form['name'];
     email = request.form['email'];
-    message = request.form['message'];
+    feedback_text = request.form['feedback_text'];
+    feedback_overall = request.form['feedback_overall'];
     jeremie ='jeremie.coullon@gmail.com'
     miguel = 'mfdsantos86@gmail.com'
     KIW = 'theknowitwall@gmail.com'
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
-    body = "Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: " + str(name)+ "\nemail: " + str(email) + "\nmessage: \n\n" + str(message) + "\n--------------------------------------------------------"
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, angus, KIW], subject, body)
+    body = "Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: "+ str(name)+ "\nemail: " + str(email) + "\nfeedback on the text/performance: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send(jeremie, subject, body)
     return name
 
 
