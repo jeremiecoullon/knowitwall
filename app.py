@@ -122,7 +122,7 @@ def contactform():
     KIW = 'theknowitwall@gmail.com'
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
-    body = "Someone loves us! Here's their info: \n \n--------------------------------------------------------\nname: "+ str(name)+ "\nemail: " + str(email) + "\nfeedback on the text/performance: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
+    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\nname: "+ str(name)+ "\nemail: " + str(email) + "\nfeedback on the text/performance: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send(jeremie, subject, body)
     return name
 
