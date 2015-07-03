@@ -107,6 +107,31 @@ def index():
 than define the Struct class. the second option is safer (if the key doesnt exist) """
 
 
+"----------------------------------------------------------------------------------------------------"
+" audiodocs on seperate page "
+
+@app.route('/audiodoc')
+def audiodoc():
+
+    audiodoc_list = ['ganymede.json', 'tate.json']
+    audiodocs =[]
+    for audiodoc_json in audiodoc_list:
+
+        with open('json_files/' + audiodoc_json, "r") as json_file:
+            ad_dictionary = json.load(json_file)
+
+        with open(ad_dictionary.get('author_bio'), "r") as f:
+            author_bio = f.read().decode('utf-8')
+        ad_dictionary['author_bio'] = author_bio
+
+        with open(ad_dictionary.get('transcript'), "r") as f:
+            transcript = f.read().decode('utf-8')
+        ad_dictionary['transcript'] = transcript
+
+        audiodocs.append(ad_dictionary.copy())
+
+    return render_template('audiodoc.html', audiodocs=audiodocs)
+
 
 "----------------------------------------------------------------------------------------------------"
 "method for AJAX contact form "
