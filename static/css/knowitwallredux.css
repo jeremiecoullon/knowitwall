@@ -463,6 +463,8 @@ padding:40px;
 
 }
 
+/* this says how  the nav bar transition happens, but not when */
+
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -512,7 +514,6 @@ padding:40px;
 
 
 }
-
 
 
 @media(max-width:768px) {
