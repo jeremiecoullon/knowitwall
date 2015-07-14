@@ -79,6 +79,7 @@ def static_from_root():
 # complete list of audiodocs
 all_audiodocs = ['ganymede.json', 'tate.json']
 
+# input list of json files, outputs dictionary of variables paths to pass to templates
 def ad_fun(audiodoc_list):
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
@@ -97,6 +98,10 @@ def ad_fun(audiodoc_list):
         audiodocs.append(ad_dictionary.copy())
     return audiodocs
 
+""" Can do ad[author_name] or ad.get('author_name', DEFAULTVALUE)
+    the second option is safer (if the key doesnt exist) """
+
+
 "----------------------------------------------------------------------------------------------------"
 "home page"
 
@@ -113,8 +118,6 @@ def index():
 
     return render_template('knowitwall.html', audiodocs=audiodocs)
 
-""" I can just do ad[author_name] or ad.get('author_namr', DEFAULTVALUE) rather
-than define the Struct class. the second option is safer (if the key doesnt exist) """
 
 
 "----------------------------------------------------------------------------------------------------"
