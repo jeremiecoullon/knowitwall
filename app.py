@@ -79,7 +79,7 @@ def static_from_root():
 # complete list of audiodocs
 all_audiodocs = ['ganymede.json', 'tate.json']
 
-# input list of json files, outputs dictionary of variables paths to pass to templates
+# input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
@@ -123,14 +123,14 @@ def index():
 "----------------------------------------------------------------------------------------------------"
 " audiodocs on seperate page "
 
-@app.route('/audiodoc')
-def audiodoc():
+@app.route('/<url>')
+def audiodoc(url):
 
-    audiodoc_list = all_audiodocs
+    audiodoc_list = [url+'.json']  # list only has the selected audiodoc 
 
-    audiodocs = ad_fun(audiodoc_list)
+    audiodoc = ad_fun(audiodoc_list)
 
-    return render_template('audiodoc.html', audiodocs=audiodocs)
+    return render_template('audiodoc.html', audiodoc=audiodoc)
 
 
 "----------------------------------------------------------------------------------------------------"
