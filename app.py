@@ -123,10 +123,10 @@ def index():
 "----------------------------------------------------------------------------------------------------"
 " audiodocs on seperate page "
 
-@app.route('/<url>')
+@app.route('/audiodoc/<url>')
 def audiodoc(url):
 
-    audiodoc_list = [url+'.json']  # list only has the selected audiodoc 
+    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
 
     audiodoc = ad_fun(audiodoc_list)
 
