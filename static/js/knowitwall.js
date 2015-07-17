@@ -3,6 +3,37 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+// Newsletter popop on click
+
+function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('selected');
+  });
+}
+
+$(function() {
+  $('#newsletter').on('click', function() {
+    if($(this).hasClass('selected')) {
+      deselect($(this));
+    } else {
+      $(this).addClass('selected');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#newsletter'));
+    return false;
+  });
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
+
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
@@ -60,11 +91,11 @@ function clickPercent(e) {
 	return (e.pageX - timeline.offsetLeft) / timelineWidth;
 }
 
-// Makes playhead draggable 
+// Makes playhead draggable
 playhead.addEventListener('mousedown', mouseDown, false);
 window.addEventListener('mouseup', mouseUp, false);
 
-// Boolean value so that mouse is moved on mouseUp only when the playhead is released 
+// Boolean value so that mouse is moved on mouseUp only when the playhead is released
 var onplayhead = false;
 // mouseDown EventListener
 function mouseDown() {
@@ -99,8 +130,8 @@ function moveplayhead(e) {
 	}
 }
 
-// timeUpdate 
-// Synchronizes playhead position with current point in audio 
+// timeUpdate
+// Synchronizes playhead position with current point in audio
 function timeUpdate() {
 	var playPercent = timelineWidth * (music.currentTime / duration);
 	playhead.style.marginLeft = playPercent + "px";
@@ -128,5 +159,5 @@ function play() {
 
 // Gets audio file duration
 music.addEventListener("canplaythrough", function () {
-	duration = music.duration;  
+	duration = music.duration;
 }, false);
