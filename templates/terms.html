@@ -5,7 +5,6 @@
 
 
 
-  <meta name="google-site-verification" content="JoE7Yhdq8T8FWWOnlh_O3I0-LhZeTCRNegIK-GY3Us8" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +29,10 @@
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
 
+  <!-- audiodoc css (nav bar always solid) -->
+  <link href="/static/css/audiodoc_page.css" rel="stylesheet">
+
+
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
@@ -43,30 +46,14 @@
   <![endif]-->
 
 
-  <!-- google analytics for jeremie.coullon@gmail.com -->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62559170-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-
 
 </head>
 
-<body id='page-top'>
-
-
-
-  <div class="overflow">
+<body id="page-top">
+  <!-- <div class="overflow"> -->
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
-
-
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
@@ -76,7 +63,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#page-top">
+        <a class="navbar-brand" href=" {{url_for('index')}}">   <!-- for audiodoc, the logo goes back to home page-->
 
     <!-- svg shizzle -->
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -260,252 +247,99 @@
         </a>
       </div>
 
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <!--
           <li class="hidden">
-            <a href="#page-top"></a>
+             <a href="#page-top"></a>
           </li>
+          -->
+
+          <!--
           <li class="page-scroll">
-            <a href="#about">About</a>
+            <a href="#page-top">Home</a>
           </li>
+          -->
 
           <li class="page-scroll">
             <a href="#episodes">episodes</a>
           </li>
 
           <li class="page-scroll">
-            <a href="#contribute">Get Involved</a>
-          </li>
-
-          <li class="page-scroll">
             <a href="#contact">Feedback</a>
-          </li>
-          <li >
-            <a href="/newsletter" id="newsletter">Subscribe</a>
           </li>
         </ul>
       <!-- /.navbar-collapse -->
       </div>
-
     <!-- /.container-fluid -->
     </div>
-    <div class="row newsrow"> <!-- row for popup newsletter form -->
-      <div class="messagepop pop newsletter-popup">
-        <!-- Begin MailChimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup">
-        <form action="//knowitwall.us11.list-manage.com/subscribe/post?u=6bb5e25cc5b0ac93e764c5cd8&amp;id=c77bd0a090" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <h2>Subscribe to our mailing list</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group">
-              <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-              </label>
-              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;"><input type="text" name="b_6bb5e25cc5b0ac93e764c5cd8_c77bd0a090" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </div> <!--end of signup scoll div -->
-        </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-        <!--End mc_embed_signup-->
-      </div>
-    </div>
   </nav>
+  <section>
+ <h2>
+   Terms of Use
+ </h2>
+ <p>
+These Terms of Use (“TOU”) apply to each user of the website, application, software, or other Service linking these TOU (“Service”) provided by knowitwall.com (“Website”, “we,” “us,” or “our”).
 
+Your use of this Service is subject to these TOU and all applicable laws, rules and regulations. Please read these TOU carefully and contact us with any questions.
+By accessing this Service, you agree that you have read, understand and agree to be legally bound by the TOU set forth below.  If you do not agree to be bound by these TOU, do not access this Service.   These TOU may be modified by us at any time. You can review the most current version of these Terms of Use at any time on our knowitwall.com website.  In agreeing to these TOU, you are responsible for periodically checking for changes and/or updates to these Terms of Use.
+</p>
+<p>
+1. License. Website grants you a revocable limited, non-sublicensable, non-transferable, nonexclusive license to solely use the Service for non-commercial purposes. In utilizing the Service, you are responsible for ensuring compliance with any applicable terms and conditions of the social networking site through which the Service may be made available. As between Website and you, title, ownership rights, and intellectual property rights in and to the Service and any derivatives or modifications thereof, in whole or in part, remain with Website. You understand that Website may modify or discontinue the Service or any of its features at any time in its sole discretion. The TOU does not entitle you to any support, upgrades, updates, add-ons patches, enhancements, or fixes for the Service except in Website's sole discretion. You do not acquire any right, title or interest in any content on the Service by virtue of accessing the Service or making use of the permitted uses allowed under these TOU.  No license to use or reproduce any logo or trademark included on the Service is granted to you by these TOU or otherwise.  The trademarks, logos, service marks and website names displayed on the Service are protected, whether or not they are registered.  Any unauthorized use of content or information posted on the Service and any unauthorized reproduction, retransmission or other use of any part of the Service may infringe our, or third parties’ copyrights, trademarks, privacy, publicity or other rights.
 
+2. Limitations. In connection with your use of the Service, you will not, and will not allow any third party to:
+1)	Post or link to any material that contains :
+Adult content, including nudity, sexual terms and/or images of people in positions or activities that are excessively suggestive or sexual;
+Obscene, defamatory, libelous, slanderous and/or unlawful content;
+Content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent;
+Inflammatory religious content;
+Politically religious agendas and/or any known associations with hate, criminal and/or terrorist activities; or
+Hate speech, whether directed at an individual or a group, and whether based upon the race, disability, sex, creed, national origin, religious affiliation, marital status, sexual orientation, gender identity, or language of such individual or group.
 
+2)	Remove, obscure or change any copyright, trademark, hyperlink or other proprietary rights notices contained within the Service;
 
-  <!-- Most Recent Podcast Section -->
-  <header>
+3)	Modify, adapt, disassemble, decompile, translate, reverse engineer or otherwise attempt to discover the source code or structure, sequence and organization of the Service or any content contained therein;
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
+4)	Use the Service in any manner that could damage, disable, overburden, or impair the Service, Website, the applicable social networking site, or any other person or entity; or
 
+5)	Collect any information about other users of the Service; create or transmit unwanted electronic communications to other users of the Service; or otherwise interfere with such users' enjoyment of the Service.
 
-          <div id="tagline-1">
-            Building knowledge one brick at a time
-          </div>
+Unless otherwise expressly authorized in these TOU or on the Service, you may not take any action to interfere with the Service or any other user’s use of the Service.  You expressly agree that you will not copy, reproduce, modify, create derivative works from, distribute or publicly display any content from the Service without our prior written consent.  You agree not to bypass our robot exclusion headers or other measures we may use to prevent or restrict access to the Service.
 
-        </div>
-        <div class="col-md-8">
-          <!--  Let top researchers inspire you through short audio documentaries -->
-          <div id="tagline-2">
-          <br>
-          <br>
-          </div>
-        </div>
-      </div>
-     </div>
-  </header>
+You agree not to use the Service for illegal purposes (including, without limitation, unlawful, harassing, libelous, invasion of another’s privacy, abusive, threatening or obscene purposes). You agree that you will comply with all laws related to your use of the Service.
 
-  <!-- About Section -->
-  <section class="success" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center">
-          <div id="about-left">
-          <h2> What are we about? </h2>
-          </div>
-        </div>
-          <div class="col-md-6">
-            <div class="vertical-line">
-            <p class = 'justify'>We’re a bunch of young academics trying to change the way academia interacts with the public. If you have more interests than you can keep track of, you’re in the right place.</p>
-            <br>
-            <p class = 'justify'>We make short audio documentaries, written by academics, for the enjoyment of everyone else. From space to spider monkeys, pyramids to Pythagoras – there’s no limit to what you could be learning.</p>
-          </div>
-      </div>
-    </div>
-    </div>
-  </section>
+3. User Content. By posting or submitting any text, images, designs, video, sound, code, data, lists, or other materials or information (such user-submitted content, collectively, "User Content") through or in connection with a Service, you grant to Website, its affiliates and sublicensees, a perpetual, universal, non-exclusive, royalty-free right to copy, display, modify, transmit, make derivative works of, and distribute your User Content (in whole or in part) in any media and to incorporate the User Content into other works in any format or medium now known or later developed. The foregoing grants shall include the right to exploit any proprietary rights in such User Content, including but not limited to rights under copyright, trademark, service mark or patent laws under any relevant jurisdiction.
 
+You represent and warrant that: (a) You own or control all of the rights to the User Content that you post or otherwise have the right to post such User Content through or in connection with the Service; (b) User Content is accurate and not misleading, and (c) use and posting of User Content supplied by you does not violate the TOU, and will not violate any rights of or cause injury to any person or entity, including without limitation the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person. You agree to pay for all royalties, fees, and any other monies owing any person by reason of any User Content posted by you through or in connection with the Service.
+You are solely responsible for the User Content that you post, store or upload through or in connection with the Service, including any material or information that you transmit to other users or post on Facebook. Website does not have an obligation to delete, screen or edit any of the User Content posted, stored or uploaded through or in connection with the Service; however, Website reserves the right to itself or through a third party, delete, screen or edit any User Content posted, stored or uploaded through or in connection with the Service at any time and for any reason without notice. Without limiting the foregoing, Website may remove any User Content for any reason including content that in the sole judgment of Website violates the TOU, or that may be offensive, illegal or violate the rights, harm, or threaten the safety of any person. Website does not endorse any User Content and takes no responsibility and assumes no liability for any User Content posted, stored or uploaded by you or any third party, or for any loss or damage thereto.
 
+4. Copyright Notice. We are committed to complying with U.K. copyright and related laws, and we require all users of the Service to comply with these laws.  Accordingly, you may not disseminate any material or content using the Service in any manner that constitutes an infringement of third party intellectual property rights, including rights granted by U.K. copyright law.
+If you believe that content that you or a third party owns has been used via the Service in a way that violates yours or someone else’s copyright or other intellectual property rights, please provide us with the following information:
+•	An electronic or physical signature of the person authorized to act on behalf of the owner of the copyright or other intellectual property interest;
+•	A description of the copyrighted work or other intellectual property that you claim has been infringed;
+•	A description of where the material that you claim is infringing is located;
+•	Your address, telephone number, and email address;
+•	A statement by you that you have a good faith belief that the disputed use is not authorized by the copyright or intellectual property owner, its agent, or the law; and
+•	A statement by you, made under penalty of perjury, that the information contained in your report is accurate and that you are the copyright or intellectual property owner or authorized to act on the copyright or intellectual property owner's behalf.
 
+5. Limitation on Liability; Disclaimers. The service, including all content therein, is provided "as is" and without warranties of any kind either express or implied and you shall use the service at your own risk. Website does not warrant or make any representations regarding the use or the results of the use of the service, including all content therein, in terms of its correctness, accuracy, reliability, or otherwise. To the fullest extent permissible pursuant to applicable law, website disclaims all warranties, express or implied, including, but not limited to implied warranties of merchantability, fitness for a particular purpose and non-infringement. Website does not warrant the accuracy, completeness or usefulness of any information contained within the service. Website does not warrant that the service or service content or the functions contained in the service will be uninterrupted or error-free, that defects will be corrected, or that the service or the servers that make it available are free of viruses or other harmful components. You (and not website) assumes the entire cost of all necessary servicing, repair and correction.
 
-  <!-- AUDIODOCS!! -->
+Website expressly disclaims any and all liability in connection with the service. In no event shall website, its parent or its subsidiary or affiliated companies or each of their respective officers, directors, employees, or agents (collectively, “released parties”), be liable to any person or entity for any direct, indirect, incidental, special, punitive, or consequential damages, losses costs, or expenses whatsoever, including without limitation, resulting from  (i)  personal injury or property damage, of any nature whatsoever, (ii) any unauthorized access to or use of the service, (iii) any interruption or cessation of transmission to, from or via the service, (iv) any bugs, viruses, trojan horses, or the like, which may be transmitted to or through the service by any third party, (v) any errors, mistakes, inaccuracies or omissions in any content or for any loss or damage of any kind incurred as a result of any use of the service or, (vi)  otherwise resulting form the use of the service. The foregoing limitation of liability shall apply to the fullest extent permitted by law.  Notwithstanding the foregoing, if the released parties are found to be liable to you for any damage or loss which arises out of or is in any connected with your use of the service or any content contained therein, released parties’ liability shall in no event exceed us £5.00.
 
-    <section id="episodes">
-      {% for audiodoc in audiodocs %}
-      <div class="container previous-audiodoc">
-        <div class="row">
+6. Indemnity. You agree that you will defend, indemnify and hold harmless Website, its parent, subsidiary and affiliated groups, and each of the foregoing entities’ respective members from any and all claims, demands, causes of action, damages, losses, costs and expenses in any way arising out of your use of the Service of violation of these TOU, including without limitation (i) all matters related to your access to and use of any Website online services, including, without limitation, your use of the Service, (ii) your violation of any provision contained in the TOU; (iii) your violation of any third party right, including without limitation any copyright, intellectual property, or privacy right; (iv) any claims that your use of the Service caused damage to a third party, and/or (v) violations of any and all applicable laws, rules or regulations from any jurisdiction.
 
-          <div class="col-lg-8 col-lg-offset-2 text-center">
-            <div class="episode-title">
-              {{audiodoc.topic_name}}
-            </div>
+7. Links to Other Sites. The Service, including content therein, may contain links to third-party websites. These links are provided as a convenience to you. Website does not control and is not responsible for the content of such third-party websites or the conduct of the operators of such third-party websites, and does not make any representations regarding the accuracy, copyright or other statutory or regulatory compliance, legality or decency of any of the content or other materials on such third-party websites. Website encourages you to exercise discretion while browsing the Internet. If you decide to access linked third-party websites, you do so at is or her own risk.
 
-            <p style="font-size:1.6em;">{{audiodoc.topic_description}}</p>
+8. Termination. Website reserves the right, at any time and in its sole discretion, to discontinue the use of the Service in whole or in part, and prevent any person or entity from access to the Service. Upon termination for any reason, Sections 6 (Disclaimers; Limitation on Liability), 7 (Indemnity) and 10 (General), together with any licenses granted to Website hereunder, will survive.
 
-            <!--
-            <p style="font-style:italic;">narrated by {{ audiodoc.narration_credits }}</p>
-            <p style="font-style:italic;">music by {{ audiodoc.music_credits }}</p>
-          -->
-          </div>
-          <!--
-          <div class="col-lg-12">
-            <audio controls>
-              <source src="{{audiodoc.audio_mp3}}" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          -->
-          <div class="comments-button">
-            <a href="audiodoc/{{audiodoc.url}}"><button type="button" class="btn btn-info">  HEAR ALL ABOUT IT </button> </a>
-          </div>
-          <br>
-        </div>
-      </div> <!-- container -->
-  <br>
-  <br>
-      {% endfor %}
-    </section> <!-- end of episodes -->
+9. Force Majeure. We will not be liable for any delay or failure to perform any obligation under this Agreement due to any event beyond our reasonable control, including but not limited to, earthquake, fire, flood or any other natural disaster, labour dispute, riot, revolution, terrorism, acts of restraint of government or regulatory authorities, failure of computer equipment and failure or delay of services and platforms used to operate our electronic media.
 
+10. General. In the event of any dispute with us, these Terms of Use will be governed by English law. If any one of these terms are considered unlawful then they shall be deemed severable and shall not affect the validity and enforcement of the remaining Terms of Use.
 
-
-
-
-
-
-
-  <!-- Contribute Section -->
-  <section id="contribute">
-    <div class="container">
-      <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <div id="contribute-left">
-          <h2> Get Involved </h2>
-          </div>
-              <div class="vertical-line">
-              <p class = 'justify'>
-                If you think your research is too interesting to be confined to academic circles, then just get in touch.
-                Our community of academics spans PhDs in mathematics to lecturers in philosophy – there’s really no subject
-                we’re not interested in. The process is simple: you send the text, we do the rest. So drop us a line at team@knowitwall.com
-                with your details, institution and area of research.
-              </p>
-            </div>
-      </div>
-    </div>
-    </div>
-  </section>
-
-
-  <!-- feedback Section -->
-  <section id="contact">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="contact-title">
-          <h2 class="feedbackform">We'd love to have your thoughts on our site</h2>
-          <p> Help us grow! Please leave any criticism, praise or advice on the site or audiodoc below</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-          <form name="sentMessage" id="contactForm" novalidate>
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Name (optional)</label>
-                <input type="text" class="form-control" name="name" placeholder="Name (optional)" id="name">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Email address (optional)</label>
-                <input type="email" class="form-control" name="email" placeholder="Email address (optional)" id="email">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Feedback on the audio documentary</label>
-                <textarea rows="4" class="form-control" name="feedback_text" placeholder="Feedback on the audio documentary you've listened to (script, narration, music, sound effects, etc.) " id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Overall Feedback</label>
-                <textarea rows="4" class="form-control" name="feedback_overall" placeholder="Overall feedback on the website and project" id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <br>
-            <div id="success"></div>
-            <div class="row">
-              <div class="form-group col-xs-12">
-                <button type="submit" class="btn btn-success btn-lg">Send</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
+Questions: Should you have any questions regarding these TOU you may contact us at knowitwall@gmail.com
+ </p>
+ </section>
 
   <!-- Footer -->
   <footer class="text-center">
@@ -538,7 +372,7 @@
             team@knowitwall.com
           </div>
           <div class="col-lg-4">
-            <a href="{{url_for('terms')}}">Terms and Conditions</a>
+            Terms and Conditions
           </div>
         </div>
       </div>
@@ -566,7 +400,6 @@
 
 
   <script src="/static/js/classie.js"></script>
-  <script src="/static/js/cbpAnimatedHeader.js"></script>
 
   <!-- Contact Form JavaScript -->
   <script src="/static/js/jqBootstrapValidation.js"></script>
@@ -584,64 +417,5 @@
         $( 'audio' ).audioPlayer();
     });
   </script>
-
-
-  <!-- disqus reveal and collapse -->
-  <script>
-  $('.disqus-reveal').click(function() {
-      $(this).slideUp(100);
-      $(this).next().slideToggle();
-      $(".disqus-collapse").slideDown(100);
-  });
-  $('.disqus-collapse').click(function() {
-      $(this).slideUp(100);
-      $(this).prev().slideToggle();
-      $(".disqus-reveal").slideDown(100);
-  });
-
-  </script>
-
-  <!-- script to reload disqus at different points of the page. takes 4 variables:
-    1. Where to place <div id="disqus_thread"></div>: Namely within the <div id="audiodocs[i].disqus_collapse" class="collapse">
-    2. disqus_identifier
-    3. disqus_url
-    4. disqus_title
-
-  -->
-  <script type="text/javascript">
-  var disqus_shortname = 'knowitwall';
-  var disqus_identifier; //made of post id and guid
-  var disqus_url; //post permalink
-  var disqus_title; // title of comment thread
-
-  function loadDisqus(source, identifier, url, title) {
-  if (window.DISQUS) {
-     jQuery('#disqus_thread').prependTo('#' + source); //append the HTML within <div id="audiodocs[i].disqus_collapse" class="collapse">
-     //if Disqus exists, call it's reset method with new parameters
-     DISQUS.reset({
-        reload: true,
-        config: function () {
-        this.page.identifier = identifier;
-        this.page.url = url;
-        this.page.title = title;
-        }
-     });
-  } else {
-     //insert a wrapper in HTML within d<div id="audiodocs[i].disqus_collapse" class="collapse">
-     jQuery('<div id="disqus_thread"></div>').prependTo('#' + source);
-     disqus_identifier = identifier; //set the identifier argument
-     disqus_url = url; //set the permalink argument
-     disqus_title = title;
-     //append the Disqus embed script to HTML
-     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-     jQuery('head').append(dsq);
-  }
-  };
-  </script>
-
-
-
-
 </body>
 </html>

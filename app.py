@@ -134,6 +134,13 @@ def audiodoc(url):
 
 
 "----------------------------------------------------------------------------------------------------"
+" terms and conditions "
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+"----------------------------------------------------------------------------------------------------"
 "method for AJAX contact form "
 
 @app.route('/contactform', methods=['POST'])
