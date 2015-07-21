@@ -149,14 +149,16 @@ def contactform():
     email = request.form['email'];
     feedback_text = request.form['feedback_text'];
     feedback_overall = request.form['feedback_overall'];
+    ad_name = request.form['ad_name'];
     jeremie ='jeremie.coullon@gmail.com'
     miguel = 'mfdsantos86@gmail.com'
     KIW = 'team@knowitwall.com'
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
-    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\nname: "+ str(name)+ "\nemail: " + str(email) + "\nfeedback on the audiodoc: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
+    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: "+ str(ad_name)+"\nname: " + str(name) + "\nemail: " + str(email) + "\nfeedback on the audiodoc: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, KIW, angus], subject, body)
     return name
+
 
 
 "----------------------------------------------------------------------------------------------------"
