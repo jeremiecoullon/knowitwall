@@ -53,7 +53,15 @@ label {
 .newsletter-popup {
   width:100%;
 }
-
+.newsletter-signup_text{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.newsletter-vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 #mc_embed_signup form {
   background-color: #FFC21C;
   border-width: 3px;
