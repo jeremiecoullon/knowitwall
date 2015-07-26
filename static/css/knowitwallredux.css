@@ -10,6 +10,14 @@
     src: url("../fonts/GeosansLight.ttf");
 }
 
+
+
+/*
+/* MailChimp Form Embed Code - Classic - 08/17/2011 */
+
+
+*/
+
 /* feedback form title not in caps lock*/
 
 .feedbackform{
@@ -57,11 +65,48 @@ label {
   overflow: hidden;
   white-space: nowrap;
 }
-.newsletter-vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+
+#mc_embed_signup .newsletter-button {
+  clear:both;
+  background-color: #FFFFFF;
+  border: 0 none;
+  border-radius:4px;
+  border-width: 3px;
+  color: #33353D;
+  cursor: pointer;
+  display: inline-block;
+  font-size:15px;
+  font-weight: bold;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 5px 10px 0;
+  padding: 0 22px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
 }
+#mc_embed_signup .newsletter-button:hover {
+  color: #33353D;
+  background-color: #FFC21C;
+  border-color: #33353D;
+}
+
+
+/* taken from btn-info
+  background-color: #FFFFFF;
+  color: #33353D;
+  background: none;
+  border-color: #33353D;
+  border-radius: 0;
+  border-width: 3px;
+  width: auto;
+  text-align: center;
+  font-size: 1.5em;
+*/
+
+
 #mc_embed_signup form {
   background-color: #FFC21C;
   border-width: 3px;
@@ -445,8 +490,7 @@ text-align: left;
   border-width: 3px;
   width: auto;
   text-align: center;
-
-font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .transcript{
