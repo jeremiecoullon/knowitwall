@@ -1,19 +1,14 @@
 {
     "url": "ganymede",
     "unique_id": "BenSlama_Ganymede",
-    "disqus_collapse": "disquscollapse_BenSlama_Ganymede",
-    "transcript_collapse": "transcriptcollapse_BenSlama_Ganymede",
-    "discipline": "Science",
     "topic_name": "Could there be life around Jupiter?",
+    "topic_name_wrap": "-nowrap",
     "topic_description": "The search for liquid water on Jupiter's moons could reveal a habitat suitable for life. Mehdi Ben Slama guides us through that search.",
     "author_name": "Mehdi Ben Slama",
     "author_image": "/static/Images/Mehdi_BenSlama.jpg",
     "author_bio": "static/texts/ganymede_author_bio.txt",
-
     "music_credits": "Chris Zabriskie and Dexter Britain",
     "narration_credits": "Vidish Athavale",
-
-    "topic_image": "/static/Images/Jupiter_and_Ganymede.jpg",
     "transcript": "static/texts/ganymede_transcript.txt",
     "audio_mp3": "http://178.62.102.130/audio/could_there_be_life_around_Jupiter.mp3"
 }

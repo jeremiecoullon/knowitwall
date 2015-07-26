@@ -263,7 +263,7 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
@@ -282,9 +282,16 @@
           <li class="page-scroll">
             <a href="#contact">Feedback</a>
           </li>
-          <li >
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
             <a href="/newsletter" id="newsletter">Newsletter</a>
           </li>
+          <!--
+          <li>
+            <a href="https://twitter.com/" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
+          </li>
+        -->
         </ul>
       <!-- /.navbar-collapse -->
       </div>
@@ -369,9 +376,9 @@
         </div>
           <div class="col-md-6">
             <div class="vertical-line">
-            <p class = 'justify'>We’re a bunch of young academics trying to change the way academia interacts with the public. If you have more interests than you can keep track of, you’re in the right place.</p>
+            <p class = 'justify'>If you have more interests than you can keep track of, you’re in the right place. We make short documentaries, written by experts in their fields, for the enjoyment of everyone.</p>
             <br>
-            <p class = 'justify'>We make short audio documentaries, written by academics, for the enjoyment of everyone else. From space to spider monkeys, pyramids to Pythagoras – there’s no limit to what you could be learning.</p>
+            <p class = 'justify'>Right now you can listen to them, but soon you'll be able to watch them too. From space to spider monkeys, pyramids to Pythagoras, there’s no limit to what you could be learning!</p>
           </div>
       </div>
     </div>
@@ -389,7 +396,7 @@
         <div class="row">
 
           <div class="col-lg-8 col-lg-offset-2 text-center">
-            <div class="episode-title">
+            <div class="episode-title{{audiodoc.topic_name_wrap}}" style="{{audiodoc.topic_name_wrap}}">
               {{audiodoc.topic_name}}
             </div>
 
@@ -436,9 +443,9 @@
           </div>
               <div class="vertical-line">
               <p class = 'justify'>
-                If you think your research is too interesting to be confined to academic circles, then just get in touch.
+                If you are an academic – or know one – whose research is too interesting to be confined to academic circles, then just get in touch.
                 Our community of academics spans PhDs in mathematics to lecturers in philosophy – there’s really no subject
-                we’re not interested in. The process is simple: you send the text, we do the rest. So drop us a line at team@knowitwall.com
+                we’re not interested in. The process is simple: the academic sends us the text, and we do the rest. So drop us a line at team@knowitwall.com
                 with your details, institution and area of research.
               </p>
             </div>
@@ -465,6 +472,15 @@
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
           <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
           <form name="sentMessage" id="contactForm" novalidate>
+
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Overall Feedback</label>
+                <textarea rows="4" class="form-control" name="feedback_overall" placeholder="We need your feedback to grow! Leave your tips here" id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
             <div class="row control-group">
               <div class="form-group col-xs-12 floating-label-form-group controls">
                 <label>Name (optional)</label>
@@ -481,21 +497,6 @@
               </div>
             </div>
 
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Feedback on the audio documentary</label>
-                <textarea rows="4" class="form-control" name="feedback_text" placeholder="Feedback on the audio documentary you've listened to (script, narration, music, sound effects, etc.) " id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Overall Feedback</label>
-                <textarea rows="4" class="form-control" name="feedback_overall" placeholder="Overall feedback on the website and project" id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
             <input type="hidden" name="ad_name" value="homepage">
             <br>
             <div id="success"></div>
@@ -514,6 +515,7 @@
 
   <!-- Footer -->
   <footer class="text-center">
+    <!--
     <div class="footer-above">
       <div class="container">
         <div class="row">
@@ -521,11 +523,12 @@
           <div class="col-md-4 col-md-offset-4 ">
             <h3>We're social too</h3>
             <ul class="list-inline">
-              <!--
+
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
               </li>
-            -->
+
+
               <li>
                 <a href="https://twitter.com/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
               </li>
@@ -534,7 +537,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="footer-below">
       <div class="container">
         <div class="row">

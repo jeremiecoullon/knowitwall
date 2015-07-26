@@ -67,6 +67,7 @@ def send_file_partial(path):
 
 @app.route('/audio/its_at_tate.mp3')
 @app.route('/audio/could_there_be_life_around_Jupiter.mp3')
+@app.route('/audio/stegosaurus_spikes.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -77,7 +78,7 @@ def static_from_root():
 "audiodoc function"
 
 # complete list of audiodocs
-all_audiodocs = ['ganymede.json', 'tate.json']
+all_audiodocs = ['stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
