@@ -281,10 +281,10 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <div class="episode-title">
-            {{audiodoc[0].topic_name}}
+            {{audiodoc[0].topic_name | safe}}
           </div>
 
-          <p style="font-size:1.6em;">{{audiodoc[0].topic_description}}</p>
+          <p style="font-size:1.6em;">{{audiodoc[0].topic_description | safe}}</p>
           <p style="font-style:italic;">narrated by {{ audiodoc[0].narration_credits }}</p>
           <p style="font-style:italic;">music by {{ audiodoc[0].music_credits }}</p>
         </div>
@@ -371,7 +371,7 @@
                 <p class="help-block text-danger"></p>
               </div>
             </div>
-            
+
             <div class="row control-group">
               <div class="form-group col-xs-12 floating-label-form-group controls">
                 <label>Name (optional)</label>
