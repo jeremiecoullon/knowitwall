@@ -526,6 +526,12 @@ padding:40px;
   padding: 0px 100px 20.5px 20px;
 }
 
+/* this is added to the audiodoc page navbar to position the links properly */
+.navbarADpage {
+  padding: 0px 330px 20.5px 20px;
+}
+
+
 @media(max-width:400px) {
 
 .navbar-brand {
@@ -533,6 +539,7 @@ padding:40px;
   max-width:250px;
   width:70%;
 }
+
 }
 
 .navbar-default .navbar-toggle {
