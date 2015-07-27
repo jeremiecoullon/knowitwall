@@ -95,6 +95,10 @@ label {
   background-color:#27282D !important;
   text-transform: lowercase;
 }
+#mc_embed_signup div.mce_inline_error::first-letter {
+
+  text-transform: uppercase;
+}
 #mc_embed_signup #mce-success-response-KiW {color:#27282D; display:none;}
 /* end of inline error for signup form */
 
