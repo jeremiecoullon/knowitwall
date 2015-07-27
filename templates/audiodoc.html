@@ -265,7 +265,7 @@
           <li class="page-scroll">
             <a href="#episodes">Episode</a>
           </li>
-          <li class="page-scroll">
+          <li class="page-scroll-offset">
             <a href="#read">Read</a>
           </li>
           <li class="page-scroll">
@@ -358,13 +358,13 @@
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
-              <p id="read"> {{ audiodoc[0].author_bio | safe}} </p>
+              <p > {{ audiodoc[0].author_bio | safe}} </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12" id="read">
           <div class="transcript"> <!-- transcript class gives the padding -->
             {{ audiodoc[0].transcript | safe }}
           </div>

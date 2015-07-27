@@ -45,6 +45,17 @@ $(function() {
     });
 });
 
+// Same scroll function as above, but offset for the audiodoc page
+$(function() {
+    $('body').on('click', '.page-scroll-offset a', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top-60
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
 // Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
