@@ -315,7 +315,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="mc-field-group">
-                  	<input type="email" value=""  name="EMAIL" placeholder="Your email address" class="required email" id="mce-EMAIL" style="border:3px solid #33353D; #mc_embed_signup div.mce_inline_error { background-color:#27282D}">
+                  	<input type="email" value=""  name="EMAIL" placeholder="Your email address" class="required email" id="mce-EMAIL" style="border:3px solid #33353D;">
                   </div>
                 	<div id="mce-responses" class="clear">
                 		<div class="response" id="mce-error-response" style="display:none"></div>
@@ -367,7 +367,7 @@
       <div class="row">
         <div class="col-md-6 text-center">
           <div id="about-left">
-          <h2> What are we about? </h2>
+          <h2> What are we about?</h2>
           </div>
         </div>
           <div class="col-md-6">
@@ -590,6 +590,12 @@
         $( 'audio' ).audioPlayer();
     });
   </script>
-
+  <!-- trying to remove an element from mailchimp signup error message
+  <script type="text/javascript">
+    $('#about-f').text(function (_,txt) {
+        return txt.slice(0, -1);
+    });
+  </script>
+-->
 </body>
 </html>
