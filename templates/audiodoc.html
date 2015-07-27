@@ -275,7 +275,7 @@
             <a href="/newsletter" id="newsletter">Newsletter</a>
           </li>
           <li>
-            <a href="https://twitter.com/" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
+            <a href="https://twitter.com/KnowitWall" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
           </li>
 
         </ul>
@@ -326,9 +326,10 @@
     <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-          <div class="episode-title{{audiodoc.topic_name_wrap}}">
+          <div class="episode-title{{audiodoc[0].topic_name_wrap}}">
             {{audiodoc[0].topic_name | safe}}
           </div>
+
 
           <p style="font-size:1.6em;">{{audiodoc[0].topic_description | safe}}</p>
           <p style="font-style:italic;">narrated by {{ audiodoc[0].narration_credits }}</p>
@@ -467,7 +468,7 @@
               </li>
             -->
               <li>
-                <a href="https://twitter.com/" target="_blank"  class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                <a href="https://twitter.com/KnowitWall" target="_blank"  class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
               </li>
             </ul>
           </div>
