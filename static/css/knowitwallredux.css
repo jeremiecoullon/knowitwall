@@ -87,6 +87,16 @@ label {
   border-color: #33353D;
 }
 
+/* inline error in sign up form: have the background colour as dark grey rather than red  #27282D */
+#mc_embed_signup input.mce_inline_error {
+  border-color:#27282D !important;
+}
+#mc_embed_signup div.mce_inline_error {
+  background-color:#27282D !important;
+}
+#mc_embed_signup #mce-success-response-KiW {color:#27282D; display:none;}
+/* end of inline error for signup form */
+
 
 #mc_embed_signup form {
   background-color: #FFC21C;
