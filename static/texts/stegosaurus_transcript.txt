@@ -1,5 +1,6 @@
 <html>
-  <p class = 'justify'> Hands up who knows what <i>Stegosaurus</i> is? Pretty much every 7
+  <p class = "justify">
+    Hands up who knows what <i>Stegosaurus</i> is? Pretty much every 7
     year old in the world can tell you that <i>Stegosaurus</i> was a plant-eating
     dinosaur which walked on four legs, and possessed two rows of bony plates and spines that
     extended down its back from its neck right to the end of its tail. But what fewer
@@ -7,7 +8,8 @@
     fossils are actually really rare – and that causes lots of problems if we want
     to understand how they lived, and what they were doing with those bony plates
     and spines. </p>
-  <p class="jusify">Stegosaurs are bird-hipped dinosaurs, which means they are
+  <p class="justify">
+    Stegosaurs are bird-hipped dinosaurs, which means they are
     closely related to dinosaurs like <i>Ankylosaurus</i>, <i>Iguanodon</i> and <i>Triceratops</i>,
     but more distantly related to the lizard-hipped dinosaurs, which included the
     long-necked dinosaurs, things like <i>Diplodocus</i>, the meat-eating dinosaurs, such
@@ -39,7 +41,7 @@
     end of the stegosaur’s tail could be swung to impale the leg of any predator
     daring enough to get too close.
   </p>
-  
+
   <p class="justify"> What does the fossil record say about this? Well, there is
     a vertebra – a bone from the back – of the meat-eating dinosaur <i>Allosaurus</i>,
     likely <i>Stegosaurus’</i> most fearsome predator. The vertebra has been punctured,
@@ -61,7 +63,7 @@
     it to cool down.
   </p>
   <p class="justify"> However, the plates of other stegosaurs, such as <i>Kentrosaurus</i>
-    from <i>Tanzania</i>, or <i>Chungkingosaurus</i> from China, are much smaller than those of
+    from Tanzania, or <i>Chungkingosaurus</i> from China, are much smaller than those of
     <i>Stegosaurus</i>, and they probably weren’t large enough to act as heat radiators.
     <i>Stegosaurus</i> might have used its plates to help it cool down, but it doesn’t seem
     like that’s why they evolved. It looks like we are running out of options…
