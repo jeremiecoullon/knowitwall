@@ -141,25 +141,39 @@ def audiodoc(url):
 def terms():
     return render_template('terms.html')
 
+
+
+
 "----------------------------------------------------------------------------------------------------"
 "method for AJAX contact form "
 
 @app.route('/contactform', methods=['POST'])
 def contactform():
+
+    """
+    regular expression to remove html tag from ad_name, otherwise the sent message
+    is all on one line
+    """
+    TAG_RE = re.compile(r'<[^>]+>')
+    def remove_tags(text):
+        return TAG_RE.sub('', text)
+
+
     name =  request.form['name'];
     email = request.form['email'];
-    feedback_text = request.form['feedback_text'];
     feedback_overall = request.form['feedback_overall'];
-    ad_name = request.form['ad_name'];
+    ad_name_html = request.form['ad_name'];
+    ad_name = remove_tags(ad_name_html)
     jeremie ='jeremie.coullon@gmail.com'
     miguel = 'mfdsantos86@gmail.com'
     KIW = 'team@knowitwall.com'
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
-    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: "+ str(ad_name)+"\nname: " + str(name) + "\nemail: " + str(email) + "\nfeedback on the audiodoc: \n" + str(feedback_text) + "\n\n \noverall feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
-    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, KIW, angus], subject, body)
+    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
+    yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie], subject, body)
     return name
 
+", miguel, KIW, angus"
 
 
 "----------------------------------------------------------------------------------------------------"

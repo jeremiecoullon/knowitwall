@@ -11,7 +11,6 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var ad_name = $("input#ad_name").val();
-            var feedback_text = $("textarea#feedback_text").val();
             var feedback_overall = $("textarea#feedback_overall").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
