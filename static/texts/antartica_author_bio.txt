@@ -1,0 +1,6 @@
+<html>
+<p class = 'justify'>Martin is Professor of Geosciences and co-director of the Grantham Institute for Climate Change
+& the Environment at Imperial College London. His research in the field of glaciology has led
+to the discovery of around 400 subglacial lakes, including Lake Ellsworth in West Antarctica.
+He is also known for telling the best stories about Antarctic explorers.
+</html>
