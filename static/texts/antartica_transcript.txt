@@ -78,6 +78,6 @@
   be over 200 kilometres from a single point of data. Given the role Antarctica
   might be about to play in the history of this century, it does seem amazing that
   we know far more about the surfaces of the Moon and Mars than we do about the
-  underside of the Antarctic Ice Sheet
+  underside of the Antarctic Ice Sheet.
 </p>
 </html>
