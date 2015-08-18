@@ -44,7 +44,7 @@
   explosions conducted on the surface, Robin increased the rate of ice thickness
   data acquisition by at least five orders of magnitude, and was thus responsible
   for one of the 20th century’s major scientific breakthroughs. Between the late
-  1960s and early 80s, the technique was fine-tuned, and applied to measure approximately
+  1960s and early 1980s, the technique was fine-tuned, and applied to measure approximately
   40% of the Antarctic Ice Sheet; a profound phase of discovery. Lakes were identified
   beneath the ice along with an appreciation of the sub-ice continental landscape,
   involving hitherto unknown mountains and valleys that testify to processes of change
@@ -64,13 +64,13 @@
   contact with the grounded ice sheet. In such places the ice sheet rests on a bed
   several hundred metres below sea level, and slopes down, back toward the ice
   sheet centre. Thus, as the grounded part of the ice sheet retreats, it does so
-  over an increasingly deeper bed, which accelerates ice loss. This situation has
+  over an increasingly deeper bed, which accelerates the ice loss. This situation has
   led some scientists to believe that irreversible change in the Antarctic has
   already begun, with huge implications for global sea levels. Antarctica holds
   so much ice that, if melted, sea levels would rise by around 60 metres. The
   rate of sea level rise from the Antarctic Ice Sheet is likely to be no more
   than 1 metre per century, but such an increase would lead to the submerging of
-  smany low lying regions of the world by 2100.
+  many low lying regions of the world by 2100.
 </p>
 <p class = 'justify'> Our knowledge of the Antarctic continent is a direct result
   of the exploration that precedes us. Yet, we still know little about so much of
