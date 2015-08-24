@@ -5,7 +5,7 @@ import os
 import yagmail
 from flask import json, url_for, send_file
 from flask import render_template, request, send_from_directory, Response
-
+from app import app
 
 
 
@@ -85,7 +85,7 @@ def ad_fun(audiodoc_list):
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
 
-        with open('json_files/' + audiodoc_json, "r") as json_file:
+        with open('app/static/json_files/' + audiodoc_json, "r") as json_file:
             ad_dictionary = json.load(json_file)
 
         with open(ad_dictionary.get('author_bio'), "r") as f:
@@ -101,6 +101,7 @@ def ad_fun(audiodoc_list):
 
 """ Can do ad[author_name] or ad.get('author_name', DEFAULTVALUE)
     the second option is safer (if the key doesnt exist) """
+
 
 
 "----------------------------------------------------------------------------------------------------"
