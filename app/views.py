@@ -3,10 +3,9 @@ import mimetypes
 import re
 import os
 import yagmail
-from flask import Flask, json, url_for, send_file
+from flask import json, url_for, send_file
 from flask import render_template, request, send_from_directory, Response
 
-app = Flask(__name__, static_folder='static')
 
 
 
@@ -185,8 +184,3 @@ def BenSlama_Ganymede():
     return render_template('define_disqus.html')
 
 """
-
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
