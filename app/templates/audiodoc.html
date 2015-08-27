@@ -47,10 +47,11 @@
   <![endif]-->
 
     <!-- Sharethis.com: this makes the social media buttons work -->
+    <!--
     <script type="text/javascript">var switchTo5x=true;</script>
     <script type="text/javascript" src="http://ws.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript" src="http://ss.sharethis.com/loader.js"></script>
-<!-- -->
+    -->
 
 
 
@@ -58,6 +59,7 @@
 </head>
 
 <body id="page-top">
+
   <!-- <div class="overflow"> -->
 
   <!-- Navigation -->
@@ -375,6 +377,8 @@
         <div class="col-md-12" id="read">
           <div class="transcript"> <!-- transcript class gives the padding -->
             {{ audiodoc[0].transcript | safe }}
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_responsive_sharing"></div>
           </div>
         </div>
       </div>  <!-- row -->
@@ -533,14 +537,17 @@
   <script src="/static/js/audioplayer.js"></script>
 
   <!-- Sharethis.com: to make the social media buttons work -->
+  <!--
   <script type="text/javascript">stLight.options({publisher: "08e3a3e8-abb1-434a-8ebb-df836483492f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   <script>
   var options={ "publisher": "08e3a3e8-abb1-434a-8ebb-df836483492f", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter"]}};
   var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
   </script>
+-->
 
-
-
+<!-- share buttons-->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
   <script>
     $( function()
