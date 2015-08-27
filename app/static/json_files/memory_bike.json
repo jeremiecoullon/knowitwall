@@ -1,16 +1,16 @@
 {
     "url": "memory_bike",
     "unique_id": "Schechtman-Belham_Memory",
-    "topic_name": "",
+    "topic_name": "memory bike",
     "og_name": "",
     "og_description": "Human memory is an intriguing thing. On the one hand, we forget things all the time. On the other, there are things we never seem to forget. How could this be though? Using the curious case of Henry Molaison, memory researcher Flavia Schechtman Belham explains.",
     "topic_name_wrap": "",
     "topic_description": "Human memory is an intriguing thing. On the one hand, we forget things all the time. On the other, there are things we never seem to forget. How could this be though? Using the curious case of Henry Molaison, memory researcher Flavia Schechtman Belham explains.",
     "author_name": "Flavia Schechtman Belham",
     "author_image": "/static/Images/Flavia_S_Belham.jpg",
-    "author_bio": "static/texts/memory_author_bio.txt",
-    "music_credits": "",
+    "author_bio": "app/static/texts/memory_author_bio.txt",
+    "music_credits": "Kai Engel and Lee Rosevere",
     "narration_credits": "Vidish Athavale",
-    "transcript": "static/texts/memory_transcript.txt",
+    "transcript": "app/static/texts/memory_transcript.txt",
     "audio_mp3": "http://knowitwall.com/audio/memory_bike.mp3"
 }
