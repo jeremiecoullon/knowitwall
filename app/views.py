@@ -3,10 +3,10 @@ import mimetypes
 import re
 import os
 import yagmail
-from flask import json, url_for, send_file
+from flask import json, url_for, send_file, flash, redirect
 from flask import render_template, request, send_from_directory, Response
 from app import app
-
+from .forms import LoginForm
 
 
 """----------------------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ def ad_fun(audiodoc_list):
     the second option is safer (if the key doesnt exist) """
 
 
-
+"VIEWS"
 "----------------------------------------------------------------------------------------------------"
 "home page"
 
@@ -175,13 +175,15 @@ def contactform():
     return name
 
 
-
 "----------------------------------------------------------------------------------------------------"
-" to define disqus form: change the disqus_id and disqus_url in the html, then change app.route to unique_id of audiodoc"
-"""
-@app.route('/BenSlama_Ganymede')
-def BenSlama_Ganymede():
+" secret login form "
 
-    return render_template('define_disqus.html')
 
-"""
+@app.route('/secretlogin', methods = ['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for OpenID="%s", remember_me=%s' %
+              (form.openid.data, str(form.remember_me.data)))
+        return redirect('/')
+    return render_template('login.html', title = 'Sign In', form = form, providers=app.config['OPENID_PROVIDERS'])
