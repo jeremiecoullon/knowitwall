@@ -68,6 +68,7 @@ def send_file_partial(path):
 @app.route('/audio/could_there_be_life_around_Jupiter.mp3')
 @app.route('/audio/stegosaurus_spikes.mp3')
 @app.route('/audio/antartica_discovery.mp3')
+@app.route('/audio/memory_keys.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
