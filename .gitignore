@@ -57,5 +57,8 @@ target/
 flask/
 venv/
 
+# database stuff (I think its part of the login info for users
+tmp/nonces/
+
 #gunicorn config file
 gunicorn.conf.py
