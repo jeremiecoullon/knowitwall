@@ -114,13 +114,19 @@ def ad_fun(audiodoc_list):
     the second option is safer (if the key doesnt exist) """
 
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 "VIEWS"
 "----------------------------------------------------------------------------------------------------"
 "home page"
 
-@app.route('/')
+@app.route('/home')
 @login_required
-def index():
+def home():
 
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
@@ -188,6 +194,35 @@ def contactform():
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, KIW, angus], subject, body)
     return name
 
+
+"----------------------------------------------------------------------------------------------------"
+" login using OAuh (facebook and twitter) "
+
+# authorize route. This redirects the user to Facebook or Twitter to allow KiW to access data
+@app.route('/authorize/<provider>')
+def oauth_authorize(provider):
+    if not current_user.is_anonymous():
+        return redirect(url_for('index'))
+    oauth = OAuthSignIn.get_provider(provider)
+    return oauth.authorize()
+
+# callback route: this is where facebook/twitter send auth info to KiW
+@app.route('/callback/<provider>')
+def oauth_callback(provider):
+    if not current_user.is_anonymous():
+        return redirect(url_for('index'))
+    oauth = OAuthSignIn.get_provider(provider)
+    social_id, username, email = oauth.callback()
+    if social_id is None:
+        flash('Authentication failed.')
+        return redirect(url_for('index'))
+    user = User.query.filter_by(social_id=social_id).first()
+    if not user:
+        user = User(social_id=social_id, nickname=username, email=email)
+        db.session.add(user)
+        db.session.commit()
+    login_user(user, True)
+    return redirect(url_for('index'))
 
 "----------------------------------------------------------------------------------------------------"
 " secret login form "
