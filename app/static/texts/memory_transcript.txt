@@ -47,9 +47,9 @@
   <p class = 'justify'>
     After several studies, many researchers started to suggest that memory is
     actually formed by separate, though interacting, classes of memories. Some
-    memories can be kept for decades, even a lifetime. They are called long-term
-    memories. The general knowledge you have, like the name of the current
-    president of your country, or the fact that monkeys are mammals, these belong
+    memories can be kept for decades, even a lifetime. These are called long-term
+    memories. The general knowledge that you have, like the name of the current
+    president of your country or the fact that monkeys are mammals, these belong
     to the part of your long-term memory called semantic memory. Likewise, events
     that you’ve experienced in your life constitute what are called episodic
     memories, like the party your friends threw for you last year, or how you felt
@@ -83,7 +83,7 @@
     that allowed him to improve on certain memory tasks, like the mirror-drawing task.
   </p>
   <p class = 'justify'>
-    What does this all mean? It means that an explicit memory requires the presence
+    What does all this mean? It means that an explicit memory requires the presence
     of the hippocampus and more complex cognitive processes, like attention and
     conscious recall. On the other hand, implicit memories make use of structures
     that were spared in Henry’s surgery, and are created by retaining connections
