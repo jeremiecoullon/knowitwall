@@ -2,11 +2,11 @@ from app import db
 from app import UserMixin
 
 class User(UserMixin, db.Model):
-    __tablename_= 'users'
+    __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     social_id = db.Column(db.String(64), nullable=False, unique=True)
-    nickname = db.Column(db.String(64), index=True, nullable=False)
-    email = db.Column(db.String(120), index=True, nullable=True)
+    nickname = db.Column(db.String(64), nullable=False)
+    email = db.Column(db.String(64), nullable=True)
 
     def is_authenticated(self):
         return True

@@ -1,3 +1,5 @@
+from rauth import OAuth1Service, OAuth2Service
+from flask import current_app, url_for, request, redirect, session
 
 # general method (provider agnostic)
 class OAuthSignIn(object):
@@ -29,7 +31,6 @@ class OAuthSignIn(object):
         return self.providers[provider_name]
 
 
-
 class FacebookSignIn(OAuthSignIn):
     def __init__(self):
         super(FacebookSignIn, self).__init__('facebook')
@@ -41,12 +42,14 @@ class FacebookSignIn(OAuthSignIn):
             access_token_url='https://graph.facebook.com/oauth/access_token',
             base_url='https://graph.facebook.com/'
         )
+
     def authorize(self):
         return redirect(self.service.get_authorize_url(
             scope='email',
             response_type='code',
             redirect_uri=self.get_callback_url())
         )
+
     def callback(self):
         if 'code' not in request.args:
             return None, None, None
@@ -55,7 +58,7 @@ class FacebookSignIn(OAuthSignIn):
                   'grant_type': 'authorization_code',
                   'redirect_uri': self.get_callback_url()}
         )
-        me = oauth_session.get('me').json()
+        me = oauth_session.get('me?fields=id,name,email').json()
         return (
             'facebook$' + me['id'],
             me.get('email').split('@')[0],  # Facebook does not provide
@@ -63,8 +66,6 @@ class FacebookSignIn(OAuthSignIn):
                                             # is used instead
             me.get('email')
         )
-
-
 
 
 class TwitterSignIn(OAuthSignIn):
@@ -79,12 +80,14 @@ class TwitterSignIn(OAuthSignIn):
             access_token_url='https://api.twitter.com/oauth/access_token',
             base_url='https://api.twitter.com/1.1/'
         )
+
     def authorize(self):
         request_token = self.service.get_request_token(
             params={'oauth_callback': self.get_callback_url()}
         )
         session['request_token'] = request_token
         return redirect(self.service.get_authorize_url(request_token[0]))
+
     def callback(self):
         request_token = session.pop('request_token')
         if 'oauth_verifier' not in request.args:
