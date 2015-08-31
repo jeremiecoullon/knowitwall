@@ -523,12 +523,29 @@
 
 </script>
 
+<!--
   <script type="text/javascript">
     jQuery(function ($) {
-      $('#annotator_transcript').annotator()
-                   .annotator('setupPlugins');
+        $('#annotator_transcript').annotator({
+            readOnly: false
+        })
+        .annotator('setupPlugins');
     });
   </script>
+-->
+<script type="text/javascript">
+function initAnnotator(json) {
+  "use strict";
+
+  $('#annotator_transcript').annotator().annotator('setupPlugins', null, {
+    Permissions: true,
+    AnnotateItPermissions: {}
+  });
+}
+</script>
+<script type="application/javascript" src="http://jsonip.com/initAnnotator"></script>
+
+
   <script>
     $( function()
     {
