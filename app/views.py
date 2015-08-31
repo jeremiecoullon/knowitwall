@@ -18,10 +18,6 @@ To change audio-doc:
 ----------------------------------------------------------------------------------------------------"""
 
 
-@app.before_request
-def before_request():
-    g.user = current_user
-
 @lm.user_loader
 def load_user(id):
     return User.query.get(int(id))
@@ -116,18 +112,12 @@ def ad_fun(audiodoc_list):
 
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
 "VIEWS"
 "----------------------------------------------------------------------------------------------------"
 "home page"
 
-@app.route('/home')
-@login_required
-def home():
+@app.route('/')
+def index():
 
     """
     To change audio-doc, simply create a new json file with the links to images,audio etc..
@@ -137,9 +127,7 @@ def home():
 
     audiodocs = ad_fun(audiodoc_list)
 
-    user = g.user
-
-    return render_template('knowitwall.html', audiodocs=audiodocs, user = user)
+    return render_template('knowitwall.html', audiodocs=audiodocs)
 
 
 
@@ -162,7 +150,6 @@ def audiodoc(url):
 @app.route('/terms')
 def terms():
     return render_template('terms.html')
-
 
 
 
@@ -203,7 +190,7 @@ def contactform():
 @app.route('/authorize/<provider>')
 def oauth_authorize(provider):
     if not current_user.is_anonymous():
-        return redirect(url_for('index'))
+        return redirect(url_for('userlogin'))
     oauth = OAuthSignIn.get_provider(provider)
     return oauth.authorize()
 
@@ -211,58 +198,29 @@ def oauth_authorize(provider):
 @app.route('/callback/<provider>')
 def oauth_callback(provider):
     if not current_user.is_anonymous():
-        return redirect(url_for('index'))
+        return redirect(url_for('userlogin'))
     oauth = OAuthSignIn.get_provider(provider)
     social_id, username, email = oauth.callback()
     if social_id is None:
         flash('Authentication failed.')
-        return redirect(url_for('index'))
+        return redirect(url_for('userlogin'))
     user = User.query.filter_by(social_id=social_id).first()
     if not user:
         user = User(social_id=social_id, nickname=username, email=email)
         db.session.add(user)
         db.session.commit()
     login_user(user, True)
-    return redirect(url_for('index'))
+    return redirect(url_for('userlogin'))
 
 "----------------------------------------------------------------------------------------------------"
 " secret login form "
 
-@app.route('/login', methods=['GET', 'POST'])
-@oid.loginhandler
-def login():
-    if g.user is not None and g.user.is_authenticated():
-        return redirect(url_for('index'))
-    form = LoginForm()
-    if form.validate_on_submit():
-        session['remember_me'] = form.remember_me.data
-        return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
-    return render_template('login.html',
-                           title='Sign In',
-                           form=form,
-                           providers=app.config['OPENID_PROVIDERS'])
+@app.route('/supersecretlogin')
+def userlogin():
+    return render_template('secretlogin.html')
 
-@oid.after_login
-def after_login(resp):
-    if resp.email is None or resp.email == "":
-        flash('Invalid login. Please try again.')
-        return redirect(url_for('login'))
-    user = User.query.filter_by(email=resp.email).first()
-    if user is None:
-        nickname = resp.nickname
-        if nickname is None or nickname == "":
-            nickname = resp.email.split('@')[0]
-        user = User(nickname=nickname, email=resp.email)
-        db.session.add(user)
-        db.session.commit()
-    remember_me = False
-    if 'remember_me' in session:
-        remember_me = session['remember_me']
-        session.pop('remember_me', None)
-    login_user(user, remember = remember_me)
-    return redirect(request.args.get('next') or url_for('index'))
 
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('userlogin'))
