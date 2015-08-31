@@ -34,7 +34,7 @@
   will need a full season of 2 to 3 months. Despite this, seismic profiling
   was used extensively in the International Geophysical Year, demonstrating
   that the continent was a single body of land, and that the ice was over 4000
-  metres thick in places. Still, there had to be a better way to collect data
+  metres thick in some places. Still, there had to be a better way to collect data
   about ice thickness.
 </p>
 <p class = 'justify'> In the 1950s, Gordon Robin, an Australian physicist and

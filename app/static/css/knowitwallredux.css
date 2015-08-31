@@ -433,24 +433,14 @@ text-align: left;
 }
 }
 
-.episode-title-nowrap {
-
- font-size:4em;
-  font-family: GeosansLight;
- color:#33353d;
- background-color: rgba(255, 194, 28, 1);
- margin-bottom: 20px;
- display: inline-block;
- white-space: nowrap;
-}
 .episode-title {
 
- font-size:4em;
+  font-size:4em;
   font-family: GeosansLight;
- color:#33353d;
- background-color: rgba(255, 194, 28, 1);
- margin-bottom: 20px;
- display: inline-block;
+  color:#33353d;
+  background-color: rgba(255, 194, 28, 1);
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 @media(max-width:561px) {
@@ -459,12 +449,7 @@ text-align: left;
     white-space: normal;
   }
 }
-@media(max-width:561px) {
-  .episode-title-nowrap {
-    font-size:3em;
-    white-space: normal;
-  }
-}
+
 
 .contact-title {
 

@@ -1,0 +1,95 @@
+<html>
+  <p class = 'justify'>
+    I can’t ride a bike. For some reason I’ve never tried to learn it. But people
+    kept telling me: ‘You should learn! It’s very easy, and once you learn how to
+    ride a bike, you’ll never forget.’ <i>Once you learn how to ride a bike, you’ll
+    never forget</i>. Now you’ve probably heard this before and, in fact, you might
+    have even said it yourself! But how then, at the same time, do we keep forgetting
+    where we leave our keys?
+  </p>
+  <p class = 'justify'>
+    Our understanding of human memory was revolutionized in the 1950s, when neurosurgeon
+    William Scoville performed surgery on Henry Molaison’s brain. Henry used to
+    suffer from severe epileptic seizures, until Scoville removed the left and
+    right portions of his hippocampus, a structure in the shape of a seahorse towards
+    the medial temporal lobe of the brain. Hippocampus functions weren’t fully
+    understood at the time, but the surgery was successful in its primary goal:
+    Henry’s seizures were greatly reduced. But so was his memory!
+  </p>
+  <p class = 'justify'>
+    After the surgery, Henry developed an anterograde amnesia, which meant that,
+    until he passed away in 2008, he couldn’t create new memories. He couldn’t
+    retain a new face, name, address, or remember having done a certain activity.
+    He also developed a retrograde amnesia, which made him forget many things
+    that had happened during the years before his surgery.
+  </p>
+  <p class = 'justify'>
+    To investigate the case of Henry Molaison, a group of neuropsychologists, led
+    by Dr. Brenda Milner and Dr. Suzanne Corkin, worked with Henry over many years,
+    asking him to perform different memory tasks. Each time the researchers met
+    Henry, they had to re-introduce themselves and explain the task again, because
+    he simply didn’t remember having seen those people or having done that task
+    before. Surprisingly, however, his performance on some of the tasks kept getting
+    better! In a paper from 1968, Dr. Corkin reported that,
+  </p>
+  <p class="justify">
+    <q>H.M. performed 39
+    trials on a mirror-drawing task and showed steady improvement (indicated by
+    reduced time and error scores for both hands) over a three-day period,
+    although on the second and third days he was not aware of having done the
+    task before.
+    </q>
+  </p>
+  <p class="justify">
+    But how could this be? How was it that Henry was unable to create new
+    memories and yet improved on some memory tasks?
+  </p>
+  <p class = 'justify'>
+    After several studies, many researchers started to suggest that memory is
+    actually formed by separate, though interacting, classes of memories. Some
+    memories can be kept for decades, even a lifetime. These are called long-term
+    memories. The general knowledge that you have, like the name of the current
+    president of your country or the fact that monkeys are mammals, these belong
+    to the part of your long-term memory called semantic memory. Likewise, events
+    that you’ve experienced in your life constitute what are called episodic
+    memories, like the party your friends threw for you last year, or how you felt
+    when a loved one passed away. The common feature between semantic and episodic
+    memories is that you are able to talk about them and consciously recollect
+    them. Because of that, they belong to the class of <i>explicit (or declarative)
+    memories</i>. These are the types of memory that Henry lost and couldn’t create
+    after his surgery.
+  </p>
+  <p class = 'justify'>
+    The twist in the tale was that Henry’s brain was still able to build another
+    group of memories within the long-term memory class, called <i>implicit (or non-declarative)
+    memories</i>. They receive this name because the information stored is retrieved
+    without conscious awareness. Usually, they are formed after the repetition of
+    movements and encounters with a certain stimulus and are automatically retrieved
+    every time you see that stimulus. In the case of motor skills like riding a
+    bike, the motor cortex, located on the frontal lobes, is involved in the execution
+    of the movements of your limbs. This area of the brain is directly connected
+    to the cerebellum, located close to where the spinal cord meets the brain, and
+    is responsible for learning behavioural responses. Once you start learning
+    how to balance and move your legs on a bike, that information is stored in the
+    cerebellum. When you try to ride a bike again, all that knowledge will automatically
+    be recovered from the cerebellum and your motor cortex will respond appropriately.
+
+  </p>
+  <p class = 'justify'>
+    So, even if you spend years without riding a bike, playing an instrument or
+    swimming, next time you see a bike, a guitar or a lake, what you learned the
+    first times you tried those activities will automatically and effortlessly
+    come back to you. These are the types of memory that Henry did not lose, and
+    that allowed him to improve on certain memory tasks, like the mirror-drawing task.
+  </p>
+  <p class = 'justify'>
+    What does all this mean? It means that an explicit memory requires the presence
+    of the hippocampus and more complex cognitive processes, like attention and
+    conscious recall. On the other hand, implicit memories make use of structures
+    that were spared in Henry’s surgery, and are created by retaining connections
+    between sensory stimuli and behavioural responses. That’s one of the reasons
+    why it may be easier to remember what you learned twenty years ago, such as
+    how to ride a bike, than to remember where you left your keys five minutes ago.
+    After all, some things, when learned, are never forgotten.
+  </p>
+</html>

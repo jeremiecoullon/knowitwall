@@ -15,6 +15,7 @@
   <meta property="og:title" content="{{audiodoc[0].og_name}}" />
   <meta property="og:description" content="{{audiodoc[0].og_description}}" />
   <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodoc.url}}" />
+  <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
 
@@ -41,11 +42,20 @@
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 
+    <!-- Sharethis.com: this makes the social media buttons work -->
+    <!--
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://ws.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://ss.sharethis.com/loader.js"></script>
+    -->
+
+
 
 
 </head>
 
 <body id="page-top">
+
   <!-- <div class="overflow"> -->
 
   <!-- Navigation -->
@@ -259,7 +269,7 @@
           -->
 
           <li class="page-scroll">
-            <a href="#episodes">Episode</a>
+            <a href="#episodes">Listen</a>
           </li>
           <li class="page-scroll-offset">
             <a href="#read">Read</a>
@@ -323,7 +333,7 @@
   <section id="episodes">
     <div class="container previous-audiodoc">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
           <div class="episode-title{{audiodoc[0].topic_name_wrap}}">
             {{audiodoc[0].topic_name | safe}}
           </div>
@@ -363,6 +373,8 @@
         <div class="col-md-12" id="read">
           <div class="transcript" id="annotator_transcript"> <!-- transcript class gives the padding. annotator_transcript allows annotator to work -->
             {{ audiodoc[0].transcript | safe }}
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_sharing_toolbox" style="float: right;"></div>
           </div>
         </div>
       </div>  <!-- row -->
@@ -545,6 +557,18 @@ function initAnnotator(json) {
 </script>
 <script type="application/javascript" src="http://jsonip.com/initAnnotator"></script>
 
+  <!-- Sharethis.com: to make the social media buttons work -->
+  <!--
+  <script type="text/javascript">stLight.options({publisher: "08e3a3e8-abb1-434a-8ebb-df836483492f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  <script>
+  var options={ "publisher": "08e3a3e8-abb1-434a-8ebb-df836483492f", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter"]}};
+  var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+  </script>
+-->
+
+<!-- share buttons-->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
   <script>
     $( function()
