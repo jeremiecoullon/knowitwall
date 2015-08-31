@@ -8,12 +8,12 @@ SECRET_KEY = 'you-will-never-guess'
 
 OAUTH_CREDENTIALS = {
     'facebook': {
-        'id': '470154729788964',
-        'secret': '010cc08bd4f51e34f3f3e684fbdea8a7'
+        'id': '125492684468652',
+        'secret': 'ac27e7025d4047ce9722d89a0ed045f0'
     },
     'twitter': {
-        'id': '3RzWQclolxWZIMq5LJqzRZPTl',
-        'secret': 'm9TEd58DSEtRrZHpz2EjrV9AhsBRxKMo8m3kuIZj3zLwzwIimt'
+        'id': 'xIStL0E3bf6v6nyUw3g89pGeu',
+        'secret': 'lUjEtyqRIb1d5Le0MruxQZGJIzj7eaLxN5jA8hc0rGNM6mgIyL'
     }}
 
 

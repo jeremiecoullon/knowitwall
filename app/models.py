@@ -1,4 +1,5 @@
 from app import db
+from app import UserMixin
 
 class User(UserMixin, db.Model):
     __tablename_= 'users'

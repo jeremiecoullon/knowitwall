@@ -4,11 +4,12 @@ import re
 import os
 import yagmail
 from flask import json, url_for, send_file, flash, redirect, session, g
-from flask import render_template, request, send_from_directory, Response
+from flask import render_template, request, send_from_directory, Response, current_app
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
 from .forms import LoginForm
 from .models import User
+from .oauth import OAuthSignIn, FacebookSignIn, TwitterSignIn
 
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
