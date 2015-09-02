@@ -491,6 +491,12 @@ text-align: left;
 .transcript{
 padding: 40px;
 }
+@media(max-width:991px) {
+  .transcript{
+  padding: 4px;
+  }
+}
+
 
 #layout {
 padding:40px;
