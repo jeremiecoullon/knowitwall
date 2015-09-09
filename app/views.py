@@ -3,6 +3,8 @@ import mimetypes
 import re
 import os
 import yagmail
+import datetime
+import jwt
 from flask import json, url_for, send_file, flash, redirect, session, g
 from flask import render_template, request, send_from_directory, Response
 from flask.ext.login import login_user, logout_user, current_user, login_required
@@ -225,3 +227,29 @@ def userlogin():
 def logout():
     logout_user()
     return redirect(url_for('userlogin'))
+
+
+"----------------------------------------------------------------------------------------------------"
+" token generation "
+
+# Replace these with your details
+CONSUMER_KEY = 'd4c108122b51434aab1d27ad4ebd2b02'
+CONSUMER_SECRET = '36977e7b-be7f-4b57-a9eb-9617e4740b6a'
+# new consumer key: 6a0f096a1e4347a8bbddfc3f1857f71b
+# new consumer secret: 1f489b5a-d218-4f7e-b132-bfbe16a69519
+
+# Only change this if you're sure you know what you're doing
+CONSUMER_TTL = 86400
+
+
+@app.route('/api/token/<user_id>')
+def generate_token(user_id):
+    return jwt.encode({
+      'consumerKey': CONSUMER_KEY,
+      'userId': user_id,
+      'issuedAt': _now().isoformat() + 'Z',
+      'ttl': CONSUMER_TTL
+    }, CONSUMER_SECRET)
+
+def _now():
+    return datetime.datetime.utcnow().replace(microsecond=0)

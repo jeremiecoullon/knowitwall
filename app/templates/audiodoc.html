@@ -535,27 +535,43 @@
 
 </script>
 
-<!--
+
   <script type="text/javascript">
-    jQuery(function ($) {
-        $('#annotator_transcript').annotator({
-            readOnly: false
-        })
-        .annotator('setupPlugins');
-    });
+  jQuery(function ($) {
+      // Customise the default plugin options with the third argument.
+      $('#annotator_transcript').annotator()
+                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token/1'}, {
+                     // Disable the tags plugin
+                     Tags: false,
+                     // Filter plugin options
+                     Filter: {
+                       addAnnotationFilter: false, // Turn off default annotation filter
+                       filters: [{label: 'Quote', property: 'quote'}] // Add a quote filter
+                     }
+                   });
+  });
   </script>
--->
+<!--
 <script type="text/javascript">
 function initAnnotator(json) {
   "use strict";
 
-  $('#annotator_transcript').annotator().annotator('setupPlugins', null, {
-    Permissions: true,
-    AnnotateItPermissions: {}
-  });
+  $('body').annotator()
+            .annotator('setupPlugins',
+            {tokenUrl: 'http://localhost:5000/api/token/1'},
+            {Tags: false,
+            Filter: {
+                     addAnnotationFilter: false, // Turn off default annotation filter
+                     filters: [{label: 'Quote', property: 'quote'}] // Add a quote filter
+                   }
+
+            }
+          );
 }
 </script>
-<script type="application/javascript" src="http://jsonip.com/initAnnotator"></script>
+
+-->
+<!-- <script type="application/javascript" src="http://jsonip.com/initAnnotator"></script> -->
 
   <!-- Sharethis.com: to make the social media buttons work -->
   <!--
