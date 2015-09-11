@@ -539,8 +539,8 @@
   <script type="text/javascript">
   jQuery(function ($) {
       // Customise the default plugin options with the third argument.
-      $('#annotator_transcript').annotator()
-                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token/1'}, {
+      $('body').annotator()
+                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'}, {
                      // Disable the tags plugin
                      Tags: false,
                      // Filter plugin options
@@ -573,14 +573,6 @@ function initAnnotator(json) {
 -->
 <!-- <script type="application/javascript" src="http://jsonip.com/initAnnotator"></script> -->
 
-  <!-- Sharethis.com: to make the social media buttons work -->
-  <!--
-  <script type="text/javascript">stLight.options({publisher: "08e3a3e8-abb1-434a-8ebb-df836483492f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-  <script>
-  var options={ "publisher": "08e3a3e8-abb1-434a-8ebb-df836483492f", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter"]}};
-  var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-  </script>
--->
 
 <!-- share buttons-->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->

@@ -7,7 +7,7 @@ import datetime
 import jwt
 from flask import json, url_for, send_file, flash, redirect, session, g
 from flask import render_template, request, send_from_directory, Response
-from flask.ext.login import login_user, logout_user, current_user, login_required
+from flask.ext.login import login_user, logout_user, current_user, login_required, AnonymousUserMixin
 from app import app, db, lm, oid
 from .forms import LoginForm
 from .models import User
@@ -18,6 +18,9 @@ To change audio-doc:
 1) change path to audio in 'sending files partially' section
 2) change path to json file in the relevant audio-doc section
 ----------------------------------------------------------------------------------------------------"""
+
+# customize anonymouse user
+
 
 
 @lm.user_loader
@@ -152,6 +155,11 @@ def audiodoc(url):
 
 @app.route('/terms')
 def terms():
+    if current_user.is_anonymous():
+        user_id='0'
+    else:
+        user_id = str(current_user.id)
+    print user_id
     return render_template('terms.html')
 
 
@@ -230,20 +238,29 @@ def logout():
 
 
 "----------------------------------------------------------------------------------------------------"
-" token generation "
+" AnnotateIt token generation "
 
-# Replace these with your details
-CONSUMER_KEY = 'd4c108122b51434aab1d27ad4ebd2b02'
-CONSUMER_SECRET = '36977e7b-be7f-4b57-a9eb-9617e4740b6a'
-# new consumer key: 6a0f096a1e4347a8bbddfc3f1857f71b
-# new consumer secret: 1f489b5a-d218-4f7e-b132-bfbe16a69519
+# old keys
+# CONSUMER_KEY = 'd4c108122b51434aab1d27ad4ebd2b02'
+# CONSUMER_SECRET = '36977e7b-be7f-4b57-a9eb-9617e4740b6a'
+
+# new keys
+CONSUMER_KEY =  '6a0f096a1e4347a8bbddfc3f1857f71b'
+CONSUMER_SECRET =  '1f489b5a-d218-4f7e-b132-bfbe16a69519'
 
 # Only change this if you're sure you know what you're doing
 CONSUMER_TTL = 86400
 
 
-@app.route('/api/token/<user_id>')
-def generate_token(user_id):
+# anonymous shizzle
+
+
+@app.route('/api/token')
+def generate_token():
+    if current_user.is_anonymous():
+        user_id='0'
+    else:
+        user_id = str(current_user.id)
     return jwt.encode({
       'consumerKey': CONSUMER_KEY,
       'userId': user_id,
