@@ -540,38 +540,26 @@
   jQuery(function ($) {
       // Customise the default plugin options with the third argument.
       $('body').annotator()
-                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'}, {
-                     // Disable the tags plugin
-                     Tags: false,
-                     // Filter plugin options
-                     Filter: {
-                       addAnnotationFilter: false, // Turn off default annotation filter
-                       filters: [{label: 'Quote', property: 'quote'}] // Add a quote filter
-                     }
-                   });
-  });
+                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},
+                   {Permissions: false,
+                      AnnotateItPermissions: {
+                        user: {id: 1, name:'jeremie.coullon'},
+                        permissions: {
+                          'read':   [],
+                          'update': [1],
+                          'delete': [1],
+                          'admin':  [1]
+                        }
+                      }
+                    }
+                 );
+                 });
   </script>
-<!--
-<script type="text/javascript">
-function initAnnotator(json) {
-  "use strict";
 
-  $('body').annotator()
-            .annotator('setupPlugins',
-            {tokenUrl: 'http://localhost:5000/api/token/1'},
-            {Tags: false,
-            Filter: {
-                     addAnnotationFilter: false, // Turn off default annotation filter
-                     filters: [{label: 'Quote', property: 'quote'}] // Add a quote filter
-                   }
 
-            }
-          );
-}
-</script>
+<!--  permsission stuff.. it doesnt really work though -->
 
--->
-<!-- <script type="application/javascript" src="http://jsonip.com/initAnnotator"></script> -->
+
 
 
 <!-- share buttons-->

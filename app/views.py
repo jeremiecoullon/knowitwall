@@ -158,7 +158,7 @@ def terms():
     if current_user.is_anonymous():
         user_id='0'
     else:
-        user_id = str(current_user.id)
+        user_id = str(current_user.nickname)
     print user_id
     return render_template('terms.html')
 
