@@ -492,10 +492,17 @@ text-align: left;
 .transcript{
 padding: 40px;
 }
+.transcript p {
+  line-height: 170%;
+  }
+
 @media(max-width:991px) {
   .transcript{
   padding: 4px;
   }
+  .transcript p {
+    line-height: 140%;
+    }
 }
 
 
