@@ -540,25 +540,25 @@
   jQuery(function ($) {
       // Customise the default plugin options with the third argument.
       $('body').annotator()
-                   .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},
-                   {Permissions: false,
-                      AnnotateItPermissions: {
-                        user: {id: 1, name:'jeremie.coullon'},
-                        permissions: {
-                          'read':   [],
-                          'update': [1],
-                          'delete': [1],
-                          'admin':  [1]
-                        }
-                      }
-                    }
+                .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},
+                {Tags: false, Filter: false, Permissions: false
+                 }
                  );
                  });
   </script>
 
 
-<!--  permsission stuff.. it doesnt really work though -->
 
+<!-- {Permissions: true,
+   AnnotateItPermissions: {
+     permissions: {
+       'read':   [],
+       'update': [],
+       'delete': [],
+       'admin':  []
+     }
+   }
+ } -->
 
 
 
