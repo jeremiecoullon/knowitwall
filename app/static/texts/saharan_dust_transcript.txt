@@ -1,33 +1,90 @@
 <html>
   <p class = "justify">
-    Dust is fun.
+    Our atmosphere is dirty. I’m not talking about greenhouse gases – those are a
+    story for another day – I’m talking about tiny particles, just a few microns
+    in size, known as aerosols. They’re so small that you can’t see them, but the
+    evidence is everywhere: from the black residue when you blow your nose after
+    spending the day in a busy city, to the hazy sky on a warm summer’s day.
   </p>
   <p class = "justify">
-
+    The most abundant aerosol is mineral dust, tiny particles of sand and other
+    surface materials, picked up by winds as they blow across the world’s desert
+    regions.  Dust. It might seem insignificant, benign. In fact, it could be
+    responsible for the survival of the Amazon rainforest as we know it today.
   </p>
   <p class = "justify">
-
+    The Sahara is the source of about half the mineral dust in the atmosphere,
+    emitting on average over a hundred million tonnes per year. Some 50% of this
+    dust comes from one single spot, in the southwest corner of Chad, called the
+    Bodélé Depression. This depression – a topographic low in the surrounding
+    landscape – is part of a vast dry lake bed. As recently as 6000 years ago,
+    the whole area was submerged beneath the surface of Lake Mega Chad. Less a
+    lake and more an inland sea, Lake Mega Chad was once larger than all of North
+    America’s Great Lakes combined. As the world’s climate changed, the Sahara
+    dried out and the receding waters left behind an abundant supply of fine
+    sediment particles, just waiting to be entrained by the wind.
   </p>
   <p class = "justify">
-
+    Many parts of the Sahara, and indeed other desert regions around the world,
+    share a similar history to this. There are two things, however, that make the
+    Bodélé Depression unique and explain why it produces such a vast amount of
+    dust:
   </p>
   <p class = "justify">
-
+    Firstly, the surface is covered in skeletons of microscopic creatures called
+    “diatoms”, which reside in water bodies. Known as “diatomite”, this material
+    is extremely light for its size, its density roughly half that of typical
+    desert sand. It is therefore much more readily picked up by the wind than,
+    relatively, much heavier sand particles.
   </p>
   <p class = "justify">
-
+    Secondly, the Bodélé lies directly downwind of two Saharan mountain ranges –
+    the Tibesti and the Ennedi. These mountains not only channel the prevailing
+    northeasterly wind directly onto the exposed diatomite surface, but this
+    channelling effect also accelerates the surface wind, ensuring that it is
+    strong enough to entrain the surface material.
   </p>
   <p class = "justify">
-
+    Dust emission from the Bodélé Depression can therefore be thought of as an
+    intricate coincidence, a conspiracy of geology and climatology. And the coincidences
+    don’t end there.
   </p>
   <p class = "justify">
-
+    Because mineral dust particles are so small and light, once they are lifted
+    from the desert surface they can drift in the wind for weeks at a time. Dust
+    from the Bodélé usually finds its way into a river of air that blows towards
+    the west, across the Sahara and out over the Atlantic. On this journey, the
+    dust plays games with the atmosphere. For example, clouds of dust will reflect
+    and absorb radiation from the sun. One effect this can have is to reduce
+    surface temperatures beneath the dust cloud during the day, with drops in
+    temperature of over 10oC not uncommon during extremely big dust outbreaks.
+    Although such extreme effects are short-lived and localised, mineral dust
+    actually has a cooling effect on <i>global</i> climate – albeit a very weak one in
+    comparison to the warming caused by humans.
   </p>
   <p class = "justify">
-
+    On the other side of the Atlantic Ocean lies the Amazon rainforest. Although
+    a highly productive and lush ecosystem, the soils of the Amazon are naturally
+    quite infertile, with vast amounts of nutrients being washed away by floodwaters
+    each year. Without input from some other source, Amazon fertility would decrease,
+    damaging regional ecosystems as well as a valuable carbon sink. Where do these
+    nutrients come from? Amazingly, it turns out that at certain times of the
+    year, the Amazon finds itself directly in the path of mineral dust from the
+    Bodélé Depression, 3000 miles away! This is the mystery source of fertiliser.
+    Compared to regular desert sand, diatomite is turbo-charged with iron and
+    phosphorous, two essential plant nutrients. In an average year, 20 million
+    tonnes of Saharan dust is dumped on the Amazon basin, quite literally washed
+    out of the sky by rain. Around 20,000 tonnes of this is phosphorous – the
+    same amount that is washed out of the Amazon basin by floodwaters each year.
   </p>
   <p class = "justify">
-
+    So, dust. Seemingly doing little more than muddying our air, fertilisation of
+    the Amazon by dust from the Bodélé Depression represents just one of the many
+    complex and beautiful relationships that exist within the Earth System.
+    However, this relationship is also extremely fragile. It would take just a
+    minor shift in climate to disrupt this conveyor belt of nutrients from the
+    Bodélé Depression to the Amazon, threatening the health of the rainforest and
+    the important place it holds in the Earth system.
   </p>
   <p class = "justify">
 

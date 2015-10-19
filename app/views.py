@@ -70,6 +70,7 @@ def send_file_partial(path):
 @app.route('/audio/antartica_discovery.mp3')
 @app.route('/audio/memory_keys.mp3')
 @app.route('/audio/viral_pandemics.mp3')
+@app.route('/audio/saharan_dust.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -175,15 +176,3 @@ def contactform():
     body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, KIW, angus], subject, body)
     return name
-
-
-
-"----------------------------------------------------------------------------------------------------"
-" to define disqus form: change the disqus_id and disqus_url in the html, then change app.route to unique_id of audiodoc"
-"""
-@app.route('/BenSlama_Ganymede')
-def BenSlama_Ganymede():
-
-    return render_template('define_disqus.html')
-
-"""
