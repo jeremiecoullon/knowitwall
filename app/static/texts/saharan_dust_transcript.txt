@@ -57,7 +57,7 @@
     dust plays games with the atmosphere. For example, clouds of dust will reflect
     and absorb radiation from the sun. One effect this can have is to reduce
     surface temperatures beneath the dust cloud during the day, with drops in
-    temperature of over 10oC not uncommon during extremely big dust outbreaks.
+    temperature of over 10&deg;C not uncommon during extremely big dust outbreaks.
     Although such extreme effects are short-lived and localised, mineral dust
     actually has a cooling effect on <i>global</i> climate – albeit a very weak one in
     comparison to the warming caused by humans.
