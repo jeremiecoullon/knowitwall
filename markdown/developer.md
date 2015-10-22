@@ -1,5 +1,7 @@
 #Knowitwall technical specifications
 
+[current site](http://knowitwall.com/)
+
 ##Annotations (ie: Knowits)
 
 **annotations specs:**
@@ -69,12 +71,14 @@
 
 	- make a nice login form page 
 	- users can login and create annotations on 3rd party content
-	- **problems:** how can annotator.js annotate on content within iframes? 
-		- look into [this question](https://forum.jquery.com/topic/changing-elements-in-an-iframe): need to modify a `div` within the iframe
+	- **problems:** 
+		- how can annotator.js annotate on content within iframes? Look into [this question](https://forum.jquery.com/topic/changing-elements-in-an-iframe): need to modify a `div` within the iframe
+		- user generated annotations must be approved by 'admin'. How to do this?
+		
 4. **Wall of Knoweldge:**
 
-	- visualise the graph well; for example [this](https://www.quantamagazine.org/20150803-physics-theories-map/)
-	- backend store for annotations feeding the content into is
+	- visualise the graph well. Example of good design: [physics theories map](https://www.quantamagazine.org/20150803-physics-theories-map/)
+	- backend store for annotations feeding the content into the visualisation
 
 ##developers:
 
@@ -84,32 +88,11 @@
 - designer/UX
 
 
-**We need:**
+**We need:** 
 
-- frontend/javascript: 
-	- deal with annotator.js: modify permission for anonymous, set up admin persmissions etc..
-	- frontend stuff on the site: follow specs from designer 
+frontend/javascript: 
+
+- deal with annotator.js: modify permission for anonymous, set up admin persmissions etc..
+- frontend stuff on the site: follow specs from designer 
 - javascript (Visualisation): for the wall of knowledge
 
-##finding a developer
-
-### Center for Digital Humanities:
-
-These courses are relevant. Contact the lecturers: do they know students (Msc, PhD, other) who would be interested?
-
-- [introduction to programming and scripting](http://www.ucl.ac.uk/dis/taught/pg/INSTG018)
-- [internet technologies](http://www.ucl.ac.uk/dis/taught/pg/INSTG017)
-- [server programming and structured data](http://www.ucl.ac.uk/dis/taught/pg/INSTG033)
-
-### Amy Okuno
-
-her, or people on her masters?
-
-### UCL public engagement unit
-
-- [contact list](https://www.ucl.ac.uk/public-engagement/contact) for public engagement unit
-
-- contact the representative for [BEAM](http://www.ucl.ac.uk/research/beamsfunding):
-Lizzy Baddeley: e.baddeley@ucl.ac.uk
-
-###Ucl Advances

@@ -1,5 +1,6 @@
 #basics of web development
 ##frontend
+_total_: 1h10
 
 - html (10 min)
 - css inline (20 min)
@@ -7,12 +8,14 @@
 - js in browser: basic `on.click`  (20 min)
 
 ##client server model
+_total_: 35min
 
 - basics of GET. what is a server? a client? (20 min)
 - POST (10 min)
 - 404 (5 min)
 
 ##server side scripting
+_total_: 1h40
 
 - why server side scripting? dynamic websites (20 min)
 - python:
@@ -24,6 +27,7 @@
 	- KiW setup (overview) (10 min)
 
 ##version control
+_total:_ 30min
 
 - why version control (10 min)
 - Git (20 min) 
