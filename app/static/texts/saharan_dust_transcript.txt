@@ -1,7 +1,7 @@
 <html>
   <p class = "justify">
     Our atmosphere is dirty. I’m not talking about greenhouse gases – those are a
-    story for another day – I’m talking about tiny particles, just a few microns
+    story for another day. I’m talking about tiny particles, just a few microns
     in size, known as aerosols. They’re so small that you can’t see them, but the
     evidence is everywhere: from the black residue when you blow your nose after
     spending the day in a busy city, to the hazy sky on a warm summer’s day.
@@ -28,7 +28,7 @@
     Many parts of the Sahara, and indeed other desert regions around the world,
     share a similar history to this. There are two things, however, that make the
     Bodélé Depression unique and explain why it produces such a vast amount of
-    dust:
+    dust.
   </p>
   <p class = "justify">
     Firstly, the surface is covered in skeletons of microscopic creatures called
