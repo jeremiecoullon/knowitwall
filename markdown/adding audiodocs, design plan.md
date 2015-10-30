@@ -4,7 +4,7 @@ sunday 31 may
 
 ##2 audiodocs in total
 
-- have 2 audiodocs in the same section style as when it was only 1. 
+- have 2 audiodocs in the same section style as when it was only 1.
 	1. have the most recent one before the 'about' section, and the other one after
 	2. have both after the 'about' section
 
@@ -18,9 +18,7 @@ sunday 31 may
 	2. (OR) click on an audiodoc to reveal the whole audiodoc.
 
 
-	
-	
 ##4+ audiodocs in total
 
 - first 3 audiodocs on main page (like above), then go to 'for more audiodocs' to get a list of all audiodocs
-	- the list could be a 'slim' version of them: click to open an audiodoc in a whole seperate page or unravel.
+- the list could be a 'slim' version of them: click to open an audiodoc in a whole seperate page or unravel.
