@@ -1,8 +1,18 @@
-#Knowitwall technical specifications
+#Knowitwall
 
-[current site](http://knowitwall.com/)
+[Knowitwall site](http://knowitwall.com/)
+****
+**Summary of the project:**
 
-##Annotations (ie: Knowits)
+Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges. So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content. This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
+****
+
+**technical specifications:**
+
+The site uses the [Flask](http://flask.pocoo.org/) web framework and is hosted on [Digitalocean](https://www.digitalocean.com/)
+
+
+###Annotations (ie: Knowits)
 
 **annotations specs:**
 
@@ -16,17 +26,18 @@
 **Annotation library: [Annotator.js](http://annotatorjs.org/)**
 
 - backend 
-	- [backend store](http://annotateit.org/): 
-		- stores the annotations
-		- needs to keep track of the link between annotated content (for the Wall of Knowledge). 
-	- `views.py`: generates a token for the currently logged in user and exposes it to `knowitwall.com/token/`. The token has the annotator permissions for that user.
+	- *storing the annotations:*
+		- we're temporarily using this [backend store](http://annotateit.org/) for development: it stores the annotations, and sends to them to the client.
+		- we're also currently setting up our own [store](https://github.com/openannotation/annotator-store) for annotations as we'll need to keep track of the link between annotated content send them back to the client (for the Wall of Knowledge).
+	- *interaction with the client*
+		- generates a token for the currently logged in user and exposes it to `knowitwall.com/token/`. The token has the annotator permissions for that user.
 - frontend:
 	- When a user is logged in, an OAuth token is exposed to `knowitwall.com/token/`
-	- token is used to set permissions for current user
+	- this token is used to set permissions for current user
 	- if user isn't logged in, default is 'anonymous user' (has read-only permissions)
 
 
-**User permissions**
+**User permissions needed**
 
 - user not logged in (ie: 'anonymous user'):
 	- can view annotations
@@ -35,9 +46,9 @@
 	- can create annotations (need to be approved by admin before being published)
 - admin logged in:
 	- can edit/create/delete all annotations
-	- has to approve user created annotations
+	- has to approve user created annotations before they get published
 
-##Wall of Knowledge: a graph of all Knowits
+###Wall of Knowledge: a graph of all Knowits
 
 - each node is an article/video 
 	- includes all Knowitwall content
@@ -46,11 +57,11 @@
 	- maybe represent direction (ie: on which text was the annotation made)
 - the nodes are clustered into disciplines (physics, history etc..)
 	- these disciplines are either:
-		- defined by users (via tags in the annotations)
-		- NLP: parse every received article page, find the article text, topic modelling. This wuldn't be possible for videos or podcasts though. This method might also be overkill, compare to the easier option of having users tag the discipline of the article.
+		- defined by users (via tags in the annotations) -  this will happen in a first step in any case
+		- NLP: parse every received article page, find the article text, topic modelling. This wouldn't be possible for videos or podcasts though. This method might also be overkill, compare to the easier option of having users tag the discipline of the article. It would be pretty cool to have though.
 - The wall gets updated as users add knowits
 
-# To Do list
+## Timeline
 
 1. **Author annotations:**
 
@@ -61,7 +72,7 @@
 		-  anonymous user (ie: users not logged in) have read-only permissions, and can't create 
 	-  need to style how the annotations look
 	-  need to set up the backend store as migrating from the AnnotateIt.com store to our store might be tedious
-	- **problems:** annotator.js doesn't allow (out of the box) the 'anonymous' permissions that we need (ie: can view annotations without creating new ones): need to go digging into the javascript to allow that.
+	- **problems:** annotator.js doesn't allow (out of the box) the 'anonymous' permissions that we need (ie: can view annotations without creating new ones): we need to go digging into the javascript to allow that.
 
 2. **iframe:**
 
@@ -69,8 +80,10 @@
 
 3. **user generated knowits:**
 
-	- make a nice login form page 
-	- users can login and create annotations on 3rd party content
+	- user login system (through facebook and twitter) is already set up (though not in production)
+	- need to add the option of logging in with an email account
+	- desing & code a login form page (or in the nav bar)
+	- users can then login and create annotations on 3rd party content
 	- **problems:** 
 		- how can annotator.js annotate on content within iframes? Look into [this question](https://forum.jquery.com/topic/changing-elements-in-an-iframe): need to modify a `div` within the iframe
 		- user generated annotations must be approved by 'admin'. How to do this?
@@ -79,20 +92,26 @@
 
 	- visualise the graph well. Example of good design: [physics theories map](https://www.quantamagazine.org/20150803-physics-theories-map/)
 	- backend store for annotations feeding the content into the visualisation
+	- visualisation is continuously updated with new annotations? would need real-time communication; see the [socket.io integration](https://flask-socketio.readthedocs.org/en/latest/) for flask for example
 
 ##developers:
 
 **We have:**
 
-- backend: python (we use Flask) & databases
+- backend: python & databases
 - designer/UX
+- recently: javascript developer 
 
 
 **We need:** 
 
-frontend/javascript: 
+more frontend/javascript developers: 
 
-- deal with annotator.js: modify permission for anonymous, set up admin persmissions etc..
+- deal with annotator.js: modify permission for anonymous, set up admin permissions etc..
 - frontend stuff on the site: follow specs from designer 
 - javascript (Visualisation): for the wall of knowledge
+
+backend - Python: would be helpful as well! but the difficulty at the moment is mainly javascript 
+
+*You don't have to commit to working on the entirety of the project; even helping out with a small aspect of it would be helpful! Generally, anyone keen to help build this is welcome!*
 
