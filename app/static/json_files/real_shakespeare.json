@@ -1,0 +1,16 @@
+{
+    "url": "img/real_shakespeare",
+    "unique_id": "Rene_Weis",
+    "topic_name": "The Real Shakespeare?",
+    "discipline": "English Literature",
+    "og_name": "The Real Shakespeare?",
+    "og_description": "",
+    "topic_description": "Was Shakespeare a human or an alien? this is the question that Rene has taken on to answer. More words and words and words and words and words and words and words and words and words and words.",
+    "author_name": "Ren&eacute; Weis",
+    "author_image": "/static/Images/rene_test.jpg",
+    "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
+    "music_credits": "Jesus",
+    "narration_credits": "God",
+    "transcript": "app/static/texts/real_shakespeare_transcript.txt",
+    "audio_mp3": "http://knowitwall.com/audio/real_shakespeare.mp3"
+}

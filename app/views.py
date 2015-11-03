@@ -81,7 +81,7 @@ def static_from_root():
 "audiodoc function"
 
 # complete list of audiodocs
-all_audiodocs = ['saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['real_shakespeare.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
@@ -137,6 +137,21 @@ def audiodoc(url):
 
     return render_template('audiodoc.html', audiodoc=audiodoc)
 
+
+"----------------------------------------------------------------------------------------------------"
+""" audiodocs on seperate page with image on top of page! The 'url' attribute in
+the json file must include 'img/' before the actual url.
+
+"""
+
+@app.route('/audiodoc/img/<url>')
+def audiodoc_img(url):
+
+    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
+
+    audiodoc = ad_fun(audiodoc_list)
+
+    return render_template('audiodoc_img.html', audiodoc=audiodoc)
 
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "
