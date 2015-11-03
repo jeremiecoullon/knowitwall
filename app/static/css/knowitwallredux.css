@@ -11,6 +11,11 @@
 }
 
 
+/* highlight words in yellow */
+.highlight {
+  color: #33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+}
 
 
 /* feedback form title not in caps lock*/

@@ -327,8 +327,8 @@
           </div>
         </div>
 
-        <div class="col-lg-10 col-lg-offset-1 text-center" style="color: black; font-size:115%">
-           <i>by</i> <span style="background-color: rgba(255, 194, 28, 0.8);">{{audiodoc[0].author_name | safe}}</span> <i>in</i> <span style="background-color: rgba(255, 194, 28, 0.8);">{{audiodoc[0].discipline}} </span>.
+        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: #33353d; font-size:115%">
+           <i>by</i> <a href="#author" class="highlight">{{audiodoc[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc[0].discipline}} </span>.
 
           <div id="tagline-2">
           <br>
@@ -351,8 +351,9 @@
           <p style="font-style:italic;">music by {{ audiodoc[0].music_credits }}</p>
         </div>
 
-        <div class="col-lg-12">
-          <audio controls>
+        <div class="col-lg-12" id="author">
+
+          <audio controls >
             <source src="{{audiodoc[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
