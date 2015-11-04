@@ -328,12 +328,12 @@ text-align: left;
     color:#d2d2d2;
 
 }
-
+/* this makes the navbar tabs light up when you scroll to their respective section */
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: #27282D;
   background-color: #FFC21C;
-
   }
+
 
   @media(max-width:440px) {
 
@@ -443,7 +443,7 @@ text-align: left;
   font-size:4em;
   font-family: GeosansLight;
   color:#33353d;
-  background-color: rgba(255, 194, 28, 1);
+  background-color: rgba(255, 194, 28, 0.8);
   margin-bottom: 20px;
   display: inline-block;
   line-height: 120%;
@@ -586,11 +586,6 @@ padding:40px;
 
 @media(min-width:768px) {
 
-.navbar-default {
-  background-color: rgba(14, 107, 119, 0.86);
-  border-color: transparent;
-
-}
 
 /* this says how  the nav bar transition happens, but not when */
 
@@ -638,21 +633,30 @@ padding:40px;
 }
 }
 
+
+/* make the navbar solid throughout */
 .navbar-default {
-    background: none;
-
-
+    padding: 10px 0;
+    background-color: #27282D;
 }
 
 
-@media(max-width:768px) {
+@media(max-width:400px) {
 
+.navbar-brand {
+  padding: 0;
+  max-width:250px;
+  width:70%;
+}
+}
+
+@media(max-width:768px) {
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
-
 }
 }
+/* end of 'make the navbar solid throughout' */
 
 .navbar a:focus {
     outline: 0;

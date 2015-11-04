@@ -337,30 +337,26 @@
   </nav>
 
 
-  <!-- Most Recent Podcast Section -->
-  <header>
 
+  <header style="background: url('{{ audiodocs[0].topic_image }}');">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
-
-
-          <div id="tagline-1">
-            Building knowledge one brick at a time
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <div class="episode-title">
+            {{audiodocs[0].topic_name | safe}}
           </div>
-
         </div>
 
-        <div class="col-md-8">
-          <!--  Let top researchers inspire you through short audio documentaries -->
+        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: #33353d; font-size:115%">
+           <i>by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>.
+
           <div id="tagline-2">
           <br>
           <br>
           </div>
-        </div>
-
       </div>
-     </div>
+    </div>
+  </div>
   </header>
 
   <!-- About Section -->
@@ -390,13 +386,14 @@
 
     <section id="episodes">
       {% for audiodoc in audiodocs %}
-      <div class="container previous-audiodoc" style="background: url('/static/Images/shakespeare_topic_image_very_ight.jpg')">
+      <div class="container previous-audiodoc" style="background: url('{{audiodoc.topic_image_light}}')">
         <div class="row">
 
           <div class="col-lg-10 col-lg-offset-1 text-center">
-            <div class="episode-title">
+            <a href="audiodoc/{{audiodoc.url}}" class="episode-title">
               {{audiodoc.topic_name | safe}}
-            </div>
+            </a>
+            <!-- <a href="audiodoc/{{audiodoc.url}}" class="episode-title"> la fdsf dsaf sla</a> -->
 
             <p style="font-size:1.6em;">{{audiodoc.topic_description | safe}}</p>
 
