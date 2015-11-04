@@ -318,7 +318,7 @@
     </div>
   </nav>
 
-  <header style="background: url('/static/Images/shakespeare_test.jpg');background-size: cover; ">
+  <header style="background: url('/static/Images/shakespeare_topic_image.jpg');background-size: cover; ">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -351,9 +351,9 @@
           <p style="font-style:italic;">music by {{ audiodoc[0].music_credits }}</p>
         </div>
 
-        <div class="col-lg-12" id="author">
+        <div class="col-lg-12">
 
-          <audio controls >
+          <audio controls id="author">
             <source src="{{audiodoc[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
