@@ -14,7 +14,7 @@
   <meta property="og:image" content="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" />
   <meta property="og:title" content="{{audiodocs[0].og_name}}" />
   <meta property="og:description" content="{{audiodocs[0].og_description}}" />
-  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
+  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs[0].url}}" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -29,6 +29,9 @@
 
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
+
+  <!-- audiodoc css (nav bar always solid) -->
+  <link href="/static/css/audiodoc_page.css" rel="stylesheet">
 
 
   <!-- Custom Fonts -->
@@ -241,6 +244,17 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <!--
+          <li class="hidden">
+             <a href="#page-top"></a>
+          </li>
+          -->
+
+          <!--
+          <li class="page-scroll">
+            <a href="#page-top">Home</a>
+          </li>
+          -->
 
           <li class="page-scroll">
             <a href="#episodes">Listen</a>
@@ -304,39 +318,23 @@
     </div>
   </nav>
 
-  <header style="background: url('{{ audiodocs[0].topic_image }}');">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-          <div class="episode-title">
-            {{audiodocs[0].topic_name | safe}}
-          </div>
-        </div>
-
-        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: #33353d; font-size:115%">
-           <i>by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>.
-
-          <div id="tagline-2">
-          <br>
-          <br>
-          </div>
-      </div>
-    </div>
-  </div>
-  </header>
 
   <section id="episodes">
     <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
+          <div class="episode-title">
+            {{audiodocs[0].topic_name | safe}}
+          </div>
+
+
           <p style="font-size:1.6em;">{{audiodocs[0].topic_description | safe}}</p>
           <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
           <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
         </div>
 
         <div class="col-lg-12">
-
-          <audio controls id="author">
+          <audio controls>
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>

@@ -139,28 +139,11 @@ def audiodoc(url):
 
 
 "----------------------------------------------------------------------------------------------------"
-""" audiodocs on seperate page with image on top of page! The 'url' attribute in
-the json file must include 'img/' before the actual url.
-
-"""
-
-@app.route('/audiodoc/img/<url>')
-def audiodoc_img(url):
-
-    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-
-    audiodocs = ad_fun(audiodoc_list)
-
-    return render_template('audiodoc_img.html', audiodocs=audiodocs)
-
-"----------------------------------------------------------------------------------------------------"
 " terms and conditions "
 
 @app.route('/terms')
 def terms():
     return render_template('terms.html')
-
-
 
 
 "----------------------------------------------------------------------------------------------------"

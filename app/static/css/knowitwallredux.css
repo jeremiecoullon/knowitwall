@@ -139,7 +139,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #FFFFFF;
+    text-decoration: none;
 }
 
 h1,
@@ -673,7 +673,7 @@ padding:40px;
 
 
 section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 section h2 {
@@ -689,7 +689,7 @@ section.success {
 
 @media(max-width:767px) {
     section {
-        padding: 75px 0;
+        padding: 40px 0;
         background-color: #fff;
     }
 

@@ -338,17 +338,17 @@
 
 
 
-  <header style="background: url('{{ audiodocs[0].topic_image }}');">
+  <header style="background: url('{{ audiodocs[0].topic_image_midlight }}');">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
-          <div class="episode-title">
+          <a href="audiodoc/{{audiodocs[0].url}}" class="episode-title">
             {{audiodocs[0].topic_name | safe}}
-          </div>
+          </a>
         </div>
 
-        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: #33353d; font-size:115%">
-           <i>by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>.
+        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+           <i>by</i> <a href="audiodoc/{{audiodocs[0].url}}#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>.
 
           <div id="tagline-2">
           <br>
@@ -393,26 +393,11 @@
             <a href="audiodoc/{{audiodoc.url}}" class="episode-title">
               {{audiodoc.topic_name | safe}}
             </a>
-            <!-- <a href="audiodoc/{{audiodoc.url}}" class="episode-title"> la fdsf dsaf sla</a> -->
 
             <p style="font-size:1.6em;">{{audiodoc.topic_description | safe}}</p>
 
-            <!--
-            <p style="font-style:italic;">narrated by {{ audiodoc.narration_credits }}</p>
-            <p style="font-style:italic;">music by {{ audiodoc.music_credits }}</p>
-          -->
           </div>
-<!--
-          <div class="col-lg-12">
-            <audio controls>
-              <source src="{{audiodoc.audio_mp3}}" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
--->
-          <!-- <div class="comments-button">
-            <a href="audiodoc/{{audiodoc.url}}"><button type="button" class="btn btn-info">  CHECK IT OUT </button> </a>
-          </div> -->
+
           <br>
         </div>
       </div> <!-- container -->
