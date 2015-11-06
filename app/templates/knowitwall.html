@@ -348,7 +348,7 @@
         </div>
 
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
-           <i>by</i> <a href="audiodoc/{{audiodocs[0].url}}#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>.
+           <i>by</i> <a href="audiodoc/{{audiodocs[0].url}}#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
 
           <div id="tagline-2">
           <br>
@@ -385,7 +385,7 @@
   <!-- AUDIODOCS!! -->
 
     <section id="episodes">
-      {% for audiodoc in audiodocs %}
+      {% for audiodoc in audiodocs[:] %}
       <div class="container previous-audiodoc" style="background: url('{{audiodoc.topic_image_light}}')">
         <div class="row">
 

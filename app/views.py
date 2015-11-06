@@ -78,10 +78,10 @@ def static_from_root():
 
 
 "----------------------------------------------------------------------------------------------------"
-"audiodoc function"
+"audiodoc function 'real_shakespeare.json',"
 
 # complete list of audiodocs
-all_audiodocs = ['neural_cartography.json', 'real_shakespeare.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
