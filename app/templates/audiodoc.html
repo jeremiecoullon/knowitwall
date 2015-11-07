@@ -30,6 +30,8 @@
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
 
+<!-- audioddoc css  -->
+  <link href="/static/css/audiodoc_page.css" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -316,16 +318,26 @@
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
            <i>by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
 
-          <div id="tagline-2">
-          <br>
-          <br>
-          </div>
+      </div>
+    </div>
+    <div class="row arrow_row">
+      <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+        <a class="arrow-wrap a_arrow" href="#episodes">
+        <span class="arrow"></span>
+        </a>
       </div>
     </div>
   </div>
   </header>
 
-  <section id="episodes">
+  <section id="episodes" >
+    <div class="container image_credits">
+      <div class="row ">
+        <p>
+          image credits: {{audiodocs[0].image_credits}}
+        </p>
+      </div>
+    </div>
     <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
