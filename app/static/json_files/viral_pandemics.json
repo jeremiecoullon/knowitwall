@@ -1,11 +1,11 @@
 {
     "url": "viral_pandemics",
     "unique_id": "Mazzon_Pandemics",
-    "topic_name": "Viral Pandemics",
+    "topic_name": "Viral pandemics",
     "topic_image": "/static/Images/TI_pandemics.jpg",
     "topic_image_home": "/static/Images/TI_pandemics_home.jpg",
     "topic_image_box": "/static/Images/TI_pandemics_box.jpg",
-    "image_credits": "<a href='https://pixabay.com/p-549471/?no_redirect' target='_blank'> Pixabay</a>  ",
+    "image_credits": "",
     "discipline": "Biology",
     "og_name": "Viral Pandemics",
     "og_description": "With the latest panic on Ebola melting away, it seems another feared disease has been contained and controlled. But why is it that, after all of our advance in medicine, we still rely on containment rather than cures? Michela Mazzon fills us in.",
