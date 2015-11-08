@@ -2,10 +2,19 @@
 /**/
 /* scroll down arrow */
 
+
 .arrow_row{
 
   padding-top: 230px;
-  padding-bottom: 70px;
+  padding-bottom: 130px; /* put padding-bottom at 130px: rather than 70px, as otherwise 1-line title don't fill the screen */
+  /*height: 100%;*/
+}
+
+.audiodoc_header{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .arrow-wrap {
