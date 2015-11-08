@@ -1,0 +1,20 @@
+{
+    "url": "neural_cartography",
+    "unique_id": "Gaelle_Coullon",
+    "topic_name": "Neural cartography: Mapping the brain using a very strong magnet",
+    "topic_image": "/static/Images/TI_neural_cartography.jpg",
+    "topic_image_home": "/static/Images/TI_neural_cartography_home.jpg",
+    "topic_image_box": "/static/Images/TI_neural_cartography_home.jpg",
+    "image_credits": "Compass Study. <a href='https://goo.gl/z6YwHg' target='_blank'> Calsidyrose</a> <a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'> CC BY 2.0</a> ",
+    "discipline": "Neuroscience",
+    "og_name": "Neural cartography: Mapping the brain using a very strong magnet",
+    "og_description": "Understanding the most complex organ in the human body is no easy task. But certain techniques are uncovering more and more about the structure and makeup of the human brain – by mapping it. Gaelle Coullon tells us more.",
+    "topic_description": "Understanding the most complex organ in the human body is no easy task. But certain techniques are uncovering more and more about the structure and makeup of the human brain – by mapping it. Gaelle Coullon tells us more.",
+    "author_name": "Gaelle Coullon",
+    "author_image": "/static/Images/author_Gaelle_Coullon.jpg",
+    "author_bio": "app/static/texts/neural_cartography_author_bio.txt",
+    "music_credits": "Music by James Joshua Otto",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "app/static/texts/neural_cartography_transcript.txt",
+    "audio_mp3": "http://knowitwall.com/audio/neural_cartography.mp3"
+}

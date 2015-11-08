@@ -1,0 +1,9 @@
+<html>
+<p class="justify">
+  René is a Professor of English at UCL and a Fellow of the Royal Society of Arts.
+  He is a Shakespearian editor (​​<i>King Lear</i>, ​<i>Romeo and Juliet</i>) and biographer.
+  His books include, The Yellow Cross, which was translated into seven languages,
+  Criminal Justice and his most recent, The Real Traviata published by Oxford
+  University Press in 2015.
+</p>
+</html>

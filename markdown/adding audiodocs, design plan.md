@@ -1,4 +1,4 @@
-sunday 31 may
+Sunday 31 May
 
 #design plan for audiodocs in website
 
