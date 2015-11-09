@@ -13,7 +13,7 @@
     "author_name": "Gaelle Coullon",
     "author_image": "/static/Images/author_Gaelle_Coullon.jpg",
     "author_bio": "app/static/texts/neural_cartography_author_bio.txt",
-    "music_credits": "Music by James Joshua Otto",
+    "music_credits": "James Joshua Otto",
     "narration_credits": "Vidish Athavale",
     "transcript": "app/static/texts/neural_cartography_transcript.txt",
     "audio_mp3": "http://knowitwall.com/audio/neural_cartography.mp3"
