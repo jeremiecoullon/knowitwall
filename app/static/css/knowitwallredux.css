@@ -10,6 +10,23 @@
     src: url("../fonts/GeosansLight.ttf");
 }
 
+/* to make the homepage scrolling arrive at the right point */
+
+
+/*.scrollything{
+  margin-top: -300px;
+  padding-bottom: 70px;
+  display: block;
+}*/
+
+/*
+.scrollything:before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+}*/
 
 /* highlight words in yellow */
 .highlight {
