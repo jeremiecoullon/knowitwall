@@ -1,5 +1,81 @@
 <html>
-<p class = 'justify'>Shakespeare is hip
+<p class = 'justify'>
+  Human beings are natural explorers. We like to discover strange new places
+  and make maps of the worlds we find. However, one particular world that we
+  have yet to fully discover lies nestled within our own heads. The human brain
+  is a hub of electrical and chemical activity where millions of cells talk to
+  each other via a complex network of inter-connected fibres. But, since we don’t
+  speak “neuron”, how can we understand how the brain works?
+
+</p>
+<p class = 'justify'>
+  One way to do this is by making a map of the human brain. Without having to
+  cut into someone’s head, the best way to build such a map is to use magnetic
+  resonance imaging (or MRI). When you lie inside an MRI scanner, the scanner’s
+  strong magnetic field interacts with the magnetic properties of the different
+  molecules within your head. The scanner can use this interaction to create
+  three-dimensional images of your brain. There are many different types of MRI
+  images that it can create. Perhaps the most popular is functional MRI (or fMRI).
+  FMRI is used to find out which parts of the brain are important for different
+  functions, like seeing or hearing. It works by detecting where oxygen is
+  present in the blood – if there is more oxygenated blood in a particular brain
+  area when doing a certain task, we can assume that this area is important for
+  that task. For example, fMRI has shown that a brain region called the fusiform
+  face area helps us to recognise faces. But how is the fusiform face area getting
+  its information? And is it communicating with other areas?
+
+</p>
+<figure align="middle" style="padding-bottom: 1em;">
+  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; padding-top: 2em; ">
+  <figcaption style="padding-top: 10px;">  Droeshout engraving: Shakespeare lookin' swag</figcaption>
+</figure>
+<!-- <div>
+  <figcaption align = "left"> Shakespeare lookin' swag</figcaption>
+</div> -->
+
+<p class = 'justify'>
+  One way to answer these questions is to look at how different brain areas
+  are inter-connected using another type of MRI, called diffusion-weighted imaging.
+  Whilst fMRI looks at activity in the cell bodies that make up the brain’s
+  hardware (called grey matter), diffusion-weighted imaging looks at the bundles
+  of wires that connect the different bits of grey matter in our brain. These
+  bundles are called white matter. Diffusion-weighted imaging tracks the motion
+  of water molecules in the brain’s white matter, and identifies the bundles of
+  wires that water will diffuse along. A team of neuroscientists from the UK and
+  USA called the “Human Connectome Project” have collected these types of MRI
+  images from hundreds of healthy adult volunteers. They are using this data
+  to create a kind of road map of the brain’s inter-connected fibres and pathways.
+  They hope that identifying the brain’s networks will help us understand how
+  we function and live our lives. So far, they have generated some fantastic
+  images of the intricate circuitry within our brains – in fact, British band
+  Muse couldn’t help but stick one of them on the cover of their album <i>The 2nd
+  Law</i>. More recently, the Human Connectome Project used their complex brain map
+  to show that the way some brain areas speak to each other could help explain
+  certain human behaviours. They found that a particular set of areas in the
+  brain – areas that normally talk to each other when you are resting, seeing
+  and hearing, moving and paying attention - communicated differently in people
+  with mostly ‘positive’ behaviour and lifestyle traits (like high life satisfaction,
+  good vocabulary, good memory) compared to people with mostly ‘negative’ traits
+  (like aggression, poor sleep, alcohol and drug use).
+</p>
+<p class = 'justify'>
+  This kind of “neural cartography” using MRI is also valuable in medicine. A
+  couple of years ago, neurosurgeons in California wanted to find a way to
+  avoid damaging healthy tissue when they removed brain tumours. What they did
+  was collect diffusion-weighted images from their patients and use them to map
+  out the vital white matter circuits around the tumour. One patient for example
+  had a tumour lodged in his occipital lobe; the region at the back of the brain
+  important for sight. Using diffusion-weighted imaging, the neurosurgery team
+  were able to remove the tumour without damaging the fibres that carry information
+  from the eyes to the brain.
+</p>
+<p class = 'justify'>
+  MRI can be a powerful tool to map the brain and its circuits of inter-connected
+  fibres. With the help of large projects like the Human Connectome Project, we
+  can begin to build a map of these circuits. This map will bring us one step
+  closer to understanding the complex and intricate world of neurons. In
+  particular, how millions of brain cells talk to each other and how this
+  communication ultimately dictates who we are as human beings.
 </p>
 
 </html>
