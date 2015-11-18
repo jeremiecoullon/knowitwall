@@ -537,14 +537,53 @@
 
 
   <script type="text/javascript">
-  jQuery(function ($) {
-      // Customise the default plugin options with the third argument.
-      $('body').annotator()
-                .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},
-                {Tags: false, Filter: false, Permissions: false
-                 }
-                 );
-                 });
+	jQuery(function ($) {
+		var annotator = $('body').annotator().data('annotator'),
+			anonymousToken = {
+				userId: '0',
+				displayName: 'anonymous'
+			};
+
+		//add auth plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/auth.html)
+		annotator.addPlugin('Auth', {
+			autoFetch: true,
+			tokenUrl: 'http://localhost:5000/api/token'
+		});
+
+		//register callback to run when we get a token
+		annotator.plugins.Auth.withToken(function(token){
+			//just pass the token to the permissions plugin
+			annotator.plugins.Permissions.setUser(token);
+		});
+
+		//add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
+		annotator.addPlugin('Permissions', {
+			//initialise with the anonymous token
+			user: anonymousToken,
+			userId: function (user) {
+				return (user || anonymousToken).userId;
+			},
+			userString: function (user) {
+				return (user || anonymousToken).displayName;
+			},
+			userAuthorize: function(action, annotation, user) {
+				user = user || anonymousToken;
+
+				//user not logged in (ie: 'anonymous user'):
+				if(user.userId === "0"){
+					//can view annotations, cannot create/edit annotations
+					return action === 'read';
+				}
+				//admin logged in: can edit/create/delete all annotations
+				if(user.isAdmin){
+					return true;
+				}
+
+				//user logged in: can create annotations (and read them)
+				return action === 'create' || action === 'read';
+			},
+		});
+	});
   </script>
 
 

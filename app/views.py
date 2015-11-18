@@ -264,6 +264,8 @@ def generate_token():
     return jwt.encode({
       'consumerKey': CONSUMER_KEY,
       'userId': user_id,
+	  'isAdmin': 'TODO:' == 'Put bool here',
+	  'displayName': 'TODO: ' + 'Put user name here',
       'issuedAt': _now().isoformat() + 'Z',
       'ttl': CONSUMER_TTL
     }, CONSUMER_SECRET)
