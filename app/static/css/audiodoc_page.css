@@ -33,6 +33,12 @@
   box-shadow:0px 0px 5px 0px #333;
 }
 
+@media(max-width: 561px){
+.arrow-wrap{
+  font-size:0.3em;
+}
+}
+
 .arrow {
   float:left;
   position:relative;
