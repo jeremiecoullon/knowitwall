@@ -531,7 +531,7 @@
   <script src="/static/js/knowitwall.js"></script>
 
   <script src="/static/js/audioplayer.js"></script>
-  <script src="/static/js/annotator-full.min.js"></script>
+  <script src="/static/js/annotator-full-1.2.7-modified.min.js"></script>
 
 </script>
 
@@ -557,6 +557,7 @@
 		});
 
 		//add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
+		//note that we're using a modified version of annotator which introduces a 'create' permission
 		annotator.addPlugin('Permissions', {
 			//initialise with the anonymous token
 			user: anonymousToken,
@@ -585,19 +586,6 @@
 		});
 	});
   </script>
-
-
-
-<!-- {Permissions: true,
-   AnnotateItPermissions: {
-     permissions: {
-       'read':   [],
-       'update': [],
-       'delete': [],
-       'admin':  []
-     }
-   }
- } -->
 
 
 
