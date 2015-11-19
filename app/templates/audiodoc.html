@@ -535,7 +535,25 @@
 
 </script>
 
+<!-- previous version of annotator script. Has persistent storage.
+    todo:  Need to rewrite this, but adding the plugins individually (like the proper version
+    below) to see how to have persistent storage for the proper version.
+ -->
+<script type="text/javascript">
+jQuery(function ($) {
+    // Customise the default plugin options with the third argument.
+    $('body').annotator()
+              .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},
+              {Tags: false, Filter: false, Permissions: false
+               }
+               );
+               });
+</script>
 
+<!-- below is the proper version of the annotator script (with Ian's addition).
+    It doesn't have persistent storage for some reason though.
+ -->
+<!--
   <script type="text/javascript">
 	jQuery(function ($) {
 		var annotator = $('body').annotator().data('annotator'),
@@ -586,7 +604,7 @@
 		});
 	});
   </script>
-
+ -->
 
 
 <!-- share buttons-->

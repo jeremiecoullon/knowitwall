@@ -261,11 +261,12 @@ def generate_token():
         user_id='0'
     else:
         user_id = str(current_user.id)
+        user_nickname = str(current_user.nickname)
     return jwt.encode({
       'consumerKey': CONSUMER_KEY,
       'userId': user_id,
 	  'isAdmin': 'TODO:' == 'Put bool here',
-	  'displayName': 'TODO: ' + 'Put user name here',
+	  'displayName': user_nickname,
       'issuedAt': _now().isoformat() + 'Z',
       'ttl': CONSUMER_TTL
     }, CONSUMER_SECRET)
