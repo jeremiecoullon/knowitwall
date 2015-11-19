@@ -299,14 +299,6 @@ header .container {
 
 }
 
-/* makes the grey box for audiodoc transcript less wide only for large screen */
-@media(min-width:1220px){
-  .previous-audiodoc{
-    width: 1000px;
-  }
-}
-
-
 
 header img {
     display: block;
