@@ -25,10 +25,10 @@
   its information? And is it communicating with other areas?
 
 </p>
-<figure align="middle" style="padding-bottom: 1em;">
-  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; padding-top: 2em; ">
-  <figcaption style="padding-top: 10px;">  Droeshout engraving: Shakespeare lookin' swag</figcaption>
-</figure>
+<!-- <figure style="padding-bottom: 1em; background-color: white;"> -->
+  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; padding-top: 2em; float: left; margin: 10px; background-color='white';">
+  <!-- <figcaption style="padding-top: 10px;display:table-caption;caption-side:bottom;">  Droeshout engraving: Shakespeare lookin' swag</figcaption> -->
+<!-- </figure> -->
 <!-- <div>
   <figcaption align = "left"> Shakespeare lookin' swag</figcaption>
 </div> -->
