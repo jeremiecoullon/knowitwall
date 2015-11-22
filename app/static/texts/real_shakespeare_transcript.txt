@@ -26,8 +26,8 @@
 
 </p>
 <!-- padding-bottom: 1em; background-color: white;  -->
-<figure style="float: left; margin: 2em 4em 2em 0; background-color:white;padding-top: 2em; padding-right:2em;padding-left:2em;padding-bottom:1.5em;">
-  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px;  float: left;  background-color='white';">
+<figure class="image_transcript">
+  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px;  float: left;">
   <figcaption style="padding-top:1em;">  Droeshout engraving: Shakespeare lookin' swag</figcaption>
 </figure>
 
