@@ -25,13 +25,12 @@
   its information? And is it communicating with other areas?
 
 </p>
-<!-- <figure style="padding-bottom: 1em; background-color: white;"> -->
+<!-- padding-bottom: 1em; background-color: white;  -->
+<figure style="float: left; margin: 10px 10px 10px 0; background-color:white; padding-right:20px;padding-left:20px;padding-bottom:20px;">
   <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; padding-top: 2em; float: left; margin: 10px; background-color='white';">
-  <!-- <figcaption style="padding-top: 10px;display:table-caption;caption-side:bottom;">  Droeshout engraving: Shakespeare lookin' swag</figcaption> -->
-<!-- </figure> -->
-<!-- <div>
-  <figcaption align = "left"> Shakespeare lookin' swag</figcaption>
-</div> -->
+  <figcaption>  Droeshout engraving: Shakespeare lookin' swag</figcaption>
+</figure>
+
 
 <p class = 'justify'>
   One way to answer these questions is to look at how different brain areas

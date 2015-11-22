@@ -13,8 +13,8 @@
     "author_name": "Ren&eacute; Weis",
     "author_image": "/static/Images/author_Rene_Weis.jpg",
     "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
-    "music_credits": "Jesus",
-    "narration_credits": "God",
+    "music_credits": "Chris Zabriskie and Sergey Chereminisov",
+    "narration_credits": "Angus Waite and Vidish Athavale",
     "transcript": "app/static/texts/real_shakespeare_transcript.txt",
     "audio_mp3": "http://knowitwall.com/audio/real_shakespeare.mp3"
 }
