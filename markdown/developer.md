@@ -7,12 +7,20 @@
 Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges. So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content. This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
 ****
 
-**technical specifications:**
+**tech stack:**
 
-The site uses the [Flask](http://flask.pocoo.org/) web framework and is hosted on [Digitalocean](https://www.digitalocean.com/)
+*the code is on [Github](https://github.com/jeremiecoullon/knowitwall)*
+
+ - [Flask](http://flask.pocoo.org/) web framework 
+ - [Digitalocean](https://www.digitalocean.com/) for hosting
+ - [gunicorn](http://gunicorn.org/) and [nginx](https://www.nginx.com/resources/wiki/) web servers
+ - sqlite for the user database
+
 
 
 ###Annotations (ie: Knowits)
+
+*currently on the 'user\_login\_OAuth' branch on [github](https://github.com/jeremiecoullon/knowitwall)*
 
 **annotations specs:**
 
@@ -93,6 +101,7 @@ The site uses the [Flask](http://flask.pocoo.org/) web framework and is hosted o
 	- visualise the graph well. Example of good design: [physics theories map](https://www.quantamagazine.org/20150803-physics-theories-map/)
 	- backend store for annotations feeding the content into the visualisation
 	- visualisation is continuously updated with new annotations? would need real-time communication; see the [socket.io integration](https://flask-socketio.readthedocs.org/en/latest/) for flask for example
+	- how to set up the annotations (in the previous sections) such that the this is possible ? Should the database be set up in a specific way?
 
 ##developers:
 
