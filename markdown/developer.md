@@ -4,7 +4,9 @@
 ****
 **Summary of the project:**
 
-Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges. So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
+Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges. 
+
+So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content. So 3rd party content is be viewed through an iframe (like in [Stumbleupon](http://www.stumbleupon.com/)), and users can create annoations on this content. This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
 ****
 
 **tech stack:**
@@ -78,9 +80,11 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 		-  we login via a 'secret' login form (on `knowitwall.com/secretloginform/` for example)
 		-  we have all permissions for creating annotations
 		-  anonymous user (ie: users not logged in) have read-only permissions, and can't create 
-	-  need to style how the annotations look
-	-  need to set up the backend store as migrating from the AnnotateIt.com store to our store might be tedious
-	- **problems:** annotator.js doesn't allow (out of the box) the 'anonymous' permissions that we need (ie: can view annotations without creating new ones): we need to go digging into the javascript to allow that.
+	- **TODO:** 
+		- set up permissions for different users
+		- need to set up the backend store 
+		- need to style how the annotations look
+
 
 2. **iframe:**
 
@@ -114,13 +118,13 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 
 **We need:** 
 
-more frontend/javascript developers: 
+more developers to do: 
 
-- deal with annotator.js: modify permission for anonymous, set up admin permissions etc..
+- deal with annotator.js: set up different permissions etc..
 - frontend stuff on the site: follow specs from designer 
+- database: how should this interact with the wall of knowledge?
 - javascript (Visualisation): for the wall of knowledge
 
-backend - Python: would be helpful as well! but the difficulty at the moment is mainly javascript 
 
 *You don't have to commit to working on the entirety of the project; even helping out with a small aspect of it would be helpful! Generally, anyone keen to help build this is welcome!*
 
