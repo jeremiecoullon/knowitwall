@@ -539,31 +539,38 @@
     todo:  Need to rewrite this, but adding the plugins individually (like the proper version
     below) to see how to have persistent storage for the proper version.
  -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 jQuery(function ($) {
     // Customise the default plugin options with the third argument.
-    $('body').annotator({readOnly: false})
+    $('body').annotator()
               .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},{
                 Tags: false,
                 Filter: false,
-                AnnotateItPermissions: true
+                Permissions:true
                }
                );
                });
-</script>
+</script> -->
 
 
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   jQuery(function ($) {
     var annotator = $('body').annotator().data('annotator');
 
     // Store plugin
-    annotator.addPlugin('Store',{
+    annotator.addPlugin('Store', {
+      // The endpoint of the store on your server.
       prefix: 'http://annotateit.org/api',
+
+      // Attach the uri of the current page to all annotations to allow search.
       annotationData: {
         'uri': 'http://localhost:5000/audiodoc/stegosaurus'
       },
+
+      // This will perform a "search" action when the plugin loads. Will
+      // request the last 20 annotations for the current url.
+      // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
       loadFromSearch: {
         'limit': 20,
         'uri': 'http://localhost:5000/audiodoc/stegosaurus'
@@ -585,7 +592,7 @@ jQuery(function ($) {
 
     })
   })
-</script> -->
+</script>
 
 
 
@@ -612,18 +619,6 @@ jQuery(function ($) {
 			//just pass the token to the permissions plugin
 			annotator.plugins.Permissions.setUser(token);
 		});
-
-    // Store plugin
-    annotator.addPlugin('Store',{
-      prefix: 'http://annotateit.org/api',
-      annotationData: {
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      },
-      loadFromSearch: {
-        'limit': 20,
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      }
-    });
 
 		//add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
 		//note that we're using a modified version of annotator which introduces a 'create' permission
