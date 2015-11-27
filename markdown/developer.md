@@ -1,17 +1,22 @@
 #Knowitwall
 
 [Knowitwall site](http://knowitwall.com/)
-****
+
 **Summary of the project:**
 
+
 Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges. So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
-****
+
+Know it Wall is a website that spreads knowledge. It does this through content creation as well as content aggregation. On the content creation side of it, our community of academics write engaging texts in any subject – from physics to history – which we then turn into short documentaries (less than 10 minutes long). Each piece of content written by an academic works as a ​*pivot*​ around which something akin to a tree of knowledge emerges.
+
+So, after a pivot is published on the website in the form of text, audio and video, its author (the academic) adds in-line annotations to particular parts of the text (or audio or video – they all sync) with links to especially relevant and insightful articles, podcasts or videos in the wider Internet. We call these annotations ​*know-its*​ (after ‘post-its’). Once users have clicked on one of these know-its, the journey begins! They can themselves add know-its to articles, podcasts or videos that are hosted on third-party websites (and even to our pivots) in exactly the same way through Know it Wall's iframe  – linking content to more content. So 3rd party content is be viewed through an iframe (like in [Stumbleupon](http://www.stumbleupon.com/)), and users can create annoations on this content. This is the content aggregation side of the project. When a decent number of know-its is added to third-party content, users will be able to take a bird’s eye view on all author- and user-generate know-its, a visual representation of everything on the website: the wall of all know-its – ​*the Know-it Wall*.
+
 
 **tech stack:**
 
 *the code is on [Github](https://github.com/jeremiecoullon/knowitwall)*
 
- - [Flask](http://flask.pocoo.org/) web framework 
+ - [Flask](http://flask.pocoo.org/) web framework
  - [Digitalocean](https://www.digitalocean.com/) for hosting
  - [gunicorn](http://gunicorn.org/) and [nginx](https://www.nginx.com/resources/wiki/) web servers
  - sqlite for the user database
@@ -27,13 +32,13 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 - users log in, highlight a section of text, create a note with a character limit (say 200 characters)
 - note must have a hyperlink to a 3rd party content (can use markdown for example to not have the URL)
 - annotations must be approved by admin before being published
-- When a user clicks on a hyperlink in an annotation, they are redirected to that article/site, but viewed in an iframe. 
+- When a user clicks on a hyperlink in an annotation, they are redirected to that article/site, but viewed in an iframe.
 - Users can repeat the whole process on this 3rd party content: create annotation and link to other 3rd party content.
 - end up with a directed graph of related article/videos/podasts with the root articles being content produced by Knowitwall.
 
 **Annotation library: [Annotator.js](http://annotatorjs.org/)**
 
-- backend 
+- backend
 	- *storing the annotations:*
 		- we're temporarily using this [backend store](http://annotateit.org/) for development: it stores the annotations, and sends to them to the client.
 		- we're also currently setting up our own [store](https://github.com/openannotation/annotator-store) for annotations as we'll need to keep track of the link between annotated content send them back to the client (for the Wall of Knowledge).
@@ -58,9 +63,9 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 
 ###Wall of Knowledge: a graph of all Knowits
 
-- each node is an article/video 
+- each node is an article/video
 	- includes all Knowitwall content
-	- includes any 3rd party content that has an annotation linking to it 
+	- includes any 3rd party content that has an annotation linking to it
 - The edges show which nodes are linked together by an annotation
 	- maybe represent direction (ie: on which text was the annotation made)
 - the nodes are clustered into disciplines (physics, history etc..)
@@ -77,10 +82,12 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 	-  we put the annotation on the site:
 		-  we login via a 'secret' login form (on `knowitwall.com/secretloginform/` for example)
 		-  we have all permissions for creating annotations
-		-  anonymous user (ie: users not logged in) have read-only permissions, and can't create 
-	-  need to style how the annotations look
-	-  need to set up the backend store as migrating from the AnnotateIt.com store to our store might be tedious
-	- **problems:** annotator.js doesn't allow (out of the box) the 'anonymous' permissions that we need (ie: can view annotations without creating new ones): we need to go digging into the javascript to allow that.
+		-  anonymous user (ie: users not logged in) have read-only permissions, and can't create
+	- **TODO:**
+		- set up permissions for different users
+		- need to set up the backend store
+		- need to style how the annotations look
+
 
 2. **iframe:**
 
@@ -92,10 +99,10 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 	- need to add the option of logging in with an email account
 	- desing & code a login form page (or in the nav bar)
 	- users can then login and create annotations on 3rd party content
-	- **problems:** 
+	- **problems:**
 		- how can annotator.js annotate on content within iframes? Look into [this question](https://forum.jquery.com/topic/changing-elements-in-an-iframe): need to modify a `div` within the iframe
 		- user generated annotations must be approved by 'admin'. How to do this?
-		
+
 4. **Wall of Knoweldge:**
 
 	- visualise the graph well. Example of good design: [physics theories map](https://www.quantamagazine.org/20150803-physics-theories-map/)
@@ -109,18 +116,17 @@ Know it Wall is a website that spreads knowledge. It does this through content c
 
 - backend: python & databases
 - designer/UX
-- recently: javascript developer 
+- recently: javascript developer
 
 
-**We need:** 
+**We need:**
 
-more frontend/javascript developers: 
+more developers to do:
 
-- deal with annotator.js: modify permission for anonymous, set up admin permissions etc..
-- frontend stuff on the site: follow specs from designer 
+- deal with annotator.js: set up different permissions etc..
+- frontend stuff on the site: follow specs from designer
+- database: how should this interact with the wall of knowledge?
 - javascript (Visualisation): for the wall of knowledge
 
-backend - Python: would be helpful as well! but the difficulty at the moment is mainly javascript 
 
 *You don't have to commit to working on the entirety of the project; even helping out with a small aspect of it would be helpful! Generally, anyone keen to help build this is welcome!*
-

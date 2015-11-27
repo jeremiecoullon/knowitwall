@@ -89,7 +89,6 @@ border-color: #111 transparent transparent transparent;
 */
 
 a.a_arrow{
-  color:#56dcee;
   opacity:0.8;
   text-decoration:none;
 }
@@ -132,3 +131,16 @@ header .container {
 }
 /* end of image credits stuff */
 /**/
+
+/* image within transcript */
+
+.image_transcript{
+  float: left;
+  margin: 2em 4em 2em 0;
+  background-color:white;
+  padding-top: 2em;
+  padding-right:2em;
+  padding-left:2em;
+  padding-bottom:1.5em;
+  text-align:center;
+}
