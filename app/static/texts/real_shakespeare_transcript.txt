@@ -83,7 +83,7 @@
   <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; margin-bottom:1em; float: left;">
   <![if !IE]>
   <figcaption>  Title page of the 1623 Folio</figcaption>
-  <![if !IE]>
+  <![endif]>
 </figure>
 <p class = 'justify'>
   The point is that Jonson, an inveterate gossip, knew Shakespeare very well. Not
