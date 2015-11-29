@@ -233,25 +233,21 @@ text-align: left;
 
 /* Clip Path */
 
-.clip-circle {
-
-  -webkit-clip-path: circle(50.0% at 50% 50%);
-clip-path: circle(50.0% at 50% 50%);
+.author-image {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
     }
 
 @media(min-width:1200px) {
-  .clip-circle {
+  .author-image {
     width: 70%;
     margin-left:60px;
   }
 }
 
 @media only screen and (max-width:991px) {
-  .clip-circle {
+  .author-image {
     display:none;
   }
 }
