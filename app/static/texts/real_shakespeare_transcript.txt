@@ -81,14 +81,14 @@
 </p>
 <figure class="image_transcript" style="text-align:center;">
   <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; margin-bottom:1em; float: left;">
-  <![if !IE]>
+  <!-- <![if !IE]>
   <figcaption class = "figcaption_IE" >  Title page of the 1623 Folio</figcaption>
-  <![if !IE]>
+  <![if !IE]> -->
 </figure>
 <p class = 'justify'>
   The point is that Jonson, an inveterate gossip, knew Shakespeare very well. Not
   only does he recall his dead friend in his diary, but in the prefatory material
-  to the 1623 Folio, a monumental work of 36 plays by Shakespeare, published by
+  to the 1623 Folio [see image], a monumental work of 36 plays by Shakespeare, published by
   fellow members of the King’s Men, John Heminges and Henry Condell, he
   authenticates the Martin Droeshout engraving of Shakespeare. In a short poem,
   ‘To the Reader’, Jonson tells us that ‘This figure that thou here seest put, /
