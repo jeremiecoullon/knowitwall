@@ -143,13 +143,23 @@ def index():
 @app.route('/audiodoc/<url>')
 def audiodoc(url):
 
+    # put all audiodoc information in the variable audiodoc
     audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-
     audiodoc = ad_fun(audiodoc_list)
+
+    # read_only permission
+    # set user_nickname variable
     if current_user.is_anonymous():
-        read_only = 'true'
+        user_nickname='anonymous'
     else:
+        user_nickname = str(current_user.nickname)
+
+    # if the user is in list of allowed users, then the user can create annotations. Otherwise no
+    create_permission = ['jeremie.coullon']
+    if user_nickname in create_permission:
         read_only = 'false'
+    else:
+        read_only = 'true'
 
     return render_template('audiodoc.html', audiodoc=audiodoc, read_only=read_only)
 
