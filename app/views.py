@@ -82,6 +82,10 @@ def send_file_partial(path):
 @app.route('/audio/stegosaurus_spikes.mp3')
 @app.route('/audio/antartica_discovery.mp3')
 @app.route('/audio/memory_keys.mp3')
+@app.route('/audio/viral_pandemics.mp3')
+@app.route('/audio/saharan_dust.mp3')
+@app.route('/audio/neural_cartography.mp3')
+@app.route('/audio/real_shakespeare.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -89,10 +93,10 @@ def static_from_root():
 
 
 "----------------------------------------------------------------------------------------------------"
-"audiodoc function"
+"audiodoc function "
 
 # complete list of audiodocs
-all_audiodocs = ['memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
@@ -169,13 +173,7 @@ def audiodoc(url):
 
 @app.route('/terms')
 def terms():
-    if current_user.is_anonymous():
-        user_id='0'
-    else:
-        user_id = str(current_user.nickname)
-    print user_id
     return render_template('terms.html')
-
 
 
 "----------------------------------------------------------------------------------------------------"
@@ -206,6 +204,7 @@ def contactform():
     body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     yagmail.Connect('emailtoknowitwall', 'startupsarefun').send([jeremie, miguel, KIW, angus], subject, body)
     return name
+
 
 
 "----------------------------------------------------------------------------------------------------"

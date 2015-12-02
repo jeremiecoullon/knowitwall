@@ -10,7 +10,29 @@
     src: url("../fonts/GeosansLight.ttf");
 }
 
+/* to make the homepage scrolling arrive at the right point */
 
+
+/*.scrollything{
+  margin-top: -300px;
+  padding-bottom: 70px;
+  display: block;
+}*/
+
+/*
+.scrollything:before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+}*/
+
+/* highlight words in yellow */
+.highlight {
+  color: #33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+}
 
 
 /* feedback form title not in caps lock*/
@@ -134,7 +156,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #FFFFFF;
+    text-decoration: none;
 }
 
 h1,
@@ -211,25 +233,21 @@ text-align: left;
 
 /* Clip Path */
 
-.clip-circle {
-
-  -webkit-clip-path: circle(50.0% at 50% 50%);
-clip-path: circle(50.0% at 50% 50%);
+.author-image {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
     }
 
 @media(min-width:1200px) {
-  .clip-circle {
+  .author-image {
     width: 70%;
     margin-left:60px;
   }
 }
 
 @media only screen and (max-width:991px) {
-  .clip-circle {
+  .author-image {
     display:none;
   }
 }
@@ -270,9 +288,11 @@ header .container {
     padding-bottom: 300px;
 }
 
+
 .previous-audiodoc{
-  background-color: #F0F0F0;    /*#F8F8F8 */
+  background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
+
 }
 
 
@@ -323,12 +343,12 @@ text-align: left;
     color:#d2d2d2;
 
 }
-
+/* this makes the navbar tabs light up when you scroll to their respective section */
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: #27282D;
   background-color: #FFC21C;
-
   }
+
 
   @media(max-width:440px) {
 
@@ -438,14 +458,15 @@ text-align: left;
   font-size:4em;
   font-family: GeosansLight;
   color:#33353d;
-  background-color: rgba(255, 194, 28, 1);
+  background-color: rgba(255, 194, 28, 0.8);
   margin-bottom: 20px;
   display: inline-block;
+  line-height: 120%;
 }
 
 @media(max-width:561px) {
   .episode-title {
-    font-size:3em;
+    font-size:2em;
     white-space: normal;
   }
 }
@@ -491,6 +512,19 @@ text-align: left;
 .transcript{
 padding: 40px;
 }
+.transcript p {
+  line-height: 170%;
+  }
+
+@media(max-width:991px) {
+  .transcript{
+  padding: 4px;
+  }
+  .transcript p {
+    line-height: 140%;
+    }
+}
+
 
 #layout {
 padding:40px;
@@ -553,7 +587,7 @@ padding:40px;
 @media(min-width:768px) {
     header .container {
         padding-top: 300px;
-        padding-bottom: 300px;
+        padding-bottom: 360px;
     }
 
     header .intro-text .name {
@@ -567,11 +601,6 @@ padding:40px;
 
 @media(min-width:768px) {
 
-.navbar-default {
-  background-color: rgba(14, 107, 119, 0.86);
-  border-color: transparent;
-
-}
 
 /* this says how  the nav bar transition happens, but not when */
 
@@ -619,21 +648,30 @@ padding:40px;
 }
 }
 
+
+/* make the navbar solid throughout */
 .navbar-default {
-    background: none;
-
-
+    padding: 10px 0;
+    background-color: #27282D;
 }
 
 
-@media(max-width:768px) {
+@media(max-width:400px) {
 
+.navbar-brand {
+  padding: 0;
+  max-width:250px;
+  width:70%;
+}
+}
+
+@media(max-width:768px) {
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
-
 }
 }
+/* end of 'make the navbar solid throughout' */
 
 .navbar a:focus {
     outline: 0;
@@ -650,7 +688,7 @@ padding:40px;
 
 
 section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 section h2 {
@@ -666,7 +704,7 @@ section.success {
 
 @media(max-width:767px) {
     section {
-        padding: 75px 0;
+        padding: 40px 0;
         background-color: #fff;
     }
 

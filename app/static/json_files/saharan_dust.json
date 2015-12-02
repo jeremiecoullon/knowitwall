@@ -1,0 +1,20 @@
+{
+    "url": "saharan_dust",
+    "unique_id": "Ashpole_dust",
+    "topic_name": "Saharan dust: Sustaining the Amazon?",
+    "topic_image": "/static/Images/TI_saharan_dust.jpg",
+    "topic_image_home": "/static/Images/TI_saharan_dust_home.jpg",
+    "topic_image_box": "/static/Images/TI_saharan_dust_box.jpg",
+    "image_credits": " Millions of tonnes of Saharan dust drift over the Atlantic. <a href='http://earthobservatory.nasa.gov/' target='_blank'>NASA Earth Observatory</a>",
+    "discipline": "Geography",
+    "og_name": "Saharan dust: Sustaining the Amazon?",
+    "og_description": "Dust in the air is nothing new. But for the Amazon rainforest, dust from the Sahara is crucial for its survival. How does this happen though? Ian Ashpole explains the phenomenon.",
+    "topic_description": "Dust in the air is nothing new. But for the Amazon rainforest, dust from the Sahara is crucial for its survival. How does this happen though? Ian Ashpole explains the phenomenon.",
+    "author_name": "Ian Ashpole",
+    "author_image": "/static/Images/author_Ian_Ashpole.jpg",
+    "author_bio": "app/static/texts/saharan_dust_author_bio.txt",
+    "music_credits": "Kai Engel, Sergey Cheremisonov and Dexter Britain",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "app/static/texts/saharan_dust_transcript.txt",
+    "audio_mp3": "http://knowitwall.com/audio/saharan_dust.mp3"
+}

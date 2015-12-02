@@ -8,13 +8,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{audiodoc[0].og_description}}">
+  <meta name="description" content="{{audiodocs[0].og_description}}">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
-  <meta property="og:image" content="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" />
-  <meta property="og:title" content="{{audiodoc[0].og_name}}" />
-  <meta property="og:description" content="{{audiodoc[0].og_description}}" />
-  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodoc.url}}" />
+  <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
+  <meta property="og:title" content="{{audiodocs[0].og_name}}" />
+  <meta property="og:description" content="{{audiodocs[0].og_description}}" />
+  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -30,8 +30,9 @@
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
 
-  <!-- audiodoc css (nav bar always solid) -->
+<!-- audioddoc css  -->
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
+
 
   <!-- annotator -->
   <link href="/static/css/annotator.min.css" rel="stylesheet" type="text/css">
@@ -40,17 +41,6 @@
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-
-    <!-- Sharethis.com: this makes the social media buttons work -->
-    <!--
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://ws.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://ss.sharethis.com/loader.js"></script>
-    -->
-
-
-
 
 </head>
 
@@ -256,17 +246,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <!--
-          <li class="hidden">
-             <a href="#page-top"></a>
-          </li>
-          -->
-
-          <!--
-          <li class="page-scroll">
-            <a href="#page-top">Home</a>
-          </li>
-          -->
 
           <li class="page-scroll">
             <a href="#episodes">Listen</a>
@@ -330,23 +309,50 @@
     </div>
   </nav>
 
-  <section id="episodes">
+  <header class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}'); background-repeat: no-repeat; background-size:cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <div class="episode-title">
+            {{audiodocs[0].topic_name | safe}}
+          </div>
+        </div>
+
+        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+           <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
+
+      </div>
+    </div>
+    <div class="row arrow_row">
+      <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+        <a class="arrow-wrap a_arrow" href="#episodes">
+        <span class="arrow"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <section id="episodes" >
+    <div class="container image_credits">
+      <div class="row ">
+        <p>
+          {{audiodocs[0].image_credits | safe}}
+        </p>
+      </div>
+    </div>
     <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
-          <div class="episode-title{{audiodoc[0].topic_name_wrap}}">
-            {{audiodoc[0].topic_name | safe}}
-          </div>
-
-
-          <p style="font-size:1.6em;">{{audiodoc[0].topic_description | safe}}</p>
-          <p style="font-style:italic;">narrated by {{ audiodoc[0].narration_credits }}</p>
-          <p style="font-style:italic;">music by {{ audiodoc[0].music_credits }}</p>
+          <p style="font-size:1.6em;">{{audiodocs[0].topic_description | safe}}</p>
+          <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
+          <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
         </div>
 
         <div class="col-lg-12">
-          <audio controls>
-            <source src="{{audiodoc[0].audio_mp3}}" type="audio/mpeg">
+
+          <audio controls id="author">
+            <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
 
@@ -355,16 +361,16 @@
 
           <div class="author-bio">
             <div class="col-md-3">
-              <img class="clip-circle"class="img-responsive" src="{{audiodoc[0].author_image}}"  alt = "author image">
+              <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image">
             </div>
             <div class="col-md-3">
               <div class="author-name">
-              <h2 style="text-align:right;"> {{ audiodoc[0].author_name }}</h2>
+              <h2 style="text-align:right;"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
-              <p > {{ audiodoc[0].author_bio | safe}} </p>
+              <p > {{ audiodocs[0].author_bio | safe}} </p>
               </div>
             </div>
           </div>
@@ -384,9 +390,9 @@
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'knowitwall'; // Required - Replace '<example>' with your forum shortname
-            var disqus_identifier = '{{audiodoc[0].unique_id}}';
-            var disqus_url = 'http://knowitwall.com/{{audiodoc[0].unique_id}}';
-            var disqus_title = '{{audiodoc[0].unique_id}}';
+            var disqus_identifier = '{{audiodocs[0].unique_id}}';
+            var disqus_url = 'http://knowitwall.com/{{audiodocs[0].unique_id}}';
+            var disqus_title = '{{audiodocs[0].unique_id}}';
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -444,7 +450,7 @@
             </div>
 
 
-            <input type="hidden" name="ad_name" value="{{audiodoc[0].topic_name}}">
+            <input type="hidden" name="ad_name" value="{{audiodocs[0].topic_name}}">
 
             <br>
             <div id="success"></div>

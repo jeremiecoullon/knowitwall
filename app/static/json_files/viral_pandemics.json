@@ -1,0 +1,20 @@
+{
+    "url": "viral_pandemics",
+    "unique_id": "Mazzon_Pandemics",
+    "topic_name": "Viral pandemics",
+    "topic_image": "/static/Images/TI_pandemics.jpg",
+    "topic_image_home": "/static/Images/TI_pandemics_home.jpg",
+    "topic_image_box": "/static/Images/TI_pandemics_box.jpg",
+    "image_credits": "",
+    "discipline": "Biology",
+    "og_name": "Viral Pandemics",
+    "og_description": "With the latest panic on Ebola melting away, it seems another feared disease has been contained and controlled. But why is it that, after all of our advance in medicine, we still rely on containment rather than cures? Michela Mazzon fills us in.",
+    "topic_description": "With the latest panic on Ebola melting away, it seems another feared disease has been contained and controlled. But why is it that, after all of our advance in medicine, we still rely on containment rather than cures?  Michela Mazzon fills us in.",
+    "author_name": "Michela Mazzon",
+    "author_image": "/static/Images/author_Michela_Mazzon.jpg",
+    "author_bio": "app/static/texts/pandemics_author_bio.txt",
+    "music_credits": "Kai Engel and Dexter Britain",
+    "narration_credits": "Angus Waite",
+    "transcript": "app/static/texts/pandemics_transcript.txt",
+    "audio_mp3": "http://knowitwall.com/audio/viral_pandemics.mp3"
+}

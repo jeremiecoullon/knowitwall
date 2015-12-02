@@ -1,13 +1,150 @@
-.navbar-default {
-  padding: 10px 0;
-  background-color:#27282D;
+
+/**/
+/* scroll down arrow */
 
 
-@media(max-width:400px) {
+.arrow_row{
 
-.navbar-brand {
-  padding: 0;
-  max-width:250px;
-  width:70%;
+  padding-top: 230px;
+  padding-bottom: 130px; /* put padding-bottom at 130px: rather than 70px, as otherwise 1-line title don't fill the screen */
+  /*height: 100%;*/
 }
+
+.audiodoc_header{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+}
+
+@media(max-width: 561px){
+.arrow-wrap{
+  font-size:0.33em;
+}
+}
+
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+
+
+  @-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+  }
+
+  .arrow-wrap .arrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+  }
+
+/* the following makes the arrow opaque when you hover. The 'a_arrow' class means that
+   this only applies to the arrow and not any other <a> tag
+*/
+
+a.a_arrow{
+  opacity:0.8;
+  text-decoration:none;
+}
+
+a:hover.a_arrow{
+  color:#333;
+  opacity:1;
+}
+
+@media only screen and (max-width:991px){
+  .arrow_row{
+
+    padding-top: 60px;
+  }
+}
+/* end of scroll down arrow */
+/**/
+
+/* take off padding for the header (because there's the arrow on this page) */
+header .container {
+    padding-bottom: 0px;
+}
+
+/**/
+/* image credits stuff */
+/* take of padding of section id=episodes (for image credits) */
+
+#episodes{
+  padding: 0;
+}
+/* for the image credits */
+
+.image_credits {
+  padding-bottom: 40px;
+  padding-top: 6px;
+}
+.image_credits p{
+
+  font-size: 12px;
+}
+/* end of image credits stuff */
+/**/
+
+/* image within transcript */
+
+.image_transcript{
+  float: left;
+  margin: 2em 4em 2em 0;
+  background-color:white;
+  padding-top: 2em;
+  padding-right:2em;
+  padding-left:2em;
+  padding-bottom:1.5em;
+  text-align:center;
+}
+
+.ie10 .figcaption_IE{
+  display: none;
 }
