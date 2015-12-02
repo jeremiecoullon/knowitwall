@@ -146,8 +146,12 @@ def audiodoc(url):
     audiodoc_list = [url+'.json']  # list only has the selected audiodoc
 
     audiodoc = ad_fun(audiodoc_list)
+    if current_user.is_anonymous():
+        read_only = 'true'
+    else:
+        read_only = 'false'
 
-    return render_template('audiodoc.html', audiodoc=audiodoc)
+    return render_template('audiodoc.html', audiodoc=audiodoc, read_only=read_only)
 
 
 "----------------------------------------------------------------------------------------------------"
