@@ -144,7 +144,3 @@ header .container {
   padding-bottom:1.5em;
   text-align:center;
 }
-
-.ie10 .figcaption_IE{
-  display: none;
-}
