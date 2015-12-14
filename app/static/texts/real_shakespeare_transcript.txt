@@ -80,10 +80,8 @@
 
 </p>
 <figure class="image_transcript" style="text-align:center;">
-  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; margin-bottom:1em; float: left;">
-  <!-- <![if !IE]>
+  <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; margin-bottom:1em;">
   <figcaption class = "figcaption_IE" >  Title page of the 1623 Folio</figcaption>
-  <![if !IE]> -->
 </figure>
 <p class = 'justify'>
   The point is that Jonson, an inveterate gossip, knew Shakespeare very well. Not
@@ -139,9 +137,4 @@
   And not, one might add, Kit (Marlowe) or Ned (Earl of Oxford), or any other of
   the scores of names that have been put forward instead of Will Shakespeare.
 </p>
-<!--[if !IE]><!--><script>
-if (/*@cc_on!@*/false) {
-    document.documentElement.className+=' ie10';
-}
-</script><!--<![endif]-->
 </html>
