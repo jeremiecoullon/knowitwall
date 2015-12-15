@@ -1,0 +1,20 @@
+{
+    "url": "higgs_boson",
+    "unique_id": "Jon_Butterworth",
+    "topic_name": "le Higgs boson",
+    "topic_image": "/static/Images/TI_shakespeare.jpg",
+    "topic_image_home": "/static/Images/TI_shakespeare_box.jpg",
+    "topic_image_box": "/static/Images/TI_shakespeare_box.jpg",
+    "image_credits": "Martin Droeshout, <i>William Shakespeare (1564-1616)</i>. Engraving. <a href='http://goo.gl/zLjeVI' target='_blank'>British Museum</a> [<a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a>]",
+    "discipline": "Physics",
+    "og_name": "",
+    "og_description": "bosons are fun",
+    "topic_description": "bosons are fun",
+    "author_name": "Jon butterworth",
+    "author_image": "/static/Images/author_Rene_Weis.jpg",
+    "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "app/static/texts/higgs_transcript.txt",
+    "audio_mp3": "http://knowitwall.com/audio/real_shakespeare.mp3"
+}
