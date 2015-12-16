@@ -1,4 +1,17 @@
 <html>
+
+<style media="screen">
+.figure_transcript{
+  float: left;
+  margin: 2em 4em 2em 0;
+  background-color:white;
+  padding-top: 2em;
+  padding-right:2em;
+  padding-left:2em;
+  padding-bottom:1.5em;
+  text-align:center;
+}
+</style>
 <p class = 'justify'>
   The very idea of a global, watertight conspiracy over mere plays, right across
   Elizabethan and Jacobean England, verges on the almost self-evidently absurd.
@@ -79,7 +92,7 @@
   and admired his imagination, only wishing that it had not overflown so.
 
 </p>
-<figure class="image_transcript" style="text-align:center;">
+<figure class="figure_transcript" style="text-align:center;">
   <img src="/static/Images/shakespeare_pic.jpg"  style="width:304px;height:400px; margin-bottom:1em;">
   <figcaption >  Title page of the 1623 Folio</figcaption>
 </figure>

@@ -1,4 +1,16 @@
 <html>
+<style media="screen">
+  .figure_transcript{
+    text-align:center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom:0.8em;
+    margin-left: 25%;
+    margin-right:25%;
+    background-color: #E2E2E2;
+  }
+</style>
 <p class = 'justify'>
   The very idea of a global, watertight conspiracy over mere plays, right across
   Elizabethan and Jacobean England, verges on the almost self-evidently absurd.
@@ -45,7 +57,7 @@
   alluded to. Cambridge students at the time obviously distinguished between
   Shakespeare and Marlowe as did of course many others commentators in the period.
 </p>
-<figure  style="text-align:center; margin-top: 1.5em; margin-bottom: 1.5em;">
+<figure  class="figure_transcript">
   <img src="/static/Images/tr_image_higgs2.gif"style="width:460px;height:276px; margin-bottom:1em;">
   <figcaption >  Cool science </figcaption>
 </figure>
@@ -83,7 +95,7 @@
   and admired his imagination, only wishing that it had not overflown so.
 
 </p>
-<figure  style="text-align:center; margin-top: 1.5em; margin-bottom: 1.5em;">
+<figure class="figure_transcript">
   <img src="/static/Images/tr_image_higgs1.gif"style="width:460px;height:276px; margin-bottom:1em;">
   <figcaption >  Cool science </figcaption>
 </figure>
