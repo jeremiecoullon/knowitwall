@@ -30,17 +30,15 @@
     Henry, they had to re-introduce themselves and explain the task again, because
     he simply didn’t remember having seen those people or having done that task
     before. Surprisingly, however, his performance on some of the tasks kept getting
-    better! In a paper from 1968, Dr. Corkin reported that,
-  </p>
-  <p class="justify">
-    <q>H.M. performed 39
+    better! In a paper from 1968, Dr. Corkin reported that:
+  <blockquote class="justify">
+    H.M. performed 39
     trials on a mirror-drawing task and showed steady improvement (indicated by
     reduced time and error scores for both hands) over a three-day period,
     although on the second and third days he was not aware of having done the
     task before.
-    </q>
-  </p>
-  <p class="justify">
+  </blockquote>
+  <p class = 'justify'>
     But how could this be? How was it that Henry was unable to create new
     memories and yet improved on some memory tasks?
   </p>
