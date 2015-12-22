@@ -3016,7 +3016,7 @@
         tokenUrl: config.tokenUrl || 'http://annotateit.org/api/token'
       },
       Store: {
-        prefix: config.storeUrl || "http://localhost:1234"  //'http://annotateit.org/api',
+        prefix: config.storeUrl || "http://localhost:1234",  //'http://annotateit.org/api',
         annotationData: {
           uri: uri
         },
