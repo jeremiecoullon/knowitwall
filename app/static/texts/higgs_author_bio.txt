@@ -1,8 +1,9 @@
 <html>
   <p class = 'justify'>
-    Jonathan is a Professor of Physics at UCL and head of the Department of Physics
-    & Astronomy. His research is in particle physics, and centres on the ATLAS
-    experiment at CERN's Large Hadron Collider. He writes regularly for the Guardian
-    and has published a book, ​_Smashing Physics_​, on his experiences of the discover of the Higgs boson.
+    Jonathan is a Professor of Physics at UCL and works on the ATLAS experiment
+    at CERN's Large Hadron Collider. He writes regularly for ​_The Guardian_​ and
+    has recently published ​_Smashing Physics_​, a book​ on his experiences of the
+    discovery of the Higgs boson which was shortlisted for the 2015 Royal Society
+    Winton Prize for Science Books.
   </p>
 </html>
