@@ -4,11 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Serif);
 @font-face {
     font-family: "GeosansLight";
     src: url("../fonts/GeosansLight.ttf");
-}
+}*/
 
 /* to make the homepage scrolling arrive at the right point */
 
@@ -166,8 +166,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'GeosansLight';
-    font-weight: 700;
+    font-family: 'Lato';
+    font-weight: 300;
 }
 
 hr.star-light,
@@ -317,7 +317,8 @@ header .intro-text .skills {
 #tagline-1 {
 
  font-size:3.2em;
- font-family: GeosansLight;
+ font-family: 'Lato';
+ font-size: 300;
  color:#33353d;
  background-color: rgba(255, 194, 28, 0.8);
 
@@ -455,19 +456,23 @@ text-align: left;
 
 .episode-title {
 
-  font-size:4em;
-  font-family: GeosansLight;
+  font-size:3em;
+  font-family: 'Lato';
+  font-weight: 300;
   color:#33353d;
   background-color: rgba(255, 194, 28, 0.8);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: inline-block;
-  line-height: 120%;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
 }
+
 
 @media(max-width:561px) {
   .episode-title {
     font-size:2em;
     white-space: normal;
+    padding: 0em;
   }
 }
 
