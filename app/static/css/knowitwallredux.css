@@ -266,11 +266,6 @@ header {
 
 }
 
-
-
-
-
-
 /*--HEADER--*/
 
 #header-bg {
@@ -287,15 +282,10 @@ header .container {
     padding-top: 300px;
     padding-bottom: 300px;
 }
-
-
 .previous-audiodoc{
   background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
-
 }
-
-
 header img {
     display: block;
     margin: 0 auto 20px;

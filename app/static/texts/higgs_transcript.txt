@@ -10,6 +10,21 @@
     margin-right:16%;
     background-color: #E2E2E2;
   }
+  .higgs_image{
+    width:80%;
+    height:80%;
+    margin-bottom:1em;
+  }
+  @media only screen and (max-width:991px) {
+    .figure_transcript{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .higgs_image{
+      width: 90%;
+      height: 90%;
+    }
+  }
 </style>
 <p class = 'justify'>
   The Large Hadron Collider (or LHC) lies in a 27 km-long circular tunnel on the
@@ -56,7 +71,7 @@
 </p>
 
 <figure  class="figure_transcript">
-  <img src="/static/Images/tr_image_higgs1.gif"style="width:580px;height:362px; margin-bottom:1em;">
+  <img src="/static/Images/tr_image_higgs1.gif" class="higgs_image">
   <figcaption >  Animation 1: Mass distribution from photon-pair events (ATLAS experiment) </figcaption>
 </figure>
 <p class="justify">
@@ -94,7 +109,7 @@
   is the mass distribution for “four-lepton” events.
 </p>
 <figure class="figure_transcript">
-  <img src="/static/Images/tr_image_higgs2.gif"style="width:580px;height:362px; margin-bottom:1em;">
+  <img src="/static/Images/tr_image_higgs2.gif" class="higgs_image">
   <figcaption >  Animation 2: Mass distribution from four-lepton events (ATLAS experiment) </figcaption>
 </figure>
 <p class="justify">
