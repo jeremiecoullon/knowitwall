@@ -57,7 +57,7 @@
 
 <figure  class="figure_transcript">
   <img src="/static/Images/tr_image_higgs1.gif"style="width:460px;height:276px; margin-bottom:1em;">
-  <figcaption >  Cool science </figcaption>
+  <figcaption >  Mass distribution from photon-pair events (ATLAS experiment) </figcaption>
 </figure>
 <p class="justify">
   To make this distribution, we collect proton-proton collisions and look for pairs
@@ -95,7 +95,7 @@
 </p>
 <figure class="figure_transcript">
   <img src="/static/Images/tr_image_higgs2.gif"style="width:460px;height:276px; margin-bottom:1em;">
-  <figcaption >  Cool science </figcaption>
+  <figcaption >  Mass distribution from four-lepton events (ATLAS experiment) </figcaption>
 </figure>
 <p class="justify">
   “Four leptons” means that, resulting from the collision, there were two electron-positron
