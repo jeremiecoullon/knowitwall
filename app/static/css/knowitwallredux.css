@@ -469,6 +469,7 @@ text-align: left;
   margin-bottom: 1.4em;
   line-height: 1.5em;
   color: #1E1F23;
+  font-size: 1.4em;
 }
 @media(max-width:561px){
   .episode-description{
