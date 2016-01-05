@@ -32,8 +32,39 @@
 .highlight {
   color: #33353d;
   background-color: rgba(255, 194, 28, 0.8);
+  padding: 0em 0.2em;
 }
 
+/* boxes on homepage: topic images */
+
+.box_image{
+  background-size: cover;
+  height:250px;
+  padding:1em;
+}
+
+.box_episode_title {
+
+  font-size:1.2em;
+  font-family: 'Lato';
+  font-weight: 300;
+  color:#33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+  margin-bottom: 30px;
+  display: inline-block;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
+}
+
+
+@media(max-width:561px) {
+  .box_episode_title {
+    font-size:1.6em;
+    white-space: normal;
+    padding: 0em;
+    margin-top: 0.4em;
+  }
+}
 
 /* feedback form title not in caps lock*/
 
@@ -465,15 +496,32 @@ text-align: left;
     padding: 0em;
   }
 }
+
+
+/* to center the last boxes on the homepage */
+
+.last_boxes_center{
+  margin-left: 37.5%;
+}
+@media(max-width:561px){
+  .last_boxes_center{
+    margin-left: 0%;
+  }
+}
+/* for the description in the boxes (on the homepage) */
 .episode-description{
+  background-color:#F0F0F0;
   margin-bottom: 1.4em;
   line-height: 1.5em;
   color: #1E1F23;
-  font-size: 1.4em;
+  font-size: 1em;
+  padding: 1em;
+   min-height: 220px;
 }
 @media(max-width:561px){
   .episode-description{
-    margin-bottom: 0em;
+    margin-bottom: 1em;
+    min-height: 100px
   }
 }
 .contact-title {

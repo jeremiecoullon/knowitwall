@@ -376,34 +376,108 @@
     </div>
   </section>
 
-
-
-
-  <!-- AUDIODOCS!! -->
-
     <section id="episodes">
-      {% for audiodoc in audiodocs[1:] %}
-      <div class="container previous-audiodoc" style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;">
+      <div class="container previous-audiodoc" style="background-color:white">
         <div class="row">
-
-          <div class="col-lg-10 col-lg-offset-1 text-center">
-            <a href="audiodoc/{{audiodoc.url}}" class="episode-title">
-              {{audiodoc.topic_name | safe}}
-            </a>
-
-            <p class="episode-description">{{audiodoc.topic_description | safe}}</p>
-
+          {% for audiodoc in audiodocs[1:5] %}
+          <div class="col-md-3">
+            <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title" >
+                {{audiodoc.topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodoc.topic_description | safe}}</p>
+            </div>
           </div>
-
-          <br>
+          {% endfor %}
         </div>
-      </div> <!-- container -->
-  <br>
-  <br>
-      {% endfor %}
-    </section> <!-- end of episodes -->
+        <div class="row">
+          {% for audiodoc in audiodocs[5:9] %}
+          <div class="col-md-3">
+            <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
+                {{audiodoc.topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodoc.topic_description | safe}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for audiodoc in audiodocs[9:13] %}
+          <div class="col-md-3 last_boxes_center">
+            <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
+                {{audiodoc.topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodoc.topic_description | safe}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+<!--
+        <div class="row">
+          <div class="col-md-6">
+            <div class="text-center">
+              <p class='episode-title' style="font-size:2em;">
+                Science
+              </p>
+              <ul>
+                <li href="audiodoc/{{audiodocs[0].url}}" class="episode-title" style="font-size:1.2em;margin-top:1em;">
+                  {{audiodocs[0].topic_name | safe}}
+                </li>
+                <li href="audiodoc/{{audiodocs[0].url}}" class="episode-title" style="font-size:1.2em;margin-top:1em;">
+                  {{audiodocs[4].topic_name | safe}}
+                </li>
+                <li href="audiodoc/{{audiodocs[0].url}}" class="episode-title" style="font-size:1.2em;margin-top:1em;">
+                  {{audiodocs[6].topic_name | safe}}
+                </li>
+                <li href="audiodoc/{{audiodocs[0].url}}" class="episode-title" style="font-size:1.2em;margin-top:1em;">
+                  {{audiodocs[4].topic_name | safe}}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="text-center">
+              <p class='episode-title' style="font-size:2em;">
+                Humanities
+              </p>
+              <p>
+                Audiodoc 1
+              </p>
+              <p>
+                Audiodoc 2
+              </p>
+              <p>
+                Audiodoc 3
+              </p>
+              <p>
+                Audiodoc 4
+              </p>
+            </div>
+          </div>
+        </div> -->
 
 
+
+      </div>
+
+    </section>
 
 
 
