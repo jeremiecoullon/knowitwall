@@ -44,7 +44,7 @@
 }
 
 .box_episode_title {
-
+  margin-top: 20%;
   font-size:1.2em;
   font-family: 'Lato';
   font-weight: 300;
@@ -59,10 +59,11 @@
 
 @media(max-width:561px) {
   .box_episode_title {
+    margin-top: 20%;
     font-size:1.6em;
     white-space: normal;
     padding: 0em;
-    margin-top: 0.4em;
+    /*margin-top: 0.4em;*/
   }
 }
 
@@ -516,7 +517,7 @@ text-align: left;
   color: #1E1F23;
   font-size: 1em;
   padding: 1em 2em;
-   min-height: 220px;
+   min-height: 230px;
 }
 @media(max-width:561px){
   .episode-description{
