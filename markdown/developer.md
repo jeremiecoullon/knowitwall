@@ -40,7 +40,7 @@ So, after a pivot is published on the website in the form of text, audio and vid
 
 - backend
 	- *storing the annotations:*
-		- we're temporarily using this [backend store](http://annotateit.org/) for development: it stores the annotations, and sends to them to the client.
+  - we're temporarily using this [backend store](http://annotateit.org/) for development: it stores the annotations, and sends to them to the client.
 		- we're also currently setting up our own [store](https://github.com/openannotation/annotator-store) for annotations as we'll need to keep track of the link between annotated content send them back to the client (for the Wall of Knowledge).
 	- *interaction with the client*
 		- generates a token for the currently logged in user and exposes it to `knowitwall.com/token/`. The token has the annotator permissions for that user.
