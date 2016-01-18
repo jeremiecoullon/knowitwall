@@ -28,7 +28,7 @@
   height:10em;
   padding:4em 2em;
   border-radius:50%;
-  font-size:0.5em;
+  font-size:0.4em;
   display:block;
   box-shadow:0px 0px 5px 0px #333;
 }
@@ -100,7 +100,6 @@ a:hover.a_arrow{
 
 @media only screen and (max-width:991px){
   .arrow_row{
-
     padding-top: 60px;
   }
 }
@@ -131,20 +130,3 @@ header .container {
 }
 /* end of image credits stuff */
 /**/
-
-/* image within transcript */
-
-.image_transcript{
-  float: left;
-  margin: 2em 4em 2em 0;
-  background-color:white;
-  padding-top: 2em;
-  padding-right:2em;
-  padding-left:2em;
-  padding-bottom:1.5em;
-  text-align:center;
-}
-
-.ie10 .figcaption_IE{
-  display: none;
-}

@@ -40,7 +40,7 @@
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -309,7 +309,7 @@
     </div>
   </nav>
 
-  <header class="audiodoc_header" style="background: url('{{ audiodoc[0].topic_image }}'); background-repeat: no-repeat; background-size:cover;">
+  <header class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -365,7 +365,7 @@
             </div>
             <div class="col-md-3">
               <div class="author-name">
-              <h2 style="text-align:right;"> {{ audiodoc[0].author_name | safe}} </h2>
+              <h2 style="text-align:right; font-size: {{ audiodocs[0].name_font_size }};"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
             </div>
             <div class="col-md-6">

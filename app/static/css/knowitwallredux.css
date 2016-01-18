@@ -4,11 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Serif);
 @font-face {
     font-family: "GeosansLight";
     src: url("../fonts/GeosansLight.ttf");
-}
+}*/
 
 /* to make the homepage scrolling arrive at the right point */
 
@@ -32,8 +32,40 @@
 .highlight {
   color: #33353d;
   background-color: rgba(255, 194, 28, 0.8);
+  padding: 0em 0.2em;
 }
 
+/* boxes on homepage: topic images */
+
+.box_image{
+  background-size: cover;
+  height:250px;
+  padding:1em;
+}
+
+.box_episode_title {
+  margin-top: 20%;
+  font-size:1.2em;
+  font-family: 'Lato';
+  font-weight: 300;
+  color:#33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+  margin-bottom: 30px;
+  display: inline-block;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
+}
+
+
+@media(max-width:561px) {
+  .box_episode_title {
+    margin-top: 20%;
+    font-size:1.6em;
+    white-space: normal;
+    padding: 0em;
+    /*margin-top: 0.4em;*/
+  }
+}
 
 /* feedback form title not in caps lock*/
 
@@ -166,8 +198,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'GeosansLight';
-    font-weight: 700;
+    font-family: 'Lato';
+    font-weight: 300;
 }
 
 hr.star-light,
@@ -266,11 +298,6 @@ header {
 
 }
 
-
-
-
-
-
 /*--HEADER--*/
 
 #header-bg {
@@ -287,15 +314,10 @@ header .container {
     padding-top: 300px;
     padding-bottom: 300px;
 }
-
-
 .previous-audiodoc{
   background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
-
 }
-
-
 header img {
     display: block;
     margin: 0 auto 20px;
@@ -317,7 +339,8 @@ header .intro-text .skills {
 #tagline-1 {
 
  font-size:3.2em;
- font-family: GeosansLight;
+ font-family: 'Lato';
+ font-size: 300;
  color:#33353d;
  background-color: rgba(255, 194, 28, 0.8);
 
@@ -455,23 +478,53 @@ text-align: left;
 
 .episode-title {
 
-  font-size:4em;
-  font-family: GeosansLight;
+  font-size:3em;
+  font-family: 'Lato';
+  font-weight: 300;
   color:#33353d;
   background-color: rgba(255, 194, 28, 0.8);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: inline-block;
-  line-height: 120%;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
 }
+
 
 @media(max-width:561px) {
   .episode-title {
     font-size:2em;
     white-space: normal;
+    padding: 0em;
   }
 }
 
 
+/* to center the last boxes on the homepage */
+
+.last_boxes_center{
+  margin-left: 37.5%;
+}
+@media(max-width:561px){
+  .last_boxes_center{
+    margin-left: 0%;
+  }
+}
+/* for the description in the boxes (on the homepage) */
+.episode-description{
+  background-color:#F0F0F0;
+  margin-bottom: 1.4em;
+  line-height: 1.5em;
+  color: #1E1F23;
+  font-size: 1em;
+  padding: 1em 2em;
+   min-height: 230px;
+}
+@media(max-width:561px){
+  .episode-description{
+    margin-bottom: 1em;
+    min-height: 100px
+  }
+}
 .contact-title {
 
   font-size: 1.5em;
@@ -693,7 +746,7 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.5em;
       text-align: center;
 }
 
