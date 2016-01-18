@@ -150,7 +150,7 @@ def audiodoc(url):
 
     # put all audiodoc information in the variable audiodoc
     audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-    audiodoc = ad_fun(audiodoc_list)
+    audiodocs = ad_fun(audiodoc_list)
 
     # read_only permission
     # set user_nickname variable
@@ -166,7 +166,7 @@ def audiodoc(url):
     else:
         read_only = 'true'
 
-    return render_template('audiodoc.html', audiodoc=audiodoc, read_only=read_only)
+    return render_template('audiodoc.html', audiodocs=audiodocs, read_only=read_only)
 
 
 "----------------------------------------------------------------------------------------------------"
