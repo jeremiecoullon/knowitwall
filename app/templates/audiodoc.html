@@ -633,34 +633,34 @@ jQuery(function ($) {
 
 		//add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
 		//note that we're using a modified version of annotator which introduces a 'create' permission
-		annotator.addPlugin('Permissions', {
-			//initialise with the anonymous token
-			user: anonymousToken,
-			userId: function (user) {
-				return (user || anonymousToken).userId;
-			},
-			userString: function (user) {
-				return (user || anonymousToken).displayName;
-			},
-			userAuthorize: function(action, annotation, user) {
-				user = user || anonymousToken;
-
-				//user not logged in (ie: 'anonymous user'):
-				if(user.userId === "0"){
-					//can view annotations, cannot create/edit annotations
-					return action === 'read';
-				}
-				//admin logged in: can edit/create/delete all annotations
-				if(user.isAdmin){
-					return true;
-				}
-
-				//user logged in: can create annotations (and read them)
-				return action === 'create' || action === 'read';
-			},
-		});
-	});
-  </script> -->
+	// 	annotator.addPlugin('Permissions', {
+	// 		//initialise with the anonymous token
+	// 		user: anonymousToken,
+	// 		userId: function (user) {
+	// 			return (user || anonymousToken).userId;
+	// 		},
+	// 		userString: function (user) {
+	// 			return (user || anonymousToken).displayName;
+	// 		},
+	// 		userAuthorize: function(action, annotation, user) {
+	// 			user = user || anonymousToken;
+  //
+	// 			//user not logged in (ie: 'anonymous user'):
+	// 			if(user.userId === "0"){
+	// 				//can view annotations, cannot create/edit annotations
+	// 				return action === 'read';
+	// 			}
+	// 			//admin logged in: can edit/create/delete all annotations
+	// 			if(user.isAdmin){
+	// 				return true;
+	// 			}
+  //
+	// 			//user logged in: can create annotations (and read them)
+	// 			return action === 'create' || action === 'read';
+	// 		},
+	// 	});
+	// });
+  // </script> -->
 
 
 
