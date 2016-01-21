@@ -250,7 +250,7 @@
     offset = $(offsetEl).position();
     return {
       top: e.pageY - offset.top,
-      left: e.pageX - offset.left
+      left: parseInt('100') + '%'//e.pageX - offset.left
     };
   };
 
