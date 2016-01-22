@@ -245,12 +245,13 @@
     return Math.max.apply(Math, all);
   };
 
+// KiW modification: the left style now is always 90% rather than wherever the mouse was before
   Util.mousePosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
     return {
       top: e.pageY - offset.top,
-      left: parseInt('90') + '%'//e.pageX - offset.left
+      left: parseInt('90') + '%' //e.pageX - offset.left
     };
   };
 
@@ -1087,7 +1088,7 @@
           return;
         }
       }
-	  //show the adder if we've selected some text which can be annotated, and either
+	  //KiW modification: show the adder if we've selected some text which can be annotated, and either
 	  //we're not using the Permissions plugin, or we are and it allows our custom 'create'
 	  //action
       if (event && this.selectedRanges.length && (!this.plugins.Permissions || this.plugins.Permissions.authorize('create', {}))) {
