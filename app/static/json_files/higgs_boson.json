@@ -4,7 +4,7 @@
     "topic_name": "Discovering the Higgs boson",
     "topic_image": "/static/Images/TI_higgs.jpg",
     "topic_image_home": "/static/Images/TI_higgs_box.jpg",
-    "topic_image_box": "/static/Images/TI_higgs_box.jpg",
+    "topic_image_box": "/static/Images/TI_higgs.jpg",
     "image_credits": "Large Hadron Collider. CERN, Geneva.",
     "by_in_colour":"#FFFFFF",
     "name_font_size": "2.3em",
