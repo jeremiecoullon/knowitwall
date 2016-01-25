@@ -111,12 +111,12 @@ header .container {
     padding-bottom: 0px;
 }
 
-/**/
 /* image credits stuff */
 /* take of padding of section id=episodes (for image credits) */
 
 #episodes{
   padding: 0;
+  padding-bottom: 50px;
 }
 /* for the image credits */
 
