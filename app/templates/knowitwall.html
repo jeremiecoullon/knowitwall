@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
 <head>
 
@@ -32,15 +32,7 @@
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic," rel="stylesheet" type="text/css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
 
   <!-- google analytics for jeremie.coullon@gmail.com -->
@@ -563,49 +555,10 @@
     </div>
 
   </section>
+{% endblock %}
 
-
-  <!-- Footer -->
-  <footer class="text-center">
-
-    <div class="footer-above">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-4 col-md-offset-4 ">
-            <h3>We're social too</h3>
-            <ul class="list-inline">
-              <li>
-                <a href="https://soundcloud.com/knowitwall" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-soundcloud"></i></a>
-              </li>
-              <li>
-                <a href="https://medium.com/know-it-wall" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-medium"></i></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/KnowitWall" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            Copyright &copy; Know it Wall 2015
-          </div>
-          <div class="col-lg-4">
-            team@knowitwall.com
-          </div>
-          <div class="col-lg-4">
-            <a href="{{url_for('terms')}}">Terms of Use</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+<!-- the footer is in base.html -->
+{% block jsscripts %}
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-top page-scroll visible-xs visble-sm">
@@ -654,4 +607,5 @@
   </script>
 
 </body>
-</html>
+
+{% endblock %}
