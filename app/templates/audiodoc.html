@@ -20,7 +20,7 @@
 
   <title>Know it Wall</title>
 
-  <link href="/static/css/audioplayer.css" rel="stylesheet">
+  <!-- <link href="/static/css/audioplayer.css" rel="stylesheet"> -->
 
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -37,6 +37,9 @@
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
+
+  <!-- circular player -->
+  <link href="/static/css/circular_player.css" rel="stylesheet">
 
 
 </head>
@@ -357,32 +360,39 @@
         <!-- Author -->
 
           <div class="author-bio">
-
-            <!-- circular player around author image -->
-            <!-- <canvas id="progress" width="320" height="320"></canvas>
-            <div id="player">
-              <audio id="audio" controls>
-                <source src="saharan_dust.mp3" type="audio/mpeg" codecs="mp3"></source>
-              </audio>
-              <img src="{{audiodocs[0].author_image}}">
-              <div class="cover">
-                <div class="controls">
-                  <button id="backward" title="Backward" onclick="resetPlayer()"><i class="fa fa-backward fa-2x"></i></button>
-                  <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
-                  <button id="forward" title="Forward" onclick="setLocation()"><i class="fa fa-forward fa-2x"></i></button>
-                  <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+            <div class="col-md-3">
+              <!-- <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image"> -->
+              <div class="circular-container">
+              <!-- circular player around author image -->
+              <canvas id="circular-progress" width="320" height="320"></canvas>
+              <div id="circular-player">
+                <audio id="circular-audio">
+                  <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg" codecs="mp3"></source>
+                </audio>
+                <img src="{{audiodocs[0].author_image}}">
+                <div class="circular-cover">
+                  <div class="circular-controls">
+                    <button id="circular-backward" title="Backward" onclick="resetPlayer()"><i class="fa fa-backward fa-2x"></i></button>
+                    <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
+                    <button id="forward" title="Forward" onclick="setLocation()"><i class="fa fa-forward fa-2x"></i></button>
+                    <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+                  </div>
                 </div>
               </div>
-            </div> -->
-
-
-            <div class="col-md-3">
-              <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image">
+              </div>
             </div>
             <div class="col-md-3">
               <div class="author-name">
               <h2 style="text-align:right; font-size: {{ audiodocs[0].name_font_size }};"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
+              <!-- <div class="circular-cover">
+              <div class="circular-controls">
+                <button id="circular-backward" title="Backward" onclick="resetPlayer()"><i class="fa fa-backward fa-2x"></i></button>
+                <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
+                <button id="forward" title="Forward" onclick="setLocation()"><i class="fa fa-forward fa-2x"></i></button>
+                <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+              </div>
+              </div> -->
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
@@ -515,7 +525,10 @@
   <!-- Custom Theme JavaScript -->
   <script src="/static/js/knowitwall.js"></script>
 
-  <script src="/static/js/audioplayer.js"></script>
+  <!-- circular player -->
+  <script src="/static/js/circular_player.js"></script>
+
+  <!-- <script src="/static/js/audioplayer.js"></script> -->
 
 
   <!-- Sharethis.com: to make the social media buttons work -->

@@ -1,20 +1,20 @@
 /* Font Awesome */
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+/*@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);*/
 
 /* Roboto Condensed */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+/*@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);*/
 
 /* Basic */
-*, *:before, *:after { box-sizing: border-box; }
+/**, *:before, *:after { box-sizing: border-box; }
 body { margin: 0; min-height: 100%; background: #222; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
 a { color: #000; text-decoration: none; }
 a:hover { color: #26C5dB; }
 p { margin: 0; }
 .credits { position: absolute; left: 20px; bottom: 20px; color: #ccc; font-size: 14px; }
-.credits a  { color: #26C5CB; }
+.credits a  { color: #26C5CB; }*/
 
 /* Centering */
-#container, #progress, #player, #flip-back, .cover, .playlist {
+#circular-container, #circular-progress, #circular-player, #flip-back, .circular-cover, .playlist {
 	  /*position: absolute;*/
 	  margin: auto;
 	  top: 0;
@@ -23,7 +23,7 @@ p { margin: 0; }
   	bottom: 0;
 }
 
-#container {
+#circular-container {
 	  width: 320px;
 	  height: 320px;
   perspective: 550px;
@@ -32,7 +32,7 @@ p { margin: 0; }
 	  -webkit-transform-style: preserve-3d;
 }
 
-#player {
+#circular-player {
   	width: 300px;
 	  height: 300px;
 	  background: #f333;
@@ -42,7 +42,7 @@ p { margin: 0; }
 	  z-index: 300;
 }
 
-#progress {
+#circular-progress {
 	  width: 320px;
 	  height: 320px;
 	  z-index: 200;
@@ -78,13 +78,13 @@ img {
 }
 
 /* Fade */
-#container:hover .cover,
-#container:hover .to-lyrics-label,
-#container:hover .to-back-label {
+/*#circular-container:hover .circular-cover,
+#circular-container:hover .to-lyrics-label,
+#circular-container:hover .to-back-label {
 	  opacity: .9;
-}
+}*/
 
-.cover,
+.circular-cover,
 .to-lyrics-label,
 .to-back-label {
 	  opacity: .3;
@@ -93,7 +93,7 @@ img {
 }
 
 /* Player Buttons */
-.controls {
+.circular-controls {
 	  position: relative;
 	  width: 100%;
 	  color: #fff;
@@ -227,7 +227,7 @@ label.to-lyrics-label {
 }
 
 /* Flip Back */
-#player, #flip-back {
+#circular-player, #flip-back {
 	  backface-visibility: hidden;
 	  -webkit-backface-visibility: hidden;
 	  transition: transform .5s ease-in-out;
@@ -240,13 +240,13 @@ label.to-lyrics-label {
 	  -webkit-transform: rotateY(0deg);
 }
 
-#to-back:checked ~ #player {
+#to-back:checked ~ #circular-player {
 	  z-index: -1;
   transform: rotateY(180deg);
 	  -webkit-transform: rotateY(180deg);
 }
 
-#to-back:checked ~ #progress {
+#to-back:checked ~ #circular-progress {
 	  opacity: 0;
   transform: rotate(0);
 	  -webkit-transform: rotate(0);
@@ -290,21 +290,21 @@ label.to-lyrics-label {
 	  text-shadow: 1px 1px 3px #000;
 }
 
-.cover {
+.circular-cover {
 	  padding-top: 130px;
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
 }
 
-#to-lyrics:checked ~ .cover {
+#to-lyrics:checked ~ .circular-cover {
 	  padding-top: 40px;
 }
 
-#to-lyrics:checked ~ .cover .lyrics {
+#to-lyrics:checked ~ .circular-cover .lyrics {
 	  margin-top: 0px;
 }
 
-#to-lyrics:checked ~ .cover button {
+#to-lyrics:checked ~ .circular-cover button {
 	  margin: 4px;
 }
 
@@ -349,10 +349,10 @@ label.to-lyrics-label {
 
 /* Media Queries */
 @media all and (max-width: 768px) {
-	  #container, #player { width: 150px; height: 150px;}
-	  #progress { width: 160px; height: 160px; margin-top: -5px; margin-left: -5px; }
+	  #circular-container, #circular-player { width: 150px; height: 150px;}
+	  #circular-progress { width: 160px; height: 160px; margin-top: -5px; margin-left: -5px; }
 	  label, .lyrics, .scroll { display: none; }
-	  .cover { padding-top: 46px; }
+	  .circular-cover { padding-top: 46px; }
 	  button { margin: 4px; }
 	  button:first-of-type, button:last-of-type { display: none; }
 	  input[type='range'] { display: block; margin-top: -76px; height: 1px; }
