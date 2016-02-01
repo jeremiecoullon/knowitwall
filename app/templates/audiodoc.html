@@ -20,7 +20,7 @@
 
   <title>Know it Wall</title>
 
-  <!-- <link href="/static/css/audioplayer.css" rel="stylesheet"> -->
+  <link href="/static/css/audioplayer.css" rel="stylesheet">
 
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -39,7 +39,7 @@
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
 
   <!-- circular player -->
-  <link href="/static/css/circular_player.css" rel="stylesheet">
+  <!-- <link href="/static/css/circular_player.css" rel="stylesheet"> -->
 
 
 </head>
@@ -351,19 +351,16 @@
 
         <div class="col-lg-12">
 
-          <!-- <audio controls id="author">
+          <audio controls id="author">
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
-          </audio> -->
-
-
+          </audio>
         <!-- Author -->
-
           <div class="author-bio">
             <div class="col-md-3">
-              <!-- <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image"> -->
-              <div class="circular-container">
-              <!-- circular player around author image -->
+              <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image">
+              <!-- <div class="circular-container">
+
               <canvas id="circular-progress" width="320" height="320"></canvas>
               <div id="circular-player">
                 <audio id="circular-audio">
@@ -379,7 +376,7 @@
                   </div>
                 </div>
               </div>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-3">
               <div class="author-name">
@@ -525,10 +522,8 @@
   <!-- Custom Theme JavaScript -->
   <script src="/static/js/knowitwall.js"></script>
 
-  <!-- circular player -->
-  <script src="/static/js/circular_player.js"></script>
 
-  <!-- <script src="/static/js/audioplayer.js"></script> -->
+  <script src="/static/js/audioplayer.js"></script>
 
 
   <!-- Sharethis.com: to make the social media buttons work -->
