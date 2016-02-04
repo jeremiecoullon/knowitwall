@@ -617,6 +617,11 @@ padding:40px;
   padding: 0px 280px 20.5px 20px;
 }
 
+@media(max-width: 700px){
+  .navbarADpage {
+    padding: 0px 0px 20.5px 20px;
+  }
+}
 
 @media(max-width:400px) {
 
@@ -722,6 +727,7 @@ padding:40px;
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
+  padding: 0px
 }
 }
 /* end of 'make the navbar solid throughout' */
