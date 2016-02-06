@@ -11,7 +11,7 @@ If on the **`user_login_OAuth` branch:**
 *The annotation library: [Annotator.js](http://annotatorjs.org/)*
 
 - to get the annotations working with this [backend store](http://annotateit.org/):
-  - make sure that `annotator-full-1.2.7.modified.js` is pointing to the that backend store. Namely, modify line 3019:
+  - make sure that `annotator-full-1.2.7-modified.js` is pointing to the that backend store. Namely, modify line 3019:
 
   ```javascript
   prefix: config.storeUrl || 'http://annotateit.org/api',
@@ -45,9 +45,9 @@ If on the **`user_login_OAuth` branch:**
 
 ###Annotator frontend
 
-- when a user creates an annotation, `annotator-full-1.2.7.modified.js` creates the html tags with the annotator classes (as an unordered list) and positions them relative to where the annotation was created.
+- when a user creates an annotation, `annotator-full-1.2.7-modified.js` creates the html tags with the annotator classes (as an unordered list) and positions them relative to where the annotation was created.
 - the position of the adder and the annotation is determined in the `div` with classes `annotator-outer annotator-viewer annotator-invert-x annotator-hide`. These classes are defined in `annotator-KIW.css`.
-- `line 254` of `annotator-full-1.2.7.modified.js` adds a style to that `div`; it's now always at 90% rather than at the position the mouse was when the annotation was created:
+- `line 254` of `annotator-full-1.2.7-modified.js` adds a style to that `div`; it's now always at 90% rather than at the position the mouse was when the annotation was created:
 ```javascript
 left: parseInt('90') + '%' //e.pageX - offset.left
 ```
