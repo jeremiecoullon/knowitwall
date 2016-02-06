@@ -1,0 +1,21 @@
+{
+    "url": "human_language",
+    "unique_id": "Vieri_language",
+    "topic_name": "The structure of human language",
+    "topic_image": "/static/Images/TI_language.jpg",
+    "topic_image_home": "/static/Images/TI_language_home.jpg",
+    "topic_image_box": "/static/Images/TI_language.jpg",
+    "image_credits": "Shadow Play: The Sackler Octagon at Tate Britain. <a href='https://goo.gl/OfrAzK' target='_blank'>BMiz</a> [<a href='https://creativecommons.org/licenses/by-sa/2.0/#' target='_blank' >CC BY-SA 2.0</a>]",
+    "by_in_colour":"#FFFFFF",
+    "discipline": "Linguistics",
+    "og_name": "Human language",
+    "og_description": "Vieri Samek-Lodovici is a Reader in Linguistics at UCL, co-editor of the Advances in Optimality Theory book series with Equinox Publishing, and author of The Interaction of Focus, Giveness, and Prosody, recently published by Oxford University Press. His research concerns the ways syntax and intonation affect each others, as well as the best way to model their complex interactions.",
+    "topic_description": "Vieri Samek-Lodovici is a Reader in Linguistics at UCL, co-editor of the Advances in Optimality Theory book series with Equinox Publishing, and author of The Interaction of Focus, Giveness, and Prosody, recently published by Oxford University Press. His research concerns the ways syntax and intonation affect each others, as well as the best way to model their complex interactions.",
+    "author_name": "Vieri Samek-Lodovici",
+    "author_image": "/static/Images/author_Vieri_SL.jpg",
+    "author_bio": "app/static/texts/language_author_bio.html",
+    "music_credits": "Addam Farmer, Debbie Miller and Mark Petrie",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "app/static/texts/language_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/its_at_tate.mp3"
+}
