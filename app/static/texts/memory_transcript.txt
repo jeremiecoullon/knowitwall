@@ -8,13 +8,7 @@
     where we leave our keys?
   </p>
   <p class = 'justify'>
-    Our understanding of human memory was revolutionized in the 1950s, when neurosurgeon
-    William Scoville performed surgery on Henry Molaison’s brain. Henry used to
-    suffer from severe epileptic seizures, until Scoville removed the left and
-    right portions of his hippocampus, a structure in the shape of a seahorse towards
-    the medial temporal lobe of the brain. Hippocampus functions weren’t fully
-    understood at the time, but the surgery was successful in its primary goal:
-    Henry’s seizures were greatly reduced. But so was his memory!
+    Our understanding of human memory was revolutionized in the 1950s, when neurosurgeon William Scoville operated on Henry Molaison’s brain. Henry used to suffer from severe epileptic seizures, until Scoville removed the left and right portions of his hippocampus, a structure in the shape of a seahorse towards the medial temporal lobe of the brain. Hippocampus functions weren’t fully understood at the time, but the surgery was successful in its primary goal: Henry’s seizures were greatly reduced. But so was his memory!
   </p>
   <p class = 'justify'>
     After the surgery, Henry developed an anterograde amnesia, which meant that,
@@ -80,13 +74,6 @@
     that allowed him to improve on certain memory tasks, like the mirror-drawing task.
   </p>
   <p class = 'justify'>
-    What does all this mean? It means that an explicit memory requires the presence
-    of the hippocampus and more complex cognitive processes, like attention and
-    conscious recall. On the other hand, implicit memories make use of structures
-    that were spared in Henry’s surgery, and are created by retaining connections
-    between sensory stimuli and behavioural responses. That’s one of the reasons
-    why it may be easier to remember what you learned twenty years ago, such as
-    how to ride a bike, than to remember where you left your keys five minutes ago.
-    After all, some things, when learned, are never forgotten.
+    What does all this mean? It means that an explicit memory requires the presence of the hippocampus and more complex cognitive processes, like attention and conscious recall. On the other hand, implicit memories make use of structures that were spared in Henry’s surgery, and are created by retaining connections between sensory stimuli and behavioural responses. That’s one of the reasons why it might be easier to remember what you learned twenty years ago, such as how to ride a bike, than to remember where you left your keys five minutes ago. And maybe it’s time for me to finally learn how to ride a bike, too. After all, some things, when learned, are never forgotten.
   </p>
 </html>
