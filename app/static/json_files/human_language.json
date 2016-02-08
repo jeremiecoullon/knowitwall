@@ -5,17 +5,17 @@
     "topic_image": "/static/Images/TI_language.jpg",
     "topic_image_home": "/static/Images/TI_language_home.jpg",
     "topic_image_box": "/static/Images/TI_language.jpg",
-    "image_credits": "Shadow Play: The Sackler Octagon at Tate Britain. <a href='https://goo.gl/OfrAzK' target='_blank'>BMiz</a> [<a href='https://creativecommons.org/licenses/by-sa/2.0/#' target='_blank' >CC BY-SA 2.0</a>]",
+    "image_credits": "Peter Bruegel the Elder, <a href='https://en.wikipedia.org/wiki/Tower_of_Babel#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg' target='_blank'>The Tower of Babel</a>, c. 1563. Oil on panel. Kunsthistorisches Museum, Vienna",
     "by_in_colour":"#FFFFFF",
     "discipline": "Linguistics",
     "og_name": "Human language",
-    "og_description": "Vieri Samek-Lodovici is a Reader in Linguistics at UCL, co-editor of the Advances in Optimality Theory book series with Equinox Publishing, and author of The Interaction of Focus, Giveness, and Prosody, recently published by Oxford University Press. His research concerns the ways syntax and intonation affect each others, as well as the best way to model their complex interactions.",
-    "topic_description": "Vieri Samek-Lodovici is a Reader in Linguistics at UCL, co-editor of the Advances in Optimality Theory book series with Equinox Publishing, and author of The Interaction of Focus, Giveness, and Prosody, recently published by Oxford University Press. His research concerns the ways syntax and intonation affect each others, as well as the best way to model their complex interactions.",
+    "og_description": "In the second half of the 20th century, the famous linguist Noam Chomsky proposed that there is a common structure to all of the world's languages, from English to Japanese. He called it a 'universal grammar'. But is there is really a universal grammar? Vieri Samek-Lodovici thinks so and explains not only how to make sense of the idea but also how it has been developed in recent years.",
+    "topic_description": "In the second half of the 20th century, the famous linguist Noam Chomsky proposed that there is a common structure to all of the world's languages, from English to Japanese. He called it a 'universal grammar'. But is there is really a universal grammar? Vieri Samek-Lodovici thinks so and explains not only how to make sense of the idea but also how it has been developed in recent years.",
     "author_name": "Vieri Samek-Lodovici",
     "author_image": "/static/Images/author_Vieri_SL.jpg",
     "author_bio": "app/static/texts/language_author_bio.html",
-    "music_credits": "Addam Farmer, Debbie Miller and Mark Petrie",
-    "narration_credits": "Vidish Athavale",
+    "music_credits": "Jon Luc Hefferman, Sergey Cheremisinov, Kai Engel, and James Joshua Otto",
+    "narration_credits": "Angus Waite and Vidish Athavale",
     "transcript": "app/static/texts/language_transcript.html",
-    "audio_mp3": "http://knowitwall.com/audio/its_at_tate.mp3"
+    "audio_mp3": "http://knowitwall.com/audio/human_language.mp3"
 }
