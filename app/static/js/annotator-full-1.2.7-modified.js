@@ -251,7 +251,7 @@
     offset = $(offsetEl).position();
     return {
       top: e.pageY - offset.top,
-      left: parseInt('90') + '%' //e.pageX - offset.left
+      left: e.pageX - offset.left
     };
   };
 
