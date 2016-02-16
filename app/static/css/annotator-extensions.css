@@ -1,0 +1,7 @@
+.annotator-hl {
+    cursor: pointer;
+}
+.annotator-viewer_show {
+    display: block !important;
+    visibility: visible !important;
+}
