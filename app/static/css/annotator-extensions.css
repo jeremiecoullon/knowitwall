@@ -1,0 +1,10 @@
+.annotator-hl {
+    cursor: pointer;
+}
+.annotator-viewer_show {
+    display: block !important;
+    visibility: visible !important;
+}
+.annotator-widget::after {
+    background-image: initial;
+}

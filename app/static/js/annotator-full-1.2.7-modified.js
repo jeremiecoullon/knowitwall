@@ -12,6 +12,7 @@
 ** Modified for Knowitwall, 2015
 */
 (function() {
+  window.vent = {}
   var $, Annotator, Delegator, LinkParser, Range, Util, base64Decode, base64UrlDecode, createDateFromISO8601, findChild, fn, functions, g, getNodeName, getNodePosition, gettext, parseToken, simpleXPathJQuery, simpleXPathPure, _Annotator, _gettext, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3, _ref4, _t,
     __slice = [].slice,
     __hasProp = {}.hasOwnProperty,
@@ -249,9 +250,16 @@
   Util.mousePosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
+    if ($(document).width() < 1707) {
+      return {
+        top: e.pageY - offset.top,
+        left: e.pageX - offset.left
+      };
+    }
     return {
       top: e.pageY - offset.top,
-      left: parseInt('90') + '%' //e.pageX - offset.left
+      right: '250px',
+      left: 'initial'
     };
   };
 
@@ -1049,6 +1057,7 @@
     Annotator.prototype.showViewer = function(annotations, location) {
       this.viewer.element.css(location);
       this.viewer.load(annotations);
+      $(window.vent).trigger('showViewerCompleted');
       return this.publish('annotationViewerShown', [this.viewer, annotations]);
     };
 
