@@ -5,3 +5,6 @@
     display: block !important;
     visibility: visible !important;
 }
+.annotator-widget::after {
+    background-image: initial;
+}

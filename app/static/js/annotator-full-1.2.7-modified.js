@@ -250,9 +250,16 @@
   Util.mousePosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
+    if ($(document).width() < 1707) {
+      return {
+        top: e.pageY - offset.top,
+        left: e.pageX - offset.left
+      };
+    }
     return {
       top: e.pageY - offset.top,
-      left: e.pageX - offset.left
+      right: '250px',
+      left: 'initial'
     };
   };
 
