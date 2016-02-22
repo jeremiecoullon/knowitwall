@@ -110,9 +110,11 @@ function NumString(num, minLength){
 }
 
 function resetPlayer() {
-	  audio.currentTime = 0; context.clearRect(0,0,canvas.width,canvas.height);
-  playpause.title = "Play";
-	  playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
+	var canvas = document.getElementById('progress'),
+		context = canvas.getContext('2d');
+	audio.currentTime = 0; context.clearRect(0,0,canvas.width,canvas.height);
+	playpause.title = "Play";
+	playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
 }
 
 // thx to: http://www.adobe.com/devnet/html5/articles/html5-multimedia-pt3.html
