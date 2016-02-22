@@ -46,8 +46,6 @@ p { margin: 0; }
 	  width: 320px;
 	  height: 320px;
 	  z-index: 200;
-  transform: rotate(147deg);
-	  -webkit-transform: rotate(147deg);
   filter: blur(1px);
 	  -webkit-filter: blur(1px);
 	  transition: all .5s ease-in-out;
