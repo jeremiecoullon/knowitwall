@@ -3,6 +3,7 @@ var audio = document.getElementById('audio');
 var progress = document.getElementById('progress');
 var playpause = document.getElementById("play-pause");
 var volume = document.getElementById("volume");
+var timeRemaining = document.getElementById("remaining");
 
 //how far from 3 o'clock the progress bar starts, 0 - 2*pi
 var progressOffsetRadians = 147 * (Math.PI / 180);
@@ -77,6 +78,8 @@ function updateProgress() {
 	var circ = Math.PI * 2;
 	var quart = Math.PI / 2;
 	var cpercent = percent / 100; /* current percent */
+	var secondsLeft = audio.duration - audio.currentTime;
+	
 	//draw the clickable part of the progress bar
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, 0, circ, false);
@@ -90,7 +93,20 @@ function updateProgress() {
 	context.lineWidth = progressWidth;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
+	
+	//also update the time remaining (mm:ss)
+	timeRemaining.innerHTML = NumString(Math.floor(secondsLeft/60), 2) + ':' + NumString(Math.floor(secondsLeft % 60), 2);
+	
 	if (audio.ended) resetPlayer();
+}
+
+//returns the provided number, padded with leading zeroes if necessary to make the required length
+function NumString(num, minLength){
+	var str = num + '';
+	while(str.length < minLength){
+		str = '0' + str;
+	}
+	return str;
 }
 
 function resetPlayer() {

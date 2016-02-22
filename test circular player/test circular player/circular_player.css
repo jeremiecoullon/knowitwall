@@ -126,6 +126,10 @@ button:hover {
 	font-size: 1.3em;
 }
 
+#remaining {
+	font-size: 20px;
+	font-weight: bold;
+}
 
 /* Song Info */
 .info {
