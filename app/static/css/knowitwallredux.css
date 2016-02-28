@@ -502,9 +502,9 @@ text-align: left;
 /* to center the last boxes on the homepage */
 
 .last_boxes_center{
-  margin-left: 37.5%;
+  margin-left: 12.5%;
 }
-@media(max-width:561px){
+@media(max-width:767px){
   .last_boxes_center{
     margin-left: 0%;
   }
@@ -517,7 +517,7 @@ text-align: left;
   color: #1E1F23;
   font-size: 1em;
   padding: 1em 2em;
-   min-height: 230px;
+   min-height: 250px;
 }
 @media(max-width:561px){
   .episode-description{
@@ -617,6 +617,11 @@ padding:40px;
   padding: 0px 280px 20.5px 20px;
 }
 
+@media(max-width: 700px){
+  .navbarADpage {
+    padding: 0px 0px 20.5px 20px;
+  }
+}
 
 @media(max-width:400px) {
 
@@ -722,6 +727,7 @@ padding:40px;
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
+  padding: 0px
 }
 }
 /* end of 'make the navbar solid throughout' */

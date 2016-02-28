@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="We make short audio documentaries, written by academics, for the enjoyment of everyone else.">
+  <meta name="description" content="Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" />
   <meta property="og:title" content="Know It Wall" />
-  <meta property="og:description" content="If you have more interests than you can keep track of, you’re in the right place. Know It Wall makes short audio documentaries, written by academics, for the enjoyment of everyone." />
+  <meta property="og:description" content="Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity." />
   <meta property="og:url" content="http://knowitwall.com/" />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -405,8 +405,23 @@
           {% endfor %}
         </div>
         <div class="row">
-          {% for audiodoc in audiodocs[9:13] %}
+
+          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
           <div class="col-md-3 last_boxes_center">
+            <div style="background: url('{{audiodocs[9].topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodocs[9].url}}" class="box_episode_title">
+                {{audiodocs[9].topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i style="color: {{audiodocs[9].by_in_colour}}">by</i> <a href="audiodoc/{{audiodocs[9].url}}#author" class="highlight">{{audiodocs[9].author_name | safe}}</a> <i style="color: {{audiodocs[9].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[9].discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodocs[9].topic_description | safe}}</p>
+            </div>
+          </div>
+          {% for audiodoc in audiodocs[10:13] %}
+          <div class="col-md-3">
             <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
               <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
                 {{audiodoc.topic_name | safe}}

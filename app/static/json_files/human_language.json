@@ -1,0 +1,21 @@
+{
+    "url": "human_language",
+    "unique_id": "Vieri_language",
+    "topic_name": "The structure of human language",
+    "topic_image": "/static/Images/TI_language.jpg",
+    "topic_image_home": "/static/Images/TI_language_home.jpg",
+    "topic_image_box": "/static/Images/TI_language_box.jpg",
+    "image_credits": "Pieter Bruegel the Elder, <i>The Tower of Babel</i>, c. 1563. Oil on panel. Kunsthistorisches Museum, Vienna",
+    "by_in_colour":"#FFFFFF",
+    "discipline": "Linguistics",
+    "og_name": "The structure of human language",
+    "og_description": "It has been suggested that all of the world's languages share the same basic structure. But do they really? The linguist Vieri Samek-Lodovici thinks so and explains not only how to make sense of the idea but also how it has been developed in recent years.",
+    "topic_description": "It has been suggested that all of the world's languages share the same basic structure. But do they really? The linguist Vieri Samek-Lodovici thinks so and explains not only how to make sense of the idea but also how it has been developed in recent years.",
+    "author_name": "Vieri Samek-Lodovici",
+    "author_image": "/static/Images/author_Vieri_SL.jpg",
+    "author_bio": "app/static/texts/language_author_bio.html",
+    "music_credits": "Jon Luc Hefferman, Sergey Cheremisinov, Kai Engel, and James Joshua Otto",
+    "narration_credits": "Angus Waite and Vidish Athavale",
+    "transcript": "app/static/texts/language_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/human_language.mp3"
+}
