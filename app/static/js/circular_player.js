@@ -6,7 +6,8 @@ var volume = document.getElementById("volume");
 var timeRemaining = document.getElementById("remaining");
 
 //how far from 3 o'clock the progress bar starts, 0 - 2*pi
-var progressOffsetRadians = 147 * (Math.PI / 180);
+// var progressOffsetRadians = 147 * (Math.PI / 180);
+var progressOffsetRadians = 270 * (Math.PI / 180);
 //the distance from the centre of the player to the middle of the progress bar
 var progressRadius = 150;
 //the thickness of the progress bar
@@ -84,7 +85,7 @@ function updateProgress() {
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, 0, circ, false);
 	context.lineWidth = progressClickWidth;
-	context.strokeStyle = '#f60';
+	context.strokeStyle = '#CCCCCC';
 	context.stroke();
 
 	//and draw the current progress

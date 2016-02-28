@@ -110,6 +110,8 @@ button:hover {
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 1.3em;
+		position: relative;
+		right: 8px;
 	}
 #forward, #backward {
 	font-size: 1.3em;
