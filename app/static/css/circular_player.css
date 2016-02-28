@@ -2,7 +2,7 @@
 /* Centering */
 #circular_container, #circular_progress, #circular_player, #flip-back, .circular_cover, .playlist {
 	  position: absolute;
-	  margin: auto;
+	  margin-left: 20px;
 	  top: 0;
 	  left: 0;
 	  right: 0;
@@ -36,6 +36,9 @@
 	  -webkit-filter: blur(1px);
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
+		position: relative;
+		left: -12px;
+		top: -10px;
 }
 
 #flip-back {
@@ -149,7 +152,7 @@ button:hover {
 input[type='range'] {
 	  display: block;
 	  margin: 14px auto;
-	  width: 80px;
+	  width: 120px;
   height: 2px;
 	  outline: 0;
 	  cursor: pointer;
@@ -342,14 +345,11 @@ label.to-lyrics-label {
 
 /* Media Queries */
 @media all and (max-width: 768px) {
-	  #circular_container, #circular_player { width: 150px; height: 150px;}
+	  /*#circular_container, #circular_player { width: 150px; height: 150px;}
 	  #circular_progress { width: 160px; height: 160px; margin-top: -5px; margin-left: -5px; }
 	  label, .lyrics, .scroll { display: none; }
 	  .circular_cover { padding-top: 46px; }
-	  button { margin: 4px; }
-	  button:first-of-type, button:last-of-type { display: none; }
-	  input[type='range'] { display: block; margin-top: -76px; height: 1px; }
-	  .info { margin-top: 70px; }
-	  .song { font-size: 12px; }
-	  .author { font-size: 10px; }
+	  button { margin: 4px; }*/
+	  /*button:first-of-type, button:last-of-type { display: none; }*/
+	  /*input[type='range'] { display: block; margin-top: -76px; height: 1px; }*/
 }

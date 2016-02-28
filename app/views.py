@@ -142,6 +142,20 @@ def audiodoc(url):
 
     return render_template('audiodoc.html', audiodocs=audiodocs)
 
+"----------------------------------------------------------------------------------------------------"
+" TEST: audiodoc page with circular player (only looks good on mobile) "
+
+@app.route('/circular_audiodoc/<url>')
+def circular_audiodoc(url):
+
+    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
+
+    audiodocs = ad_fun(audiodoc_list)
+
+    return render_template('audiodoc.html', audiodocs=audiodocs)
+
+
+
 
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "
