@@ -22,6 +22,8 @@
 
   <link href="/static/css/audioplayer.css" rel="stylesheet">
 
+    <!-- circular player -->
+    <!-- <link href="/static/css/circular_player.css" rel="stylesheet"> -->
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -38,8 +40,6 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
 
-  <!-- circular player -->
-  <!-- <link href="/static/css/circular_player.css" rel="stylesheet"> -->
 
 
 </head>
@@ -348,48 +348,28 @@
           <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
           <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
         </div>
-
+      </div>
+      <!-- <div class="row">
+        <audio controls id="author">
+          <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div> -->
+      <div class="row">
         <div class="col-lg-12">
           <audio controls id="author">
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
-
         <!-- Author -->
           <div class="author-bio">
             <div class="col-md-3">
               <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "author image">
-              <!-- <div class="circular-container">
-
-              <canvas id="circular-progress" width="320" height="320"></canvas>
-              <div id="circular-player">
-                <audio id="circular-audio">
-                  <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg" codecs="mp3"></source>
-                </audio>
-                <img src="{{audiodocs[0].author_image}}">
-                <div class="circular-cover">
-                  <div class="circular-controls">
-                    <button id="circular-backward" title="Backward" onclick="resetPlayer()"><i class="fa fa-backward fa-2x"></i></button>
-                    <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
-                    <button id="forward" title="Forward" onclick="setLocation()"><i class="fa fa-forward fa-2x"></i></button>
-                    <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
-                  </div>
-                </div>
-              </div>
-              </div> -->
             </div>
             <div class="col-md-3">
               <div class="author-name">
               <h2 style="text-align:right; font-size: {{ audiodocs[0].name_font_size }};"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
-              <!-- <div class="circular-cover">
-              <div class="circular-controls">
-                <button id="circular-backward" title="Backward" onclick="resetPlayer()"><i class="fa fa-backward fa-2x"></i></button>
-                <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
-                <button id="forward" title="Forward" onclick="setLocation()"><i class="fa fa-forward fa-2x"></i></button>
-                <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
-              </div>
-              </div> -->
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
@@ -397,6 +377,7 @@
               </div>
             </div>
           </div>
+        <!-- </div> -->
         </div>
 
         <div class="col-md-12" id="read">
@@ -524,6 +505,7 @@
 
 
   <script src="/static/js/audioplayer.js"></script>
+  <!-- <script src="/static/js/circular_player.js"></script> -->
 
 
   <!-- Sharethis.com: to make the social media buttons work -->

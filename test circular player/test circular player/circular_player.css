@@ -14,7 +14,7 @@ p { margin: 0; }
 .credits a  { color: #26C5CB; }
 
 /* Centering */
-#container, #progress, #player, #flip-back, .cover, .playlist {
+#circular_container, #circular_progress, #circular_player, #flip-back, .circular_cover, .playlist {
 	  position: absolute;
 	  margin: auto;
 	  top: 0;
@@ -23,7 +23,7 @@ p { margin: 0; }
   	bottom: 0;
 }
 
-#container {
+#circular_container {
 	  width: 320px;
 	  height: 320px;
   perspective: 550px;
@@ -32,7 +32,7 @@ p { margin: 0; }
 	  -webkit-transform-style: preserve-3d;
 }
 
-#player {
+#circular_player {
   	width: 300px;
 	  height: 300px;
 	  background: #f333;
@@ -42,7 +42,7 @@ p { margin: 0; }
 	  z-index: 300;
 }
 
-#progress {
+#circular_progress {
 	  width: 320px;
 	  height: 320px;
 	  z-index: 200;
@@ -64,7 +64,7 @@ p { margin: 0; }
 	  -webkit-transform: rotateY(-180deg);
 }
 
-/* Album Cover */
+/* Image */
 img {
   	width: 100%;
 	  height: 100%;
@@ -75,13 +75,13 @@ img {
 }
 
 /* Fade */
-#container:hover .cover,
-#container:hover .to-lyrics-label,
-#container:hover .to-back-label {
+#circular_container:hover .circular_cover,
+#circular_container:hover .to-lyrics-label,
+#circular_container:hover .to-back-label {
 	  opacity: .9;
 }
 
-.cover,
+.circular_cover,
 .to-lyrics-label,
 .to-back-label {
 	  opacity: .8;
@@ -90,7 +90,7 @@ img {
 }
 
 /* Player Buttons */
-.controls {
+.circular_controls {
 	  position: relative;
 	  width: 100%;
 	  color: #ffc21c;
@@ -234,7 +234,7 @@ label.to-lyrics-label {
 }
 
 /* Flip Back */
-#player, #flip-back {
+#circular_player, #flip-back {
 	  backface-visibility: hidden;
 	  -webkit-backface-visibility: hidden;
 	  transition: transform .5s ease-in-out;
@@ -247,13 +247,13 @@ label.to-lyrics-label {
 	  -webkit-transform: rotateY(0deg);
 }
 
-#to-back:checked ~ #player {
+#to-back:checked ~ #circular_player {
 	  z-index: -1;
   transform: rotateY(180deg);
 	  -webkit-transform: rotateY(180deg);
 }
 
-#to-back:checked ~ #progress {
+#to-back:checked ~ #circular_progress {
 	  opacity: 0;
   transform: rotate(0);
 	  -webkit-transform: rotate(0);
@@ -297,21 +297,21 @@ label.to-lyrics-label {
 	  text-shadow: 1px 1px 3px #000;
 }
 
-.cover {
+.circular_cover {
 	  padding-top: 130px;
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
 }
 
-#to-lyrics:checked ~ .cover {
+#to-lyrics:checked ~ .circular_cover {
 	  padding-top: 40px;
 }
 
-#to-lyrics:checked ~ .cover .lyrics {
+#to-lyrics:checked ~ .circular_cover .lyrics {
 	  margin-top: 0px;
 }
 
-#to-lyrics:checked ~ .cover button {
+#to-lyrics:checked ~ .circular_cover button {
 	  margin: 4px;
 }
 
@@ -356,10 +356,10 @@ label.to-lyrics-label {
 
 /* Media Queries */
 @media all and (max-width: 768px) {
-	  #container, #player { width: 150px; height: 150px;}
-	  #progress { width: 160px; height: 160px; margin-top: -5px; margin-left: -5px; }
+	  #circular_container, #circular_player { width: 150px; height: 150px;}
+	  #circular_progress { width: 160px; height: 160px; margin-top: -5px; margin-left: -5px; }
 	  label, .lyrics, .scroll { display: none; }
-	  .cover { padding-top: 46px; }
+	  .circular_cover { padding-top: 46px; }
 	  button { margin: 4px; }
 	  button:first-of-type, button:last-of-type { display: none; }
 	  input[type='range'] { display: block; margin-top: -76px; height: 1px; }

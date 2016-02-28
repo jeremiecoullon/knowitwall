@@ -1,6 +1,6 @@
 
-var audio = document.getElementById('audio');
-var progress = document.getElementById('progress');
+var audio = document.getElementById('circular_audio');
+var progress = document.getElementById('circular_progress');
 var playpause = document.getElementById("play-pause");
 var volume = document.getElementById("volume");
 var timeRemaining = document.getElementById("remaining");
@@ -20,8 +20,8 @@ audio.addEventListener('timeupdate', function() {
   	updateProgress();
 }, false);
 
-document.getElementById('container').addEventListener('click', function(e){
-	var player = document.getElementById('player'),
+document.getElementById('circular_container').addEventListener('click', function(e){
+	var player = document.getElementById('circular_player'),
 		//playerBounds is the rectangle encompassing the player
 		playerBounds = player.getBoundingClientRect(),
 		//xDistance is the distance on the x-axis of the click relative to the centre
@@ -35,7 +35,7 @@ document.getElementById('container').addEventListener('click', function(e){
 		newProgressPercentage,
 		//and here's a handy constant
 		twoPi = 2 * Math.PI;
-			
+
 	//use distanceFromCentre to work out whether the progress bar was clicked - does it fall within the radius range?
 	if(distanceFromCentre >= progressRadius - progressClickWidth && distanceFromCentre <= progressRadius + progressClickWidth){
 		//note that although Math.atan2 is undefined for (0, 0) arguments, in practice the check above avoids that case given reasonable values
@@ -49,7 +49,7 @@ document.getElementById('container').addEventListener('click', function(e){
 		if(newProgressPercentage > 1) newProgressPercentage = 1;
 		//and set the new progress
 		audio.currentTime = audio.duration * newProgressPercentage;
-	}		
+	}
 });
 
 function togglePlayPause() {
@@ -71,7 +71,7 @@ function setVolume() {
 function updateProgress() {
 	var percent = Math.floor((100 / audio.duration) * audio.currentTime);
 	progress.value = percent;
-	var canvas = document.getElementById('progress');
+	var canvas = document.getElementById('circular_progress');
 	var context = canvas.getContext('2d');
 	var centerX = canvas.width / 2;
 	var centerY = canvas.height / 2;
@@ -79,24 +79,24 @@ function updateProgress() {
 	var quart = Math.PI / 2;
 	var cpercent = percent / 100; /* current percent */
 	var secondsLeft = audio.duration - audio.currentTime;
-	
+
 	//draw the clickable part of the progress bar
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, 0, circ, false);
 	context.lineWidth = progressClickWidth;
 	context.strokeStyle = '#f60';
 	context.stroke();
-	
+
 	//and draw the current progress
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, progressOffsetRadians + ((circ) * cpercent), false);
 	context.lineWidth = progressWidth;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
-	
+
 	//also update the time remaining (mm:ss)
 	timeRemaining.innerHTML = NumString(Math.floor(secondsLeft/60), 2) + ':' + NumString(Math.floor(secondsLeft % 60), 2);
-	
+
 	if (audio.ended) resetPlayer();
 }
 
@@ -110,7 +110,7 @@ function NumString(num, minLength){
 }
 
 function resetPlayer() {
-	var canvas = document.getElementById('progress'),
+	var canvas = document.getElementById('circular_progress'),
 		context = canvas.getContext('2d');
 	audio.currentTime = 0; context.clearRect(0,0,canvas.width,canvas.height);
 	playpause.title = "Play";
