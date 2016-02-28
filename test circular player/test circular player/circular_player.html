@@ -1,12 +1,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="circular_player.css" media="screen" type="text/css" />
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-
+<div class="row">
+ <p>
+   lala
+ </p>
+</div>
+<div class="row">
   <div id="circular_container">
-	<canvas id="circular_progress" width="320" height="320"></canvas><!-- progress bar -->
+	<canvas id="circular_progress" width="320" height="320"></canvas>
 	<div id="circular_player">
 		<audio id="circular_audio">
 			<source src="saharan_dust.mp3" type="audio/mpeg" codecs="mp3"></source>
@@ -21,11 +27,12 @@
 				<!-- <button id="backward" title="Backward"><i class="fa fa-random fa-lg"></i></button> -->
 				<input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
 				<div id="remaining"></div>
-			</div><!-- #circular_controls -->
+			</div>
+    </div>
+  </div>
+  </div>
 
-    </div><!-- #circular_cover -->
-  </div><!-- #player -->
-  </div><!-- #container -->
+</div>
 
 </body>
 <script src="circular_player.js"></script>
