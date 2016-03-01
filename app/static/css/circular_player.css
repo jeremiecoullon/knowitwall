@@ -9,7 +9,7 @@
 /* Centering */
 #circular_container, #circular_progress, #circular_player, #flip-back, .circular_cover, .playlist {
 	  position: absolute;
-	  margin-left: 40px;
+	  margin-left: 20px;
 	  top: 0;
 	  left: 0;
 	  right: 0;
@@ -102,7 +102,7 @@ button:hover {
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 1.3em;
 		position: relative;
-		right: 27px;
+		right: 17px;
 		bottom: 25px;
 	}
 #forward, #backward {
