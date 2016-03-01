@@ -1,4 +1,11 @@
 
+/*force height manually to make room for the circular player on mobile*/
+@media(max-width:768px){
+	#switching_audioplayers{
+		position: relative;
+		height: 300px;
+	}
+}
 /* Centering */
 #circular_container, #circular_progress, #circular_player, #flip-back, .circular_cover, .playlist {
 	  position: absolute;

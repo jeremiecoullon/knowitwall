@@ -336,7 +336,8 @@
         </div>
       </div>
 
-      <div class="row" style="position: relative; height: 300px;">
+      <div class="row">
+        <!-- these 2 divs are used to get the variable audio & TI_box for the players -->
         <div id="audioplayer_source_mp3" style="display:none">
           {{audiodocs[0].audio_mp3}}
         </div>
@@ -344,9 +345,6 @@
           {{audiodocs[0].topic_image_box}}
         </div>
         <div id="switching_audioplayers" class="col-lg-12">
-
-          <script src="/static/js/switching_audioplayers.js"></script>
-
           <!-- <audio controls id="author" >
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
@@ -499,9 +497,7 @@
   <script src="/static/js/jqBootstrapValidation.js"></script>
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
-  <!-- <script src="/static/js/audioplayer.min.js"></script> -->
-  <!-- <script src="/static/js/circular_player.js"></script> -->
-
+  <script src="/static/js/switching_audioplayers.js"></script>
 
 <!-- share buttons-->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
