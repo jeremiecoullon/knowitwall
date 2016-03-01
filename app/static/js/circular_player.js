@@ -119,7 +119,5 @@ function resetPlayer() {
 }
 
 // thx to: http://www.adobe.com/devnet/html5/articles/html5-multimedia-pt3.html
-
 // Circular rotating music player with menu on back with html5 javascript and css3 is  MIT licensed:  http://opensource.org/licenses/MIT
-
 // modified for Knowitwall 2016

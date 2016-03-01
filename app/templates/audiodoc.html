@@ -20,7 +20,7 @@
 
   <title>Know it Wall</title>
 
-  <link href="/static/css/audioplayer.css" rel="stylesheet">
+  <link href="/static/css/audioplayer.min.css" rel="stylesheet">
 
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -502,28 +502,9 @@
   <script src="/static/js/knowitwall.js"></script>
 
 
-  <script src="/static/js/audioplayer.js"></script>
+  <script src="/static/js/audioplayer.min.js"></script>
   <!-- <script src="/static/js/circular_player.js"></script> -->
-
-
-  <!-- Sharethis.com: to make the social media buttons work -->
-  <!--
-  <script type="text/javascript">stLight.options({publisher: "08e3a3e8-abb1-434a-8ebb-df836483492f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-  <script>
-  var options={ "publisher": "08e3a3e8-abb1-434a-8ebb-df836483492f", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter"]}};
-  var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-  </script>
--->
-
-<!-- share buttons-->
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
-  <script>
-    $( function()
-    {
-        $( 'audio' ).audioPlayer();
-    });
-  </script>
 </body>
 {% endblock %}

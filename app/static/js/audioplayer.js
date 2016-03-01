@@ -207,3 +207,9 @@
     return this;
   };
 })( jQuery, window, document );
+
+// activate function
+$( function()
+{
+    $( 'audio' ).audioPlayer();
+});

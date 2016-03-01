@@ -20,7 +20,7 @@
 
   <title>Know it Wall</title>
 
-  <!-- <link href="/static/css/audioplayer.css" rel="stylesheet"> -->
+  <link href="/static/css/audioplayer.min.css" rel="stylesheet">
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
@@ -34,9 +34,6 @@
 </head>
 
 <body id="page-top">
-
-  <!-- <div class="overflow"> -->
-
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -340,19 +337,22 @@
       </div>
 
       <div class="row" style="position: relative; height: 300px;">
-        <div id="audio_source_mp3" style="display:none">
+        <div id="audioplayer_source_mp3" style="display:none">
           {{audiodocs[0].audio_mp3}}
+        </div>
+        <div id="audioplayer_TI_box" style="display:none">
+          {{audiodocs[0].topic_image_box}}
         </div>
         <div id="switching_audioplayers" class="col-lg-12">
 
-          <!-- <script src="/static/js/switching_audioplayers.js"></script> -->
+          <script src="/static/js/switching_audioplayers.js"></script>
 
           <!-- <audio controls id="author" >
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio> -->
 
-          <div id="circular_container">
+          <!-- <div id="circular_container">
           <canvas id="circular_progress" width="320" height="320"></canvas>
           <div id="circular_player">
             <audio id="circular_audio">
@@ -362,12 +362,11 @@
             <div class="circular_cover">
               <div class="circular_controls">
                 <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
-                <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
                 <div id="remaining"></div>
               </div>
             </div>
           </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -500,8 +499,8 @@
   <script src="/static/js/jqBootstrapValidation.js"></script>
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
-  <!-- <script src="/static/js/audioplayer.js"></script> -->
-  <script src="/static/js/circular_player.js"></script>
+  <!-- <script src="/static/js/audioplayer.min.js"></script> -->
+  <!-- <script src="/static/js/circular_player.js"></script> -->
 
 
 <!-- share buttons-->
@@ -509,21 +508,10 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
   <script>
-    $( function()
-    {
-        $( 'audio' ).audioPlayer();
-    });
-  </script>
-  <script type="text/javascript">
-//   var width = window.innerWidth
-// || document.documentElement.clientWidth
-// || document.body.clientWidth;
-//
-// var height = window.innerHeight
-// || document.documentElement.clientHeight
-// || document.body.clientHeight;
-//   var element = document.getElementById("switching_audioplayers");
-// element.innerHTML = "New Header";
+    // $( function()
+    // {
+    //     $( 'audio' ).audioPlayer();
+    // });
   </script>
 </body>
 {% endblock %}
