@@ -9,13 +9,33 @@ var timeRemaining = document.getElementById("remaining");
 // var progressOffsetRadians = 147 * (Math.PI / 180);
 var progressOffsetRadians = 270 * (Math.PI / 180);
 //the distance from the centre of the player to the middle of the progress bar
-var progressRadius = 150;
+var progressRadius = 120;
 //the thickness of the progress bar
 var progressWidth = 10;
 //how far from the middle of the progress bar a click 'on' the progress bar can be, and still control the progress - should be at least progressWidth
 var progressClickWidth = 20;
 
 audio.controls = false;
+
+// variable needed for the clickable part of the progress bar
+var percent = Math.floor((100 / audio.duration) * audio.currentTime);
+progress.value = percent;
+var canvas = document.getElementById('circular_progress');
+var context = canvas.getContext('2d');
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+var circ = Math.PI * 2;
+var quart = Math.PI / 2;
+var cpercent = percent / 100; /* current percent */
+var secondsLeft = audio.duration - audio.currentTime;
+var current_progress = progressOffsetRadians + ((circ) * cpercent);
+//draw the clickable part of the progress bar
+context.beginPath();
+context.arc(centerX, centerY, progressRadius, 0, circ, false);
+context.lineWidth = progressClickWidth;
+context.strokeStyle = '#CCCCCC';
+context.stroke();
+
 
 audio.addEventListener('timeupdate', function() {
   	updateProgress();
@@ -80,10 +100,10 @@ function updateProgress() {
 	var quart = Math.PI / 2;
 	var cpercent = percent / 100; /* current percent */
 	var secondsLeft = audio.duration - audio.currentTime;
-  var current_progress = progressOffsetRadians + ((circ) * cpercent) + circ * 0.003
+  var current_progress = progressOffsetRadians + ((circ) * cpercent);
 
 
-// circle with grey background to draw over the circle at the tip of the progress bar
+// circle with light grey background to draw over the circle at the tip of the progress bar
   context.beginPath();
   context.arc(centerX, centerY, progressRadius, 0, circ, false);
   context.lineWidth = 40;

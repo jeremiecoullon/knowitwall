@@ -26,13 +26,15 @@
 }
 
 #circular_player {
-  	width: 250px;
-	  height: 250px;
+  	width: 200px;
+	  height: 200px;
 	  background: #f333;
   	border-radius: 50%;
 	  overflow: hidden;
 	  box-shadow: 2px 2px 20px 0 rgba(0,0,0,.3);
 	  z-index: 300;
+		left: 25px;
+		top: 25px;
 }
 
 #circular_progress {
@@ -100,21 +102,21 @@ button:hover {
 	  height: 46px;
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
-		font-size: 3em;
+		font-size: 2em;
 		position: relative;
-		right: 17px;
-		bottom: 25px;
+		right: 7px;
+		bottom: 50px;
 	}
 #forward, #backward {
 	font-size: 1.3em;
 }
 
 #remaining {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	position: relative;
-	right: 18px;
-	bottom: 10px;
+	right: 10px;
+	bottom: 45px;
 }
 
 /* Volume */
