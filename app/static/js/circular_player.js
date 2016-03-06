@@ -126,8 +126,10 @@ function updateProgress() {
 
   // add circle at the tip of the current progress
     context.beginPath();
-    context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 12, 0, circ);
-    context.fillStyle = '#ffc21c';
+    context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 8, 0, circ);
+    context.fillStyle = 'rgba(255, 194, 28, 1)';
+    context.lineWidth = 12;
+    context.strokeStyle = 'rgba(255, 194, 28, 0.4)';
     context.fill();
     context.stroke();
 
