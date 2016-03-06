@@ -82,6 +82,14 @@ function updateProgress() {
 	var secondsLeft = audio.duration - audio.currentTime;
   var current_progress = progressOffsetRadians + ((circ) * cpercent) + circ * 0.003
 
+
+// circle with grey background to draw over the circle at the tip of the progress bar
+  context.beginPath();
+  context.arc(centerX, centerY, progressRadius, 0, circ, false);
+  context.lineWidth = 40;
+  context.strokeStyle = '#F0F0F0';
+  context.stroke();
+
 	//draw the clickable part of the progress bar
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, 0, circ, false);
@@ -92,16 +100,16 @@ function updateProgress() {
 	//and draw the current progress
 	context.beginPath();
 	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, current_progress, false);
-	context.lineWidth = progressWidth;
+	context.lineWidth = 5.5;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
 
   // add circle at the tip of the current progress
-    // context.beginPath();
-    // context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 35, 0, circ);
-    // context.fillStyle = '#ffc21c';
-    // context.fill();
-    // context.stroke();
+    context.beginPath();
+    context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 12, 0, circ);
+    context.fillStyle = '#ffc21c';
+    context.fill();
+    context.stroke();
 
 
 	//also update the time remaining (mm:ss)
