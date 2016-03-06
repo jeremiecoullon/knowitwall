@@ -103,9 +103,9 @@ button:hover {
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 2em;
-		position: relative;
-		right: 7px;
-		bottom: 50px;
+		position: absolute;
+		right: 60px;
+		bottom: 0px;
 	}
 #forward, #backward {
 	font-size: 1.3em;
@@ -114,9 +114,9 @@ button:hover {
 #remaining {
 	font-size: 20px;
 	font-weight: bold;
-	position: relative;
-	right: 10px;
-	bottom: 45px;
+	position: absolute;
+	left: 60px;
+	/*bottom: 45px;*/
 }
 
 /* Volume */
