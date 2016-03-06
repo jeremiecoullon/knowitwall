@@ -56,11 +56,11 @@ document.getElementById('circular_container').addEventListener('click', function
 function togglePlayPause() {
    if (audio.paused || audio.ended) {
       playpause.title = "Pause";
-      playpause.innerHTML = '<i class="fa fa-pause fa-3x"></i>';
+      playpause.innerHTML = '<i class="fa fa-pause"></i>';
       audio.play();
    } else {
       playpause.title = "Play";
-      playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
+      playpause.innerHTML = '<i class="fa fa-play"></i>';
       audio.pause();
    }
 }
@@ -80,6 +80,7 @@ function updateProgress() {
 	var quart = Math.PI / 2;
 	var cpercent = percent / 100; /* current percent */
 	var secondsLeft = audio.duration - audio.currentTime;
+  var current_progress = progressOffsetRadians + ((circ) * cpercent) + circ * 0.003
 
 	//draw the clickable part of the progress bar
 	context.beginPath();
@@ -90,10 +91,18 @@ function updateProgress() {
 
 	//and draw the current progress
 	context.beginPath();
-	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, progressOffsetRadians + ((circ) * cpercent), false);
+	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, current_progress, false);
 	context.lineWidth = progressWidth;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
+
+  // add circle at the tip of the current progress
+    // context.beginPath();
+    // context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 35, 0, circ);
+    // context.fillStyle = '#ffc21c';
+    // context.fill();
+    // context.stroke();
+
 
 	//also update the time remaining (mm:ss)
 	timeRemaining.innerHTML = NumString(Math.floor(secondsLeft/60), 2) + ':' + NumString(Math.floor(secondsLeft % 60), 2);
@@ -115,7 +124,7 @@ function resetPlayer() {
 		context = canvas.getContext('2d');
 	audio.currentTime = 0; context.clearRect(0,0,canvas.width,canvas.height);
 	playpause.title = "Play";
-	playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
+	playpause.innerHTML = '<i class="fa fa-play"></i>';
 }
 
 // thx to: http://www.adobe.com/devnet/html5/articles/html5-multimedia-pt3.html
