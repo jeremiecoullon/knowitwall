@@ -76,7 +76,7 @@
 	  width: 278px;
 	  height: 278px;
 	  z-index: 200;
-  filter: blur(1px);
+  /*filter: blur(1px);*/
 	  -webkit-filter: blur(1px);
 	  transition: all .5s ease-in-out;
 	  -webkit-transition: all .5s ease-in-out;
