@@ -104,7 +104,7 @@ button:hover {
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 2em;
 		position: absolute;
-		right: 60px;
+		right: 65px;
 		bottom: 0px;
 	}
 #forward, #backward {
