@@ -7,15 +7,50 @@
 	}
 }
 /* Centering */
-#circular_container, #circular_progress, #circular_player, #flip-back, .circular_cover, .playlist {
+#circular_container, #circular_progress, #circular_player,.circular_cover {
 	  position: absolute;
-	  margin-left: 20px;
+	  margin-left: 7%;
 	  top: 0;
 	  left: 0;
 	  right: 0;
   	bottom: 0;
 }
-/*The sizes for container/player/progress use to be: 320/300/328px*/
+/*nexus 5*/
+@media(min-width:360px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 9%;
+	}
+}
+/* positioning for iphone 6 */
+@media(min-width:375px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 12%;
+	}
+}
+/* nexus 4 */
+@media(min-width:600px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 20%;
+	}
+}
+/*iphone 4 portrait mode*/
+@media(min-width:480px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 15%;
+	}
+}
+/*iphone 5 portrait*/
+@media(min-width:567px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 19.5%;
+	}
+}
+/*iphone 6 portrait*/
+@media(min-width:666px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 23%;
+	}
+}
 #circular_container {
 	  width: 270px;
 	  height: 270px;
@@ -104,9 +139,14 @@ button:hover {
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 2em;
 		position: absolute;
-		right: 65px;
+		right: 62px;
 		bottom: 0px;
 	}
+@media(max-width:320px){
+	#play-pause{
+		right:70px;
+	}
+}
 #forward, #backward {
 	font-size: 1.3em;
 }
@@ -116,9 +156,13 @@ button:hover {
 	font-weight: bold;
 	position: absolute;
 	left: 60px;
-	/*bottom: 45px;*/
+	top:0px;
 }
-
+@media(min-width:550px){
+	#remaining {
+		left: 37px;
+	}
+}
 /* Volume */
 input[type='range'] {
 	  display: block;
