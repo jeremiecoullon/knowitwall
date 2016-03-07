@@ -138,7 +138,7 @@ button:hover {
 	  -webkit-transition: all .5s ease-in-out;
 		font-size: 2em;
 		position: absolute;
-		right: 63px;
+		right: 64px;
 		bottom: 0px;
 	}
 @media(max-width:320px){
@@ -165,7 +165,7 @@ button:hover {
 /*iphone5*/
 @media(max-width:320px){
 	#remaining {
-		left: 58px;
+		left: 60px;
 	}
 }
 /* Volume */
