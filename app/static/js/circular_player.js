@@ -90,7 +90,7 @@ function setVolume() {
 }
 
 function updateProgress() {
-	var percent = Math.floor((1000000 / audio.duration) * audio.currentTime);
+	var percent = Math.floor((10000 / audio.duration) * audio.currentTime);
 	progress.value = percent;
 	var canvas = document.getElementById('circular_progress');
 	var context = canvas.getContext('2d');
@@ -98,7 +98,7 @@ function updateProgress() {
 	var centerY = canvas.height / 2;
 	var circ = Math.PI * 2;
 	var quart = Math.PI / 2;
-	var cpercent = percent / 1000000; /* current percent */
+	var cpercent = percent / 10000; /* current percent */
 	var secondsLeft = audio.duration - audio.currentTime;
   var current_progress = progressOffsetRadians + ((circ) * cpercent);
 
