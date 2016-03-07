@@ -163,7 +163,7 @@ button:hover {
 	}
 }
 /*iphone5*/
-@media(min-width:320px){
+@media(max-width:320px){
 	#remaining {
 		left: 58px;
 	}
