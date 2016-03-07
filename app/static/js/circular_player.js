@@ -106,7 +106,7 @@ function updateProgress() {
 // circle with light grey background to draw over the circle at the tip of the progress bar
   context.beginPath();
   context.arc(centerX, centerY, progressRadius, 0, circ, false);
-  context.lineWidth = 40;
+  context.lineWidth = 50;
   context.strokeStyle = '#F0F0F0';
   context.stroke();
 
@@ -119,14 +119,14 @@ function updateProgress() {
 
 	//and draw the current progress
 	context.beginPath();
-	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, current_progress, false);
+	context.arc(centerX, centerY, progressRadius+2, progressOffsetRadians, current_progress, false);
 	context.lineWidth = 5.5;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
 
   // add circle at the tip of the current progress
     context.beginPath();
-    context.arc(centerX + Math.cos(current_progress) * progressRadius, centerY + Math.sin(current_progress) * progressRadius , 12, 0, circ);
+    context.arc(centerX + Math.cos(current_progress) * (progressRadius+2), centerY + Math.sin(current_progress) * (progressRadius+2) , 12, 0, circ);
     context.fillStyle = 'rgba(255, 194, 28, 1)';
     context.lineWidth = 14;
     context.strokeStyle = 'rgba(255, 194, 28, 0.4)';
