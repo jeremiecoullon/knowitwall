@@ -162,6 +162,11 @@ button:hover {
 		left: 37px;
 	}
 }
+@media(min-width:320px){
+	#remaining {
+		left: 57px;
+	}
+}
 /* Volume */
 input[type='range'] {
 	  display: block;
