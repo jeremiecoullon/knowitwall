@@ -9,11 +9,11 @@ var timeRemaining = document.getElementById("remaining");
 // var progressOffsetRadians = 147 * (Math.PI / 180);
 var progressOffsetRadians = 270 * (Math.PI / 180);
 //the distance from the centre of the player to the middle of the progress bar
-var progressRadius = 120;
+var progressRadius = 123;
 //the thickness of the progress bar
 var progressWidth = 10;
 //how far from the middle of the progress bar a click 'on' the progress bar can be, and still control the progress - should be at least progressWidth
-var progressClickWidth = 20;
+var progressClickWidth = 17;
 
 audio.controls = false;
 
@@ -119,14 +119,14 @@ function updateProgress() {
 
 	//and draw the current progress
 	context.beginPath();
-	context.arc(centerX, centerY, progressRadius+2, progressOffsetRadians, current_progress, false);
+	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, current_progress, false);
 	context.lineWidth = 5.5;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
 
   // add circle at the tip of the current progress
     context.beginPath();
-    context.arc(centerX + Math.cos(current_progress) * (progressRadius+2), centerY + Math.sin(current_progress) * (progressRadius+2) , 12, 0, circ);
+    context.arc(centerX + Math.cos(current_progress) * (progressRadius), centerY + Math.sin(current_progress) * (progressRadius) , 12, 0, circ);
     context.fillStyle = 'rgba(255, 194, 28, 1)';
     context.lineWidth = 14;
     context.strokeStyle = 'rgba(255, 194, 28, 0.4)';
