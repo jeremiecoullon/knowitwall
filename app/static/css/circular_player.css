@@ -162,9 +162,10 @@ button:hover {
 		left: 37px;
 	}
 }
+/*iphone5*/
 @media(min-width:320px){
 	#remaining {
-		left: 57px;
+		left: 58px;
 	}
 }
 /* Volume */
