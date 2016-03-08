@@ -3,17 +3,17 @@
 /* scroll down arrow */
 
 .audiodoc_abstract-bio{
-  font-size:1.6em;
+  font-size:20px;
 }
 .audiodoc_narrate-credits{
   font-style:italic;
 }
 @media(max-width:768px){
   .audiodoc_abstract-bio{
-    font-size:1.2em;
+    font-size:18px;
   }
   .audiodoc_narrate-credits{
-    font-size:1.2em;
+    font-size:18px;
   }
 }
 
