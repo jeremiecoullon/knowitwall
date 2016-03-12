@@ -22,7 +22,7 @@ var bar_player = bar_player1.concat(audiodoc_audio.innerHTML).concat(bar_player2
 var audiodoc_TI_box = document.getElementById("audioplayer_TI_box");
 var cir_player1 = '<div id="circular_container"><canvas id="circular_progress" width="320" height="320"></canvas><div id="circular_player"><audio id="circular_audio"><source src="';
 var cir_player2 = '" type="audio/mpeg" codecs="mp3"></source></audio><img src="';
-var cir_player3 = '""><div class="circular_cover"><div class="circular_controls"><button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button><div id="remaining"></div></div></div></div></div>';
+var cir_player3 = '""><div class="circular_cover"><div class="circular_controls"><button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play"></i></button><div id="remaining"></div></div></div></div></div>';
 var cir_player = cir_player1.concat(audiodoc_audio.innerHTML).concat(cir_player2).concat(audiodoc_TI_box.innerHTML).concat(cir_player3);
 
 // check width of screen and pass the correct player into the html

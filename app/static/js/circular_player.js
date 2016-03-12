@@ -9,13 +9,33 @@ var timeRemaining = document.getElementById("remaining");
 // var progressOffsetRadians = 147 * (Math.PI / 180);
 var progressOffsetRadians = 270 * (Math.PI / 180);
 //the distance from the centre of the player to the middle of the progress bar
-var progressRadius = 150;
+var progressRadius = 123;
 //the thickness of the progress bar
 var progressWidth = 10;
 //how far from the middle of the progress bar a click 'on' the progress bar can be, and still control the progress - should be at least progressWidth
-var progressClickWidth = 20;
+var progressClickWidth = 17;
 
 audio.controls = false;
+
+// variable needed for the clickable part of the progress bar
+var percent = Math.floor((100 / audio.duration) * audio.currentTime);
+progress.value = percent;
+var canvas = document.getElementById('circular_progress');
+var context = canvas.getContext('2d');
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+var circ = Math.PI * 2;
+var quart = Math.PI / 2;
+var cpercent = percent / 100; /* current percent */
+var secondsLeft = audio.duration - audio.currentTime;
+var current_progress = progressOffsetRadians + ((circ) * cpercent);
+//draw the clickable part of the progress bar
+context.beginPath();
+context.arc(centerX, centerY, progressRadius, 0, circ, false);
+context.lineWidth = progressClickWidth;
+context.strokeStyle = '#CCCCCC';
+context.stroke();
+
 
 audio.addEventListener('timeupdate', function() {
   	updateProgress();
@@ -56,11 +76,11 @@ document.getElementById('circular_container').addEventListener('click', function
 function togglePlayPause() {
    if (audio.paused || audio.ended) {
       playpause.title = "Pause";
-      playpause.innerHTML = '<i class="fa fa-pause fa-3x"></i>';
+      playpause.innerHTML = '<i class="fa fa-pause"></i>';
       audio.play();
    } else {
       playpause.title = "Play";
-      playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
+      playpause.innerHTML = '<i class="fa fa-play"></i>';
       audio.pause();
    }
 }
@@ -70,7 +90,7 @@ function setVolume() {
 }
 
 function updateProgress() {
-	var percent = Math.floor((100 / audio.duration) * audio.currentTime);
+	var percent = Math.floor((10000 / audio.duration) * audio.currentTime);
 	progress.value = percent;
 	var canvas = document.getElementById('circular_progress');
 	var context = canvas.getContext('2d');
@@ -78,8 +98,17 @@ function updateProgress() {
 	var centerY = canvas.height / 2;
 	var circ = Math.PI * 2;
 	var quart = Math.PI / 2;
-	var cpercent = percent / 100; /* current percent */
+	var cpercent = percent / 10000; /* current percent */
 	var secondsLeft = audio.duration - audio.currentTime;
+  var current_progress = progressOffsetRadians + ((circ) * cpercent);
+
+
+// circle with light grey background to draw over the circle at the tip of the progress bar
+  context.beginPath();
+  context.arc(centerX, centerY, progressRadius, 0, circ, false);
+  context.lineWidth = 50;
+  context.strokeStyle = '#F0F0F0';
+  context.stroke();
 
 	//draw the clickable part of the progress bar
 	context.beginPath();
@@ -90,10 +119,20 @@ function updateProgress() {
 
 	//and draw the current progress
 	context.beginPath();
-	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, progressOffsetRadians + ((circ) * cpercent), false);
-	context.lineWidth = progressWidth;
+	context.arc(centerX, centerY, progressRadius, progressOffsetRadians, current_progress, false);
+	context.lineWidth = 5.5;
 	context.strokeStyle = '#ffc21c';
 	context.stroke();
+
+  // add circle at the tip of the current progress
+    context.beginPath();
+    context.arc(centerX + Math.cos(current_progress) * (progressRadius), centerY + Math.sin(current_progress) * (progressRadius) , 12, 0, circ);
+    context.fillStyle = 'rgba(255, 194, 28, 1)';
+    context.lineWidth = 14;
+    context.strokeStyle = 'rgba(255, 194, 28, 0.4)';
+    context.fill();
+    context.stroke();
+
 
 	//also update the time remaining (mm:ss)
 	timeRemaining.innerHTML = NumString(Math.floor(secondsLeft/60), 2) + ':' + NumString(Math.floor(secondsLeft % 60), 2);
@@ -115,7 +154,7 @@ function resetPlayer() {
 		context = canvas.getContext('2d');
 	audio.currentTime = 0; context.clearRect(0,0,canvas.width,canvas.height);
 	playpause.title = "Play";
-	playpause.innerHTML = '<i class="fa fa-play fa-3x"></i>';
+	playpause.innerHTML = '<i class="fa fa-play"></i>';
 }
 
 // thx to: http://www.adobe.com/devnet/html5/articles/html5-multimedia-pt3.html
