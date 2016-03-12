@@ -1,5 +1,5 @@
 <html>
-<p class = 'justify'>
+<p>
   By the time the Spanish flu pandemic was over in 1918, it had claimed an estimated
   50 million lives. Symptoms started like any ordinary flu, with a cough, chills
   and fever, but for many the symptoms could get so bad that they never recovered.
@@ -8,22 +8,20 @@
   immune system overreacted to the infection, killing the person in an attempt to
   get rid of the virus.
 </p>
-
-<p class = 'justify'>
+<p>
   In 2005, scientists managed to sequence the RNA genome of the virus responsible
   for the Spanish flu, after it was isolated from the frozen corpse of a native
   Alaskan woman who had been buried for nearly eighty years in permafrost. They
   discovered that this 1918 flu strain was in fact a subtype of the avian flu virus.
 </p>
-
-<p class = 'justify'>
+<p>
   Many more epidemics have struck the world since 1918. Recently in 2004, we have
   seen the avian flu H5N1, swine flu H1N1 in 2007, and another avian flu H7N9 in
   2013. Each of these made the headlines, threatening to become the next, long-feared,
   global pandemic, but each one was also rapidly contained by quarantine measures
   on an international scale.
 </p>
-<p class = 'justify'>
+<p>
   Yet in 2003, a new virus reminded us that flu is not the only pathogen we should
   be wary of. SARS, or Severe Acute Respiratory Syndrome, spread to 29 countries
   in just a few months, killing nearly 10 percent of the people it infected, and
@@ -31,16 +29,16 @@
   of the great importance of acting rapidly and globally to contain the spread of
   infectious diseases.
 </p>
-<p class = 'justify'>
+<p>
   However, the recent epidemic of Ebola in West Africa has again shown our unpreparedness
   in the face of emerging infections, especially in terms of vaccines and antiviral
   drugs. Why, almost 100 years after the Spanish flu, are we still so unprepared
   and heavily reliant on containment rather than protective measures?
 </p>
-<p class = 'justify'>
+<p>
   The problem lies in the nature of the viruses themselves.
 </p>
-<p class = 'justify'>
+<p>
   First of all, viruses not only use our living cells to replicate, but once inside
   the cell, they also systematically divert every cellular activity towards the
   generation of more copies of the virus itself. The inextricable link now established
@@ -48,7 +46,7 @@
   even for our own immune systems!) to discriminate between the two, and thus to
   destroy the virus without harming the cell.
 </p>
-<p class = 'justify'>
+<p>
   Secondly, viruses greatly differ in their composition, their target organs or
   cells, and their mechanism of infection. This makes it very difficult to identify
   common patterns that may help develop universal treatments. The vast majority of
@@ -58,7 +56,7 @@
   diversity of known and unknown viruses comes at a huge financial cost, and
   likely won’t be rapid enough to be sufficiently effective.
 </p>
-<p class = 'justify'>
+<p>
   Finally, we cannot predict when new viruses will emerge. The emergence of a new
   virus depends on a random combination of events that cause an existing virus,
   often infecting other animal species, to mutate in a very particular way that
@@ -68,7 +66,7 @@
   and animals in close enough contact to provide these mutated viruses the perfect
   environment to spread.
 </p>
-<p class = 'justify'>
+<p>
   And while viruses mutate and adapt quickly, introducing errors and alterations
   in their own genome, humans can’t. In front of a new virus rapidly spreading in
   our body, the immune system simply doesn’t have the time to evolve the correct
@@ -78,7 +76,7 @@
   epidemics on record, including the Spanish flu, SARS, and also for a number of
   viruses that cause haemorrhagic fever, like the dengue virus.
 </p>
-<p class = 'justify'>
+<p>
   It’s very hard to find a way to stop the unknown. We don’t know what a new virus
   will be like, and we don’t even know how our immune system will react to it. A
   deeper knowledge of the entire system, virus and cell, is required before we
@@ -92,13 +90,10 @@
   can help scientists advance their knowledge of infectious disease and develop
   new ways not only to contain, but also, and more importantly, to prevent and
   control infections.
-
 </p>
-<p class = 'justify'>
+<p>
   Our body doesn’t evolve at the same rate as viruses, but our scientific knowledge
   and progress do, and they are likely to be the most potent tools we have to free
   the world from pandemics.
-
 </p>
-
 </html>

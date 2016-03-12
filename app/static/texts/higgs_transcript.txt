@@ -26,7 +26,7 @@
     }
   }
 </style>
-<p class = 'justify'>
+<p>
   The Large Hadron Collider (or LHC) lies in a 27 km-long circular tunnel on the
   Swiss-French border near Geneva. It was built to collide protons together, head-on,
   at the highest energies ever achieved. These collisions allow the LHC to function
@@ -35,7 +35,7 @@
   and electrons – so far thought to not made up of even smaller particles – as
   well as potentially creating new particles, and discovering new forces between them.
 </p>
-<p class="justify">
+<p>
   The biggest discovery at the LHC so far was a new particle known as the Higgs
   boson. This particle was first postulated by a group of six physicists in 1964
   who were trying to come up with a way of allowing fundamental particles to have
@@ -43,7 +43,7 @@
   with a new quantum field, where the mass of a particle comes about via its
   interactions with this field.
 </p>
-<p class="justify">
+<p>
   This worked from a mathematical point of view, but it is a big leap to propose
   that such a quantum field really exists just based on theory. Some experimental
   evidence was required. The only direct way of obtaining such evidence would be
@@ -52,7 +52,7 @@
   particle: the Higgs boson. This is one of the things the LHC was designed to do,
   and in 2012, the new Higgs boson particle was discovered.
 </p>
-<p class="justify">
+<p>
   The two experiments involved, ATLAS and CMS, are now in the process of trying
   to measure as much about this boson as they can. So far, everything we know
   about it is consistent with it being the same Higgs boson as proposed in the
@@ -62,7 +62,7 @@
   might have expected.
 
 </p>
-<p class="justify">
+<p>
   The Higgs boson discovery was made under intense pressure: pressure of competition
   between ATLAS and CMS, and, at least initially, with the Tevatron experiments in
   the USA. Everyone was very excited, the media were following every twist and turn,
@@ -70,17 +70,17 @@
   collaboration. Here’s the first one:
 </p>
 
-<figure  class="figure_transcript">
+<figure class="figure_transcript">
   <img src="/static/Images/tr_image_higgs1.gif" class="higgs_image">
   <figcaption >  Animation 1: Mass distribution from photon-pair events (ATLAS experiment) </figcaption>
 </figure>
-<p class="justify">
+<p>
   To make this distribution, we collect proton-proton collisions and look for pairs
   of isolated high-energy photons resulting from the collisions. Photons are quanta
   of light, but the ones measured here are about ten billion times more energetic
   than photons of visible light.
 </p>
-<p class="justify">
+<p>
   Once we have two photons and their measured energies, we hypothesize that they
   were the result of the decay of some particle produced in the collision. We then
   combine their momenta to work out what the mass of that particle might be. In
@@ -90,7 +90,7 @@
   animation, mass is on the x-axis, and the number of pairs of photons created is
   on the y-axis.
 </p>
-<p class="justify">
+<p>
   As you watch the animation, you can see that, over time, more and more photon
   pairs are collected. There are fake “bumps” in the distribution everywhere, but
   these are statistically insignificant. That's when you have to keep calm and
@@ -99,12 +99,12 @@
   the photon pairs correctly – you calibrate the detector. How sure are you of
   where on the horizontal axis a given photon pair should appear?
 </p>
-<p class="justify">
+<p>
   Watch the distribution. Eventually it gets smoother, all except for a glitch
   around 125 GeV, which gets more and more significant until in the end there is
   a clear bump – this is the sign of a new particle.
 </p>
-<p class="justify">
+<p>
   In parallel, the other major distribution currently being shown in Animation 2
   is the mass distribution for “four-lepton” events.
 </p>
@@ -112,7 +112,7 @@
   <img src="/static/Images/tr_image_higgs2.gif" class="higgs_image">
   <figcaption >  Animation 2: Mass distribution from four-lepton events (ATLAS experiment) </figcaption>
 </figure>
-<p class="justify">
+<p>
   “Four leptons” means that, resulting from the collision, there were two electron-positron
   pairs or two muon-antimuon pairs, or one of each pair. If you combine the
   momenta of these four leptons to get a mass, you can search for a new particle.

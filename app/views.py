@@ -86,7 +86,7 @@ def static_from_root():
 "audiodoc function "
 
 # complete list of audiodocs
-all_audiodocs = ['flying_spying.json', 'flying_spying.json','blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['flying_spying.json','blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
@@ -141,20 +141,6 @@ def audiodoc(url):
     audiodocs = ad_fun(audiodoc_list)
 
     return render_template('audiodoc.html', audiodocs=audiodocs)
-
-"----------------------------------------------------------------------------------------------------"
-" TEST: audiodoc page with circular player (only looks good on mobile) "
-
-@app.route('/circular_audiodoc/<url>')
-def circular_audiodoc(url):
-
-    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-
-    audiodocs = ad_fun(audiodoc_list)
-
-    return render_template('audiodoc_old.html', audiodocs=audiodocs)
-
-
 
 
 "----------------------------------------------------------------------------------------------------"

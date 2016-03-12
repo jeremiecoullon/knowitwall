@@ -1,7 +1,5 @@
-<html>
-<p class = 'audiodoc_abstract-bio justify'>Martin is a Professor of Geosciences and co-director of the
+Martin is a Professor of Geosciences and co-director of the
   Grantham Institute for Climate Change at Imperial College London. His research,
   in the field of glaciology, involves acquiring data from unexplored parts of
   Antarctica and exploring Antarctic subglacial lakes for signs of life. He is
   well known among his students for telling the best stories about Antarctic explorers.
-</html>

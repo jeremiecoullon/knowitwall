@@ -1,9 +1,4 @@
-<html>
-  <p class = 'audiodoc_abstract-bio justify'>
-    Ian is a postdoctoral researcher in geography at the University of Oxford.
-    When he’s not collecting data from African deserts, he works on trying to improve
-    the way that mineral dust is modelled in the UK Met Office’s climate model.
-    He also loves cycling and ​<i>The Great British Bake Off</i>.
-
-  </p>
-</html>
+Ian is a postdoctoral researcher in geography at the University of Oxford.
+When he’s not collecting data from African deserts, he works on trying to improve
+the way that mineral dust is modelled in the UK Met Office’s climate model.
+He also loves cycling and ​<i>The Great British Bake Off</i>.

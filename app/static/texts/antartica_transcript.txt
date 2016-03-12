@@ -1,11 +1,11 @@
 <html>
-<p class = 'justify'>More than 2300 years ago, in a time when much of the world
+<p>More than 2300 years ago, in a time when much of the world
   was unknown to Europeans, Greek philosopher Aristotle hypothesized that a substantial
   southern land mass in the southern hemisphere was necessary to balance the
   continents in the North. The idea of the imaginary land 'Antarctica' was so
   influential that 15th- to 17th-century maps commonly included a significant
   body of land across the southern hemisphere, based on no actual information! </p>
-<p class = 'justify'> The first major piece of knowledge about Antarctica wasn’t
+<p> The first major piece of knowledge about Antarctica wasn’t
   formed until the late 18th century with the three circumnavigation voyages of
   Captain Cook. Specifically, his failure to discover Antarctica during his second
   voyage demonstrated that open ocean lay where maps had predicted Antarctic land.
@@ -14,18 +14,18 @@
   in 1895, a group of Norwegian explorers became the first to set foot on the
   Antarctic continent.
 </p>
-<p class = 'justify'>The International Geophysical Year, 1957, was the herald of
+<p>The International Geophysical Year, 1957, was the herald of
   a major phase of glaciological discovery, using geophysical techniques to measure
   the depth of the ice for the first time. Chief among these was seismic surveying.
 </p>
-<p class = 'justify'>Seismic surveying is a process where acoustic or sound waves
+<p>Seismic surveying is a process where acoustic or sound waves
   emitted near the ice surface, usually in the form of a controlled explosion, are
   reflected off the base of the ice sheet and measured upon their return to the
   ice surface. As the velocity of sound in ice is known, the time taken between
   the explosion and the recording of the reflected waves can be converted to
   ice depth.
 </p>
-<p class = 'justify'> This method is very good for measuring ice thickness, but
+<p> This method is very good for measuring ice thickness, but
   it has a big limitation: the amount of time needed to acquire a single point
   of data. To do the experiment, each seismic charge must be set in a borehole
   around 40 metres deep, next to another hole of similar depth where seismometers
@@ -37,7 +37,7 @@
   metres thick in some places. Still, there had to be a better way to collect data
   about ice thickness.
 </p>
-<p class = 'justify'> In the 1950s, Gordon Robin, an Australian physicist and
+<p> In the 1950s, Gordon Robin, an Australian physicist and
   long-term director of the Scott Polar Research Institute in Cambridge, had
   perfected the art of seismic surveying on ice as part of his doctoral research.
   By using aircraft-mounted equipment to perform radio echo-sounding, rather than
@@ -51,7 +51,7 @@
   dating back many millions of years.
 
 </p>
-<p class = 'justify'>In more recent times, several programmes have unveiled over
+<p>In more recent times, several programmes have unveiled over
   400 lakes beneath the ice, some of which leak their water to form ever-changing
   rivers flowing over hundreds of kilometres. They have also discovered mountains
   ranges, from which our comprehension of Antarctica’s role in the tectonic
@@ -59,7 +59,7 @@
   have improved knowledge of the ice sheet at its boundary with the ocean – and
   this is where things get serious for us all.
 </p>
-<p class = 'justify'>The Antarctic Ice Sheet is known to be losing mass in several
+<p>The Antarctic Ice Sheet is known to be losing mass in several
   places. This is due to it melting because of relatively warm ocean water in
   contact with the grounded ice sheet. In such places the ice sheet rests on a bed
   several hundred metres below sea level, and slopes down, back toward the ice
@@ -72,7 +72,7 @@
   than 1 metre per century, but such an increase would lead to the submerging of
   many low lying regions of the world by 2100.
 </p>
-<p class = 'justify'> Our knowledge of the Antarctic continent is a direct result
+<p> Our knowledge of the Antarctic continent is a direct result
   of the exploration that precedes us. Yet, we still know little about so much of
   it. There are two places, for example, where one can stand on the Ice Sheet and
   be over 200 kilometres from a single point of data. Given the role Antarctica

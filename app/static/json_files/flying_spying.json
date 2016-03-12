@@ -5,7 +5,7 @@
     "topic_image": "/static/Images/TI_flying_spying.jpg",
     "topic_image_home": "/static/Images/TI_flying_spying_home.jpg",
     "topic_image_box": "/static/Images/TI_flying_spying_box.jpg",
-    "image_credits": "Jacopo de’ Barbari; Anton Kolb, Italian (Venetian), c. 1460/70-before 1516. View of Venice, 1500. Woodcut from six blocks on six sheets of paper, 132.72 x 277.5 cm (sheet), 153.35 x 300.04 cm (outer frame). Minneapolis Institute of Arts, The John R. Van Derlip Fund 2010.88. Photo: Minneapolis Institute of Arts",
+    "image_credits": "View of Venice, 1500. Jacapo de' Barbari.",
     "by_in_colour":"#FFFFFF",
     "discipline": "History",
     "og_name": "Flying and Spying",
@@ -14,8 +14,8 @@
     "author_name": "Zoltan Biedermann",
     "author_image": "/static/Images/author_Zoltan_Biedermann.jpg",
     "author_bio": "app/static/texts/flying_spying_author_bio.html",
-    "music_credits": "",
-    "narration_credits": "Vidish Athavale",
+    "music_credits": "Adam Selzer, Kai Engel, Addam Farmer, Lee Rosevere and Mark Petrie",
+    "narration_credits": "Angus Waite",
     "transcript": "app/static/texts/flying_spying_transcript.html",
     "audio_mp3": ""
 }

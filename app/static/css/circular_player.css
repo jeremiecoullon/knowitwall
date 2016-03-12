@@ -1,6 +1,6 @@
 
 /*force height manually to make room for the circular player on mobile*/
-@media(max-width:768px){
+@media(max-width:767px){
 	#switching_audioplayers{
 		position: relative;
 		height: 220px;

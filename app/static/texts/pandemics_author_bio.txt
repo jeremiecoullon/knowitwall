@@ -1,9 +1,5 @@
-<html>
-  <p class = 'audiodoc_abstract-bio justify'>
-    Michela is a Research Associate at UCL's Laboratory for Molecular Cell Biology,
-    where she works on the development of a new broad-spectrum antiviral drug and
-    tries to understand the molecular basis of the interaction between viruses
-    and cells. She likes to spend her free time enjoying modern art, friends’ company,
-    and a good sci-fi book.
-  </p>
-</html>
+Michela is a Research Associate at UCL's Laboratory for Molecular Cell Biology,
+where she works on the development of a new broad-spectrum antiviral drug and
+tries to understand the molecular basis of the interaction between viruses
+and cells. She likes to spend her free time enjoying modern art, friends’ company,
+and a good sci-fi book.

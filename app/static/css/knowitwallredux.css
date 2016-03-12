@@ -481,7 +481,7 @@ text-align: left;
 /* to center the last boxes on the homepage */
 
 .last_boxes_center{
-  margin-left: 12.5%;
+  margin-left: 0%;
 }
 @media(max-width:767px){
   .last_boxes_center{
@@ -539,6 +539,7 @@ text-align: left;
 
 .transcript{
 padding: 40px;
+text-align: justify;
 }
 .transcript p {
   line-height: 170%;
@@ -553,7 +554,11 @@ padding: 40px;
     font-size: 1.2em;
     }
 }
-
+@media(max-width:599px){
+  .transcript{
+    text-align: left;
+  }
+}
 
 #layout {
 padding:40px;

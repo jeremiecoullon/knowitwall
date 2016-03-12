@@ -1,7 +1,4 @@
-<html>
-<p class = 'audiodoc_abstract-bio justify'>Susannah is a Junior Research Fellow at Imperial College London,
-  where she uses geology to examine patterns of dinosaur diversity. When not
-  fiddling about with stegosaurs, she spends her time taming a toddler and mountain
-  biking, with variable success in each case, and not necessarily at the same time.
-</p>
-</html>
+Susannah is a Junior Research Fellow at Imperial College London,
+where she uses geology to examine patterns of dinosaur diversity. When not
+fiddling about with stegosaurs, she spends her time taming a toddler and mountain
+biking, with variable success in each case, and not necessarily at the same time.
