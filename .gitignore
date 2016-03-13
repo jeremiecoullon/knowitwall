@@ -60,3 +60,4 @@ venv/
 #gunicorn config file
 gunicorn.conf.py
 .DS_store
+app/static/audio/.DS_store
