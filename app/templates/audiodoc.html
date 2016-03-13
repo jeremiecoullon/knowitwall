@@ -329,8 +329,8 @@
     </div>
     <div class="container previous-audiodoc">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center" style="padding-bottom: 20px;">
-          <p class="audiodoc_abstract-bio">{{audiodocs[0].topic_description | safe}}</p>
+        <div class="col-lg-10 col-lg-offset-1 text-center" >
+          <p class="audiodoc_bio">{{audiodocs[0].topic_description | safe}}</p>
           <p class="audiodoc_narrate-credits">narrated by {{ audiodocs[0].narration_credits }}</p>
           <p class="audiodoc_narrate-credits">music by {{ audiodocs[0].music_credits }}</p>
         </div>
@@ -382,7 +382,7 @@
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
-              <p class="audiodoc_abstract-bio justify"> {{ audiodocs[0].author_bio | safe}} </p>
+              <p class="audiodoc_abstract justify"> {{ audiodocs[0].author_bio | safe}} </p>
               </div>
             </div>
           </div>

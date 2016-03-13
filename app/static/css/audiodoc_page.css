@@ -2,15 +2,23 @@
 /**/
 /* scroll down arrow */
 
-.audiodoc_abstract-bio{
+.audiodoc_abstract{
   font-size:20px;
+}
+.audiodoc_bio{
+  font-size:20px;
+  margin-bottom:20px;
 }
 .audiodoc_narrate-credits{
   font-style:italic;
 }
 @media(max-width:768px){
-  .audiodoc_abstract-bio{
+  .audiodoc_abstract{
     font-size:18px;
+  }
+  .audiodoc_bio{
+    font-size:18px;
+    margin-bottom:10px;
   }
   .audiodoc_narrate-credits{
     font-size:18px;
