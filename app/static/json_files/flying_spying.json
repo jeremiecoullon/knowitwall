@@ -11,11 +11,11 @@
     "og_name": "Flying and Spying",
     "og_description": "The popular trend for drones has highlighted an old human desire: to see the world from above and look upon the lives of those below. But how was this desire satisfied in a world before flying and spying? Zoltán Biedermann takes us to Renaissance Italy to find the expression of an earlier form of voyeurism.",
     "topic_description": "The popular trend for drones has highlighted an old human desire: to see the world from above and look upon the lives of those below. But how was this desire satisfied in a world before flying and spying? Zoltán Biedermann takes us to Renaissance Italy to find the expression of an earlier form of voyeurism.",
-    "author_name": "Zoltan Biedermann",
+    "author_name": "Zoltán Biedermann",
     "author_image": "/static/Images/author_Zoltan_Biedermann.jpg",
     "author_bio": "app/static/texts/flying_spying_author_bio.html",
-    "music_credits": "Adam Selzer, Kai Engel, Addam Farmer, Lee Rosevere and Mark Petrie",
+    "music_credits": "Kai Engel and Lee Rosevere",
     "narration_credits": "Angus Waite",
     "transcript": "app/static/texts/flying_spying_transcript.html",
-    "audio_mp3": ""
+    "audio_mp3": "http://knowitwall.com/audio/flying_spying.mp3"
 }
