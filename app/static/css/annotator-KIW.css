@@ -123,6 +123,23 @@
     -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
 }
+/*popup box to write the annotation is back how it was originally*/
+.annotator-write-annotation{
+  margin: 0;
+  padding: 0;
+  bottom: 15px;
+  left: -18px;
+  min-width: 265px;
+  background-color: rgba(251, 251, 251, 0.98);
+  border: 1px solid rgba(122, 122, 122, 0.6);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 .annotator-invert-x .annotator-widget {
     left: auto;
