@@ -250,7 +250,7 @@
   Util.mousePosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
-    if ($(document).width() < 1707) {
+    if ($(document).width() < 768) {
       return {
         top: e.pageY - offset.top,
         left: e.pageX - offset.left
