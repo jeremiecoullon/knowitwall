@@ -1,5 +1,5 @@
 <html>
-  <p class = "justify">
+  <p>
     Hands up who knows what <i>Stegosaurus</i> is? Pretty much every 7
     year old in the world can tell you that <i>Stegosaurus</i> was a plant-eating
     dinosaur which walked on four legs, and possessed two rows of bony plates and spines that
@@ -8,7 +8,7 @@
     fossils are actually really rare – and that causes lots of problems if we want
     to understand how they lived, and what they were doing with those bony plates
     and spines. </p>
-  <p class="justify">
+  <p>
     Stegosaurs are bird-hipped dinosaurs, which means they are
     closely related to dinosaurs like <i>Ankylosaurus</i>, <i>Iguanodon</i> and <i>Triceratops</i>,
     but more distantly related to the lizard-hipped dinosaurs, which included the
@@ -16,7 +16,7 @@
     as <i>T. rex</i>, and of course the birds, which are the direct descendants of the
     dinosaurs.
   </p>
-  <p class="justify">
+  <p>
     Stegosaurs lived in a time period called <i>the Late Jurassic</i>, from about 165 to
     145 million years ago. The first dinosaurs evolved about 235 million years ago,
     and the last dinosaurs – if we exclude the birds – went extinct at the end
@@ -27,7 +27,7 @@
     fossils have been found on all continents except Australia and Antarctica,
     suggesting that, while they may have been rare, they were widespread.
   </p>
-  <p class="justify">
+  <p>
     So that’s some of the things the fossil record tells us about the stegosaurs.
     But what was the function of the two rows of bony plates and spines on their
     backs? What were they <i>for</i>? Understanding what the plates and spines were
@@ -35,14 +35,13 @@
     – whether they were warm blooded or cold blooded, whether they were social
      animals or lived individually. A few leading theories have thus been suggested.
   </p>
-  <p class="justify"> One theory is that the rows of plates and spines were for
+  <p> One theory is that the rows of plates and spines were for
     defence. Any large, meat-eating dinosaur attacking from above would receive
     a mouthful of spikes if it tried to attack a stegosaur. And the spikes at the
     end of the stegosaur’s tail could be swung to impale the leg of any predator
     daring enough to get too close.
   </p>
-
-  <p class="justify"> What does the fossil record say about this? Well, there is
+  <p> What does the fossil record say about this? Well, there is
     a vertebra – a bone from the back – of the meat-eating dinosaur <i>Allosaurus</i>,
     likely <i>Stegosaurus’</i> most fearsome predator. The vertebra has been punctured,
     and the bone has healed in a ring. Insert a <i>Stegosaurus</i> tail spike into the
@@ -54,7 +53,7 @@
     munching on a <i>Stegosaurus</i> plate would probably have been like eating a pack
     of Pringles!
   </p>
-  <p class="justify"> So what could explain why the plates of <i>Stegosaurus</i> evolved?
+  <p> So what could explain why the plates of <i>Stegosaurus</i> evolved?
     According to another theory, they evolved to control body temperature. The
     dinosaurs were probably cold-blooded, so would have had to rely on some aspects
     of their environment to regulate their body temperature. The plates of
@@ -62,13 +61,13 @@
     suggesting the animal could have pumped blood into the plates, perhaps allowing
     it to cool down.
   </p>
-  <p class="justify"> However, the plates of other stegosaurs, such as <i>Kentrosaurus</i>
+  <p> However, the plates of other stegosaurs, such as <i>Kentrosaurus</i>
     from Tanzania, or <i>Chungkingosaurus</i> from China, are much smaller than those of
     <i>Stegosaurus</i>, and they probably weren’t large enough to act as heat radiators.
     <i>Stegosaurus</i> might have used its plates to help it cool down, but it doesn’t seem
     like that’s why they evolved. It looks like we are running out of options…
   </p>
-  <p class="justify"> But are we really? The final leading theory that has been
+  <p> But are we really? The final leading theory that has been
     suggested is that the plates and spikes were simply display structures: they
     were used to identify members of the same species, to make sure the animal was
     mating with its own kind, or perhaps they just made the stegosaur look larger
@@ -77,7 +76,7 @@
     different species of stegosaurs had different shaped plates and spikes,
     lending some credence to this theory.
   </p>
-  <p class="justify"> It seems likely that all three of these theories might be
+  <p> It seems likely that all three of these theories might be
     right in one way or another. While stegosaur plates might not have been any
     good for defence, stegosaur tail spikes were probably fearsome weapons. <i>Stegosaurus</i>
     might have used its plates as heat radiators, even if they weren’t so
@@ -86,7 +85,5 @@
     are to understand more about these fascinating, iconic animals, our search
     for more stegosaur fossils, especially ones that represent complete skeletons,
     cannot stop here: we need to keep digging deep.
-
   </p>
-
 </html>

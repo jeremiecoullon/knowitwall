@@ -1,45 +1,45 @@
 <html>
-<p class = 'justify'>From the point of view of the universe, our everyday concerns, goals, failures and achievements are uneventful occurrences.
+<p>From the point of view of the universe, our everyday concerns, goals, failures and achievements are uneventful occurrences.
 Until fairly recently, at the beginning of the 20th century, we thought that the Milky Way galaxy made up everything that there is,
 the entire universe. We thought that its 100+ <i>billion</i> stars – of which the Sun is but one – exhausted the number of stars that there are in space.
 It turns out that today we know the Milky Way is but one of over 100 billion <i>galaxies</i> that populate the universe. This vastness is overwhelming,
 overwhelming to the point of frightening us. This fear is understandable, however. The universe is so great that the rise of a civilization like
 ours might not be a one-off event, but an event that occurs all the time. The emergence and persistence of life, including intelligent life,
 may be no rarity. The universe may be rippling with life. But if that’s the case, where does this alien life hide? </p>
-<p class = 'justify'> Maybe much closer than we would expect. Living creatures, as we know them, require water to survive, so
+<p> Maybe much closer than we would expect. Living creatures, as we know them, require water to survive, so
   our best shot at finding them involves first determining which environments possess water in large quantities.
   In the last few years, our best shot at finding water hasn’t been with other Solar System planets, not even Mars,
    but with Solar System <i>moons</i>, with the most recent space missions taking place around Jupiter and Saturn.
 </p>
-<p class = 'justify'> And this is where things get interesting: Ganymede, the largest of Jupiter’s moons, is almost entirely
+<p> And this is where things get interesting: Ganymede, the largest of Jupiter’s moons, is almost entirely
   made up of water ice. This fact raises a question: if there is ice all around the surface and down to almost
   600 km under it, could that ice melt into liquid water? We know that the further underground we go, the warmer it gets.
   Hence, there could be a certain depth where it gets hot enough for water to exist in its liquid form.
   The problem then becomes: how can you detect liquid water that’s covered by a large layer of ice? </p>
-<p class = 'justify'> The answer is electricity. Our oceans are excellent conductors of electrical currents.
+<p> The answer is electricity. Our oceans are excellent conductors of electrical currents.
   (This is why swimming during a storm is a really bad idea – you might be electrocuted!)
   On Earth, electrical currents on the water surface produce oscillations in the magnetic field
   that spread upwards and can be picked up by instruments on orbiting satellites. If a satellite picks
    up these signals, we can suspect that there is an ocean below it, potentially harbouring life.</p>
-<p class = 'justify'>But there are no storms on these moons. And even if there were, the lightning couldn’t reach the
+<p>But there are no storms on these moons. And even if there were, the lightning couldn’t reach the
   water several kilometres below. So if there are oceans below the ice on Ganymede, how can we tell that they’re there? </p>
-<p class = 'justify'>The mechanism involved is very common, and is something used in everyday life. The process, called <i>magnetic induction</i>,
+<p>The mechanism involved is very common, and is something used in everyday life. The process, called <i>magnetic induction</i>,
    allows us to convert motion into electricity, or electricity into motion. Take your electric toy car, for example: open it
    and you will find a chunk of copper wires surrounded by a ring of magnets. When the magnets rotate around the copper wires,
    electricity is created in them.
  </p>
-<p class = 'justify'> So, a fact to remember: if something conductive wiggles near a magnet, you get a magnetic field.
+<p> So, a fact to remember: if something conductive wiggles near a magnet, you get a magnetic field.
   So, if there are oceans under the ice on Ganymede, they could act as a conductive wire that carries electrical currents.
   So what could play the role of a magnet? Well, Jupiter has the largest magnetic field of any planet in the Solar System.
   On top of that, we have motion due to the orbit of the moons around Jupiter. So, we have the perfect recipe for electricity:
   a wire (which could be the oceans), a magnet (which would be Jupiter), and movement (which is the orbit). We know that
    there is a magnet and movement. So, if a magnetic field is detected on Ganymede, there must be oceans conducting the electricity!
 </p>
-<p class = 'justify'>This is why we think that oceans exist underneath the large layer of ice on Ganymede: in the 1990s,
+<p>This is why we think that oceans exist underneath the large layer of ice on Ganymede: in the 1990s,
   the instruments aboard a satellite picked up a very large magnetic field. This large magnetic field could only
   have been created by the existence of such oceans.
  </p>
- <p class = 'justify'>There is still a lot we don’t know about the oceans though. Our last mission measuring this magnetic field ended in 1995.
+ <p>There is still a lot we don’t know about the oceans though. Our last mission measuring this magnetic field ended in 1995.
     But in approximately 2030 a new space mission by the European Space Agency will seek to observe Ganymede in detail.
     It will hopefully confirm the existence of these oceans, providing us with evidence for a potential habitat for alien
     life in our very own Solar System! </p>

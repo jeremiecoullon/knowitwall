@@ -1,8 +1,1 @@
-<html>
-  <p class = 'justify'>
-    Flavia is a Brazilian biologist working on memory and ageing at the Institute of
-    Cognitive Neuroscience at UCL. When not busy with her research, she likes to
-    get involved in the organization of science events and festivals in different
-     cities. No less important, she has a love for monkeys, travelling and chocolate desserts.
-  </p>
-</html>
+Flavia is a Brazilian biologist working on memory and ageing at the UCL Institute of Cognitive Neuroscience. When not busy with her research, she likes to get involved in the organization of science events and festivals in different cities. No less important, she has a love for monkeys, travelling and chocolate desserts.

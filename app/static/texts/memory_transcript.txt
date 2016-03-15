@@ -1,5 +1,5 @@
 <html>
-  <p class = 'justify'>
+  <p>
     I can’t ride a bike. For some reason I’ve never tried to learn it. But people
     kept telling me: ‘You should learn! It’s very easy, and once you learn how to
     ride a bike, you’ll never forget.’ <i>Once you learn how to ride a bike, you’ll
@@ -7,23 +7,17 @@
     have even said it yourself! But how then, at the same time, do we keep forgetting
     where we leave our keys?
   </p>
-  <p class = 'justify'>
-    Our understanding of human memory was revolutionized in the 1950s, when neurosurgeon
-    William Scoville performed surgery on Henry Molaison’s brain. Henry used to
-    suffer from severe epileptic seizures, until Scoville removed the left and
-    right portions of his hippocampus, a structure in the shape of a seahorse towards
-    the medial temporal lobe of the brain. Hippocampus functions weren’t fully
-    understood at the time, but the surgery was successful in its primary goal:
-    Henry’s seizures were greatly reduced. But so was his memory!
+  <p>
+    Our understanding of human memory was revolutionized in the 1950s, when neurosurgeon William Scoville operated on Henry Molaison’s brain. Henry used to suffer from severe epileptic seizures, until Scoville removed the left and right portions of his hippocampus, a structure in the shape of a seahorse towards the medial temporal lobe of the brain. Hippocampus functions weren’t fully understood at the time, but the surgery was successful in its primary goal: Henry’s seizures were greatly reduced. But so was his memory!
   </p>
-  <p class = 'justify'>
+  <p>
     After the surgery, Henry developed an anterograde amnesia, which meant that,
     until he passed away in 2008, he couldn’t create new memories. He couldn’t
     retain a new face, name, address, or remember having done a certain activity.
     He also developed a retrograde amnesia, which made him forget many things
     that had happened during the years before his surgery.
   </p>
-  <p class = 'justify'>
+  <p>
     To investigate the case of Henry Molaison, a group of neuropsychologists, led
     by Dr. Brenda Milner and Dr. Suzanne Corkin, worked with Henry over many years,
     asking him to perform different memory tasks. Each time the researchers met
@@ -37,11 +31,11 @@
     period, although on the second and third days he was not aware of having done
     the task before.
   </blockquote>
-  <p class = 'justify'>
+  <p>
     But how could this be? How was it that Henry was unable to create new
     memories and yet improved on some memory tasks?
   </p>
-  <p class = 'justify'>
+  <p>
     After several studies, many researchers started to suggest that memory is
     actually formed by separate, though interacting, classes of memories. Some
     memories can be kept for decades, even a lifetime. These are called long-term
@@ -56,7 +50,7 @@
     memories</i>. These are the types of memory that Henry lost and couldn’t create
     after his surgery.
   </p>
-  <p class = 'justify'>
+  <p>
     The twist in the tale was that Henry’s brain was still able to build another
     group of memories within the long-term memory class, called <i>implicit (or non-declarative)
     memories</i>. They receive this name because the information stored is retrieved
@@ -72,21 +66,14 @@
     be recovered from the cerebellum and your motor cortex will respond appropriately.
 
   </p>
-  <p class = 'justify'>
+  <p>
     So, even if you spend years without riding a bike, playing an instrument or
     swimming, next time you see a bike, a guitar or a lake, what you learned the
     first times you tried those activities will automatically and effortlessly
     come back to you. These are the types of memory that Henry did not lose, and
     that allowed him to improve on certain memory tasks, like the mirror-drawing task.
   </p>
-  <p class = 'justify'>
-    What does all this mean? It means that an explicit memory requires the presence
-    of the hippocampus and more complex cognitive processes, like attention and
-    conscious recall. On the other hand, implicit memories make use of structures
-    that were spared in Henry’s surgery, and are created by retaining connections
-    between sensory stimuli and behavioural responses. That’s one of the reasons
-    why it may be easier to remember what you learned twenty years ago, such as
-    how to ride a bike, than to remember where you left your keys five minutes ago.
-    After all, some things, when learned, are never forgotten.
+  <p>
+    What does all this mean? It means that an explicit memory requires the presence of the hippocampus and more complex cognitive processes, like attention and conscious recall. On the other hand, implicit memories make use of structures that were spared in Henry’s surgery, and are created by retaining connections between sensory stimuli and behavioural responses. That’s one of the reasons why it might be easier to remember what you learned twenty years ago, such as how to ride a bike, than to remember where you left your keys five minutes ago. And maybe it’s time for me to finally learn how to ride a bike, too. After all, some things, when learned, are never forgotten.
   </p>
 </html>

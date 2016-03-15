@@ -1,4 +1,4 @@
-Knowitwall
+ Knowitwall
 ==========
 
 To get Knowitwall running locally:

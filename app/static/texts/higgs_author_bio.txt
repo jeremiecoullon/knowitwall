@@ -1,9 +1,5 @@
-<html>
-  <p class = 'justify'>
-    Jonathan is a Professor of Physics at UCL, head of the Department of Physics
-    & Astronomy, and a member of the ATLAS experiment at CERN's Large Hadron Collider.
-    He writes regularly for ​<i>The Guardian</i>​ and has recently published ​<i>Smashing Physics</i>, 
-    a book​ on his experiences of the discovery of the Higgs boson that was shortlisted
-    for the 2015 Royal Society Winton Prize for Science Books.
-  </p>
-</html>
+Jonathan is a Professor of Physics at UCL, head of the Department of Physics
+& Astronomy, and a member of the ATLAS experiment at CERN's Large Hadron Collider.
+He writes regularly for ​<i>The Guardian</i>​ and has recently published ​<i>Smashing Physics</i>,
+a book​ on his experiences of the discovery of the Higgs boson that was shortlisted
+for the 2015 Royal Society Winton Prize for Science Books.

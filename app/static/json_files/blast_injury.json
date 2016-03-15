@@ -1,0 +1,22 @@
+{
+    "url": "blast_injury",
+    "unique_id": "Mayhew_blast",
+    "topic_name": "The shot without a bullet: Blast injury",
+    "topic_image": "/static/Images/TI_blast_injury.jpg",
+    "topic_image_home": "/static/Images/TI_blast_injury_home.jpg",
+    "topic_image_box": "/static/Images/TI_blast_injury_box.jpg",
+    "image_credits": "Canadian machine gunners on Vimy Ridge, France, 1917",
+    "by_in_colour":"black",
+    "by_in_colour_box":"white",
+    "discipline": "History of Science",
+    "og_name": "The shot without a bullet: Blast injury",
+    "og_description": "Warfare has given rise to an invisible killer, one that was first discovered in World War I, attacking soldiers even after they had returned home to their families. Historian of science Emily Mayhew takes us through the story so far.",
+    "topic_description": "Warfare has given rise to an invisible killer, one that was first discovered in World War I, attacking soldiers even after they had returned home to their families. Historian of science Emily Mayhew takes us through the story so far.",
+    "author_name": "Emily Mayhew",
+    "author_image": "/static/Images/author_Emily_Mayhew.jpg",
+    "author_bio": "app/static/texts/blast_injury_author_bio.html",
+    "music_credits": "Kai Engel",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "app/static/texts/blast_injury_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/blast_injury.mp3"
+}

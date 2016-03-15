@@ -3,9 +3,10 @@
     "unique_id": "Rene_Weis",
     "topic_name": "The real Shakespeare?",
     "topic_image": "/static/Images/TI_shakespeare.jpg",
-    "topic_image_home": "/static/Images/TI_shakespeare_box.jpg",
+    "topic_image_home": "/static/Images/TI_shakespeare_home.jpg",
     "topic_image_box": "/static/Images/TI_shakespeare_box.jpg",
     "image_credits": "Martin Droeshout, <i>William Shakespeare (1564-1616)</i>. Engraving. <a href='http://goo.gl/zLjeVI' target='_blank'>British Museum</a> [<a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a>]",
+    "by_in_colour":"black",
     "discipline": "English Literature",
     "og_name": "The real Shakespeare?",
     "og_description": "Is William Shakespeare of Stratford-upon-Avon the real author of the Shakespearean plays? The so-called anti-Stratfordians think not. The Shakespeare scholar René Weis disagrees and presents three pieces of evidence against conspiracy theories.",
@@ -15,6 +16,6 @@
     "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
     "music_credits": "Chris Zabriskie, John Dowland (performed by David Hernández Romero) and Sergey Chereminisov",
     "narration_credits": "Angus Waite and Vidish Athavale",
-    "transcript": "app/static/texts/real_shakespeare_transcript.txt",
+    "transcript": "app/static/texts/real_shakespeare_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/real_shakespeare.mp3"
 }

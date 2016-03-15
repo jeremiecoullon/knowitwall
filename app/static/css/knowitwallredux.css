@@ -392,52 +392,35 @@ text-align: left;
   header .container {
   padding-top: 150px;
   padding-bottom: 150px;
-
-
 }
-
 }
 
 /*--ABOUT--*/
-
 #about-left {
-
     text-align:right;
     font-size:1.5em;
     margin-top:50px;
     margin-bottom:50px;
     padding-right:40px;
 }
-
  @media(max-width:768px) {
 #about-left {
-
- font-size: 1em
-
+ font-size: 1em;
 }
 }
-
-
-
 .comments-button {
-
     width:90%;
     margin-right: auto;
     margin-left:auto;
     text-align: center;
-
 }
-
 .transcript-button {
     width:90%;
     margin-right: auto;
     margin-left:auto;
     margin-top: 20px;
-
 }
-
 .btn-info:focus {
-
   color: #464655;
   background-color: #FFFFFF;
   border-color: #454654;
@@ -468,16 +451,12 @@ text-align: left;
 
 @media(max-width:768px) {
 #contribute-left {
-
-
     font-size:1em;
     margin-top:0px;
-
 }
 }
 
 .episode-title {
-
   font-size:3em;
   font-family: 'Lato';
   font-weight: 300;
@@ -502,9 +481,9 @@ text-align: left;
 /* to center the last boxes on the homepage */
 
 .last_boxes_center{
-  margin-left: 37.5%;
+  margin-left: 0%;
 }
-@media(max-width:561px){
+@media(max-width:767px){
   .last_boxes_center{
     margin-left: 0%;
   }
@@ -517,7 +496,7 @@ text-align: left;
   color: #1E1F23;
   font-size: 1em;
   padding: 1em 2em;
-   min-height: 230px;
+   min-height: 250px;
 }
 @media(max-width:561px){
   .episode-description{
@@ -540,12 +519,8 @@ text-align: left;
 
 @media(max-width:768px) {
 .contact-title {
-
   font-size: 1em;
   width:100%;
-
-
-
 }
 }
 
@@ -564,6 +539,7 @@ text-align: left;
 
 .transcript{
 padding: 40px;
+text-align: justify;
 }
 .transcript p {
   line-height: 170%;
@@ -575,9 +551,14 @@ padding: 40px;
   }
   .transcript p {
     line-height: 140%;
+    font-size: 1.2em;
     }
 }
-
+@media(max-width:599px){
+  .transcript{
+    text-align: left;
+  }
+}
 
 #layout {
 padding:40px;
@@ -617,6 +598,11 @@ padding:40px;
   padding: 0px 280px 20.5px 20px;
 }
 
+@media(max-width: 700px){
+  .navbarADpage {
+    padding: 0px 0px 20.5px 20px;
+  }
+}
 
 @media(max-width:400px) {
 
@@ -642,35 +628,27 @@ padding:40px;
         padding-top: 300px;
         padding-bottom: 360px;
     }
-
     header .intro-text .name {
         font-size: 4.75em;
     }
-
     header .intro-text .skills {
         font-size: 1.75em;
     }
 }
-
 @media(min-width:768px) {
-
-
 /* this says how  the nav bar transition happens, but not when */
-
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
-
     @media (max-width: 991px) {
 .navbar-fixed-top .navbar-brand {
   font-size: 1.5em;
@@ -722,6 +700,7 @@ padding:40px;
 .navbar-default {
   background-color: #27282D;
   border-color: transparent;
+  padding: 0px
 }
 }
 /* end of 'make the navbar solid throughout' */
@@ -998,11 +977,12 @@ footer .footer-below {
     color: #44F;
 }
 
-audio, canvas, progress, video {
+/*This affected the circular player (don't what why this is here anyways..)*/
+/*audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;
   max-height: 150px;
-}
+}*/
 
 .top-border-ireg {
 

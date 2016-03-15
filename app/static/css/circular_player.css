@@ -1,0 +1,246 @@
+
+/*force height manually to make room for the circular player on mobile*/
+@media(max-width:767px){
+	#switching_audioplayers{
+		position: relative;
+		height: 220px;
+	}
+}
+/* Centering */
+#circular_container, #circular_progress, #circular_player,.circular_cover {
+	  position: absolute;
+	  margin-left: 7%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+  	bottom: 0;
+}
+/*iphone 4 and 5*/
+@media(max-width:359px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 6%;
+	}
+}
+/* positioning for nexus5 */
+@media(min-width:360px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 9%;
+	}
+}
+/* positioning for iphone 6 */
+@media(min-width:375px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 10%;
+	}
+}
+
+/* positioning for nexus 6 */
+@media(min-width:412px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 12%;
+	}
+}
+/* nexus 4 */
+@media(min-width:600px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 20%;
+	}
+}
+/*iphone 4 portrait mode*/
+@media(min-width:480px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 15%;
+	}
+}
+/*iphone 5 portrait*/
+@media(min-width:567px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 19.5%;
+	}
+}
+/*iphone 6 portrait*/
+@media(min-width:666px){
+	#circular_container, #circular_progress, #circular_player,.circular_cover {
+		margin-left: 23%;
+	}
+}
+#circular_container {
+	  width: 270px;
+	  height: 270px;
+  perspective: 550px;
+	  -webkit-perspective: 550px;
+  transform-style: preserve-3d;
+	  -webkit-transform-style: preserve-3d;
+}
+
+#circular_player {
+  	width: 200px;
+	  height: 200px;
+	  background: #f333;
+  	border-radius: 50%;
+	  overflow: hidden;
+	  box-shadow: 2px 2px 20px 0 rgba(0,0,0,.3);
+	  z-index: 300;
+		left: 25px;
+		top: 25px;
+}
+
+#circular_progress {
+	  width: 278px;
+	  height: 278px;
+	  z-index: 200;
+	  /*-webkit-filter: blur(1px);*/
+	  transition: all .5s ease-in-out;
+	  -webkit-transition: all .5s ease-in-out;
+		position: relative;
+		left: -14px;
+		top: -14px;
+}
+
+/* Image */
+img {
+  	width: 100%;
+	  height: 100%;
+	  background: #333;
+	  opacity: .75;
+	  transition: .3s all ease-in-out;
+  -webkit-transition: .3s all ease-in-out;
+}
+
+/* Fade */
+#circular_container:hover .circular_cover{
+	  opacity: .9;
+}
+
+.circular_cover{
+	  opacity: .8;
+	  transition: all .3s ease-in-out;
+	  -webkit-transition: all .3s ease-in-out;
+}
+
+/* Player Buttons */
+.circular_controls {
+	  position: relative;
+	  width: 100%;
+	  color: #ffc21c;
+	  text-align: center;
+}
+
+button {
+	  margin: 10px;
+	  color: #ffc21c;
+	  background: transparent;
+	  border: 0;
+	  outline: 0;
+	  cursor: pointer;
+	  text-align: center;
+	  text-shadow: 1px 1px 3px #000;
+	  transition: all .3s ease-in-out;
+	  -webkit-transition: all .3s ease-in-out;
+}
+
+button:hover {
+	color: #ffc21c;
+	  /*color: #26C5CB;*/
+}
+
+#play-pause {
+	  width: 46px;
+	  height: 46px;
+	  transition: all .5s ease-in-out;
+	  -webkit-transition: all .5s ease-in-out;
+		font-size: 2em;
+		position: absolute;
+		right: 64px;
+		bottom: 0px;
+	}
+@media(max-width:320px){
+	#play-pause{
+		right:72px;
+	}
+}
+#forward, #backward {
+	font-size: 1.3em;
+}
+
+#remaining {
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	left: 60px;
+	top:0px;
+}
+@media(min-width:550px){
+	#remaining {
+		left: 37px;
+	}
+}
+/*iphone5*/
+@media(max-width:320px){
+	#remaining {
+		left: 60px;
+	}
+}
+/* Volume */
+input[type='range'] {
+	  display: block;
+	  margin: 14px auto;
+	  width: 120px;
+  height: 2px;
+	  outline: 0;
+	  cursor: pointer;
+	  box-shadow: 1px 1px 3px 0 #000;
+	  -webkit-appearance: none !important;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  background: #AEAEAE;
+  height: 6px;
+  width: 6px;
+	  border-radius: 50%;
+  transition: .1s all linear;
+	  -webkit-transition: .1s all linear;
+  -webkit-appearance: none !important;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+  	background: #ffc21c;
+	  -webkit-transform:scale(2);
+}
+
+/* Checkboxes */
+input[type=checkbox] {
+  	position: absolute;
+	  top: -9999px;
+	  left: -9999px;
+}
+
+/* Flip Back */
+#circular_player, #flip-back {
+	  backface-visibility: hidden;
+	  -webkit-backface-visibility: hidden;
+	  transition: transform .5s ease-in-out;
+	  -webkit-transition: -webkit-transform .5s ease-in-out;
+}
+
+#to-back:checked ~ #circular_player {
+	  z-index: -1;
+  transform: rotateY(180deg);
+	  -webkit-transform: rotateY(180deg);
+}
+
+#to-back:checked ~ #circular_progress {
+	  opacity: 0;
+  transform: rotate(0);
+	  -webkit-transform: rotate(0);
+}
+
+#to-back:checked ~ #flip-back .playlist {
+	  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+.circular_cover {
+	  padding-top: 130px;
+	  transition: all .5s ease-in-out;
+	  -webkit-transition: all .5s ease-in-out;
+}

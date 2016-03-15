@@ -1,7 +1,4 @@
-<html>
-  <p class = 'justify'> Gaelle is a postdoctoral researcher in neuroscience at
-    the University of Oxford. She spends her days studying pictures of brains to
-    work out what changes in the brain of people who become blind. She is also
-    a keen cyclist, warm-weather windsurfer, and Netflix’s most valuable customer.
-  </p>
-</html>
+Gaelle is a postdoctoral researcher in neuroscience at
+the University of Oxford. She spends her days studying pictures of brains to
+work out what changes in the brain of people who become blind. She is also
+a keen cyclist, warm-weather windsurfer, and Netflix’s most valuable customer.

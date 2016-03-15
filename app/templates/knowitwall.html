@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
 <head>
 
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="We make short audio documentaries, written by academics, for the enjoyment of everyone else.">
+  <meta name="description" content="Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" />
   <meta property="og:title" content="Know It Wall" />
-  <meta property="og:description" content="If you have more interests than you can keep track of, you’re in the right place. Know It Wall makes short audio documentaries, written by academics, for the enjoyment of everyone." />
+  <meta property="og:description" content="Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity." />
   <meta property="og:url" content="http://knowitwall.com/" />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -32,15 +32,7 @@
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic," rel="stylesheet" type="text/css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
 
   <!-- google analytics for jeremie.coullon@gmail.com -->
@@ -348,7 +340,7 @@
         </div>
 
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
-           <i>by</i> <a href="audiodoc/{{audiodocs[0].url}}#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
+           <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <a href="audiodoc/{{audiodocs[0].url}}#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
 
       </div>
     </div>
@@ -367,9 +359,9 @@
         </div>
         <div class="col-md-6">
           <div class="vertical-line">
-          <p class = 'justify'>Know it Wall is an education website in arts & sciences. We make short documentaries, written by experts in their fields, for the enjoyment of everyone.</p>
+          <p class = 'justify'>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
           <br>
-          <p class = 'justify'>Right now you can listen to new ones every two weeks, but soon you'll be able to watch them too. From space to spider monkeys, pyramids to Pythagoras, there’s no limit to what you could be learning!</p>
+          <p class = 'justify'>Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!</p>
           </div>
         </div>
       </div>
@@ -386,7 +378,7 @@
                 {{audiodoc.topic_name | safe}}
               </a>
               <p style="font-size:0.8em;">
-                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+                <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">in</i> <span class="highlight">{{audiodoc.discipline}} </span>
               </p>
             </div>
             <div>
@@ -403,7 +395,7 @@
                 {{audiodoc.topic_name | safe}}
               </a>
               <p style="font-size:0.8em;">
-                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+                <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">in</i> <span class="highlight">{{audiodoc.discipline}} </span>
               </p>
             </div>
             <div>
@@ -413,14 +405,29 @@
           {% endfor %}
         </div>
         <div class="row">
-          {% for audiodoc in audiodocs[9:13] %}
+
+          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
           <div class="col-md-3 last_boxes_center">
+            <div style="background: url('{{audiodocs[9].topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodocs[9].url}}" class="box_episode_title">
+                {{audiodocs[9].topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i style="color: {{audiodocs[9].by_in_colour}}; color: {{audiodocs[9].by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodocs[9].url}}#author" class="highlight">{{audiodocs[9].author_name | safe}}</a> <i style="color: {{audiodocs[9].by_in_colour}}; color: {{audiodocs[9].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[9].discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodocs[9].topic_description | safe}}</p>
+            </div>
+          </div>
+          {% for audiodoc in audiodocs[10:13] %}
+          <div class="col-md-3">
             <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
               <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
                 {{audiodoc.topic_name | safe}}
               </a>
               <p style="font-size:0.8em;">
-                <i>by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+                <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">in</i> <span class="highlight">{{audiodoc.discipline}} </span>
               </p>
             </div>
             <div>
@@ -478,12 +485,6 @@
       </div>
 
     </section>
-
-
-
-
-
-
   <!-- Contribute Section -->
   <section id="contribute">
     <div class="container">
@@ -563,49 +564,10 @@
     </div>
 
   </section>
+{% endblock %}
 
-
-  <!-- Footer -->
-  <footer class="text-center">
-
-    <div class="footer-above">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-4 col-md-offset-4 ">
-            <h3>We're social too</h3>
-            <ul class="list-inline">
-              <!--
-              <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-              </li>
-
--->
-              <li>
-                <a href="https://twitter.com/KnowitWall" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            Copyright &copy; Know it Wall 2015
-          </div>
-          <div class="col-lg-4">
-            team@knowitwall.com
-          </div>
-          <div class="col-lg-4">
-            <a href="{{url_for('terms')}}">Terms of Use</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+<!-- the footer is in base.html -->
+{% block jsscripts %}
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-top page-scroll visible-xs visble-sm">
@@ -654,4 +616,5 @@
   </script>
 
 </body>
-</html>
+
+{% endblock %}

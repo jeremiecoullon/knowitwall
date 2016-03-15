@@ -1,5 +1,5 @@
 <html>
-  <p class = 'justify'>
+  <p>
     Human beings are natural explorers. We like to discover strange new places
     and make maps of the worlds we find. However, one particular world that we
     have yet to fully discover lies nestled within our own heads. The human brain
@@ -8,7 +8,7 @@
     speak “neuron”, how can we understand how the brain works?
 
   </p>
-  <p class = 'justify'>
+  <p>
     One way to do this is by making a map of the human brain. Without having to
     cut into someone’s head, the best way to build such a map is to use magnetic
     resonance imaging (or MRI). When you lie inside an MRI scanner, the scanner’s
@@ -25,7 +25,7 @@
     its information? And is it communicating with other areas?
 
   </p>
-  <p class = 'justify'>
+  <p>
     One way to answer these questions is to look at how different brain areas
     are inter-connected using another type of MRI, called diffusion-weighted imaging.
     Whilst fMRI looks at activity in the cell bodies that make up the brain’s
@@ -50,7 +50,7 @@
     good vocabulary, good memory) compared to people with mostly ‘negative’ traits
     (like aggression, poor sleep, alcohol and drug use).
   </p>
-  <p class = 'justify'>
+  <p>
     This kind of “neural cartography” using MRI is also valuable in medicine. A
     couple of years ago, neurosurgeons in California wanted to find a way to
     avoid damaging healthy tissue when they removed brain tumours. What they did
@@ -61,7 +61,7 @@
     were able to remove the tumour without damaging the fibres that carry information
     from the eyes to the brain.
   </p>
-  <p class = 'justify'>
+  <p>
     MRI can be a powerful tool to map the brain and its circuits of inter-connected
     fibres. With the help of large projects like the Human Connectome Project, we
     can begin to build a map of these circuits. This map will bring us one step

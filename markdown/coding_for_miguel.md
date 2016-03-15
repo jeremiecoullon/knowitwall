@@ -1,33 +1,38 @@
-#basics of web development
+#web development
 ##frontend
-_total_: 1h10
 
-- html (10 min)
-- css inline (20 min)
-- css files (20 min)
-- js in browser: basic `on.click`  (20 min)
+- **html** - basic [tutorial](http://www.w3schools.com/html/html_intro.asp) (the first few pages are enough)
+- **css** files: basic [tutorial](http://www.w3schools.com/html/html_css.asp) (just that page)
+- **javascript** in browser [`on.click`](http://www.w3schools.com/tags/ev_onclick.asp) (just the first example)
 
-##client server model
-_total_: 35min
+##client-server model
 
-- basics of GET. what is a server? a client? (20 min)
-- POST (10 min)
-- 404 (5 min)
+- **server**:
+	- what is a [server](http://computer.howstuffworks.com/web-server.htm)? a **client**?
+	- **GET** & **POST** requests
+- **database**: how this interacts with web servers
 
 ##server side scripting
-_total_: 1h40
 
-- why server side scripting? dynamic websites (20 min)
-- python:
-	- list: play around with accessing elements of the list (20 min)
-	- loop through the list; loop through portions of the list (20 min)
-- web servers:
-	- Why Flask? (10 min)
-	- Jinja2: basic loop over raw html (20 min)
-	- KiW setup (overview) (10 min)
+- why **server side** scripting (as opposed to **client side**)? dynamic websites
+- **python**:
+	- list: play around with accessing elements of the list
+	- loop through the list; loop through portions of the list
+- **web servers**:
+	- Why **Flask**?
+	- generate html dynamically: looping sections of html
+	- KiW setup (overview)
+
+##web hosting
+
+- [**Digitalocean**](https://en.wikipedia.org/wiki/DigitalOcean): **cloud hosting**
+- example of server setup: nginx & gunicorn
 
 ##version control
-_total:_ 30min
 
-- why version control (10 min)
-- Git (20 min) 
+
+[**Git**](http://rogerdudler.github.io/git-guide/), [**Github**](https://en.wikipedia.org/wiki/GitHub):
+
+- git **push/pull**
+- **branching**, **merging**
+- collaborating: **pull requests**
