@@ -246,8 +246,16 @@
     return Math.max.apply(Math, all);
   };
 
-// KiW modification: the left style now is always 90% rather than wherever the mouse was before
   Util.mousePosition = function(e, offsetEl) {
+    var offset;
+    offset = $(offsetEl).position();
+    return {
+      top: e.pageY - offset.top,
+      left: e.pageX - offset.left
+    };
+  };
+  // KiW modif: this sets the position of the annotation only for screen size > 768px, fix annotation on the right
+  Util.annotationPosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
     if ($(document).width() < 768) {
@@ -262,7 +270,6 @@
       left: 'initial'
     };
   };
-
   Util.preventEventDefault = function(event) {
     return event != null ? typeof event.preventDefault === "function" ? event.preventDefault() : void 0 : void 0;
   };
@@ -1111,6 +1118,7 @@
       return !!$(element).parents().andSelf().filter('[class^=annotator-]').not(this.wrapper).length;
     };
 
+    // KIW modif: use annontationPosition rather than mousePosition to place annotation on the RHS of the screen
     Annotator.prototype.onHighlightMouseover = function(event) {
       var annotations;
       this.clearViewerHideTimer();
@@ -1120,7 +1128,7 @@
       annotations = $(event.target).parents('.annotator-hl').andSelf().map(function() {
         return $(this).data("annotation");
       });
-      return this.showViewer($.makeArray(annotations), Util.mousePosition(event, this.wrapper[0]));
+      return this.showViewer($.makeArray(annotations), Util.annotationPosition(event, this.wrapper[0]));
     };
 
     Annotator.prototype.onAdderMousedown = function(event) {
