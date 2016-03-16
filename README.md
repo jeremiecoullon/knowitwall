@@ -36,7 +36,6 @@ If on the **`user_login_OAuth` branch:**
 
 **Stuff to do:**
 - <del>have the vertical yellow line like in the image above</del>
-- display the URL to the 3rd party content nicely (dunno how this should look...)
 - get the image for the article (like the thumbnail when you post articles on facebook) and display it above the text (like in the image above).
 - <del>have the adder (the square that appears when you highlight text) appear next to the mouse.</del>
 - <del>be able to click on the highlighted section of text and have the annotation stay visible. Click again to hide it.</del>
@@ -44,6 +43,7 @@ If on the **`user_login_OAuth` branch:**
   - <del>one box for the text (with a character limit, say 200)</del>
   - <del>one box for the URL to the 3rd party content</del>
 - **Displaying URLs:** copy any hyperlink into the message, and the entire annotation become clickable
+- **bug**: when you have a URL in the annotation, it doesn't display on the right hand side
 
 
 ###Annotator frontend
