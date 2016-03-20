@@ -25,6 +25,17 @@
   <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
+  <link href="/static/css/jquery.fancybox.css" rel="stylesheet"/>
+
+  <link href="/static/css/fancybox-helpers/jquery.fancybox-buttons.css" rel="stylesheet"/>
+  <link href="/static/css/fancybox-helpers/jquery.fancybox-thumbs.css" rel="stylesheet"/>
+
+
+  <script src="/static/css/fancybox-helpers/jquery.fancybox-buttons.js"></script>
+  <script src="/static/css/fancybox-helpers/jquery.fancybox-media.js"></script>
+  <!-- <script src="/static/css/fancybox-helpers/jquery.fancybox-buttons.js"></script>
+  <script src="/static/css/fancybox-helpers/jquery.fancybox-buttons.js"></script> -->
+
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -498,16 +509,52 @@
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
   <script src="/static/js/switching_audioplayers.js"></script>
-
+  <script src="/static/js/jquery.fancybox.pack.js"></script>
 <!-- share buttons-->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
-  <script>
-    // $( function()
-    // {
-    //     $( 'audio' ).audioPlayer();
-    // });
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $("#single_1").fancybox({
+            helpers: {
+                title : {
+                    type : 'float'
+                }
+            }
+        });
+
+      $("#single_2").fancybox({
+      	openEffect	: 'elastic',
+      	closeEffect	: 'elastic',
+
+      	helpers : {
+      		title : {
+      			type : 'inside'
+      		}
+      	}
+      });
+
+      $("#single_3").fancybox({
+      	openEffect : 'none',
+      	closeEffect	: 'none',
+      	helpers : {
+      		title : {
+      			type : 'outside'
+      		}
+      	}
+      });
+
+      $("#single_4").fancybox({
+      	helpers : {
+      		title : {
+      			type : 'over'
+      		}
+      	}
+      });
+  });
+
   </script>
+
 </body>
 {% endblock %}
