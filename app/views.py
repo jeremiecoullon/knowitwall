@@ -144,12 +144,26 @@ def index():
     return render_template('knowitwall.html', audiodocs=audiodocs)
 
 
-
 "----------------------------------------------------------------------------------------------------"
-" audiodocs on seperate page "
+" audiodoc page"
 
+" TODO: have all redirects to this page be to /episodes/<url> rather than /audiodoc/ "
+@app.route('/episodes/<url>')
 @app.route('/audiodoc/<url>')
 def audiodoc(url):
+
+    # put all audiodoc information in the variable audiodoc
+    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
+    audiodocs = ad_fun(audiodoc_list)
+
+    return render_template('audiodoc.html', audiodocs=audiodocs)
+
+
+"----------------------------------------------------------------------------------------------------"
+" TEST: audiodocs page with annotations "
+
+@app.route('/audiodoc_annotations/<url>')
+def audiodoc_annotations(url):
 
     # put all audiodoc information in the variable audiodoc
     audiodoc_list = [url+'.json']  # list only has the selected audiodoc
@@ -169,7 +183,7 @@ def audiodoc(url):
     else:
         read_only = 'true'
 
-    return render_template('audiodoc.html', audiodocs=audiodocs, read_only=read_only)
+    return render_template('audiodoc_annotations.html', audiodocs=audiodocs, read_only=read_only)
 
 
 "----------------------------------------------------------------------------------------------------"
