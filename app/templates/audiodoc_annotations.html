@@ -13,7 +13,7 @@
   <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
   <meta property="og:title" content="{{audiodocs[0].og_name}}" />
   <meta property="og:description" content="{{audiodocs[0].og_description}}" />
-  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
+  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs[0].url}}" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -21,32 +21,24 @@
   <title>Know it Wall</title>
 
   <link href="/static/css/audioplayer.min.css" rel="stylesheet">
-
-
-  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- <link href="/static/css/circular_player.css" rel="stylesheet"> -->
-  <!-- Custom CSS -->
+  <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
-
-  <!-- audioddoc css  -->
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
 
+
+  <!-- annotator -->
+  <link href="/static/css/annotator-KIW.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/annotator-extensions.css" rel="stylesheet" type="text/css">
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
 
-
-
 </head>
 
 <body id="page-top">
-
-  <!-- <div class="overflow"> -->
-
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -340,21 +332,44 @@
         </p>
       </div>
     </div>
-    <div class="container previous-audiodoc">
+    <div class="container previous-audiodoc audiodoc_page_box">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-          <p style="font-size:1.6em;">{{audiodocs[0].topic_description | safe}}</p>
-          <p style="font-style:italic;">narrated by {{ audiodocs[0].narration_credits }}</p>
-          <p style="font-style:italic;">music by {{ audiodocs[0].music_credits }}</p>
+        <div class="col-lg-10 col-lg-offset-1 text-center" >
+          <p class="audiodoc_bio">{{audiodocs[0].topic_description | safe}}</p>
+          <p class="audiodoc_narrate-credits">narrated by {{ audiodocs[0].narration_credits }}</p>
+          <p class="audiodoc_narrate-credits">music by {{ audiodocs[0].music_credits }}</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
-          <audio controls id="author">
+        <!-- these 2 divs are used to get the variable audio & TI_box for the players -->
+        <div id="audioplayer_source_mp3" style="display:none">
+          {{audiodocs[0].audio_mp3}}
+        </div>
+        <div id="audioplayer_TI_box" style="display:none">
+          {{audiodocs[0].topic_image_box}}
+        </div>
+        <div id="switching_audioplayers" class="col-lg-12">
+          <!-- <audio controls id="author" >
             <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg">
             Your browser does not support the audio element.
-          </audio>
+          </audio> -->
+
+          <!-- <div id="circular_container">
+          <canvas id="circular_progress" width="320" height="320"></canvas>
+          <div id="circular_player">
+            <audio id="circular_audio">
+              <source src="{{audiodocs[0].audio_mp3}}" type="audio/mpeg" codecs="mp3"></source>
+            </audio>
+            <img src="{{ audiodocs[0].topic_image_box }}">
+            <div class="circular_cover">
+              <div class="circular_controls">
+                <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
+                <div id="remaining"></div>
+              </div>
+            </div>
+          </div>
+          </div> -->
         </div>
       </div>
 
@@ -372,14 +387,15 @@
             </div>
             <div class="col-md-6">
               <div class="vertical-line">
-              <p > {{ audiodocs[0].author_bio | safe}} </p>
+              <p class="audiodoc_abstract justify"> {{ audiodocs[0].author_bio | safe}} </p>
               </div>
             </div>
           </div>
+        <!-- </div> -->
         </div>
 
         <div class="col-md-12" id="read">
-          <div class="transcript"> <!-- transcript class gives the padding -->
+          <div class="transcript" id="annotator_transcript"> <!-- transcript class gives the padding. annotator_transcript allows annotator to work -->
             {{ audiodocs[0].transcript | safe }}
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
             <div class="addthis_sharing_toolbox" style="float: right;"></div>
@@ -479,32 +495,153 @@
     </a>
   </div>
 
-
-<!-- scripts! -->
-
-  <!-- jQuery -->
   <script src="/static/js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
   <script src="/static/js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
   <script src="/static/js/jquery.easing.min.js"></script>
-
-
   <script src="/static/js/classie.js"></script>
-
-  <!-- Contact Form JavaScript -->
   <script src="/static/js/jqBootstrapValidation.js"></script>
   <script src="/static/js/contact_me.js"></script>
-
-  <!-- Custom Theme JavaScript -->
   <script src="/static/js/knowitwall.js"></script>
+  <script src="/static/js/switching_audioplayers.js"></script>
+
+  <!-- showdown library -->
+  <!-- <script src="/static/js/showdown.min.js"></script> -->
+
+  <!-- annotator.js -->
+  <script src="/static/js/annotator-full-1.2.7-modified.js"></script>
+  <script src="/static/js/annotator-extensions.js"></script>
+
+</script>
+
+<!-- previous version of annotator script. Has persistent storage.
+    todo:  Need to rewrite this, but adding the plugins individually (like the proper version
+    below) to see how to have persistent storage for the proper version.
+ -->
+<script type="text/javascript">
+jQuery(function ($) {
+    // Customise the default plugin options with the third argument.
+    $('body').annotator({readOnly: {{read_only}}})
+              .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},{
+                Tags: false,
+                Filter: false,
+                Permissions:false
+               }
+               );
+               });
+</script>
 
 
-  <script src="/static/js/audioplayer.min.js"></script>
-  <!-- <script src="/static/js/circular_player.js"></script> -->
+
+<!-- <script type="text/javascript">
+  jQuery(function ($) {
+    var annotator = $('body').annotator().data('annotator');
+
+    // Store plugin
+    annotator.addPlugin('Store', {
+      // The endpoint of the store on your server.
+      prefix: 'http://annotateit.org/api',
+
+      // Attach the uri of the current page to all annotations to allow search.
+      annotationData: {
+        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
+      },
+
+      // This will perform a "search" action when the plugin loads. Will
+      // request the last 20 annotations for the current url.
+      // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
+      loadFromSearch: {
+        'limit': 20,
+        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
+      }
+    });
+
+    // Auth plugin
+    annotator.addPlugin('Auth',{
+      tokenUrl: 'http://localhost:5000/api/token'
+    });
+    //register callback to run when we get a token
+		annotator.plugins.Auth.withToken(function(token){
+			//just pass the token to the permissions plugin
+			annotator.plugins.Permissions.setUser(token);
+		});
+
+    // Permissions plugin
+    annotator.addPlugin('Permissions',{
+
+    })
+  })
+</script> -->
+
+
+
+<!-- below is the proper version of the annotator script (with Ian's addition).
+    It doesn't have persistent storage for some reason though.
+ -->
+  <!-- <script type="text/javascript">
+	jQuery(function ($) {
+		var annotator = $('body').annotator().data('annotator'),
+			anonymousToken = {
+				userId: '0',
+				displayName: 'anonymous'
+			}
+      ;
+
+		//add auth plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/auth.html)
+		annotator.addPlugin('Auth', {
+			autoFetch: true,
+			tokenUrl: 'http://localhost:5000/api/token'
+		});
+
+		//register callback to run when we get a token
+		annotator.plugins.Auth.withToken(function(token){
+			//just pass the token to the permissions plugin
+			annotator.plugins.Permissions.setUser(token);
+		});
+
+	// 	add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
+	// 	note that we're using a modified version of annotator which introduces a 'create' permission
+		annotator.addPlugin('Permissions', {
+			//initialise with the anonymous token
+			user: anonymousToken,
+			userId: function (user) {
+				return (user || anonymousToken).userId;
+			},
+			userString: function (user) {
+				return (user || anonymousToken).displayName;
+			},
+			userAuthorize: function(action, annotation, user) {
+				user = user || anonymousToken;
+
+				//user not logged in (ie: 'anonymous user'):
+				if(user.userId === "0"){
+					//can view annotations, cannot create/edit annotations
+					return action === 'read';
+				}
+				//admin logged in: can edit/create/delete all annotations
+				if(user.isAdmin){
+					return true;
+				}
+
+				//user logged in: can create annotations (and read them)
+				return action === 'create' || action === 'read';
+			},
+		});
+	});
+  </script> -->
+
+
+
+
+
+<!-- share buttons-->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
+  <script>
+    // $( function()
+    // {
+    //     $( 'audio' ).audioPlayer();
+    // });
+  </script>
 </body>
 {% endblock %}
