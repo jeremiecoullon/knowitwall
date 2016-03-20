@@ -6,7 +6,8 @@ To get Knowitwall running locally:
 - install packages in `requirements.txt`
 - run `run.py`
 
-If on the **`user_login_OAuth` branch:**
+Annotations
+===========
 
 *The annotation library: [Annotator.js](http://annotatorjs.org/)*
 
