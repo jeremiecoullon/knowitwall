@@ -13,7 +13,7 @@
   <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
   <meta property="og:title" content="{{audiodocs[0].og_name}}" />
   <meta property="og:description" content="{{audiodocs[0].og_description}}" />
-  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs[0].url}}" />
+  <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
@@ -25,11 +25,6 @@
   <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
-
-
-  <!-- annotator -->
-  <link href="/static/css/annotator-KIW.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/annotator-extensions.css" rel="stylesheet" type="text/css">
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -266,25 +261,25 @@
         <!-- Begin MailChimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
         <style type="text/css">
-        	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-        	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-        	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         </style>
         <div id="mc_embed_signup">
         <form action="//knowitwall.us11.list-manage.com/subscribe/post?u=0c2ccb6c7234e8de621e119c8&amp;id=4ff941f843" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="row">
                 <div class="col-md-6 col-md-offset-1">
-              	   <h2 class="newsletter-signup_text">Get notified of new content by signing up to our newsletter</h2>
+                   <h2 class="newsletter-signup_text">Get notified of new content by signing up to our newsletter</h2>
                 </div>
                 <div class="col-md-3">
                   <div class="mc-field-group">
-                  	<input type="email" value="" style="border:3px solid #33353D;" name="EMAIL" placeholder="your email address" class="required email" id="mce-EMAIL">
+                    <input type="email" value="" style="border:3px solid #33353D;" name="EMAIL" placeholder="your email address" class="required email" id="mce-EMAIL">
                   </div>
-                	<div id="mce-responses" class="clear">
-                		<div class="response" id="mce-error-response" style="display:none"></div>
-                		<div class="response" id="mce-success-response" style="display:none"></div>
-                	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 </div>
                 <div class="col-md-2">
                   <div style="position: absolute; left: -5000px;"><input type="text" name="b_0c2ccb6c7234e8de621e119c8_4ff941f843" tabindex="-1" value=""></div>
@@ -332,7 +327,7 @@
         </p>
       </div>
     </div>
-    <div class="container previous-audiodoc audiodoc_page_box">
+    <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center" >
           <p class="audiodoc_bio">{{audiodocs[0].topic_description | safe}}</p>
@@ -395,7 +390,7 @@
         </div>
 
         <div class="col-md-12" id="read">
-          <div class="transcript" id="annotator_transcript"> <!-- transcript class gives the padding. annotator_transcript allows annotator to work -->
+          <div class="transcript"> <!-- transcript class gives the padding -->
             {{ audiodocs[0].transcript | safe }}
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
             <div class="addthis_sharing_toolbox" style="float: right;"></div>
@@ -503,135 +498,6 @@
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
   <script src="/static/js/switching_audioplayers.js"></script>
-
-  <!-- showdown library -->
-  <!-- <script src="/static/js/showdown.min.js"></script> -->
-
-  <!-- annotator.js -->
-  <script src="/static/js/annotator-full-1.2.7-modified.js"></script>
-  <script src="/static/js/annotator-extensions.js"></script>
-
-</script>
-
-<!-- previous version of annotator script. Has persistent storage.
-    todo:  Need to rewrite this, but adding the plugins individually (like the proper version
-    below) to see how to have persistent storage for the proper version.
- -->
-<script type="text/javascript">
-jQuery(function ($) {
-    // Customise the default plugin options with the third argument.
-    $('body').annotator({readOnly: {{read_only}}})
-              .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},{
-                Tags: false,
-                Filter: false,
-                Permissions:false
-               }
-               );
-               });
-</script>
-
-
-
-<!-- <script type="text/javascript">
-  jQuery(function ($) {
-    var annotator = $('body').annotator().data('annotator');
-
-    // Store plugin
-    annotator.addPlugin('Store', {
-      // The endpoint of the store on your server.
-      prefix: 'http://annotateit.org/api',
-
-      // Attach the uri of the current page to all annotations to allow search.
-      annotationData: {
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      },
-
-      // This will perform a "search" action when the plugin loads. Will
-      // request the last 20 annotations for the current url.
-      // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
-      loadFromSearch: {
-        'limit': 20,
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      }
-    });
-
-    // Auth plugin
-    annotator.addPlugin('Auth',{
-      tokenUrl: 'http://localhost:5000/api/token'
-    });
-    //register callback to run when we get a token
-		annotator.plugins.Auth.withToken(function(token){
-			//just pass the token to the permissions plugin
-			annotator.plugins.Permissions.setUser(token);
-		});
-
-    // Permissions plugin
-    annotator.addPlugin('Permissions',{
-
-    })
-  })
-</script> -->
-
-
-
-<!-- below is the proper version of the annotator script (with Ian's addition).
-    It doesn't have persistent storage for some reason though.
- -->
-  <!-- <script type="text/javascript">
-	jQuery(function ($) {
-		var annotator = $('body').annotator().data('annotator'),
-			anonymousToken = {
-				userId: '0',
-				displayName: 'anonymous'
-			}
-      ;
-
-		//add auth plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/auth.html)
-		annotator.addPlugin('Auth', {
-			autoFetch: true,
-			tokenUrl: 'http://localhost:5000/api/token'
-		});
-
-		//register callback to run when we get a token
-		annotator.plugins.Auth.withToken(function(token){
-			//just pass the token to the permissions plugin
-			annotator.plugins.Permissions.setUser(token);
-		});
-
-	// 	add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
-	// 	note that we're using a modified version of annotator which introduces a 'create' permission
-		annotator.addPlugin('Permissions', {
-			//initialise with the anonymous token
-			user: anonymousToken,
-			userId: function (user) {
-				return (user || anonymousToken).userId;
-			},
-			userString: function (user) {
-				return (user || anonymousToken).displayName;
-			},
-			userAuthorize: function(action, annotation, user) {
-				user = user || anonymousToken;
-
-				//user not logged in (ie: 'anonymous user'):
-				if(user.userId === "0"){
-					//can view annotations, cannot create/edit annotations
-					return action === 'read';
-				}
-				//admin logged in: can edit/create/delete all annotations
-				if(user.isAdmin){
-					return true;
-				}
-
-				//user logged in: can create annotations (and read them)
-				return action === 'create' || action === 'read';
-			},
-		});
-	});
-  </script> -->
-
-
-
-
 
 <!-- share buttons-->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
