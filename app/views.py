@@ -177,7 +177,7 @@ def audiodoc_annotations(url):
         user_nickname = str(current_user.nickname)
 
     # if the user is in list of allowed users, then the user can create annotations. Otherwise no
-    create_permission = ['jeremie.coullon']
+    create_permission = ['jeremie.coullon', 'JeremieCoullon']
     if user_nickname in create_permission:
         read_only = 'false'
     else:
