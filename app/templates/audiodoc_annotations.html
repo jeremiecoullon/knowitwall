@@ -396,7 +396,7 @@
 
         <div class="col-md-12" id="read">
           <div id="bige">
-            lsls
+            blablabla
           </div>
           <div class="transcript" id="annotator_transcript"> <!-- transcript class gives the padding. annotator_transcript allows annotator to work -->
             {{ audiodocs[0].transcript | safe }}
@@ -534,11 +534,10 @@ jQuery(function ($) {
 </script>
 <script src="/static/js/jquery.ogp.js"></script>
 <script type="text/javascript">
-  // var element = document.querySelector('meta[property="og:image"]');
-  // var content = element.getAttribute("content");
-  // var lediv = document.getElementById('bige');
-
-  lediv.innerHTML = jsondata
+  var element = document.querySelector('meta[property="og:image"]');
+  var content = element.getAttribute("content");
+  var lediv = document.getElementById('bige');
+  lediv.innerHTML = content;
 </script>
 
 
