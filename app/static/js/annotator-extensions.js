@@ -9,23 +9,32 @@ $(window.vent).on('showViewerCompleted', function() {
         toggledOnce = true;
     });
 
-    // Find and replace text URLs into hyperlinks.
+    // 1. parses message as html
     var text = $('.annotator-annotation div').text();
+    $('.annotator-annotation div').html(text);
+
+    // -----------------------
+
+    // 2. Find and replace text URLs into hyperlinks.
+    // var text = $('.annotator-annotation div').text();
     // var regex = /(https?:\/\/([-\w\.]+)+(:\d+)?(\/([-\w\/_\.]*(\?\S+)?)?)?)/ig
     // var replaced_text = text.replace(regex, "<a href='$1' target='_blank'>$1</a>");
+    // $('.annotator-annotation div').html(replaced_text);
 
-    // assume the text is exactly a URL and pass it to crossdomain
-    var request = $.ajax({
-        type: 'GET',
-        url: 'http://localhost:5000/crossdomain',
-        data: {url:text}
-    });
-    request.done(function(reply){
-      // replaced_text = text.replace(text,JSON.stringify(reply))
-      var replaced_text = reply
-      $('.annotator-annotation div').html(replaced_text);
-    });
+    // -----------------------
+
+    // 3. assume the text is exactly a URL and pass it to crossdomain
+    // var request = $.ajax({
+    //     type: 'GET',
+    //     url: 'http://localhost:5000/crossdomain',
+    //     data: {url:text}
+    // });
+    // request.done(function(reply){
+    //   // replaced_text = text.replace(text,JSON.stringify(reply))
+    //   var replaced_text = reply
+    //   $('.annotator-annotation div').html(replaced_text);
+    // });
 
 
-    $('.annotator-annotation div').html(replaced_text);
+
 });
