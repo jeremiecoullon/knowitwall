@@ -14,6 +14,7 @@ from .models import User
 from oauth import OAuthSignIn
 import proxypy
 import opengraph
+import requests
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
 1) change path to audio in 'sending files partially' section
@@ -130,20 +131,26 @@ def test():
     return render_template('test.html')
 @app.route('/demo/')
 def demo():
-    return render_template('demo.txt')
+    r = requests.get('http://thepointmag.com/2016/examined-life/the-insane-idea', auth=('user', 'pass'))
+    HTML = r.text
+    og_full = opengraph.OpenGraph(html = HTML)
+    og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
+    return render_template('demo.html',json_data=og_small)
 
 @app.route("/crossdomain")
 def crossdom():
     # get HTML & headers from the requested URL
-    reply = proxypy.get(request.query_string)
-    # load into a dictionary, and get only the 'content' values (ie: the HTML)
-    HTML = json.loads(reply).get('content')
-    # parse for opengraph stuff, and keep only a few of them
-    og_full = opengraph.OpenGraph(html = HTML)
-    og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
-    # return json.dumps(og_small)
-    return "<img src='{0}'><a href='{1}' target='_blank'>{2}</a>".format(og_small.get('image'), og_small.get('url'), og_small.get('title'))
-
+    # reply = proxypy.get(request.query_string)
+    # # load into a dictionary, and get only the 'content' values (ie: the HTML)
+    # HTML = json.loads(reply).get('content')
+    # # parse for opengraph stuff, and keep only a few of them
+    # og_full = opengraph.OpenGraph(html = HTML)
+    # og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
+    # # return json.dumps(og_small)
+    # # return Response(reply,status=200,mimetype='application/json')
+    # return "<img src='{0}'><a href='{1}' target='_blank'>{2}</a>".format(og_small.get('image'), og_small.get('url'), og_small.get('title'))
+    reply = request.query_string
+    return reply
 
 "VIEWS"
 "----------------------------------------------------------------------------------------------------"

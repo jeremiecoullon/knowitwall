@@ -8,7 +8,7 @@ $('#urlForm').submit(function() {
         type: form.prop('method'),
         // url: window.location.protocol+'//'+window.location.host+"/crossdomain",
         url: 'http://localhost:5000/crossdomain',
-        data: {url:page_url, headers: page_headers},
+        data: {url:page_url},
 
         beforeSend: function() {
             form.find('.urlBox').prop("disabled",true);
