@@ -126,20 +126,20 @@ def ad_fun(audiodoc_list):
 """ Can do ad[author_name] or ad.get('author_name', DEFAULTVALUE)
     the second option is safer (if the key doesnt exist) """
 
-@app.route("/crossdomain")
-def crossdom():
-    # get HTML & headers from the requested URL
-    # reply = proxypy.get(request.query_string)
-    # # load into a dictionary, and get only the 'content' values (ie: the HTML)
-    # HTML = json.loads(reply).get('content')
-    # # parse for opengraph stuff, and keep only a few of them
-    # og_full = opengraph.OpenGraph(html = HTML)
-    # og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
-    # # return json.dumps(og_small)
-    # # return Response(reply,status=200,mimetype='application/json')
-    # return "<img src='{0}'><a href='{1}' target='_blank'>{2}</a>".format(og_small.get('image'), og_small.get('url'), og_small.get('title'))
-    reply = request.query_string
-    return reply
+# @app.route("/crossdomain")
+# def crossdom():
+#     # get HTML & headers from the requested URL
+#     # reply = proxypy.get(request.query_string)
+#     # # load into a dictionary, and get only the 'content' values (ie: the HTML)
+#     # HTML = json.loads(reply).get('content')
+#     # # parse for opengraph stuff, and keep only a few of them
+#     # og_full = opengraph.OpenGraph(html = HTML)
+#     # og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
+#     # # return json.dumps(og_small)
+#     # # return Response(reply,status=200,mimetype='application/json')
+#     # return "<img src='{0}'><a href='{1}' target='_blank'>{2}</a>".format(og_small.get('image'), og_small.get('url'), og_small.get('title'))
+#     reply = request.query_string
+#     return reply
 
 "VIEWS"
 "----------------------------------------------------------------------------------------------------"
