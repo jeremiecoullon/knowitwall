@@ -9,6 +9,8 @@ $(window.vent).on('showViewerCompleted', function() {
         toggledOnce = true;
     });
 
+    // We've tried 3 different things so far.
+
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
     $('.annotator-annotation div').html(text);
