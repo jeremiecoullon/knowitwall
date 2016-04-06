@@ -25,6 +25,7 @@
   <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
+  <link href="/static/css/jquery.fancybox.css" rel="stylesheet"/>
 
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -498,16 +499,31 @@
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
   <script src="/static/js/switching_audioplayers.js"></script>
+  <script src="/static/js/jquery.fancybox.pack.js"></script>
+
 
 <!-- share buttons-->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55df4f643792046e" async="async"></script>
 
-  <script>
-    // $( function()
-    // {
-    //     $( 'audio' ).audioPlayer();
-    // });
+<!-- fancybox for transcript images -->
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $(".fancybox_transcript").fancybox({
+          helpers : {
+              overlay : {
+                  css : {
+                      'background' : 'rgba(119, 119, 119, 0.95)'
+                  }
+              },
+              title : {
+                type: 'inside'
+              }
+          }
+      });
+  });
+
   </script>
+
 </body>
 {% endblock %}
