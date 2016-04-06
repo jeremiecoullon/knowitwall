@@ -126,17 +126,6 @@ def ad_fun(audiodoc_list):
 """ Can do ad[author_name] or ad.get('author_name', DEFAULTVALUE)
     the second option is safer (if the key doesnt exist) """
 
-@app.route('/test/')
-def test():
-    return render_template('test.html')
-@app.route('/demo/')
-def demo():
-    r = requests.get('http://thepointmag.com/2016/examined-life/the-insane-idea', auth=('user', 'pass'))
-    HTML = r.text
-    og_full = opengraph.OpenGraph(html = HTML)
-    og_small = {k: og_full[k] for k in ('title', 'url', 'image')}
-    return render_template('demo.html',json_data=og_small)
-
 @app.route("/crossdomain")
 def crossdom():
     # get HTML & headers from the requested URL
