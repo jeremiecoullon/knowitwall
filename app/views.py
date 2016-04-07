@@ -12,9 +12,7 @@ from app import app, db, lm, oid
 from .forms import LoginForm
 from .models import User
 from oauth import OAuthSignIn
-import proxypy
-import opengraph
-import requests
+
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
 1) change path to audio in 'sending files partially' section
