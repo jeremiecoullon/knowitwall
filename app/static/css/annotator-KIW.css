@@ -212,14 +212,18 @@
     font-style: italic;
     line-height: 1.5;
     border-top: 0;
+
 }
 /*styles the image in the annotations*/
-.annotator-viewer div:first-of-type img{
+.annotator-viewer div:first-of-type,
+.annotator-editor .annotator-item:first-child img{
   width: 190px;
   padding: 10px 0;
 }
-
-
+.annotator-viewer div:first-of-type,
+.annotator-editor .annotator-item:first-child div.knowit{
+  /*border: 1px solid black;*/
+}
 .annotator-viewer .annotator-controls {
     position: relative;
     top: 5px;

@@ -521,7 +521,7 @@
 jQuery(function ($) {
     // Customise the default plugin options with the third argument.
     $('body').annotator({readOnly: {{read_only}}})
-              .annotator('setupPlugins', {tokenUrl: 'http://knowitwall.com/api/token'},{
+              .annotator('setupPlugins', {tokenUrl: 'http://localhost:5000/api/token'},{
                 Tags: false,
                 Filter: false,
                 Permissions:false
