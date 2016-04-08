@@ -203,6 +203,7 @@
     padding: 4px 16px
 }
 
+/* styling the text inside the annotation */
 .annotator-viewer div:first-of-type,
 .annotator-editor .annotator-item:first-child textarea {
     padding-top: 12px;
@@ -212,7 +213,6 @@
     font-style: italic;
     line-height: 1.5;
     border-top: 0;
-
 }
 /*styles the image in the annotations*/
 .annotator-viewer div:first-of-type,
@@ -220,6 +220,12 @@
   width: 190px;
   padding: 10px 0;
 }
+.annotator-viewer div:first-of-type,
+.annotator-editor .annotator-item:first-child p{
+  /*text-transform: none;*/
+  /*color:blue;*/
+}
+
 .annotator-viewer div:first-of-type,
 .annotator-editor .annotator-item:first-child div.knowit{
   /*border: 1px solid black;*/
