@@ -215,6 +215,8 @@
 .annotator-editor .annotator-item:first-child textarea {
     line-height: 1.5;
     border-top: 0;
+    background-color: white;
+    background-clip: content-box;
 }
 /*styles the image in the annotations*/
 .annotator-viewer .knowit_link{
@@ -228,7 +230,6 @@
   text-align:center;
   border-bottom: 1px solid #C3C3C3;
   margin: 6px 51px 10px 51px;
-  /*padding-bottom: 9px;*/
   padding: 0px 0px 9px 0px;
 }
 .annotator-viewer .knowit_message{
