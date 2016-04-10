@@ -9,12 +9,19 @@ $(window.vent).on('showViewerCompleted', function() {
         toggledOnce = true;
     });
 
-    // We've tried 3 different things so far.
+    // The 'close' button on annotation hides it
+    $('.annotator-close').click(function () {
+        $('.annotator-viewer').toggleClass('annotator-viewer_show');
+        toggledOnce = true;
+    });
+
+
+    // To parse the annotation, we've tried 3 different things so far.
 
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
 
-    var knowit_title = "<img src='/static/Images/Know-it_logo.png' style='opacity:1; width:100px;margin-left:25%;'>"
+    var knowit_title = "<img src='/static/Images/Know-it_logo.png' style='width:100px;margin-left:25%;'>"
     $('.annotator-annotation div').html(knowit_title+text);
     // -----------------------
 

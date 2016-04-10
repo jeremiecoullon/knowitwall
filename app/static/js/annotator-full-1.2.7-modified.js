@@ -1574,7 +1574,7 @@
 
     Viewer.prototype.html = {
       element: "<div class=\"annotator-outer annotator-viewer\">\n  <ul class=\"annotator-widget annotator-listing\"></ul>\n</div>",
-      item: "<li class=\"annotator-annotation annotator-item\">\n  <span class=\"annotator-controls\">\n <button title=\"Edit\" class=\"annotator-edit\">Edit</button>\n    <button title=\"Delete\" class=\"annotator-delete\">Delete</button>\n  </span>\n</li>"
+      item: "<li class=\"annotator-annotation annotator-item\">\n  <span class=\"annotator-controls\">\n <button title=\"Edit\" class=\"annotator-edit\">Edit</button>\n    <button title=\"Delete\" class=\"annotator-delete\">Delete</button>\n</span>\n <span  id='annotator-close_span'> <img class='annotator-close' src='/static/Images/hip_close.png'> <p class='annotator_close_mouseover'>Close</p></span></li>"
     };
 
     Viewer.prototype.options = {
