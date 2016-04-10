@@ -98,7 +98,7 @@
 }
 
 /* Image */
-img {
+#circular_image {
   	width: 100%;
 	  height: 100%;
 	  background: #333;

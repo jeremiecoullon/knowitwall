@@ -15,7 +15,7 @@
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    color: #909090
+    color: #909090;
 }
 
 .annotator-adder {
@@ -106,8 +106,9 @@
     margin: 0;
     padding: 0;
     bottom: -130px;
-    left: 37px;
-    border-left: solid 4px #FFC21C;
+    /*left: 37px;*/
+    left: 19px;
+    /*border-left: solid 4px #FFC21C;*/
     font-size: 30px;
     text-align: left;
     padding-left: 7px;
@@ -191,11 +192,12 @@
 
 .annotator-editor .annotator-item,
 .annotator-viewer div {
-    border-top: 1px solid rgba(133, 133, 133, 0.11)
+    /*border-top: 1px solid #C3C3C3;*/
 }
 
 .annotator-viewer div {
-    padding: 6px 6px
+    /*padding: 6px 6px*/
+  padding: 0px 2px 0px 12px;
 }
 
 .annotator-viewer .annotator-item ol,
@@ -204,31 +206,52 @@
 }
 
 /* styling the text inside the annotation */
+.annotator-viewer .knowit{
+  border-left: solid 4px #FFC21C;
+  max-width: 200px;
+  opacity: 1;
+}
 .annotator-viewer div:first-of-type,
 .annotator-editor .annotator-item:first-child textarea {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: #3c3c3c;
-    font-size: 16px;
-    font-style: italic;
     line-height: 1.5;
     border-top: 0;
 }
 /*styles the image in the annotations*/
-.annotator-viewer div:first-of-type,
-.annotator-editor .annotator-item:first-child img{
-  width: 190px;
-  padding: 10px 0;
+.annotator-viewer .knowit_link{
+  border: 1px solid #C3C3C3;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
 }
-.annotator-viewer div:first-of-type,
-.annotator-editor .annotator-item:first-child p{
-  /*text-transform: none;*/
-  /*color:blue;*/
+.annotator-viewer .knowit_author{
+  font-size:11px;
+  text-align:center;
+  border-bottom: 1px solid #C3C3C3;
+  margin: 6px 51px 10px 51px;
+  /*padding-bottom: 9px;*/
+  padding: 0px 0px 9px 0px;
+}
+.annotator-viewer .knowit_message{
+  color:blue;
+  color: #3c3c3c;
+  font-size: 16px;
+  padding-left:6px;
 }
 
-.annotator-viewer div:first-of-type,
-.annotator-editor .annotator-item:first-child div.knowit{
-  /*border: 1px solid black;*/
+.annotator-viewer .knowit_image{
+   padding-bottom:12px;
+   opacity: 1;
+   width: 180px;
+ }
+.annotator-viewer .knowit_url{
+  font-size: 13px;
+  /*position: relative;
+  top:11px;*/
+}
+.annotator-viewer .knowit_title{
+  font-size: 15px;
+  /*position: relative;
+  top:7px;*/
 }
 .annotator-viewer .annotator-controls {
     position: relative;
@@ -342,7 +365,7 @@
 }
 
 .annotator-editor .annotator-item:first-child textarea {
-    min-height: 5.5em;
+    min-height: 250px;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     -o-border-radius: 5px 5px 0 0;

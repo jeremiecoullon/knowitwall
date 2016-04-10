@@ -13,11 +13,9 @@ $(window.vent).on('showViewerCompleted', function() {
 
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
-    var knowit_title = "<p>KiW annotation</p>"
+
+    var knowit_title = "<img src='/static/Images/Know-it_logo.png' style='opacity:1; width:100px;margin-left:25%;'>"
     $('.annotator-annotation div').html(knowit_title+text);
-    $('.annotator-annotation div div.knowit').css("border", "1px solid #C3C3C3");
-    $('.annotator-annotation div div.knowit').css("text-align", "center");
-    $('.annotator-annotation div p').css("text-align", "center");
     // -----------------------
 
     // 2. Find and replace text URLs into hyperlinks.
