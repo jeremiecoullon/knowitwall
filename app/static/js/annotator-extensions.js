@@ -5,6 +5,9 @@ $(window.vent).on('showViewerCompleted', function() {
         if (toggledOnce) {
             return;
         }
+
+        $('.audiodoc_page_box').animate({'margin-left': '5%'}, 'slow');
+        // $('.audiodoc_page_box').toggleClass('audiodoc_page_box_knowit');
         $('.annotator-viewer').toggleClass('annotator-viewer_show');
         toggledOnce = true;
     });
@@ -21,7 +24,7 @@ $(window.vent).on('showViewerCompleted', function() {
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
 
-    var knowit_title = "<img src='/static/Images/Know-it_logo.png' style='width:100px;margin-left:25%;'>"
+    var knowit_title = "<img src='/static/Images/KIW-thumbnail_logo.png' style='width:100px;margin-left:25%;'>"
     $('.annotator-annotation div').html(knowit_title+text);
     // -----------------------
 
@@ -44,7 +47,4 @@ $(window.vent).on('showViewerCompleted', function() {
     //   var replaced_text = reply
     //   $('.annotator-annotation div').html(replaced_text);
     // });
-
-
-
 });

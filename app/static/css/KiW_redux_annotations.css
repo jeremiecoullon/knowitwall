@@ -320,7 +320,17 @@ header .container {
 }
 @media(min-width:768px){
   .audiodoc_page_box{
-    width:1000px
+    /*width:1000px;*/
+    width: 950px;
+    background-color: white;
+  }
+}
+@media(min-width:768px){
+  .audiodoc_page_box_knowit{
+    /*width:1000px;*/
+    width: 950px;
+    background-color: white;
+    margin-left: 5%;
   }
 }
 header img {
