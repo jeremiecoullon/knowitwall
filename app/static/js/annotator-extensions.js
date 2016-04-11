@@ -1,11 +1,13 @@
 $(window.vent).on('showViewerCompleted', function() {
+    // hide annotation if the mouse is over the annotation
+    $('.annotator-viewer').css('display','none');
+
     // Force show current annotation if highlight clicked on.
     var toggledOnce = false;
     $('.annotator-hl').click(function () {
         if (toggledOnce) {
             return;
         }
-
         $('.audiodoc_page_box').animate({'margin-left': '5%'}, 'slow');
         // $('.audiodoc_page_box').toggleClass('audiodoc_page_box_knowit');
         $('.annotator-viewer').toggleClass('annotator-viewer_show');
@@ -24,7 +26,7 @@ $(window.vent).on('showViewerCompleted', function() {
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
 
-    var knowit_title = "<img src='/static/Images/KIW-thumbnail_logo.png' style='width:100px;margin-left:25%;'>"
+    var knowit_title = "<img src='/static/Images/KIW_logo_circle.png' style='width:50px;margin-left:42%;'>"
     $('.annotator-annotation div').html(knowit_title+text);
     // -----------------------
 
