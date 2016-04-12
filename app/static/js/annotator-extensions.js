@@ -8,18 +8,18 @@ $(window.vent).on('showViewerCompleted', function() {
         if (toggledOnce) {
             return;
         }
-        $('.audiodoc_page_box').animate({'margin-left': '5%'}, 'slow');
-        // $('.audiodoc_page_box').toggleClass('audiodoc_page_box_knowit');
+        // $('.audiodoc_page_box').animate({'margin-left': '5%'}, 'slow');
+        $('.audiodoc_page_box').toggleClass('audiodoc_page_box_knowit');
         $('.annotator-viewer').toggleClass('annotator-viewer_show');
         toggledOnce = true;
     });
 
     // The 'close' button on annotation hides it
     $('.annotator-close').click(function () {
+        $('.audiodoc_page_box').toggleClass('audiodoc_page_box_knowit');
         $('.annotator-viewer').toggleClass('annotator-viewer_show');
         toggledOnce = true;
     });
-
 
     // To parse the annotation, we've tried 3 different things so far.
 
@@ -50,3 +50,13 @@ $(window.vent).on('showViewerCompleted', function() {
     //   $('.annotator-annotation div').html(replaced_text);
     // });
 });
+
+
+// This acts weirdly
+// $(window.vent).on('showViewerCompleted', function() {
+//   var oddClick = true;
+//   $(".annotator-hl").click(function() {
+//     $('.audiodoc_page_box').animate({'margin-left': oddClick ? '5%': '20%'}, 'slow');
+//       oddClick = !oddClick;
+//   });
+// });

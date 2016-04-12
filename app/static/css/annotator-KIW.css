@@ -247,12 +247,13 @@
  }
  .annotator-viewer .knowit_title{
    font-size: 16px;
-   text-align: center;
+   padding-left: 5px;
+   color:black;
  }
 .annotator-viewer .knowit_url{
   font-size: 13px;
-  text-align: center;
   padding-top: 6px;
+  padding-left: 5px;
 }
 .annotator-viewer .annotator-controls {
     position: relative;
