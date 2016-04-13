@@ -320,19 +320,12 @@ header .container {
 }
 @media(min-width:768px){
   .audiodoc_page_box{
-    /*width:1000px;*/
-    width: 950px;
-    background-color: white;
+    width:1100px;
+    background-color: #FDFDFD;
+    border-radius: 15px;
   }
 }
-@media(min-width:768px){
-  .audiodoc_page_box_knowit{
-    /*width:1000px;*/
-    width: 950px;
-    background-color: white;
-    margin-left: 5%;
-  }
-}
+
 header img {
     display: block;
     margin: 0 auto 20px;
@@ -553,9 +546,16 @@ text-align: left;
 }
 
 .transcript{
-padding: 40px;
-text-align: justify;
+  padding: 40px;
+  text-align: justify;
+  background-color: white;
 }
+@media(min-width: 768px){
+  .transcript{
+  width: 728px;
+  }
+}
+
 .transcript p {
   line-height: 170%;
   }
