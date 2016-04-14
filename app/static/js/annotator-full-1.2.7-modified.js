@@ -266,7 +266,7 @@
     }
     return {
       top: e.pageY - offset.top,
-      right: '430px',
+      right: '550px',
       left: 'initial'
     };
   };
