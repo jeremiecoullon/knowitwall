@@ -105,8 +105,7 @@
 .annotator-widget {
     margin: 0;
     padding: 0;
-    bottom: -130px;
-    top: 0px;
+    top: -23px;
     font-size: 30px;
     text-align: left;
     padding-left: 7px;
@@ -196,7 +195,7 @@
 
 .annotator-viewer div {
     /*padding: 6px 6px*/
-  padding: 0px 2px 0px 17px;
+  padding: 0px 0px 0px 0px;
 }
 
 .annotator-viewer .annotator-item ol,
@@ -205,20 +204,24 @@
 }
 
 /* styling the text inside the annotation */
+.entire_knowit{
+  margin-left: 50px;
+  border: 2px solid #C5C5C5;
+  border-radius: 10px;
+}
 .annotator-viewer .knowit{
-  width: 382px;
+  width: 450px;
   opacity: 1;
 }
 .annotator-viewer div:first-of-type,
 .annotator-editor .annotator-item:first-child textarea {
     line-height: 1.5;
-    border-top: 0;
     background-color: white;
     background-clip: content-box;
 }
 /*styles the image in the annotations*/
 .annotator-viewer .knowit_link{
-  border: 1px solid #C3C3C3;
+  /*border: 1px solid #C3C3C3;*/
   margin-top: 10px;
   text-align: center;
   padding: 0px 0px 10px 0px;
@@ -226,27 +229,29 @@
 .annotator-viewer .knowit_author{
   font-size:11px;
   text-align:center;
-  border-bottom: 1px solid #C3C3C3;
+  /*border-bottom: 1px solid #C3C3C3;*/
   margin-top: 6px;
   margin-bottom: 10px;
   padding: 0px 0px 9px 0px;
   width: 30%;
   margin-left: 34%;
+  color: #505050
 }
 .annotator-viewer .knowit_message{
   color:blue;
   color: #3c3c3c;
   font-size: 16px;
-  padding-left:6px;
+  padding-left:14px;
 }
 
 .annotator-viewer .knowit_image{
    padding-bottom:12px;
    opacity: 1;
    width: 100%;
+   height: 100%;
  }
  .annotator-viewer .knowit_title{
-   font-size: 16px;
+   font-size: 19px;
    padding-left: 5px;
    color:black;
  }

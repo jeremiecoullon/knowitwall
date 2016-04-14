@@ -10,8 +10,8 @@
 }
 #annotator-close_span {
   position: absolute;
-  left: 350px;
-  top: -20px;
+  left: 479px;
+  top: -17px;
   cursor: pointer;
 }
 /* close button */
@@ -36,7 +36,7 @@
   height: 25px;
   cursor: pointer;
   position: absolute;
-  top: 429px;
+  top: 499px;
   left:710px;
 }
 .knowit_button_svg{
@@ -44,6 +44,6 @@
   margin-left: 28%;
 }
 .knowit_button:hover{
-  border: solid 1.5px #ffc21c;
+  border: solid 1.5px black;
   background-color: #ffc21c;
 }
