@@ -240,9 +240,6 @@
           <li class="page-scroll-offset">
             <a href="#read">Read</a>
           </li>
-          <li class="page-scroll">
-            <a href="#contact">Feedback</a>
-          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -420,66 +417,6 @@
     </div> <!-- container -->
   </section> <!-- end of episodes -->
 
-
-
-
-  <!-- Contact Section -->
-  <section id="contact">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="contact-title">
-            <h2 class="feedbackform">We'd love to have your thoughts on this episode</h2>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <form name="sentMessage" id="contactForm" novalidate>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Feedback on the audio documentary</label>
-                <textarea rows="4" class="form-control" name="feedback_overall" placeholder="Your feedback on the script, narration, music, sound effects, etc. Bonus points if you can make us cry! " id="message" required data-validation-required-message="Please enter some feedback!"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Name (optional)</label>
-                <input type="text" class="form-control" name="name" placeholder="Your name (optional)" id="name">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Email address (optional)</label>
-                <input type="email" class="form-control" name="email" placeholder="Your email address (optional)" id="email">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-
-            <input type="hidden" name="ad_name" value="{{audiodocs[0].topic_name}}">
-
-            <br>
-            <div id="success"></div>
-            <div class="row">
-              <div class="form-group col-xs-12">
-                <button type="submit" class="btn btn-success btn-lg">Send</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
 {% endblock %}
 <!-- the footer is in base.html -->
 {% block jsscripts %}
@@ -496,7 +433,6 @@
   <script src="/static/js/jquery.easing.min.js"></script>
   <script src="/static/js/classie.js"></script>
   <script src="/static/js/jqBootstrapValidation.js"></script>
-  <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
   <script src="/static/js/switching_audioplayers.js"></script>
   <script src="/static/js/jquery.fancybox.pack.js"></script>

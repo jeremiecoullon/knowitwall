@@ -149,3 +149,20 @@ header .container {
   color: black;
   font-size:125%;
 }
+
+footer .footer-above{
+  background-color: #FFC21C;
+}
+footer .footer-below{
+  background-color: #FFC21C;
+}
+footer h3{
+  color:#27282D;
+}
+footer .btn-social{
+  color: #27282D;
+  border: 2px solid #27282D;
+}
+footer .footer-info{
+  color: #F5F5F5;
+}
