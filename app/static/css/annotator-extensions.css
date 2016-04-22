@@ -44,6 +44,6 @@
   margin-left: 28%;
 }
 .knowit_button:hover{
-  border: solid 1.5px black;
+  border: solid 1.5px #ffc21c;
   background-color: #ffc21c;
 }
