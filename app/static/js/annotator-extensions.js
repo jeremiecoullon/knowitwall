@@ -1,6 +1,6 @@
 $(window.vent).on('showViewerCompleted', function() {
     // hide annotation if the mouse is over the annotation
-    $('.annotator-viewer').css('display','none');
+    // $('.annotator-viewer').css('display','none');
 
     // Force show current annotation if highlight clicked on.
     var toggledOnce = false;
