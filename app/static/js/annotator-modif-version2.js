@@ -729,9 +729,9 @@
     Annotator.prototype.events = {
       ".annotator-adder button click": "onAdderClick",
       ".annotator-adder button mousedown": "onAdderMousedown",
-      // ".annotator-hl click": "toggleAnnotationViewer"
-      ".annotator-hl mouseover": "onHighlightMouseover",
-      ".annotator-hl mouseout": "startViewerHideTimer"
+      ".annotator-hl click": "toggleAnnotationViewer"
+      // ".annotator-hl mouseover": "onHighlightMouseover",
+      // ".annotator-hl mouseout": "startViewerHideTimer"
     };
 
     Annotator.prototype.html = {
@@ -761,6 +761,7 @@
       this.onDeleteAnnotation = __bind(this.onDeleteAnnotation, this);
       this.onEditAnnotation = __bind(this.onEditAnnotation, this);
       this.onAdderClick = __bind(this.onAdderClick, this);
+      this.toggleAnnotationViewer = __bind(this.toggleAnnotationViewer, this);
       this.onAdderMousedown = __bind(this.onAdderMousedown, this);
       this.onHighlightMouseover = __bind(this.onHighlightMouseover, this);
       this.checkForEndSelection = __bind(this.checkForEndSelection, this);
@@ -1071,7 +1072,7 @@
 
     Annotator.prototype.startViewerHideTimer = function() {
       if (!this.viewerHideTimer) {
-        return this.viewerHideTimer = setTimeout(this.viewer.hide, 250);
+        return this.viewerHideTimer = setTimeout(this.viewer.hide, 0);
       }
     };
 
@@ -1118,6 +1119,13 @@
     Annotator.prototype.isAnnotator = function(element) {
       return !!$(element).parents().andSelf().filter('[class^=annotator-]').not(this.wrapper).length;
     };
+
+    // KIW modif: toggle opening and closing on click
+    Annotator.prototype.toggleAnnotationViewer = function(event) {
+      this.onHighlightMouseover(event);
+      // TODO: get toggling to work here
+      // this.startViewerHideTimer(event);
+    }
 
     // KIW modif: use annontationPosition rather than mousePosition to place annotation on the RHS of the screen
     Annotator.prototype.onHighlightMouseover = function(event) {
