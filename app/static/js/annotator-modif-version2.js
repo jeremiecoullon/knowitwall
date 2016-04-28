@@ -757,6 +757,9 @@
 
     Annotator.prototype.viewerHideTimer = null;
 
+// set to false: annotations don't show by default
+    Annotator.prototype.toggleOn = true;
+
     function Annotator(element, options) {
       this.onDeleteAnnotation = __bind(this.onDeleteAnnotation, this);
       this.onEditAnnotation = __bind(this.onEditAnnotation, this);
@@ -1120,11 +1123,16 @@
       return !!$(element).parents().andSelf().filter('[class^=annotator-]').not(this.wrapper).length;
     };
 
-    // KIW modif: toggle opening and closing on click
+    // KIW modif: toggle opening and closing on click. kinda works but still buggy
     Annotator.prototype.toggleAnnotationViewer = function(event) {
-      this.onHighlightMouseover(event);
-      // TODO: get toggling to work here
-      // this.startViewerHideTimer(event);
+      if (this.toggleOn ===true){
+        this.onHighlightMouseover(event);
+        return this.toggleOn = false;
+      }
+      if (this.toggleOn ===false){
+      this.startViewerHideTimer(event);
+      return this.toggleOn = true;
+      }
     }
 
     // KIW modif: use annontationPosition rather than mousePosition to place annotation on the RHS of the screen
