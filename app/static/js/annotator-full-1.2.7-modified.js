@@ -266,8 +266,7 @@
     }
     return {
       top: e.pageY - offset.top,
-      right: '550px',
-      left: 'initial'
+      right: '550px'
     };
   };
   Util.preventEventDefault = function(event) {
@@ -736,6 +735,7 @@
 
     Annotator.prototype.html = {
       adder: '<div class="annotator-adder"><button>' + _t('Annotate') + '</button></div>',
+      knowit_button: '<div class="knowit_button"><svg class="knowit_button_svg"width="50%" height="50%" viewBox="0 0 175 170" inkscape:export-xdpi="90" inkscape:export-ydpi="90"><g id="layer1" transform="translate(-241.83035,-280.77737)"><path id="text2413"d="M373.178,331.207c-4.037,27.995-6.055,47.526-6.055,58.594c0,23.047,5.924,34.57,17.773,34.57   c8.333,0,17.057-4.883,26.172-14.648l3.711,2.539c-6.25,14.453-11.816,24.023-16.699,28.711s-10.254,7.031-16.113,7.031   c-8.984,0-15.397-5.404-19.238-16.211c-3.842-10.807-5.762-23.177-5.762-37.109c0-13.672,1.822-31.966,5.469-54.883   c-13.933,14.323-31.381,36.589-52.344,66.797c-13.021,18.75-21.81,30.339-26.367,34.766c-4.557,4.428-9.961,6.641-16.211,6.641   c-9.505,0-14.258-4.688-14.258-14.063c0-4.947,1.888-9.537,5.664-13.77c3.776-4.231,12.695-11.165,26.758-20.801   c4.037-26.432,6.055-45.703,6.055-57.813c0-22.917-5.99-34.375-17.969-34.375c-8.203,0-16.862,4.883-25.977,14.648l-3.906-2.539   c10.287-23.828,21.224-35.742,32.813-35.742c8.854,0,15.234,5.371,19.141,16.113s5.859,23.145,5.859,37.207   c0,13.802-1.758,32.031-5.273,54.688c15.495-15.625,32.487-37.174,50.977-64.648c12.239-18.099,21.061-29.85,26.465-35.254   c5.403-5.403,11.23-8.105,17.48-8.105c4.297,0,7.715,1.367,10.254,4.102s3.809,6.055,3.809,9.961c0,5.208-1.953,9.961-5.859,14.258   S386.85,322.613,373.178,331.207L373.178,331.207z"style="fill:#27282d;fill-opacity:1"/></g></svg></div>',
       wrapper: '<div class="annotator-wrapper"></div>'
     };
 
@@ -765,6 +765,7 @@
       this.onEditAnnotation = __bind(this.onEditAnnotation, this);
       this.onAdderClick = __bind(this.onAdderClick, this);
       this.onAdderMousedown = __bind(this.onAdderMousedown, this);
+      this.knowit_button = __bind(this.knowit_button, this);
       this.toggleAnnotationViewer = __bind(this.toggleAnnotationViewer, this);
       this.onHighlightMouseover = __bind(this.onHighlightMouseover, this);
       this.checkForEndSelection = __bind(this.checkForEndSelection, this);
@@ -786,6 +787,19 @@
       this._setupWrapper()._setupViewer()._setupEditor();
       this._setupDynamicStyle();
       this.adder = $(this.html.adder).appendTo(this.wrapper).hide();
+      this.knowit_button = $(this.html.knowit_button).appendTo(this.wrapper).hide();
+      this.setKnowitButton();
+    }
+
+    // Get position of `.annotator-hl` and use it to position `.knowit_button`
+    Annotator.prototype.setKnowitButton = function() {
+      var highlight_position
+      highlight_position = $('.annotator-hl').position();
+      // this.knowit_button.css('left', highlight_position.left);
+      // this.knowit_button.css('top', highlight_position.top);
+      // this.knowit_button.css('left', this.wrapper[0].left);
+      // left: e.pageX - offset.left
+      this.knowit_button.show();
     }
 
     Annotator.prototype._setupWrapper = function() {
@@ -1145,6 +1159,7 @@
       annotations = $(event.target).parents('.annotator-hl').andSelf().map(function() {
         return $(this).data("annotation");
       });
+      this.knowit_button.show();
       return this.showViewer($.makeArray(annotations), Util.annotationPosition(event, this.wrapper[0]));
     };
 
