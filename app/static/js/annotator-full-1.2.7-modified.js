@@ -729,8 +729,9 @@
     Annotator.prototype.events = {
       ".annotator-adder button click": "onAdderClick",
       ".annotator-adder button mousedown": "onAdderMousedown",
-      ".annotator-hl mouseover": "onHighlightMouseover",
-      ".annotator-hl mouseout": "startViewerHideTimer"
+      ".annotator-hl click": "toggleAnnotationViewer"
+      // ".annotator-hl mouseover": "onHighlightMouseover",
+      // ".annotator-hl mouseout": "startViewerHideTimer"
     };
 
     Annotator.prototype.html = {
@@ -756,11 +757,15 @@
 
     Annotator.prototype.viewerHideTimer = null;
 
+    // set to true: annotations don't show by default
+    Annotator.prototype.toggleOn = true;
+
     function Annotator(element, options) {
       this.onDeleteAnnotation = __bind(this.onDeleteAnnotation, this);
       this.onEditAnnotation = __bind(this.onEditAnnotation, this);
       this.onAdderClick = __bind(this.onAdderClick, this);
       this.onAdderMousedown = __bind(this.onAdderMousedown, this);
+      this.toggleAnnotationViewer = __bind(this.toggleAnnotationViewer, this);
       this.onHighlightMouseover = __bind(this.onHighlightMouseover, this);
       this.checkForEndSelection = __bind(this.checkForEndSelection, this);
       this.checkForStartSelection = __bind(this.checkForStartSelection, this);
@@ -1117,6 +1122,18 @@
     Annotator.prototype.isAnnotator = function(element) {
       return !!$(element).parents().andSelf().filter('[class^=annotator-]').not(this.wrapper).length;
     };
+
+    // KIW modif: toggle opening and closing on click. kinda works but still buggy
+    Annotator.prototype.toggleAnnotationViewer = function(event) {
+      if (this.toggleOn ===true){
+        this.onHighlightMouseover(event);
+        return this.toggleOn = false;
+      }
+      if (this.toggleOn ===false){
+      this.startViewerHideTimer(event);
+      return this.toggleOn = true;
+      }
+    }
 
     // KIW modif: use annontationPosition rather than mousePosition to place annotation on the RHS of the screen
     Annotator.prototype.onHighlightMouseover = function(event) {
