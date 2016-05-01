@@ -404,23 +404,42 @@
           </div>
           {% endfor %}
         </div>
-        <div class="row">
 
-          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
-          <div class="col-md-3 last_boxes_center">
-            <div style="background: url('{{audiodocs[9].topic_image_box}}'); background-size:cover;" class='box_image text-center'>
-              <a href="audiodoc/{{audiodocs[9].url}}" class="box_episode_title">
-                {{audiodocs[9].topic_name | safe}}
+        <div class="row">
+          {% for audiodoc in audiodocs[9:13] %}
+          <div class="col-md-3">
+            <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
+                {{audiodoc.topic_name | safe}}
               </a>
               <p style="font-size:0.8em;">
-                <i style="color: {{audiodocs[9].by_in_colour}}; color: {{audiodocs[9].by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodocs[9].url}}#author" class="highlight">{{audiodocs[9].author_name | safe}}</a> <i style="color: {{audiodocs[9].by_in_colour}}; color: {{audiodocs[9].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[9].discipline}} </span>
+                <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">in</i> <span class="highlight">{{audiodoc.discipline}} </span>
               </p>
             </div>
             <div>
-              <p class="episode-description justify">{{audiodocs[9].topic_description | safe}}</p>
+              <p class="episode-description justify">{{audiodoc.topic_description | safe}}</p>
             </div>
           </div>
-          {% for audiodoc in audiodocs[10:13] %}
+          {% endfor %}
+        </div>
+        <div class="row">
+          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
+          {% for audiodoc in audiodocs[13:14] %}
+          <div class="col-md-3 last_boxes_center">
+            <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
+              <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">
+                {{audiodoc.topic_name | safe}}
+              </a>
+              <p style="font-size:0.8em;">
+                <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">by</i> <a href="audiodoc/{{audiodoc.url}}#author" class="highlight">{{audiodoc.author_name | safe}}</a> <i style="color: {{audiodoc.by_in_colour}}; color: {{audiodoc.by_in_colour_box}};">in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+              </p>
+            </div>
+            <div>
+              <p class="episode-description justify">{{audiodoc.topic_description | safe}}</p>
+            </div>
+          </div>
+          {% endfor %}
+          {% for audiodoc in audiodocs[14:17] %}
           <div class="col-md-3">
             <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
               <a href="audiodoc/{{audiodoc.url}}" class="box_episode_title">

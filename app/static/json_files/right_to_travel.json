@@ -1,0 +1,21 @@
+{
+    "url": "right_to_travel",
+    "unique_id": "Samson_Travel",
+    "topic_name": "The migrant crisis, Spanish America and the right to travel",
+    "topic_image": "/static/Images/TI_travel.jpg",
+    "topic_image_home": "/static/Images/TI_travel_home.jpg",
+    "topic_image_box": "/static/Images/TI_travel_box.jpg",
+    "image_credits": "",
+    "by_in_colour":"#FFFFFF",
+    "discipline": "History",
+    "og_name": "The migrant crisis, Spanish America and the right to travel",
+    "og_description": "",
+    "topic_description": "",
+    "author_name": "Alexander Samson",
+    "author_image": "/static/Images/author_Alexander_Samson.jpg",
+    "author_bio": "app/static/texts/travel_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "Alexander Samson and Vidish Athavale",
+    "transcript": "app/static/texts/travel_transcript.html",
+    "audio_mp3": ""
+}

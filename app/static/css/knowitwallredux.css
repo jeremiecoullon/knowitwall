@@ -482,7 +482,7 @@ text-align: left;
 /* to center the last boxes on the homepage */
 
 .last_boxes_center{
-  margin-left: 0%;
+  margin-left: 37.5%;
 }
 @media(max-width:767px){
   .last_boxes_center{
