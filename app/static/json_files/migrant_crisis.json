@@ -1,12 +1,12 @@
 {
-    "url": "right_to_travel",
+    "url": "migrant_crisis",
     "unique_id": "Samson_Travel",
     "topic_name": "The migrant crisis, Spanish America and the right to travel",
     "topic_image": "/static/Images/TI_travel.jpg",
     "topic_image_home": "/static/Images/TI_travel_home.jpg",
     "topic_image_box": "/static/Images/TI_travel_box.jpg",
     "image_credits": "Caption: World map by Frederik De Wit, ca. 1670",
-    "by_in_colour":"#FFFFFF",
+    "by_in_colour":"black",
     "discipline": "History",
     "og_name": "The migrant crisis, Spanish America and the right to travel",
     "og_description": "The general public has been debating immigration with seemingly modern notions of economics, identity and conflict, but is this debate really so modern? Surely our forbears have little to add to the discussion in our globalised world? Alexander Samson doesn't think so.",
@@ -17,5 +17,5 @@
     "music_credits": "Kai Engel",
     "narration_credits": "Alexander Samson and Vidish Athavale",
     "transcript": "app/static/texts/travel_transcript.html",
-    "audio_mp3": "http://knowitwall.com/audio/right_to_travel.mp3"
+    "audio_mp3": "http://knowitwall.com/audio/migrant_crisis.mp3"
 }
