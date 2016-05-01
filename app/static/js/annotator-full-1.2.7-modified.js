@@ -799,7 +799,7 @@
       // this.knowit_button.css('top', highlight_position.top);
       // this.knowit_button.css('left', this.wrapper[0].left);
       // left: e.pageX - offset.left
-      this.knowit_button.show();
+      // this.knowit_button.show();
     }
 
     Annotator.prototype._setupWrapper = function() {
@@ -1029,6 +1029,15 @@
           _results.push($(node).wrapAll(hl).parent().show()[0]);
         }
       }
+      var left_button = $('.annotator-hl').position().left;
+      var top_button = $('.annotator-hl').position().top;
+      $('.audiodoc_bio').html("left: " + String(left_button)+", top: " +String(top_button));
+
+
+        // top: e.pageY - offset.top,
+        // right: '550px'
+      this.knowit_button.css({"top": top_button ,"right": '700px'});
+      this.knowit_button.show();
       return _results;
     };
 
@@ -1159,6 +1168,9 @@
       annotations = $(event.target).parents('.annotator-hl').andSelf().map(function() {
         return $(this).data("annotation");
       });
+      // top: e.pageY - offset.top,
+      // show the knowit_button at the level of the mouse posiiton
+      this.knowit_button.css({"top": Util.annotationPosition(event, this.wrapper[0]).top,"right": "700px"});
       this.knowit_button.show();
       return this.showViewer($.makeArray(annotations), Util.annotationPosition(event, this.wrapper[0]));
     };
