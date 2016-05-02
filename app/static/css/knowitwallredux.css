@@ -33,6 +33,7 @@
   color: #33353d;
   background-color: rgba(255, 194, 28, 0.8);
   padding: 0em 0.2em;
+  border-radius: 3px;
 }
 
 /* boxes on homepage: topic images */
@@ -54,6 +55,7 @@
   display: inline-block;
   line-height: 110%;
   padding: 0.3em 0.4em;
+  border-radius: 3px;
 }
 
 
@@ -371,6 +373,7 @@ text-align: left;
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: #27282D;
   background-color: #FFC21C;
+  border-radius: 5px;
   }
 
 
@@ -467,6 +470,7 @@ text-align: left;
   display: inline-block;
   line-height: 110%;
   padding: 0.3em 0.4em;
+  border-radius: 8px;
 }
 
 
