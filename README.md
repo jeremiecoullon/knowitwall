@@ -1,4 +1,4 @@
- Knowitwall
+                                                                                                                                                              Knowitwall
 ==========
 
 To get Knowitwall running locally:
@@ -9,70 +9,109 @@ To get Knowitwall running locally:
 Annotations
 ===========
 
-##Annotator design:
+##Current Annotator design:
 
-###Step 1: manually typing annotations
+Here is the current annotation design.
 
-**Example design:**
-(the font size under the image weird as it's just a screenshot of a facebook post :p). We'd need to play around with the size of everything to make it look less crowded. maybe quite a small image ?
+![annotation Design](annotation_design.png)
 
-<img src="KiW_annotation_2.png"  style="width:700px; margin-left:10%; margin-right:10%" ></img>
-
-
-- Objective is to get this simple design and play with to see how it is (in terms of usability) and what needs to be done next:
-- In the first instance, we write each annotation manually in html (and write the message, og:image, og:title directly in html). We only show 'author-written' annotations at first so users can't annotate
-- Then we'll allow users to annotate; so we'll need to automatically scrape each URL for opengraph info.
-
-**TODO:**
-
-- **bug**: when you have a URL in the annotation, it doesn't always display on the right hand side, and instead puts it somewhere in the middle of the text (so covers up some of the episode's text). to reproduce: type this into an annotation:
+To reproduce this annotation, create an annotation and copy the html below into it. We'll first get annotations on the site in this way before allowing users to add them themselves (which will need a nice interface).
 
 ```html
-Knowitwall is a cool site.
-<img src="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" target="_blank">
-<p>Knowitwall</p>
+<div class="entire_knowit">
+<div class='knowit_author'>by KiW Team</div>
+<div class='knowit'><div class='knowit_message'>There is actually an argument by philosopher Nick Bostrom from Oxford according to which it would be bad to find alien life in our Solar System:
+ </div><a href="https://www.technologyreview.com/s/409936/where-are-they/" target='_blank' ><div class='knowit_link'><img src="http://goo.gl/OgZzbP" class='knowit_image'>
+<p class='knowit_title'>Where are they?</p><p class='knowit_url'>TECHNOLOGYREVIEW.COM</p></div></a></div>
+</div>
 ```
 
-- style annotation:
-  - center text
-  - black font rather than dark grey (unless it's a hyperlink)
-  - image and title clickeable
-- mobile: the message & image should cover the text (because there's no margin on mobile), but the background of the annotation should be white rather than transparent.
-###Step 2: automatically scrape opengraph info from URL
+###TODO
 
-_Each annotation must include a URL (an article on a 3rd party site) and a short message explaining what the article is about):_
+- **Kappa logo (ie: knowit button):** For every annotation, place the small kappa logo at the end of the line (the 'knowit button'):
+  - in the above screenshot the knowit button was put there manually (line 404 in `audiodoc_annotations.html`). However, the annotator library should put it there automatically. This should happen at the same time that it adds the yellow highlight to the text (which is `<span class='annotator-hl'>...</span> `)
+- **Toggle:** add method that toggles the annotation as visible/not-visible
+  - only one annotation open at once: for 2 annotations `A` and `B`, opening annotation `B` closes annotation `A` if `A` is already open
+  - method toggles when you click on the yellow highlighted text _or_ on the knowit_button
+  - annotation closes when you click on the 'close' cross on the top right hand corner of the annotation
+  - currently: annotations opens and closes when you click on the yellow highlight, but there are bugs:
+    - annotation closes randomly when you hover the mouse over it (but not all the time; there seem to be some weird conditions for this to happen)
+    - when you click anywhere on the page (on the text for example), the annotation closes. You then need to click on the highlighted bit twice to open it again (once to 'close' it (as far as the toggle method is concerned) and once to open it again.)
+    - `knowit_button` needs to also open/close it.
+- **on mobile:**
+  - Must have no 'knowit button'
+  - The annotation (same design) appears above (or below) the highlighted bit of text
+  - Open/close the annotation by clicking on the highlighted text. Close by clicking on the 'close' button (the black cross)
 
-**process for a user creating an annotation.**
+###Useful details about the annotator library
 
-- user highlights text, types in a message which includes a URL.
-- frontend finds URL (regex), and fetches from it:
-  - og:title
-  - og:image
-- The created annotation then becomes like when you post a URL as a facebook post; namely has the info in the following order:
+_in `app/static/js/annotator-full-1.2.7-modified.js`_
 
-message|
-------|
-|**og:image**|
-|**og:title**|
-|**URL** |
+######Events:
+_line 728_
 
---------
+define jQuery methods that go with certain CSS classes, and assign them to an Annotator method (`onAdderClick`, `onAdderMousedown`, etc..)
 
-- maybe have `og:description` (or just the beginning of it) between `og:title` and URL (like on facebook); though it's less necessary as you already have the message from the user on top.
-- `og:image`, `og:title`, and URL are all clickable, and redirect to the URL (like on facebook)
+```javascript
+Annotator.prototype.events = {
 
-**Stuff to do:**
-- <del>have the vertical yellow line like in the image above</del>
-- <del>have the adder (the square that appears when you highlight text) appear next to the mouse.</del>
-- <del>be able to click on the highlighted section of text and have the annotation stay visible. Click again to hide it.</del>
-- <del>when creating an annotations we need to display 2 boxes. This needs to be setup in the backend store though..</del>
-  - <del>one box for the text (with a character limit, say 200)</del>
-  - <del>one box for the URL to the 3rd party content</del>
-- **Displaying URLs:** user can paste any hyperlink into the message, and frontend fetches `og:image`, `og:title`, and displays as above
-- **bug**: when you have a URL in the annotation, it doesn't always display on the right hand side, and instead puts it somewhere in the middle of the text (so covers up some of the episode's text). I can't reproduce this again though; but look out for it  #rigorous
+  ".annotator-adder button click": "onAdderClick",
+  ".annotator-adder button mousedown": "onAdderMousedown",
+  // modification: show annotation on click
+  ".annotator-hl click": "toggleAnnotationViewer"
+  // original methods: show annotation on hover
+  // ".annotator-hl mouseover": "onHighlightMouseover",
+  // ".annotator-hl mouseout": "startViewerHideTimer"
+};
+```
 
+######add knowit button
 
-###Annotation library
+_line 736_
+
+add relevant html to the page, including the knowit button
+
+```javascript
+Annotator.prototype.html = {
+  adder: '<div class="annotator-adder"><button>' + _t('Annotate') + '</button></div>',
+  knowit_button: '<div class="knowit_button"><svg> (svg for button)</svg></div>',
+  wrapper: '<div class="annotator-wrapper"></div>'
+};
+```
+
+######my shitty toggle function
+
+_line 1129_
+
+I just reuse the same original methods (`onHighlightMouseover` and `startViewerHideTimer`). The latter has a delay (namely, the timer) to close the annotation (that I set to 0 seconds).
+
+```javascript
+// KIW modif: toggle opening and closing on click. kinda works but still buggy
+Annotator.prototype.toggleAnnotationViewer = function(event) {
+  if (this.toggleOn ===true){
+    this.onHighlightMouseover(event);
+    return this.toggleOn = false;
+  }
+  if (this.toggleOn ===false){
+  this.startViewerHideTimer(event);
+  return this.toggleOn = true;
+  }
+}
+```
+
+######position the knowit button
+
+_line 1151_
+
+Here I place the knowit button at the level on the highlighted text, but this is only happens when you open the annotation.
+
+```javascript
+// show the knowit_button at the level of the mouse posiiton
+this.knowit_button.css({"top": Util.annotationPosition(event, this.wrapper[0]).top,"right": "700px"});
+this.knowit_button.show();
+```
+
+###Set up Annotation library
 *The annotation library: [Annotator.js](http://annotatorjs.org/)*
 
 - to get the annotations working with this [backend store](http://annotateit.org/):
@@ -87,8 +126,3 @@ message|
   ```python
   create_permission = ['jeremie.coullon']
   ```
-
-###Annotator frontend
-
-- when a user creates an annotation, `annotator-full-1.2.7-modified.js` creates the html tags with the annotator classes (as an unordered list) and positions them relative to where the annotation was created.
-- the position of the adder and the annotation is determined in the `div` with classes `annotator-outer annotator-viewer annotator-invert-x annotator-hide`. These classes are defined in `annotator-KIW.css`.
