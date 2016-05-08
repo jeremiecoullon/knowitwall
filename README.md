@@ -32,7 +32,7 @@ To reproduce this annotation, create an annotation and copy the html below into 
   - in the above screenshot the knowit button was put there manually (line 404 in `audiodoc_annotations.html`). However, the annotator library should put it there automatically. This should happen at the same time that it adds the yellow highlight to the text (which is `<span class='annotator-hl'>...</span> `)
 - **Toggle:** add method that toggles the annotation as visible/not-visible
   - only one annotation open at once: for 2 annotations `A` and `B`, opening annotation `B` closes annotation `A` if `A` is already open
-  - method toggles when you click on the yellow highlighted text _or_ on the knowit_button
+  - method toggles _only_ when you click on the yellow highlighted text _or_ on the knowit_button. Namely: clicking elsewhere on the page shouldn't open/close the annotation
   - annotation closes when you click on the 'close' cross on the top right hand corner of the annotation
   - currently: annotations opens and closes when you click on the yellow highlight, but there are bugs:
     - annotation closes randomly when you hover the mouse over it (but not all the time; there seem to be some weird conditions for this to happen)
