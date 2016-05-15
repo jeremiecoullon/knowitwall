@@ -147,6 +147,47 @@
   $ = jQuery;
 
   Util = {};
+  
+  //KiW modif: add Util.verticalAnchors
+  //Util.verticalAnchors manages elements which are to be vertically aligned. It exposes a register function,
+  //which accepts an anchor along with the element to align to it.
+  Util.verticalAnchors = (function(){
+    var registered = [];
+    
+    //updates the position of the element toAlign so that it is aligned with the anchor
+    function align(anchor, toAlign){
+        var anchorParent = anchor.parent();
+        toAlign.offset({
+            //the element toAlign should have its centre point vertically in line with that of the anchor
+            top: anchor.offset().top + ((anchor.height() - toAlign.height()) / 2),
+            //the element toAlign should have its left side a short distance from the right side of the anchor's parent
+            left: anchorParent.offset().left + anchorParent.width() + 5
+        });
+    }
+    
+    //when the window is resized the elements toAlign need to be realigned to their anchors.
+    $(window).on('resize', function(){
+        var i;
+        for(i = 0; i < registered.length; i += 1){
+            align(registered[i].anchor, registered[i].toAlign);
+        }
+    });
+    
+    return {
+        //aligns the element toAlign in relation to the provided anchor, and maintains their alignment
+        register: function(anchor, toAlign){
+            //the element toAlign must be absolutely positioned for the alignment to work
+            toAlign.css('position', 'absolute');
+            //set the initial alignment
+            align(anchor, toAlign);
+            //remember the pair
+            registered.push({
+                anchor: anchor,
+                toAlign: toAlign
+            });
+        }
+    };
+  })();
 
   Util.flatten = function(array) {
     var flatten;
@@ -266,7 +307,7 @@
     }
     return {
       top: e.pageY - offset.top,
-      right: '550px'
+      right: '544px'
     };
   };
   Util.preventEventDefault = function(event) {
@@ -729,8 +770,6 @@
       ".annotator-adder button click": "onAdderClick",
       ".annotator-adder button mousedown": "onAdderMousedown",
       ".annotator-hl click": "toggleAnnotationViewer"
-      // ".annotator-hl mouseover": "onHighlightMouseover",
-      // ".annotator-hl mouseout": "startViewerHideTimer"
     };
 
     Annotator.prototype.html = {
@@ -757,21 +796,14 @@
 
     Annotator.prototype.viewerHideTimer = null;
 
-    // set to true: annotations don't show by default
-    Annotator.prototype.toggleOn = true;
-
     function Annotator(element, options) {
       this.onDeleteAnnotation = __bind(this.onDeleteAnnotation, this);
       this.onEditAnnotation = __bind(this.onEditAnnotation, this);
       this.onAdderClick = __bind(this.onAdderClick, this);
       this.onAdderMousedown = __bind(this.onAdderMousedown, this);
-      this.knowit_button = __bind(this.knowit_button, this);
       this.toggleAnnotationViewer = __bind(this.toggleAnnotationViewer, this);
-      this.onHighlightMouseover = __bind(this.onHighlightMouseover, this);
       this.checkForEndSelection = __bind(this.checkForEndSelection, this);
       this.checkForStartSelection = __bind(this.checkForStartSelection, this);
-      this.clearViewerHideTimer = __bind(this.clearViewerHideTimer, this);
-      this.startViewerHideTimer = __bind(this.startViewerHideTimer, this);
       this.showViewer = __bind(this.showViewer, this);
       this.onEditorSubmit = __bind(this.onEditorSubmit, this);
       this.onEditorHide = __bind(this.onEditorHide, this);
@@ -787,7 +819,6 @@
       this._setupWrapper()._setupViewer()._setupEditor();
       this._setupDynamicStyle();
       this.adder = $(this.html.adder).appendTo(this.wrapper).hide();
-      this.knowit_button = $(this.html.knowit_button).appendTo(this.wrapper).hide();
     }
 
     Annotator.prototype._setupWrapper = function() {
@@ -812,10 +843,7 @@
           }
           return _this.publish('annotationViewerTextField', [field, annotation]);
         }
-      }).element.appendTo(this.wrapper).bind({
-        "mouseover": this.clearViewerHideTimer,
-        "mouseout": this.startViewerHideTimer
-      });
+      }).element.appendTo(this.wrapper);
       return this;
     };
 
@@ -1003,7 +1031,8 @@
     };
 
     Annotator.prototype.highlightRange = function(normedRange, cssClass) {
-      var hl, node, white, _k, _len2, _ref1, _results;
+      //KiW modif: add kappa
+      var hl, node, white, _k, _len2, _ref1, _results, kappa;
       if (cssClass == null) {
         cssClass = 'annotator-hl';
       }
@@ -1017,6 +1046,10 @@
           _results.push($(node).wrapAll(hl).parent().show()[0]);
         }
       }
+      //KiW modif: anchor kappa vertically to the highlight
+      kappa = $(this.html.knowit_button);
+      $(node).parent().append(kappa);
+      Util.verticalAnchors.register($(node).parent(), kappa);
       return _results;
     };
 
@@ -1068,28 +1101,14 @@
       return this.publish('annotationEditorSubmit', [this.editor, annotation]);
     };
 
-    Annotator.prototype.showViewer = function(annotations, location) {
+    Annotator.prototype.showViewer = function(annotations, location, representative) {
       this.viewer.element.css(location);
-      this.viewer.load(annotations);
+      this.viewer.load(annotations, representative);
       $(window.vent).trigger('showViewerCompleted');
-      return this.publish('annotationViewerShown', [this.viewer, annotations]);
-    };
-
-    Annotator.prototype.startViewerHideTimer = function() {
-      if (!this.viewerHideTimer) {
-        return this.viewerHideTimer = setTimeout(this.viewer.hide, 250);
-      }
-    };
-
-    Annotator.prototype.clearViewerHideTimer = function() {
-      clearTimeout(this.viewerHideTimer);
-      return this.viewerHideTimer = false;
+      return this.publish('annotationViewerShown', [this.viewer, annotations, representative]);
     };
 
     Annotator.prototype.checkForStartSelection = function(event) {
-      if (!(event && this.isAnnotator(event.target))) {
-        this.startViewerHideTimer();
-      }
       return this.mouseIsDown = true;
     };
 
@@ -1111,9 +1130,9 @@
           return;
         }
       }
-	  //KiW modification: show the adder if we've selected some text which can be annotated, and either
-	  //we're not using the Permissions plugin, or we are and it allows our custom 'create'
-	  //action
+      //KiW modification: show the adder if we've selected some text which can be annotated, and either
+      //we're not using the Permissions plugin, or we are and it allows our custom 'create'
+      //action
       if (event && this.selectedRanges.length && (!this.plugins.Permissions || this.plugins.Permissions.authorize('create', {}))) {
         return this.adder.css(Util.mousePosition(event, this.wrapper[0])).show();
       } else {
@@ -1125,33 +1144,21 @@
       return !!$(element).parents().andSelf().filter('[class^=annotator-]').not(this.wrapper).length;
     };
 
-    // KIW modif: toggle opening and closing on click. kinda works but still buggy
+    // KIW modif: toggle opening and closing on click
     Annotator.prototype.toggleAnnotationViewer = function(event) {
-      if (this.toggleOn ===true){
-        this.onHighlightMouseover(event);
-        return this.toggleOn = false;
-      }
-      if (this.toggleOn ===false){
-      this.startViewerHideTimer(event);
-      return this.toggleOn = true;
+      var annotations,
+          representative = $(event.target).parents('.annotator-hl').andSelf().filter('.annotator-hl')[0];
+
+      //if the viewer is currently shown for this representative then hide it, otherwise show it.
+      if (this.viewer.isShown(representative)){
+        this.viewer.hide();
+      } else {
+        annotations = $(event.target).parents('.annotator-hl').andSelf().map(function() {
+          return $(this).data("annotation");
+        });
+        return this.showViewer($.makeArray(annotations), Util.annotationPosition(event, this.wrapper[0]), representative);
       }
     }
-
-    // KIW modif: use annontationPosition rather than mousePosition to place annotation on the RHS of the screen
-    Annotator.prototype.onHighlightMouseover = function(event) {
-      var annotations;
-      this.clearViewerHideTimer();
-      if (this.mouseIsDown || this.viewer.isShown()) {
-        return false;
-      }
-      annotations = $(event.target).parents('.annotator-hl').andSelf().map(function() {
-        return $(this).data("annotation");
-      });
-      // show the knowit_button at the level of the mouse posiiton
-      this.knowit_button.css({"top": Util.annotationPosition(event, this.wrapper[0]).top,"right": "700px"});
-      this.knowit_button.show();
-      return this.showViewer($.makeArray(annotations), Util.annotationPosition(event, this.wrapper[0]));
-    };
 
     Annotator.prototype.onAdderMousedown = function(event) {
       if (event != null) {
@@ -1583,8 +1590,10 @@
 
   Annotator.Viewer = (function(_super) {
     __extends(Viewer, _super);
+    var lastLoadedRepresentative;//the lastLoadedRepresentative is the .annotator-hl associated with the last loaded viewer
 
     Viewer.prototype.events = {
+      ".annotator-close click": "onCloseClick",
       ".annotator-edit click": "onEditClick",
       ".annotator-delete click": "onDeleteClick"
     };
@@ -1608,13 +1617,13 @@
       this.onEditClick = __bind(this.onEditClick, this);
       this.load = __bind(this.load, this);
       this.hide = __bind(this.hide, this);
-      this.show = __bind(this.show, this);
       Viewer.__super__.constructor.call(this, $(this.html.element)[0], options);
       this.item = $(this.html.item)[0];
       this.fields = [];
       this.annotations = [];
     }
 
+    //shows the loaded viewer - external callers should call load instead, for representative tracking
     Viewer.prototype.show = function(event) {
       var controls,
         _this = this;
@@ -1627,8 +1636,12 @@
       return this.checkOrientation().publish('show');
     };
 
-    Viewer.prototype.isShown = function() {
-      return !this.element.hasClass(this.classes.hide);
+    //returns whether the viewer is currently being shown for the supplied representative element,
+    //which should be the .annotator-hl.
+    Viewer.prototype.isShown = function(representative) {
+      //the viewer is shown for the provided representative if it is visible and the representative
+      //was the last one loaded
+      return !this.element.hasClass(this.classes.hide) && representative === lastLoadedRepresentative;
     };
 
     Viewer.prototype.hide = function(event) {
@@ -1637,7 +1650,9 @@
       return this.publish('hide');
     };
 
-    Viewer.prototype.load = function(annotations) {
+    //loads and displays the viewer for the provided annotations, using the supplied representative element,
+    //which should be the .annotator-hl.
+    Viewer.prototype.load = function(annotations, representative) {
       var annotation, controller, controls, del, edit, element, field, item, link, links, list, _k, _l, _len2, _len3, _ref2, _ref3;
       this.annotations = annotations || [];
       list = this.element.find('ul:first').empty();
@@ -1684,6 +1699,7 @@
         }
       }
       this.publish('load', [this.annotations]);
+      lastLoadedRepresentative = representative;
       return this.show();
     };
 
@@ -1696,6 +1712,10 @@
       this.fields.push(field);
       field.element;
       return this;
+    };
+
+    Viewer.prototype.onCloseClick = function(event) {
+      return this.hide();
     };
 
     Viewer.prototype.onEditClick = function(event) {
