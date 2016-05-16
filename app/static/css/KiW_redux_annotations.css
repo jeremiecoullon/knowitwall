@@ -318,10 +318,13 @@ header .container {
   background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
 }
+.audiodoc_page_box{
+  background-color: #FDFDFD;
+}
 @media(min-width:768px){
   .audiodoc_page_box{
     width:1100px;
-    background-color: #FDFDFD;
+    /*background-color: #FDFDFD;*/
     border-radius: 15px;
   }
 }

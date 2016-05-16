@@ -1,22 +1,4 @@
 $(window.vent).on('showViewerCompleted', function() {
-    // hide annotation if the mouse is over the annotation
-    // $('.annotator-viewer').css('display','none');
-
-    // Force show current annotation if highlight clicked on.
-    // var toggledOnce = false;
-    // $('.knowit_button').click(function () {
-    //     if (toggledOnce) {
-    //         return;
-    //     }
-    //     $('.annotator-viewer').toggleClass('annotator-viewer_show');
-    //     toggledOnce = true;
-    // });
-    //
-    // // The 'close' button on annotation hides it
-    // $('.annotator-close').click(function () {
-    //     $('.annotator-viewer').toggleClass('annotator-viewer_show');
-    //     toggledOnce = true;
-    // });
     // To parse the annotation, we've tried 3 different things so far.
 
     // 1. parses message as html
@@ -46,13 +28,3 @@ $(window.vent).on('showViewerCompleted', function() {
     //   $('.annotator-annotation div').html(replaced_text);
     // });
 });
-
-
-// This acts weirdly
-// $(window.vent).on('showViewerCompleted', function() {
-//   var oddClick = true;
-//   $(".annotator-hl").click(function() {
-//     $('.audiodoc_page_box').animate({'margin-left': oddClick ? '5%': '20%'}, 'slow');
-//       oddClick = !oddClick;
-//   });
-// });

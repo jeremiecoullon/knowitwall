@@ -36,6 +36,11 @@
   height: 25px;
   cursor: pointer;
 }
+@media(max-width: 768px){
+  .knowit_button{
+  display:none;
+  }
+}
 .knowit_button_svg{
   position: relative;
   top: -7px;
