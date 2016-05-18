@@ -33,6 +33,7 @@
   color: #33353d;
   background-color: rgba(255, 194, 28, 0.8);
   padding: 0em 0.2em;
+  border-radius: 3px;
 }
 
 /* boxes on homepage: topic images */
@@ -54,6 +55,7 @@
   display: inline-block;
   line-height: 110%;
   padding: 0.3em 0.4em;
+  border-radius: 3px;
 }
 
 
@@ -317,9 +319,11 @@ header .container {
 .previous-audiodoc{
   background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 .audiodoc_page_box{
-  background-color: #FDFDFD;
+  /*background-color: #FDFDFD;*/
+  background-color: #F9F9F9;
 }
 @media(min-width:768px){
   .audiodoc_page_box{
@@ -381,6 +385,7 @@ text-align: left;
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: #27282D;
   background-color: #FFC21C;
+  border-radius: 5px;
   }
 
 
@@ -477,6 +482,7 @@ text-align: left;
   display: inline-block;
   line-height: 110%;
   padding: 0.3em 0.4em;
+  border-radius: 10px;
 }
 
 
@@ -869,7 +875,7 @@ footer h3 {
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 7px;
     background-color: #33353d;
 }
 

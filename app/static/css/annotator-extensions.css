@@ -1,5 +1,6 @@
 .annotator-hl {
     cursor: pointer;
+    border-radius: 3px;
 }
 .annotator-viewer_show {
     display: block !important;
