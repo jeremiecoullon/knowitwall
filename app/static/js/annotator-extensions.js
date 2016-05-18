@@ -4,7 +4,7 @@ $(window.vent).on('showViewerCompleted', function() {
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
 
-    var knowit_title = "<img src='/static/Images/know-it.png' style='width:125px;margin-left:41.5%;border:1px solid #2c3e50; border-radius:10px;padding:7px;margin-bottom:6px;'>"
+    var knowit_title = "<img src='/static/Images/know-it.png' class='knowit_img'>"
     $('.annotator-annotation div').html(knowit_title+text);
     // -----------------------
 

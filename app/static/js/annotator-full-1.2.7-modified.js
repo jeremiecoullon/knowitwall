@@ -147,13 +147,13 @@
   $ = jQuery;
 
   Util = {};
-  
+
   //KiW modif: add Util.verticalAnchors
   //Util.verticalAnchors manages elements which are to be vertically aligned. It exposes a register function,
   //which accepts an anchor along with the element to align to it.
   Util.verticalAnchors = (function(){
     var registered = [];
-    
+
     //updates the position of the element toAlign so that it is aligned with the anchor
     function align(anchor, toAlign){
         var anchorParent = anchor.parent();
@@ -164,7 +164,7 @@
             left: anchorParent.offset().left + anchorParent.width() + 5
         });
     }
-    
+
     //when the window is resized the elements toAlign need to be realigned to their anchors.
     $(window).on('resize', function(){
         var i;
@@ -172,7 +172,7 @@
             align(registered[i].anchor, registered[i].toAlign);
         }
     });
-    
+
     return {
         //aligns the element toAlign in relation to the provided anchor, and maintains their alignment
         register: function(anchor, toAlign){
@@ -301,13 +301,13 @@
     offset = $(offsetEl).position();
     if ($(document).width() < 768) {
       return {
-        top: e.pageY - offset.top,
-        left: e.pageX - offset.left
+        top: e.pageY - offset.top + 100,
+        left: '6px'
       };
     }
     return {
       top: e.pageY - offset.top,
-      right: '544px'
+      right: '544px',
     };
   };
   Util.preventEventDefault = function(event) {
