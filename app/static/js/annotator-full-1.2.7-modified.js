@@ -301,8 +301,8 @@
     offset = $(offsetEl).position();
     if ($(document).width() < 768) {
       return {
-        top: e.pageY - offset.top + 100,
-        left: '6px'
+        top: e.pageY - offset.top + 80,
+        left: '8px'
       };
     }
     return {

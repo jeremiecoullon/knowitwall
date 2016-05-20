@@ -63,10 +63,24 @@
 /*annotation size & positioning on mobile*/
 @media(max-width:400px){
   .annotator-annotation{
-    width: 300px;
+    width: 290px;
   }
   .entire_knowit{
     margin-left: 7px;
+  }
+  .entire_knowit::after{
+    content: '';
+    position: absolute;
+    top: 43px;
+    left: -5px;
+    right: 0px;
+    bottom: 0px;
+    border-left: 4px solid #ffc21c;
+    z-index: -1;
+  }
+  .annotator-widget .annotator-listing,
+  .annotator-widget .annotator-item{
+    border-left: none;
   }
   #annotator-close_span{
     left:275px;
@@ -77,5 +91,19 @@
   }
   .knowit_img{
     margin-left: 31%;
+    margin-bottom: 1px;
+  }
+  .annotator-viewer .knowit_message{
+    font-size: 13px;
+    padding-left: 9px
+  }
+  .annotator-viewer .knowit_author{
+    margin-bottom: 0px;
+  }
+  .annotator-viewer .knowit_title{
+    font-size: 18px
+  }
+  .annotator-viewer .knowit_url{
+    font-size: 10px
   }
 }

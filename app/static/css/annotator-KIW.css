@@ -186,28 +186,20 @@
 .annotator-widget .annotator-item:first-child {
     border-top: 0
 }
-
-.annotator-editor .annotator-item,
 .annotator-viewer div {
-    /*border-top: 1px solid #C3C3C3;*/
-}
-
-.annotator-viewer div {
-    /*padding: 6px 6px*/
   padding: 0px 0px 0px 0px;
 }
-
 .annotator-viewer .annotator-item ol,
 .annotator-viewer .annotator-item ul {
     padding: 4px 16px
 }
-
 /* styling the text inside the annotation */
 .entire_knowit{
   margin-left: 50px;
   border: 2px solid #C5C5C5;
   border-radius: 10px;
   width: 100%;
+  background-color: white;
 }
 .annotator-viewer .knowit{
   width: 100%;
@@ -216,7 +208,6 @@
 .annotator-viewer div:first-of-type,
 .annotator-editor .annotator-item:first-child textarea {
     line-height: 1.5;
-    background-color: white;
     background-clip: content-box;
 }
 /*this gives the width of the whole annotation*/
@@ -233,7 +224,6 @@
 .annotator-viewer .knowit_author{
   font-size:11px;
   text-align:center;
-  /*border-bottom: 1px solid #C3C3C3;*/
   margin-top: 6px;
   margin-bottom: 10px;
   padding: 0px 0px 9px 0px;
@@ -242,7 +232,6 @@
   color: #505050
 }
 .annotator-viewer .knowit_message{
-  color:blue;
   color: #3c3c3c;
   font-size: 16px;
   padding-left:14px;
