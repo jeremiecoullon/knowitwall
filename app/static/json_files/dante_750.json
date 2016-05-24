@@ -1,0 +1,21 @@
+{
+    "url": "dante_750",
+    "unique_id": "John_Took",
+    "topic_name": "Dante at 750",
+    "topic_image": "/static/Images/TI_shakespeare.jpg",
+    "topic_image_home": "/static/Images/TI_shakespeare_home.jpg",
+    "topic_image_box": "/static/Images/TI_shakespeare_box.jpg",
+    "image_credits": "",
+    "by_in_colour":"black",
+    "discipline": "Literature",
+    "og_name": "Dante at 750?",
+    "og_description": "",
+    "topic_description": "",
+    "author_name": "John Took",
+    "author_image": "/static/Images/author_John_Took_square_2.jpg",
+    "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "app/static/texts/real_shakespeare_transcript.html",
+    "audio_mp3": ""
+}
