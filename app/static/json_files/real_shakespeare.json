@@ -13,6 +13,7 @@
     "topic_description": "Is William Shakespeare of Stratford-upon-Avon the real author of the Shakespearean plays? The so-called anti-Stratfordians think not. The Shakespeare scholar René Weis disagrees and presents three pieces of evidence against conspiracy theories.",
     "author_name": "Ren&eacute; Weis",
     "author_image": "/static/Images/author_Rene_Weis_square_2.jpg",
+    "author_image": "/static/Images/author_Rene_Weis.jpg",
     "author_bio": "app/static/texts/real_shakespeare_author_bio.txt",
     "music_credits": "Chris Zabriskie, John Dowland (performed by David Hernández Romero) and Sergey Chereminisov",
     "narration_credits": "Angus Waite and Vidish Athavale",
