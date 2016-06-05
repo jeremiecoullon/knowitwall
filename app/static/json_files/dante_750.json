@@ -15,7 +15,7 @@
     "author_image": "/static/Images/author_John_Took.jpg",
     "author_bio": "app/static/texts/Dante_750_author_bio.txt",
     "music_credits": "Advent Chamber Orchestra, Kai Engel, TALES, Spin Day, Ars Sonor & XXIXI, and Kevin MacLeod",
-    "narration_credits": "Vidish Athavale",
+    "narration_credits": "John Took",
     "transcript": "app/static/texts/Dante_750_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/Dante_750.mp3"
 }
