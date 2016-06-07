@@ -61,12 +61,14 @@
   background-color: white;
 }
 /*annotation size & positioning on mobile*/
-@media(max-width:400px){
+
+/* Nexus 5S */
+@media(max-width:436px){
   .annotator-annotation{
-    width: 290px;
+    width: 406px;
   }
   .entire_knowit{
-    margin-left: 7px;
+    margin-left: 2%;
   }
   .entire_knowit::after{
     content: '';
@@ -90,7 +92,7 @@
     left: 2%;
   }
   .knowit_img{
-    margin-left: 31%;
+    margin-left: 35%;
     margin-bottom: 1px;
   }
   .annotator-viewer .knowit_message{
@@ -105,5 +107,32 @@
   }
   .annotator-viewer .knowit_url{
     font-size: 10px
+  }
+}
+@media(max-width:414px){
+  .annotator-annotation{
+    width: 380px;
+  }
+}
+@media(max-width:375px){
+  .annotator-annotation{
+    width: 350px;
+  }
+}
+@media(max-width:360px){
+  .annotator-annotation{
+    width: 335px;
+  }
+}
+
+@media(max-width:320px){
+  .entire_knowit{
+    margin-left: 2%;
+  }
+  .knowit_img{
+    margin-left: 31%;
+  }
+  .annotator-annotation{
+    width: 290px;
   }
 }
