@@ -1,0 +1,21 @@
+{
+    "url": "dante_750",
+    "unique_id": "John_Took",
+    "topic_name": "Dante on his 750th birthday",
+    "topic_image": "/static/Images/TI_Dante.jpg",
+    "topic_image_home": "/static/Images/TI_Dante_home.jpg",
+    "topic_image_box": "/static/Images/TI_Dante_box.jpg",
+    "image_credits": "Domenico di Michelino, ​<i>La Commedia illumina Firenze</i>, 1465. Fresco. Cathedral of Santa Maria del Fiore, Florence",
+    "by_in_colour":"white",
+    "discipline": "Italian Literature",
+    "og_name": "Dante on his 750th birthday",
+    "og_description": "As the legendary Italian poet Dante turns 750, what can he tell us about the human experience? Dante scholar John Took takes us through his timeless angst and joy ridden ponderings on love, despair and existence.",
+    "topic_description": "As the legendary Italian poet Dante turns 750, what can he tell us about the human experience? Dante scholar John Took takes us through his timeless angst and joy ridden ponderings on love, despair and existence.",
+    "author_name": "John Took",
+    "author_image": "/static/Images/author_John_Took.jpg",
+    "author_bio": "app/static/texts/Dante_750_author_bio.txt",
+    "music_credits": "Advent Chamber Orchestra, Kai Engel, Tales, Spin Day, Ars Sonor & XXIXI, and Kevin MacLeod",
+    "narration_credits": "John Took",
+    "transcript": "app/static/texts/Dante_750_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/Dante_750.mp3"
+}

@@ -9,11 +9,13 @@
     margin-left: 16%;
     margin-right:16%;
     background-color: #E2E2E2;
+    border-radius: 5px;
   }
   .higgs_image{
     width:80%;
     height:80%;
     margin-bottom:1em;
+    border-radius: 3px;
   }
   @media only screen and (max-width:991px) {
     .figure_transcript{
