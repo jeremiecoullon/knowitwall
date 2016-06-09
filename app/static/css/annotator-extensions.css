@@ -62,7 +62,7 @@
 }
 /*annotation size & positioning on mobile*/
 
-/* Nexus 5S */
+/* Nexus 6P */
 @media(max-width:436px){
   .annotator-annotation{
     width: 406px;
@@ -92,7 +92,7 @@
     left: 2%;
   }
   .knowit_img{
-    margin-left: 35%;
+    margin-left: 36%;
     margin-bottom: 1px;
   }
   .annotator-viewer .knowit_message{
@@ -109,9 +109,13 @@
     font-size: 10px
   }
 }
+/* iphone 6+ */
 @media(max-width:414px){
   .annotator-annotation{
     width: 380px;
+  }
+  .knowit_img{
+    margin-left: 34%;
   }
 }
 @media(max-width:375px){
@@ -119,9 +123,13 @@
     width: 350px;
   }
 }
+/* Galaxy 5S */
 @media(max-width:360px){
   .annotator-annotation{
     width: 335px;
+  }
+  .knowit_img{
+    margin-left: 33%;
   }
 }
 
