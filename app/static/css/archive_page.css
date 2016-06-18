@@ -10,14 +10,41 @@
   margin: auto;
 }
 
+.archive_filter{
+  margin-top: 65px;
+  padding: 0px 0px;
+}
+.archive_filter ul{
+  list-style-type: none;
+  display: table;
+  padding: 0px 0px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  margin: auto;
+}
+.archive_filter li{
+  float: left;
+  border-radius: 7px;
+  margin: 3px;
+  display: table-cell;
+}
+.archive_filter li:hover{
+  background-color: rgba(255, 194, 28, 0.8);
+}
+.archive_filter p{
+  padding:25px 40px;
+  color: #33353d;
+  margin: 0px;
+  font-size: 17px;
+}
 
 /* List of episode titles */
 .archive_episode_list{
   border: 3px solid #ffc21c;
   text-align: center;
-  /*background-color: #fbfbfb;*/
   margin-left: -10px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 .archive_category{
   text-transform: none;
