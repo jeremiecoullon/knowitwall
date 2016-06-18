@@ -1,0 +1,68 @@
+.archive_header{
+  margin-top: 70px;
+  text-align: center;
+}
+.archive_title{
+  font-size: 57px;
+  border-bottom: 5px solid rgba(255, 194, 28, 0.8);
+  padding-bottom: 25px;
+  width: 90%;
+  margin: auto;
+}
+
+
+/* List of episode titles */
+.archive_episode_list{
+  border: 3px solid #ffc21c;
+  text-align: center;
+  /*background-color: #fbfbfb;*/
+  margin-left: -10px;
+  margin-right: 10px;
+}
+.archive_category{
+  text-transform: none;
+  padding: 40px 0px;
+  font-size: 45px;
+}
+.archive_topic_name{
+  font-style: italic;
+}
+.archive_title_info{
+  color: #b1b1b1;
+  font-size: 16px;
+}
+.archive_title_info i {
+  font-weight: 100;
+}
+.archive_title_click{
+  color: inherit;
+}
+
+/* List of episode images */
+.archive_image_list{
+  margin-right: -10px;
+  margin-left: 10px;
+  overflow: scroll;
+  max-height: 1229px;
+}
+.archive_episode_image{
+  width: 100%;
+}
+
+/* Make the footer yellow cuz we like yellow */
+footer .footer-above{
+  background-color: #FFC21C;
+}
+footer .footer-below{
+  background-color: #FFC21C;
+}
+footer h3{
+  color:#27282D;
+}
+footer .btn-social{
+  color: #27282D;
+  border: 2px solid #27282D;
+}
+footer .footer-info{
+  color: #F5F5F5;
+}

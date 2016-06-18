@@ -202,6 +202,18 @@ def audiodoc_annotations(url):
 
 
 "----------------------------------------------------------------------------------------------------"
+" archive page "
+
+@app.route('/all_episodes')
+def archive():
+    # put all audiodoc information in the variable audiodoc
+    audiodoc_list = all_audiodocs
+
+    audiodocs = ad_fun(audiodoc_list)
+
+    return render_template('archive_page.html', audiodocs = audiodocs)
+
+"----------------------------------------------------------------------------------------------------"
 " terms and conditions "
 
 @app.route('/terms')
