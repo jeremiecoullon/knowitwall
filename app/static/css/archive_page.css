@@ -38,6 +38,7 @@
   font-size: 17px;
 }
 
+
 /* List of episode titles */
 .archive_episode_list{
   border: 3px solid #ffc21c;
@@ -64,7 +65,9 @@
 .archive_title_click{
   color: inherit;
 }
-
+.archive_disciplines_hidden{
+  display: none;
+}
 /* List of episode images */
 .archive_image_list{
   margin-right: -10px;

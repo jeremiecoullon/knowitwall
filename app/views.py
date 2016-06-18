@@ -211,7 +211,10 @@ def archive():
 
     audiodocs = ad_fun(audiodoc_list)
 
-    return render_template('archive_page.html', audiodocs = audiodocs)
+    # pass a list of all disciplines
+    disciplines_list = [elem.get('discipline') for elem in audiodocs]
+
+    return render_template('archive_page.html', audiodocs = audiodocs, disciplines_list=disciplines_list)
 
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "

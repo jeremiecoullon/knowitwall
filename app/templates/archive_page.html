@@ -276,18 +276,23 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 archive_episode_list">
+        <div class="archive_disciplines_hidden">
+          {{disciplines_list}}
+        </div>
         <h2 class="archive_category">
           All Episodes
         </h2>
         {% for audiodoc in audiodocs %}
-        <a class="archive_title_click" href="#{{audiodoc.url}}">
-          <p class="archive_topic_name">
-            {{audiodoc.topic_name | safe}}
+        <div id="archive_title_episode_{{audiodoc.discipline}}">
+          <a class="archive_title_click" href="#{{audiodoc.url}}">
+            <p class="archive_topic_name">
+              {{audiodoc.topic_name | safe}}
+            </p>
+          </a>
+          <p class="archive_title_info">
+            <i>by</i> {{audiodoc.author_name | safe}} <i>in</i> {{audiodoc.discipline}}
           </p>
-        </a>
-        <p class="archive_title_info">
-          <i>by</i> {{audiodoc.author_name | safe}} <i>in</i> {{audiodoc.discipline}}
-        </p>
+        </div>
         {% endfor %}
       </div>
       <div class="col-md-6 archive_image_list">
@@ -315,6 +320,7 @@
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/jquery.easing.min.js"></script>
 <script src="/static/js/knowitwall.js"></script>
+<script src="/static/js/archive_filter.js"></script>
 
 </body>
 {% endblock %}
