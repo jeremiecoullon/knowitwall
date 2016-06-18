@@ -274,7 +274,7 @@
 <!-- Archive -->
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row archive_row">
       <div class="col-md-6 archive_episode_list">
         <div class="archive_disciplines_hidden">
           {{disciplines_list}}
@@ -283,7 +283,7 @@
           All Episodes
         </h2>
         {% for audiodoc in audiodocs %}
-        <div id="archive_title_episode_{{audiodoc.discipline}}">
+        <div class="archive_title_episode_{{audiodoc.discipline}}">
           <a class="archive_title_click" href="#{{audiodoc.url}}">
             <p class="archive_topic_name">
               {{audiodoc.topic_name | safe}}
