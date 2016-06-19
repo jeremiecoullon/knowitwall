@@ -1,23 +1,42 @@
 // filter disciplines in the archive page
 var archive_filter = function(){
 
-  // Arrays of episode discplines in each category
-  var Arts_list = ['Italian Literature', 'History', 'History of Science', 'Linguistics', 'English Literature', 'Philosophy'];
-  var Sciences_list = ['Physics', 'Neuroscience', 'Geography', 'Biology', 'Earth Science', 'Palaeontology', 'Astrophysics'];
+  $('#button_All').click(function(){
+    $('#archive_category').html('All Episodes');
+    $('.archive_episode_category_Arts').css('display','inline');
+  $('.archive_episode_category_Sciences').css('display','inline');
+  });
 
-// Checks whether episode is NOT within a category or not.
-// Returns true if it isn't; false if it is.
-  function isNotInCategory(value,array){
-    return ~array.indexOf(value) >-1;
-  }
-console.log(isNotInCategory('History',Arts_list));
+$('#button_Arts').click(function(){
+  $('#archive_category').html('Arts');
+  $('.archive_episode_category_Arts').css('display','inline');
+$('.archive_episode_category_Sciences').css('display','none');
+});
 
+$('#button_Sciences').click(function(){
+  $('#archive_category').html('Sciences');
+  $('.archive_episode_category_Sciences').css('display','inline');
+$('.archive_episode_category_Arts').css('display','none');
+});
 
 }
 archive_filter();
 
 
-// TODO:
-// python passes list of all disciplines
-// archive_filter.js gets that array: loops through it and returns true or false
-// if true: insert css: "display:none;". if false, do nothing
+// Version 1: creating categories client-side
+// Click on 'Arts' button:
+// 1. check toggle_variable: if toggle_variable === 'Arts': do nothing. Else, continue
+// 3. get list of all disciplines in hidden div (or json)
+// 4. If isNotInCategory returns true: build list of css classes with those disciplines
+// 5. Build list of css classes for the 'Arts'
+// 5. apply 'display: none;' to non-'Arts' discplines. apply 'display:inline;' to 'Arts'
+
+
+// Version 2: create categories server side (in json)
+// click on 'Art':
+// 1. check toggle_variable: if toggle_variable === 'Arts': do nothing. Else, continue
+// 2. apply 'display: none;' to all non-Arts categories. apply 'display: inline' to 'Arts'
+
+// Click on 'All':
+// check toggle_variable. if already on 'All': do nothing
+// apply 'display:inline;' to all categories

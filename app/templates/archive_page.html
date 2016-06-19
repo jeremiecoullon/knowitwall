@@ -251,17 +251,17 @@
       <div class="col-md-4 col-md-offset-4 archive_filter">
         <ul>
           <li>
-              <p>
+              <p id="button_All">
               All
               </p>
           </li>
           <li>
-              <p>
+              <p id="button_Arts">
                 Arts
               </p>
           </li>
           <li>
-              <p>
+              <p id="button_Sciences">
                 Sciences
               </p>
           </li>
@@ -276,14 +276,11 @@
   <div class="container">
     <div class="row archive_row">
       <div class="col-md-6 archive_episode_list">
-        <div class="archive_disciplines_hidden">
-          {{disciplines_list}}
-        </div>
-        <h2 class="archive_category">
+        <h2 id="archive_category">
           All Episodes
         </h2>
         {% for audiodoc in audiodocs %}
-        <div class="archive_title_episode_{{audiodoc.discipline}}">
+        <div class="archive_episode_category_{{audiodoc.category}}">
           <a class="archive_title_click" href="#{{audiodoc.url}}">
             <p class="archive_topic_name">
               {{audiodoc.topic_name | safe}}
@@ -297,9 +294,11 @@
       </div>
       <div class="col-md-6 archive_image_list">
         {% for audiodoc in audiodocs %}
-        <a href="episodes/{{audiodoc.url}}" target="_blank" id="{{audiodoc.url}}">
-          <img src="{{audiodoc.topic_image}}" alt="episode image" class="archive_episode_image" />
-        </a>
+        <div id="{{audiodoc.url}}" class="archive_episode_category_{{audiodoc.category}}">
+          <a href="episodes/{{audiodoc.url}}" target="_blank">
+            <img src="{{audiodoc.topic_image}}" alt="episode image" class="archive_episode_image" />
+          </a>
+        </div>
         {% endfor %}
       </div>
     </div>

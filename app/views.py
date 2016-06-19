@@ -106,25 +106,39 @@ all_audiodocs = ['dante_750.json', 'migrant_crisis.json', 'flying_spying.json','
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
+    """
+    Extract all information about the episodes from a list of json files and outputs
+    a list of dictionaries
+
+    Parameters
+    ---------
+    audiodoc_list : list
+        List of json files. All json files has the information for an episodes
+        (topic_image, transcript, author_bio, etc)
+
+    Returns
+    -------
+    audiodoc : list
+        List of dictionaries. Each dictionary has all the attributes necessary for each episode
+        (topic image, transcript, author_bio, etc). The transcript and author_bio are decoded
+        (as they have html tags)
+    """
     audiodocs =[]
     for audiodoc_json in audiodoc_list:
 
         with open('app/static/json_files/' + audiodoc_json, "r") as json_file:
             ad_dictionary = json.load(json_file)
 
-        with open(ad_dictionary.get('author_bio'), "r") as f:
+        with open(ad_dictionary.get('author_bio', 'no author bio found'), "r") as f:
             author_bio = f.read().decode('utf-8')
         ad_dictionary['author_bio'] = author_bio
 
-        with open(ad_dictionary.get('transcript'), "r") as f:
+        with open(ad_dictionary.get('transcript', 'no transcript found'), "r") as f:
             transcript = f.read().decode('utf-8')
         ad_dictionary['transcript'] = transcript
 
         audiodocs.append(ad_dictionary.copy())
     return audiodocs
-
-""" Can do ad[author_name] or ad.get('author_name', DEFAULTVALUE)
-    the second option is safer (if the key doesnt exist) """
 
 # @app.route("/crossdomain")
 # def crossdom():
@@ -211,10 +225,7 @@ def archive():
 
     audiodocs = ad_fun(audiodoc_list)
 
-    # pass a list of all disciplines
-    disciplines_list = [elem.get('discipline') for elem in audiodocs]
-
-    return render_template('archive_page.html', audiodocs = audiodocs, disciplines_list=disciplines_list)
+    return render_template('archive_page.html', audiodocs = audiodocs)
 
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "

@@ -1,3 +1,6 @@
+body{
+  background-color: #f5f5f5;
+}
 .archive_header{
   margin-top: 70px;
   text-align: center;
@@ -21,6 +24,7 @@
   border-radius: 10px;
   border: 1px solid #bdbdbd;
   margin: auto;
+  background-color: white;
 }
 .archive_filter li{
   float: left;
@@ -44,13 +48,13 @@
 
 /* List of episode titles */
 .archive_episode_list{
-  border: 3px solid #ffc21c;
   text-align: center;
   margin-left: -10px;
   margin-right: 10px;
   border-radius: 5px;
+  background-color: white;
 }
-.archive_category{
+#archive_category{
   text-transform: none;
   padding: 40px 0px;
   font-size: 45px;
@@ -70,9 +74,6 @@
 }
 .archive_title_click{
   color: inherit;
-}
-.archive_disciplines_hidden{
-  display: none;
 }
 /* List of episode images */
 .archive_image_list{
