@@ -31,9 +31,11 @@ body{
   border-radius: 7px;
   margin: 3px;
   display: table-cell;
+  transition: all 0.1s ease;
+  cursor: pointer;
 }
 .archive_filter li:hover{
-  background-color: rgba(255, 194, 28, 0.8);
+  background-color: rgba(255, 194, 28, 0.4);
 }
 .archive_filter p{
   padding:25px 40px;
@@ -41,11 +43,15 @@ body{
   margin: 0px;
   font-size: 17px;
 }
-
+/* 'All Episodes' is selected by default */
+#button_All{
+  background-color: rgba(255, 194, 28, 0.8);
+  border-radius: 7px;
+}
+/* set .archive_row to absolute positioning to control the position/height of .archive_image_list */
 .archive_row{
   position: relative;
 }
-
 /* List of episode titles */
 .archive_episode_list{
   text-align: center;
@@ -85,8 +91,31 @@ body{
   right:0;
   top:0;
 }
-.archive_episode_image{
-  width: 100%;
+.archive_image_padding{
+  padding-bottom: 2px;
+  background-color: white;
+}
+/* darken the episode images */
+.archive_image_element {
+  height: 350px;
+  text-align: center;
+}
+.archive_episode_title{
+  font-size: 20px;
+  margin-top: 15%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.archive_abstract{
+  color: white;
+  font-size: 14px;
+  margin: 52px 40px 0px 40px;
+  text-align: center;
+  line-height: 23px;
+}
+.archive_wrapper i{
+  color: white;
+  font-weight: 100;
 }
 
 /* Make the footer yellow cuz we like yellow */

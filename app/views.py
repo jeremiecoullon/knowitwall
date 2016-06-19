@@ -220,10 +220,8 @@ def audiodoc_annotations(url):
 
 @app.route('/all_episodes')
 def archive():
-    # put all audiodoc information in the variable audiodoc
-    audiodoc_list = all_audiodocs
-
-    audiodocs = ad_fun(audiodoc_list)
+    
+    audiodocs = ad_fun(all_audiodocs)
 
     return render_template('archive_page.html', audiodocs = audiodocs)
 
