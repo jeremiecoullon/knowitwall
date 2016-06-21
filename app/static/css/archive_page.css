@@ -53,11 +53,14 @@ body{
   position: relative;
 }
 /* List of episode titles */
+.archive_episode_list_column{
+
+}
 .archive_episode_list{
   text-align: center;
-  margin-left: -10px;
-  margin-right: 10px;
-  border-radius: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 3px;
   background-color: white;
 }
 #archive_category{
@@ -82,14 +85,18 @@ body{
   color: inherit;
 }
 /* List of episode images */
+.archive_image_list_column{
+  position: absolute;
+  right: 0px;
+  height: 100%;
+}
 .archive_image_list{
-  margin-right: -10px;
-  margin-left: 10px;
   overflow: scroll;
   height: 100%;
   position: absolute;
-  right:0;
-  top:0;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 3px;
 }
 .archive_image_padding{
   padding-bottom: 2px;
@@ -99,6 +106,7 @@ body{
 .archive_image_element {
   height: 350px;
   text-align: center;
+  border-radius: 3px;
 }
 .archive_episode_title{
   font-size: 20px;
