@@ -17,9 +17,6 @@ body{
   margin-top: 65px;
   padding: 0px 0px;
 }
-.archive_filter_disciplines{
-  margin-top: 1px
-}
 .archive_filter ul{
   list-style-type: none;
   display: table;
@@ -92,7 +89,14 @@ body{
   position: absolute;
   right: 0px;
   height: 100%;
+  padding-right: 0px;
+  padding-left: 25px;
 }
+.archive_episode_list_column{
+  padding-right: 25px;
+  padding-left: 0px;
+}
+
 .archive_image_list{
   overflow: scroll;
   height: 100%;
