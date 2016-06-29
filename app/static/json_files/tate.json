@@ -3,6 +3,7 @@
     "unique_id": "",
     "topic_name": "It's at Tate but is it art?",
     "topic_image": "/static/Images/TI_Tate.jpg",
+    "topic_image_archive": "/static/Images/TI_Tate.jpg",
     "topic_image_box": "/static/Images/TI_tate_box.jpg",
     "image_credits": "Shadow Play: The Sackler Octagon at Tate Britain. <a href='https://goo.gl/OfrAzK' target='_blank'>BMiz</a> [<a href='https://creativecommons.org/licenses/by-sa/2.0/#' target='_blank' >CC BY-SA 2.0</a>]",
     "by_in_colour":"#FFFFFF",

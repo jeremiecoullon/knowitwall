@@ -3,6 +3,7 @@
     "unique_id": "Rene_Weis",
     "topic_name": "The real Shakespeare?",
     "topic_image": "/static/Images/TI_shakespeare.jpg",
+    "topic_image_archive": "/static/Images/TI_shakespeare.jpg",
     "topic_image_box": "/static/Images/TI_shakespeare_box.jpg",
     "image_credits": "Martin Droeshout, <i>William Shakespeare (1564-1616)</i>. Engraving. <a href='http://goo.gl/zLjeVI' target='_blank'>British Museum</a> [<a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a>]",
     "by_in_colour":"black",

@@ -3,6 +3,7 @@
     "unique_id": "Mayhew_blast",
     "topic_name": "The shot without a bullet: Blast injury",
     "topic_image": "/static/Images/TI_blast_injury.jpg",
+    "topic_image_archive": "/static/Images/TI_blast_injury.jpg",
     "topic_image_box": "/static/Images/TI_blast_injury_box.jpg",
     "image_credits": "Canadian machine gunners on Vimy Ridge, France, 1917",
     "by_in_colour":"black",
