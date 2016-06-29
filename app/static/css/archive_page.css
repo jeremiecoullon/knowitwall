@@ -51,9 +51,20 @@ body{
   background-color: rgba(255, 194, 28, 0.8);
   border-radius: 7px;
 }
+
+
+
+
+
+
 /* set .archive_row to relative positioning to control the position/height of .archive_image_list */
 .archive_row{
   position: relative;
+}
+@media(min-width: 1200px){
+  .container{
+    width: 1200px
+  }
 }
 /* List of episode titles */
 .archive_episode_list{
