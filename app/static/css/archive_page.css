@@ -172,6 +172,10 @@ footer .footer-info{
 .archive_mobile_display{
   display: none;
 }
+.archive_mobile_display p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 /* Image boxes only */
 @media(max-width:768px){
   .archive_image_list_column{
@@ -198,6 +202,19 @@ footer .footer-info{
   }
   .archive_title_click{
     display: none;
+  }
+  .archive_filter p{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 13px;
+  }
+  #button_Sciences{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .archive_title{
+    font-size: 40px;
+    width: 84%;
   }
 }
 #button_titles, #button_images{
