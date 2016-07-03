@@ -30,10 +30,12 @@
 
 /* highlight words in yellow */
 .highlight {
-  color: #33353d;
+  /*color: #33353d;*/
+  color: black;
   background-color: rgba(255, 194, 28, 0.8);
   padding: 0em 0.2em;
   border-radius: 3px;
+  font-weight: 300;
 }
 
 /* boxes on homepage: topic images */
