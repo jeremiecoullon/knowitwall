@@ -230,6 +230,15 @@ footer .footer-info{
     border-radius: 3px;
     padding: 3px;
   }
+  .archive_image_element{
+    position: relative;
+  }
+  .archive_abstract{
+    font-size: 13px;
+    position: absolute;
+    top: 50%;
+    margin: 0px 11px;
+  }
 }
 #button_titles, #button_images{
   border-radius: 7px;
