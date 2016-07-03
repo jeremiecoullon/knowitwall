@@ -236,8 +236,16 @@ footer .footer-info{
   .archive_abstract{
     font-size: 13px;
     position: absolute;
-    top: 50%;
+    top: 52%;
     margin: 0px 11px;
+  }
+  .archive_episode_list{
+    padding: 0px 30px;
+  }
+}
+@@media(max-width:320px) {
+  .archive_abstract{
+    top: 50%;
   }
 }
 #button_titles, #button_images{
