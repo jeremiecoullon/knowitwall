@@ -263,6 +263,7 @@ footer .footer-info{
 
 .scroll-top .btn {
   border-radius: 0px;
+  opacity: 0.9;
 }
 .toggle-off.btn{
   padding-left:34px;
