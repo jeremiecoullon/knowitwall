@@ -74,7 +74,7 @@ body{
   border-radius: 3px;
   background-color: white;
 }
-#archive_category{
+.archive_category{
   text-transform: none;
   padding: 40px 0px;
   font-size: 45px;
@@ -176,8 +176,18 @@ footer .footer-info{
   padding-left: 20px;
   padding-right: 20px;
 }
+/* don't display category name above the image on desktop */
+.archive_category_image_mobile{
+  display: none;
+}
 /* Image boxes only */
 @media(max-width:768px){
+  .archive_category_image_mobile{
+    display: block;
+  }
+  .archive_category{
+    padding-top: 0px;
+  }
   .archive_image_list_column{
     position: static;
     padding-left: 14px;
@@ -215,6 +225,10 @@ footer .footer-info{
   .archive_title{
     font-size: 40px;
     width: 84%;
+  }
+  .archive_episode_title{
+    border-radius: 3px;
+    padding: 3px;
   }
 }
 #button_titles, #button_images{

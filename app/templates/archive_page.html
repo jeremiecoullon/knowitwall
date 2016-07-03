@@ -296,7 +296,7 @@
     <div class="row archive_row">
       <div class="col-md-6 archive_episode_list_column">
         <div class="col-md-12 archive_episode_list">
-          <h2 id="archive_category">
+          <h2 class="archive_category">
             All Episodes
           </h2>
           {% for audiodoc in audiodocs %}
@@ -320,6 +320,9 @@
       </div>
       <div class="col-md-6 archive_image_list_column">
         <div class="col-md-12 archive_image_list">
+          <h2 class="archive_category archive_category_image_mobile">
+            All Episodes
+          </h2>
           {% for audiodoc in audiodocs %}
           <div id="{{audiodoc.url}}" class="archive_episode_category_{{audiodoc.category}}">
             <a href="episodes/{{audiodoc.url}}" target="_blank">
