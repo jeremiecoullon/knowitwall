@@ -95,6 +95,11 @@ body{
 .archive_title_click{
   color: inherit;
 }
+/* episode title for mobile: redirects to episode page */
+.archive_title_click_mobile{
+  display: none;
+  color: inherit;
+}
 /* List of episode images */
 .archive_image_list_column{
   position: absolute;
@@ -161,3 +166,43 @@ footer .btn-social{
 footer .footer-info{
   color: #F5F5F5;
 }
+
+/* mobile version */
+
+.archive_mobile_display{
+  display: none;
+}
+/* Image boxes only */
+@media(max-width:768px){
+  .archive_image_list_column{
+    position: static;
+    padding-left: 14px;
+    padding-right: 14px;
+    display: none;
+  }
+  .archive_image_list{
+    overflow: visible;
+    position: static;
+  }
+  .archive_episode_list_column{
+    padding-right: 0px
+  }
+  .archive_image_padding{
+    padding-bottom: 12px;
+  }
+  .archive_mobile_display{
+    display: block;
+  }
+  .archive_title_click_mobile{
+    display: inline;
+  }
+  .archive_title_click{
+    display: none;
+  }
+}
+#button_titles, #button_images{
+  border-radius: 7px;
+}
+ #button_titles{
+   background-color: rgba(255, 194, 28, 0.8);
+ }

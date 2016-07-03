@@ -49,4 +49,23 @@ var archive_filter = function(){
     $('.archive_episode_category_Sciences:last .archive_image_padding').css('padding-bottom','0px');
   });
 }
+
+var archive_mobile_display = function(){
+  $('#button_titles').click(function(){
+    $('#button_titles').css({"background-color": "rgba(255, 194, 28, 0.8)"});
+    $('#button_images').css({"background-color": ""});
+// rgba(255, 194, 28, 0)
+    $('.archive_image_list_column').css('display','none');
+    $('.archive_episode_list_column').css('display','block');
+  });
+  $('#button_images').click(function(){
+    $('#button_images').css({"background-color": "rgba(255, 194, 28, 0.8)"});
+    $('#button_titles').css({"background-color": "rgba(255, 194, 28, 0)"});
+
+    $('.archive_episode_list_column').css('display','none');
+    $('.archive_image_list_column').css('display','block');
+  });
+}
+
 archive_filter();
+archive_mobile_display();
