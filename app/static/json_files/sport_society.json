@@ -1,0 +1,21 @@
+{
+    "url": "sport_society",
+    "unique_id": "Piercey_sport_society",
+    "topic_name": "Is sport really good for society?",
+    "topic_image": "/static/Images/TI_sport_society.jpg",
+    "topic_image_box": "/static/Images/TI_sport_society_box.jpg",
+    "image_credits": "Germany vs Poland, Euro 2016. <a href='https://www.flickr.com/photos/jorge-11/27105722873/in/photostream/' target='_blank'>George M. Groutas</a>",
+    "by_in_colour":"#FFFFFF",
+    "discipline": "Sociology",
+    "category": "Sciences",
+    "og_name": "Is sport relaly good for society?",
+    "og_description": "The medical effects of sport seem to be well understood, there being a consensus that it is good for maintaining a healthy lifestyle. The same cannot be said about its non-medical effects, however. For example, are the effects sport has on society generally positive? Nick Piercey shares his views.",
+    "topic_description": "The medical effects of sport seem to be well understood, there being a consensus that it is good for maintaining a healthy lifestyle. The same cannot be said about its non-medical effects, however. For example, are the effects sport has on society generally positive? Nick Piercey shares his views.",
+    "author_name": "Nick Piercey",
+    "author_image": "/static/Images/author_Nick_Piercey.jpg",
+    "author_bio": "app/static/texts/sport_society_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "app/static/texts/sport_society_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/sport_society.mp3"
+}
