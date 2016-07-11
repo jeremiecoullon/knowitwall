@@ -162,7 +162,6 @@ def index():
 "----------------------------------------------------------------------------------------------------"
 " audiodoc page"
 
-" TODO: have all redirects to this page be to /episodes/<url> rather than /audiodoc/ "
 @app.route('/episodes/<url>')
 @app.route('/audiodoc/<url>')
 def audiodoc(url):
