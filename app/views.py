@@ -208,6 +208,7 @@ def audiodoc_annotations(url):
 def archive():
 
     audiodocs = ad_fun(all_audiodocs)
+    # TODO: sort episodes in alphabetical order based on the titles
 
     return render_template('archive_page.html', audiodocs = audiodocs)
 
