@@ -256,10 +256,14 @@ footer .footer-info{
 #button_titles, #button_images{
   border-radius: 7px;
 }
- #button_titles{
+
+/* Mobile filter (between images and titles): Choose default button when you load the page */
+ /*#button_titles{
+   background-color: rgba(255, 194, 28, 0.8);
+ }*/
+ #button_images{
    background-color: rgba(255, 194, 28, 0.8);
  }
-
 
 .scroll-top .btn {
   border-radius: 0px;

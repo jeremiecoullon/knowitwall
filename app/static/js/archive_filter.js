@@ -53,7 +53,7 @@ var archive_filter = function(){
 var archive_mobile_display = function(){
   $('#button_titles').click(function(){
     $('#button_titles').css({"background-color": "rgba(255, 194, 28, 0.8)"});
-    $('#button_images').css({"background-color": ""});
+    $('#button_images').css({"background-color": "rgba(255, 194, 28, 0)"});
 
     $('.archive_image_list_column').css('display','none');
     $('.archive_episode_list_column').css('display','block');
@@ -78,8 +78,6 @@ var toggle_title_abstract = function(){
       $('.archive_image_list_column').css('display','none');
       $('.archive_episode_list_column').css('display','block');
 
-
-        // return;
     }
     if (!$(this).prop('checked')){
 
@@ -89,7 +87,6 @@ var toggle_title_abstract = function(){
       $('.archive_episode_list_column').css('display','none');
       $('.archive_image_list_column').css('display','block');
     }
-      // toggledOnce = true;
   });
 }
 
