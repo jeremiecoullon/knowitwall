@@ -164,7 +164,7 @@ def index():
 
 @app.route('/homepage_redesign')
 def index_redesign():
-    
+
     audiodoc_list = all_audiodocs
 
     audiodocs = ad_fun(audiodoc_list)

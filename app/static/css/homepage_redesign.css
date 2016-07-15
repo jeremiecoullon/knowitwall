@@ -1,9 +1,20 @@
 /* TODO: refactor this: merge with knowitwallredux.css (after cleaning knowitwallredux.css) */
 .homepage_hidden_info{
   display: none;
+
 }
-.box_image:hover > .homepage_hidden_info{
-  display:block;
+.homepage_box_episode:hover > .homepage_hidden_info{
+  /*-webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;*/
+/*-webkit-transition: all 5s ease;
+-moz-transition: all 5s ease;
+-ms-transition: all 5s ease;
+-o-transition: all 5s ease;
+transition: all 5s ease;*/
+  display:inline;
 }
 /* homepage boxes: rows and column styling (to override bootstrap) */
 .homepage_box_row{
@@ -24,8 +35,8 @@
   height:400px;
 }
 .homepage_box_about h2{
-  padding-top: 30px;
-  font-size: 40px;
+  padding-top: 40px;
+  font-size: 50px;
 }
 .homepage_box_about p{
   text-align: justify;
@@ -35,14 +46,36 @@
 }
 .homepage_About_description{
   border-top: 3px solid #ffc21c;
-  margin: 40px 100px;
+  margin: 45px 100px;
   padding-top: 23px;
 }
 /*TODO: add this to the class in redux!*/
-.episode-title{
+.box_episode_title{
   text-align: center;
+  font-size: 20px;
+  margin-top: 10%;
 }
 /* Episode boxes on the homepage */
 .homepage_box_episode{
   height: 400px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+.homepage_box_more_episodes{
+  height:400px;
+  text-align: center;
+}
+.homepage_box_more_episodes h2{
+  padding-top: 30px;
+}
+.homepage_box_abstract{
+  color: white;
+  font-size: 14px;
+  margin: 52px 18% 0px 18%;
+  text-align: center;
+  line-height: 23px;
+}
+.homepage_box_by-in{
+  font-size: 16px;
 }
