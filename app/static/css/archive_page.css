@@ -256,14 +256,23 @@ footer .footer-info{
 #button_titles, #button_images{
   border-radius: 7px;
 }
- #button_titles{
+
+/* Mobile filter (between images and titles): Choose default button when you load the page */
+ /*#button_titles{
+   background-color: rgba(255, 194, 28, 0.8);
+ }*/
+ #button_images{
    background-color: rgba(255, 194, 28, 0.8);
  }
-
 
 .scroll-top .btn {
   border-radius: 0px;
   opacity: 0.9;
+}
+.scroll-top{
+  bottom:95px;
+  width:100%;
+  right: 0px;
 }
 .toggle-off.btn{
   padding-left:34px;
@@ -279,4 +288,8 @@ footer .footer-info{
 }
 .btn-default:hover{
   background-color: #ffc21c;
+}
+
+.mobile_filter_wrapper{
+  background-color:rgba(255,255,255,0.0);
 }

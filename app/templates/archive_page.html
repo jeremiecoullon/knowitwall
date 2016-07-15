@@ -365,7 +365,23 @@
     <!-- <a class="btn btn-primary" href="#page-top">
       <i class="fa fa-chevron-up"></i>
     </a> -->
-    <input id="toggle-title_abstract" type="checkbox" data-toggle="toggle" data-on="Titles" data-off="Abstracts">
+    <!-- <input id="toggle-title_abstract" type="checkbox" data-toggle="toggle" data-on="Titles" data-off="Abstracts"> -->
+    <div class="mobile_filter_wrapper">
+      <div class="archive_filter">
+        <ul>
+          <li>
+              <p id="button_titles">
+              Titles only
+              </p>
+          </li>
+          <li>
+              <p id="button_images">
+                Titles with abstracts
+              </p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/jquery.easing.min.js"></script>
@@ -374,14 +390,6 @@
 
 <!-- TEST: bootstrap toggle -->
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-<script>
-  // $(function() {
-  //   $('#toggle-title_abstract').change(function() {
-  //     $('#console-event').html('Toggle: ' + $(this).prop('checked'))
-  //     console.log($(this).prop('checked'));
-  //   })
-  // })
-</script>
 
 </body>
 {% endblock %}
