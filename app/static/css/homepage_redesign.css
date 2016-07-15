@@ -1,0 +1,48 @@
+/* TODO: refactor this: merge with knowitwallredux.css (after cleaning knowitwallredux.css) */
+.homepage_hidden_info{
+  display: none;
+}
+.box_image:hover > .homepage_hidden_info{
+  display:block;
+}
+/* homepage boxes: rows and column styling (to override bootstrap) */
+.homepage_box_row{
+  padding-top: 5px
+}
+.homepage_box_col{
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+/* overrides knowitwallredux.css padding on the #episodes section */
+#episodes{
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+.homepage_box_about{
+  color: #fff;
+  background: #33353d;
+  height:400px;
+}
+.homepage_box_about h2{
+  padding-top: 30px;
+  font-size: 40px;
+}
+.homepage_box_about p{
+  text-align: justify;
+  font-size: 15px;
+  padding-top: 15px;
+  line-height: 25px;
+}
+.homepage_About_description{
+  border-top: 3px solid #ffc21c;
+  margin: 40px 100px;
+  padding-top: 23px;
+}
+/*TODO: add this to the class in redux!*/
+.episode-title{
+  text-align: center;
+}
+/* Episode boxes on the homepage */
+.homepage_box_episode{
+  height: 400px;
+}

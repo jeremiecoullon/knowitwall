@@ -30,6 +30,9 @@
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
 
+  <!-- homepage redesign: TODO: put these changes nicely in knowitwallredux.css -->
+  <link href="/static/css/homepage_redesign.css" rel="stylesheet">
+
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic," rel="stylesheet" type="text/css">
@@ -45,16 +48,6 @@
   ga('create', 'UA-62559170-1', 'auto');
   ga('send', 'pageview');
   </script>
-
-<style media="screen">
-.hidden_index_stuff{
-  display: none;
-}
-.box_image:hover > .hidden_index_stuff{
-  display:block;
-}
-
-</style>
 </head>
 
 <body id='page-top'>
@@ -357,7 +350,7 @@
 
 <!-- <span class="scrollything" id="about"></span> -->
   <!-- About Section -->
-  <section class="success" id="about">
+  <!-- <section class="success" id="about">
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-center">
@@ -374,7 +367,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -385,74 +378,93 @@
 
 
     <section id="episodes">
+<!-- START OF REDESIGN TEST -->
 
-      <div class="row">
-
-        <div class="col-md-5">
-          <div style="background: url('{{audiodocs[1].topic_image_box}}'); background-size:cover;height: 400px" class='box_image text-center'>
-            <!-- <a href="episodes/{{audiodocs[1].url}}" class="box_episode_title" >
-              {{audiodocs[2].topic_name | safe}}
-            </a>
-            <p style="font-size:0.8em;">
-              <i style="color: {{audiodocs[1].by_in_colour}}; color: {{audiodocs[1].by_in_colour_box}};">by</i> <a href="episodes/{{audiodocs[1].url}}#author" class="highlight">{{audiodocs[1].author_name | safe}}</a> <i style="color: {{audiodocs[1].by_in_colour}}; color: {{audiodocs[1].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[1].discipline}} </span>
-            </p> -->
+      <div class="row homepage_box_row">
+        <div class="col-md-5 homepage_box_col">
+          <div class="homepage_box_about">
+            <div class="row">
+              <h2>About</h2>
+            </div>
+            <div class="row homepage_About_description">
+              <p>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+              <p>
+                Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!
+              </p>
+            </div>
           </div>
-          <!-- <div>
-            <p class="episode-description justify">{{audiodocs[1].topic_description | safe}}</p>
-          </div> -->
+
         </div>
-<!-- stuff! -->
-
-        <div class="col-md-7">
-          <div style="background: url('{{audiodocs[2].topic_image_box}}'); background-size:cover; height: 400px" class='box_image text-center'>
-            <!-- <a href="episodes/{{audiodocs[2].url}}" class="box_episode_title" >
-              {{audiodocs[2].topic_name | safe}}
+        {% for elem in audiodocs[1:2] %}
+        <div class="col-md-7 homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-title homepage_hidden_info">
+              {{elem.topic_name | safe}}
             </a>
-            <p style="font-size:0.8em;">
-              <i style="color: {{audiodocs[2].by_in_colour}}; color: {{audiodocs[2].by_in_colour_box}};">by</i> <a href="episodes/{{audiodocs[2].url}}#author" class="highlight">{{audiodocs[2].author_name | safe}}</a> <i style="color: {{audiodocs[2].by_in_colour}}; color: {{audiodocs[2].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[2].discipline}} </span>
-            </p> -->
-          </div>
-          <!-- <div>
-            <p class="episode-description justify">{{audiodocs[2].topic_description | safe}}</p>
-          </div> -->
-        </div>
-      </div>
-
-
-      <div class="row" style="padding-top:10px">
-
-        <div class="col-md-7">
-          <div style="background: url('{{audiodocs[1].topic_image_box}}'); background-size:cover;height: 400px" class='box_image text-center'>
-            <a href="episodes/{{audiodocs[1].url}}" class="box_episode_title hidden_index_stuff">
-              {{audiodocs[2].topic_name | safe}}
-            </a>
-            <p style="font-size:0.8em;" class="hidden_index_stuff">
-              <i style="color: {{audiodocs[1].by_in_colour}}; color: {{audiodocs[1].by_in_colour_box}};">by</i> <a href="episodes/{{audiodocs[1].url}}#author" class="highlight">{{audiodocs[1].author_name | safe}}</a> <i style="color: {{audiodocs[1].by_in_colour}}; color: {{audiodocs[1].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[1].discipline}} </span>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
             </p>
-            <p class="episode-description justify hidden_index_stuff">{{audiodocs[2].topic_description | safe}}</p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
           </div>
-          <!-- <div class="hidden_index_stuff">
-
-          </div> -->
         </div>
-<!-- stuff! -->
-
-        <div class="col-md-5">
-          <div style="background: url('{{audiodocs[2].topic_image_box}}'); background-size:cover; height: 400px" class='box_image text-center'>
-            <!-- <a href="episodes/{{audiodocs[2].url}}" class="box_episode_title" >
-              {{audiodocs[2].topic_name | safe}}
-            </a>
-            <p style="font-size:0.8em;">
-              <i style="color: {{audiodocs[2].by_in_colour}}; color: {{audiodocs[2].by_in_colour_box}};">by</i> <a href="episodes/{{audiodocs[2].url}}#author" class="highlight">{{audiodocs[2].author_name | safe}}</a> <i style="color: {{audiodocs[2].by_in_colour}}; color: {{audiodocs[2].by_in_colour_box}};">in</i> <span class="highlight">{{audiodocs[2].discipline}} </span>
-            </p> -->
-          </div>
-          <!-- <div>
-            <p class="episode-description justify">{{audiodocs[2].topic_description | safe}}</p>
-          </div> -->
-        </div>
+        {% endfor %}
       </div>
 
 
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[2:4] %}
+        <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-title homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[4:6] %}
+        <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-titles homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[6:8] %}
+        <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-titles homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+<!-- END OF REDESIGN TEST -->
 
 
 
@@ -462,10 +474,7 @@
 
 
 
-
-
-
-
+<!--
       <div class="container previous-audiodoc" style="background-color:white">
         <div class="row">
           {% for audiodoc in audiodocs[1:5] %}
@@ -501,7 +510,6 @@
           </div>
           {% endfor %}
         </div>
-
         <div class="row">
           {% for audiodoc in audiodocs[9:13] %}
           <div class="col-md-3">
@@ -520,7 +528,6 @@
           {% endfor %}
         </div>
         <div class="row">
-          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
           {% for audiodoc in audiodocs[13:14] %}
           <div class="col-md-3 last_boxes_center">
             <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
@@ -551,7 +558,7 @@
             </div>
           </div>
           {% endfor %}
-        </div>
+        </div> -->
 <!--
         <div class="row">
           <div class="col-md-6">
