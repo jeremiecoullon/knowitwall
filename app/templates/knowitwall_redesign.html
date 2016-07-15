@@ -30,6 +30,9 @@
   <!-- Custom CSS -->
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
 
+  <!-- homepage redesign: TODO: put these changes nicely in knowitwallredux.css -->
+  <link href="/static/css/homepage_redesign.css" rel="stylesheet">
+
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic," rel="stylesheet" type="text/css">
@@ -45,8 +48,6 @@
   ga('create', 'UA-62559170-1', 'auto');
   ga('send', 'pageview');
   </script>
-
-
 </head>
 
 <body id='page-top'>
@@ -294,25 +295,25 @@
         <!-- Begin MailChimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
         <style type="text/css">
-          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+        	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         </style>
         <div id="mc_embed_signup">
         <form action="//knowitwall.us11.list-manage.com/subscribe/post?u=0c2ccb6c7234e8de621e119c8&amp;id=4ff941f843" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="row">
                 <div class="col-md-6 col-md-offset-1">
-                   <h2 class="newsletter-signup_text">Get notified of new content by signing up to our newsletter</h2>
+              	   <h2 class="newsletter-signup_text">Get notified of new content by signing up to our newsletter</h2>
                 </div>
                 <div class="col-md-3">
                   <div class="mc-field-group">
-                    <input type="email" value=""  name="EMAIL" placeholder="Your email address" class="required email" id="mce-EMAIL" style="border:3px solid #33353D;">
+                  	<input type="email" value=""  name="EMAIL" placeholder="Your email address" class="required email" id="mce-EMAIL" style="border:3px solid #33353D;">
                   </div>
-                  <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response-KiW" style="display:none"></div>
-                  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                	<div id="mce-responses" class="clear">
+                		<div class="response" id="mce-error-response" style="display:none"></div>
+                		<div class="response" id="mce-success-response-KiW" style="display:none"></div>
+                	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 </div>
                 <div class="col-md-2">
                   <div style="position: absolute; left: -5000px;"><input type="text" name="b_0c2ccb6c7234e8de621e119c8_4ff941f843" tabindex="-1" value=""></div>
@@ -349,7 +350,7 @@
 
 <!-- <span class="scrollything" id="about"></span> -->
   <!-- About Section -->
-  <section class="success" id="about">
+  <!-- <section class="success" id="about">
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-center">
@@ -366,9 +367,114 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
+
+
+
+
+
+
 
     <section id="episodes">
+<!-- START OF REDESIGN TEST -->
+
+      <div class="row homepage_box_row">
+        <div class="col-md-5 homepage_box_col">
+          <div class="homepage_box_about">
+            <div class="row">
+              <h2>About</h2>
+            </div>
+            <div class="row homepage_About_description">
+              <p>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+              <p>
+                Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!
+              </p>
+            </div>
+          </div>
+
+        </div>
+        {% for elem in audiodocs[1:2] %}
+        <div class="col-md-7 homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-title homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[2:4] %}
+        <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-title homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[4:6] %}
+        <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-titles homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="row homepage_box_row">
+        {% for elem in audiodocs[6:8] %}
+        <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+          <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode box_image'>
+            <a href="episodes/{{elem.url}}" class="episode-titles homepage_hidden_info">
+              {{elem.topic_name | safe}}
+            </a>
+            <p class="homepage_hidden_info">
+              <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i style="color: {{elem.by_in_colour}}; color: {{elem.by_in_colour_box}};">in</i> <span class="highlight">{{elem.discipline}} </span>
+            </p>
+            <p class="homepage_hidden_info">{{elem.topic_description | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+<!-- END OF REDESIGN TEST -->
+
+
+
+
+
+
+
+
+
+<!--
       <div class="container previous-audiodoc" style="background-color:white">
         <div class="row">
           {% for audiodoc in audiodocs[1:5] %}
@@ -404,7 +510,6 @@
           </div>
           {% endfor %}
         </div>
-
         <div class="row">
           {% for audiodoc in audiodocs[9:13] %}
           <div class="col-md-3">
@@ -423,7 +528,6 @@
           {% endfor %}
         </div>
         <div class="row">
-          <!-- this audiodoc has a big margin-left. Then you put the remaining ones on the right of it -->
           {% for audiodoc in audiodocs[13:14] %}
           <div class="col-md-3 last_boxes_center">
             <div style="background: url('{{audiodoc.topic_image_box}}'); background-size:cover;" class='box_image text-center'>
@@ -454,7 +558,7 @@
             </div>
           </div>
           {% endfor %}
-        </div>
+        </div> -->
 <!--
         <div class="row">
           <div class="col-md-6">

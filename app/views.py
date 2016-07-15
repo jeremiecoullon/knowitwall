@@ -160,6 +160,20 @@ def index():
 
 
 "----------------------------------------------------------------------------------------------------"
+"home page redesign"
+
+@app.route('/homepage_redesign')
+def index_redesign():
+    
+    audiodoc_list = all_audiodocs
+
+    audiodocs = ad_fun(audiodoc_list)
+
+    return render_template('knowitwall_redesign.html', audiodocs=audiodocs)
+
+
+
+"----------------------------------------------------------------------------------------------------"
 " audiodoc page"
 
 @app.route('/episodes/<url>')
