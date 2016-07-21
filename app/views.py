@@ -222,7 +222,9 @@ def archive():
 
     audiodocs = ad_fun(all_audiodocs)
     # TODO: sort episodes in alphabetical order based on the titles
-
+    # titles_list = sorted([elem.get('topic_name') for elem in audiodocs])
+    # audiodocs_sorted = [elem for elem in audiodocs if elem.get('topic_name')]
+    # , titles_list = titles_list
     return render_template('archive_page.html', audiodocs = audiodocs)
 
 "----------------------------------------------------------------------------------------------------"

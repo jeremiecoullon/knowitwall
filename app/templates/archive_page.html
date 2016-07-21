@@ -301,6 +301,9 @@
     <div class="row archive_row">
       <div class="col-md-6 archive_episode_list_column">
         <div class="col-md-12 archive_episode_list">
+          <p>
+             {{titles_list | safe}}
+          </p>
           <h2 class="archive_category">
             All Episodes
           </h2>
@@ -330,7 +333,7 @@
           </h2>
           {% for audiodoc in audiodocs %}
           <div class="archive_episode_category_{{audiodoc.category}}">
-            <div id="{{audiodoc.url}}" style="visibility:hidden;position: relative;bottom: 85px;"></div>
+            <div id="{{audiodoc.url}}" class="archive_hidden_anchor"></div>
             <a href="episodes/{{audiodoc.url}}" target="_blank">
               <div class="archive_image_padding">
                 <div class="archive_image_element" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('{{ audiodoc.topic_image }}');background-size:cover;">

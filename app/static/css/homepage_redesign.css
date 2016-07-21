@@ -1,5 +1,9 @@
 /* TODO: refactor this: merge with knowitwallredux.css (after cleaning knowitwallredux.css) */
-
+.about_hidden_anchor{
+  visibility:hidden;
+  position: relative;
+  bottom: 86px;
+}
 /*darken homepage box images on hover */
 .homepage_box_episode:hover > .homepage_overlay {
     position: absolute;

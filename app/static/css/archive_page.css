@@ -264,7 +264,11 @@ footer .footer-info{
  #button_images{
    background-color: rgba(255, 194, 28, 0.8);
  }
-
+.archive_hidden_anchor{
+  visibility:hidden;
+  position: relative;
+  bottom: 85px;
+}
 .scroll-top .btn {
   border-radius: 0px;
   opacity: 0.9;
