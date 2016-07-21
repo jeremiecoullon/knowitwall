@@ -347,27 +347,30 @@
     </div>
   </div>
   </header>
+  <section class="success" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <div id="about-left">
+          <h2> What are we about?</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="vertical-line">
+          <p class = 'justify'>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+          <br>
+          <p class = 'justify'>Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <section id="episodes">
-      <div class="row homepage_box_row">
-        <div class="col-md-5 homepage_box_col">
-          <div class="homepage_box_about">
-            <div class="about_hidden_anchor" id="about"></div>
-            <div class="row">
-              <h2>About</h2>
-            </div>
-            <div class="row homepage_About_description">
-              <p>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
-              <p>
-                Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!
-              </p>
-            </div>
-          </div>
-
-        </div>
+      <!-- <div class="row homepage_box_row">
         {% for elem in audiodocs[1:2] %}
-        <div class="col-md-7 homepage_box_col">
-           <!-- linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), -->
+        <div class="col-md-5 homepage_box_col">
+
           <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
             <div class="homepage_overlay">
             <a a href="episodes/{{elem.url}}" target="_blank" class="homepage_hidden_info">
@@ -385,7 +388,38 @@
           </div>
         </div>
         {% endfor %}
-      </div>
+
+        <div class="col-md-7 homepage_box_col">
+          <div class="homepage_box_about">
+            <div class="row" style="padding-top: 65px;">
+              <div class="col-md-4">
+                <div id="about-left" style="padding-right: 0px;">
+                <h2>about</h2>
+                </div>
+              </div>
+              <div class="col-md-8" style="padding-left: 30px; margin-left: 100px;">
+                <div class="vertical-line" style="width: 600px;">
+                <p class = 'justify'>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+                <br>
+                <p class = 'justify'>Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!</p>
+                </div>
+              </div>
+            </div>
+            <div class="about_hidden_anchor" id="about"></div>
+            <div class="row">
+              <h2>About</h2>
+            </div>
+            <div class="row homepage_About_description">
+              <p>Know it Wall is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+              <p>
+                Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div> -->
 
 
       <div class="row homepage_box_row">
@@ -457,16 +491,13 @@
         {% endfor %}
 
         <div class="col-md-5 homepage_box_col">
-          <div class="homepage_box_more_episodes">
-            <div class="row">
-              <h2>More episodes</h2>
+          <div class="homepage_box_more_episodes" style="background-color: #ffc21c">
+            <div class="row" >
+              <h2 style="padding-top:160px; font-size:40px; font-weight:300;">All episodes</h2>
             </div>
-            <div class="row homepage_About_description">
+            <!-- <div class="row homepage_About_description">
               <p>You can view more of our episodes here</p>
-              <!-- <p>
-                Right now you can read and listen to our episodes, but soon you'll be able to watch them too. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!
-              </p> -->
-            </div>
+            </div> -->
           </div>
 
         </div>

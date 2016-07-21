@@ -26,11 +26,11 @@
 }
 /* homepage boxes: rows and column styling (to override bootstrap) */
 .homepage_box_row{
-  padding-top: 5px
+  padding-top: 2px
 }
 .homepage_box_col{
-  padding-left: 2.5px;
-  padding-right: 2.5px;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 /* overrides knowitwallredux.css padding on the #episodes section */
 #episodes{
