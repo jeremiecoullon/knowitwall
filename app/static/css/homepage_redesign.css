@@ -35,7 +35,7 @@
 /* overrides knowitwallredux.css padding on the #episodes section */
 #episodes{
   padding-top: 0px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 .homepage_box_about{
   color: #fff;
