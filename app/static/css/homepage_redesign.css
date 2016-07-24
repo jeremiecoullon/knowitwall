@@ -1,4 +1,11 @@
 /* TODO: refactor this: merge with knowitwallredux.css (after cleaning knowitwallredux.css) */
+
+/* container with a small padding for the episodes section, otherwise the content spills out of the
+browser for some reason.. */
+.episodes_container{
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .about_hidden_anchor{
   visibility:hidden;
   position: relative;
@@ -73,9 +80,17 @@
 .homepage_box_more_episodes{
   height:400px;
   text-align: center;
+  background-image:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('/static/Images/all_episodes.jpg');
+  background-size:cover;
 }
 .homepage_box_more_episodes h2{
   padding-top: 30px;
+   padding-top:160px;
+   font-size:60px;
+   font-weight:300;
+}
+.more_episodes_redirect{
+  color: inherit;
 }
 .homepage_box_abstract{
   color: white;
