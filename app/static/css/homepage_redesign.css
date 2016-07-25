@@ -80,7 +80,7 @@ browser for some reason.. */
 .homepage_box_more_episodes{
   height:400px;
   text-align: center;
-  background-image:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('/static/Images/all_episodes.jpg');
+  background-image:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('/static/Images/all_episodes_centered.jpg');
   background-size:cover;
 }
 .homepage_box_more_episodes h2{
