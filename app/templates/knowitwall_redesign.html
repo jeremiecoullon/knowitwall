@@ -375,7 +375,7 @@
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                <a a href="episodes/{{elem.url}}" target="_blank" class="homepage_hidden_info">
-                 <p href="episodes/{{elem.url}}" class="box_episode_title ">
+                 <p href="episodes/{{elem.url}}" class="box_episode_title {{loop.cycle('box_episode_title_bigger', '')}}">
                    {{elem.topic_name | safe}}
                  </p>
                </a>
@@ -398,7 +398,7 @@
            <div style="background: url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                  <a a href="episodes/{{elem.url}}" target="_blank" class="homepage_hidden_info">
-                   <p href="episodes/{{elem.url}}" class="box_episode_title">
+                   <p href="episodes/{{elem.url}}" class="box_episode_title {{loop.cycle('', 'box_episode_title_bigger')}}">
                      {{elem.topic_name | safe}}
                    </p>
                  </a>
@@ -421,7 +421,7 @@
           <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
             <div class="homepage_overlay">
               <a a href="episodes/{{elem.url}}" target="_blank" class="homepage_hidden_info">
-                <p href="episodes/{{elem.url}}" class="box_episode_title">
+                <p href="episodes/{{elem.url}}" class="box_episode_title box_episode_title_bigger">
                   {{elem.topic_name | safe}}
                 </p>
               </a>

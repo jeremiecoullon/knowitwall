@@ -70,6 +70,10 @@ browser for some reason.. */
   font-size: 20px;
   margin-top: 10%;
 }
+/* change the font size for the bigger boxes on the homepage */
+.box_episode_title_bigger{
+  font-size: 30px;
+}
 /* Episode boxes on the homepage */
 .homepage_box_episode{
   height: 400px;
