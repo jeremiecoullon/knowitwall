@@ -58,7 +58,9 @@
   padding: 0.3em 0.4em;
   border-radius: 3px;
 }
-
+.box_episode_title:hover{
+  color: #999999;
+}
 
 @media(max-width:561px) {
   .box_episode_title {
