@@ -72,7 +72,7 @@ browser for some reason.. */
 }
 /* change the font size for the bigger boxes on the homepage */
 .box_episode_title_bigger{
-  font-size: 30px;
+  font-size: 28px;
 }
 /* Episode boxes on the homepage */
 .homepage_box_episode{
@@ -103,6 +103,12 @@ browser for some reason.. */
   text-align: center;
   line-height: 23px;
 }
+.homepage_box_abstract_bigger{
+  font-size: 16px;
+}
 .homepage_box_by-in{
   font-size: 16px;
+}
+.homepage_box_by-in_bigger{
+  font-size: 17px;
 }
