@@ -3,8 +3,8 @@
 /* container with a small padding for the episodes section, otherwise the content spills out of the
 browser for some reason.. */
 .episodes_container{
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 .about_hidden_anchor{
   visibility:hidden;
@@ -13,31 +13,33 @@ browser for some reason.. */
 }
 /*darken homepage box images on hover */
 .homepage_box_episode:hover > .homepage_overlay {
-    position: absolute;
-    top: 0;
-    width:100%;
+    /*position: absolute;*/
+    /*top: 1px;*/
+    /*width:100%;*/
     height:100%;
-    left: 0;
+    /*left: 1px;*/
     background: rgba(0, 0, 0, 0.6);
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     display: block;
+    border-radius: 6px;
 }
 .homepage_hidden_info{
   display: none;
 }
+body{background-color: #f8f8f8}
 .homepage_overlay:hover > .homepage_hidden_info{
   display:inline;
 }
 /* homepage boxes: rows and column styling (to override bootstrap) */
 .homepage_box_row{
-  padding-top: 0px
+  padding-top: 12px
 }
 .homepage_box_col{
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 /* overrides knowitwallredux.css padding on the #episodes section */
 #episodes{
@@ -67,12 +69,19 @@ browser for some reason.. */
 /*TODO: add this to the class in redux!*/
 .box_episode_title{
   text-align: center;
-  font-size: 20px;
-  margin-top: 10%;
+  margin-top: 64px;
+  font-size: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 /* change the font size for the bigger boxes on the homepage */
 .box_episode_title_bigger{
   font-size: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#contribute{
+  margin-top: 12px;
 }
 /* Episode boxes on the homepage */
 .homepage_box_episode{
@@ -80,6 +89,7 @@ browser for some reason.. */
   text-align: center;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  border-radius:6px
 }
 .homepage_box_more_episodes{
   height:400px;
@@ -98,17 +108,11 @@ browser for some reason.. */
 }
 .homepage_box_abstract{
   color: white;
-  font-size: 14px;
-  margin: 52px 18% 0px 18%;
+  font-size: 16px;
+  margin: 6.5% 18% 0px 18%;
   text-align: center;
   line-height: 23px;
 }
-.homepage_box_abstract_bigger{
-  font-size: 16px;
-}
 .homepage_box_by-in{
-  font-size: 16px;
-}
-.homepage_box_by-in_bigger{
   font-size: 17px;
 }

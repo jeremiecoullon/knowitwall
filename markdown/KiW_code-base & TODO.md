@@ -175,11 +175,11 @@ However, we'll need to have more info in these annotations (namely a URL) and we
 - [command-line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm)
 
 
-##CSS good practices
+##CSS and design
 
-I know they exist but I'm not sure what they are! :p. An example where this would be useful: we use the same kind of yellow in many different places on the site. It would be better to have a variable defined to be this exact type of yellow and then using that variable in CSS.
+### CSS preprocessing
 
-I know that there are languages that compile to CSS that include functions, variables, and class inheritance (such as [LESS](http://lesscss.org/)). I've been told they are good to use as a site gets bigger, so we should check them out.
+Checkout CSS preprocessing languages (SASS, LESS) and implment.
 
 **Task:**
 
@@ -195,3 +195,12 @@ I know that there are languages that compile to CSS that include functions, vari
 **Tools:**
 
 - I dunno that what tools we'd need: that's what we need to find out!
+
+
+### Google Material Design
+
+Checkout [Google Material Design](https://material.google.com/). How to get the shadow stuff, and on elements. What CSS framework to use (that integrates with bootstrap)
+
+### wireframing tools
+
+Check out [these free tools](https://docs.google.com/document/d/1FigxN9uZL3fkWzOzts7WVco6zwEyNIT4hEsih9VQeWU/edit?pref=2&pli=1)

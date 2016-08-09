@@ -278,8 +278,14 @@
 <!-- Archive -->
 <section>
   <div class="container">
+
+    <div class="row">
+
+    </div>
+
+
     <div class="row archive_row">
-      <div class="col-md-6 archive_episode_list_column">
+      <!-- <div class="col-md-6 archive_episode_list_column">
         <div class="col-md-12 archive_episode_list">
           <p>
              {{titles_list | safe}}
@@ -305,13 +311,42 @@
           </div>
           {% endfor %}
         </div>
-      </div>
-      <div class="col-md-6 archive_image_list_column">
-        <div class="col-md-12 archive_image_list">
+      </div> -->
+      <div class="col-md-6 ">
+        <div class="col-md-12 ">
           <h2 class="archive_category archive_category_image_mobile">
             All Episodes
           </h2>
-          {% for audiodoc in audiodocs %}
+          {% for audiodoc in audiodocs[::2] %}
+          <div class="archive_episode_category_{{audiodoc.category}}">
+            <div id="{{audiodoc.url}}" class="archive_hidden_anchor"></div>
+            <a href="episodes/{{audiodoc.url}}" target="_blank">
+              <div class="archive_image_padding">
+                <div class="archive_image_element" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('{{ audiodoc.topic_image }}');background-size:cover;">
+                  <p href="episodes/{{audiodoc.url}}" class="episode-title archive_episode_title" target="_blank">
+                    {{audiodoc.topic_name | safe}}
+                  </p>
+                  <div class="archive_wrapper">
+                  <i>by</i> <a href="episodes/{{audiodoc.url}}#author" target="_blank" class="highlight">{{audiodoc.author_name | safe}}</a> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+                  <p class="archive_abstract">
+                    {{audiodoc.topic_description | safe}}
+                  </p>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <h2 class="archive_category archive_category_image_mobile">
+            All Episodes
+          </h2>
+          {% for audiodoc in audiodocs[1::2] %}
           <div class="archive_episode_category_{{audiodoc.category}}">
             <div id="{{audiodoc.url}}" class="archive_hidden_anchor"></div>
             <a href="episodes/{{audiodoc.url}}" target="_blank">
