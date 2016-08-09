@@ -121,3 +121,52 @@ body{background-color: #f8f8f8}
   border-radius: 5px;
   color: #27282D;
 }
+.label_wrapper{
+  position: absolute;
+  left: 20px;
+  border-radius:50px;
+  height:35px;
+  width:35px;
+  background-color: white;
+}
+
+.audio-film_label{
+  color:#27282D;
+  position:relative;
+  top:7px;
+  left:0.5px;
+}
+.audio_label_wrapper{
+  bottom:20px;
+}
+.film_label_wrapper{
+  bottom:65px;
+}
+.label_wrapper_landing_page{
+  position: absolute;
+  left: 20px;
+  border-radius:50px;
+  height:46px;
+  width:46px;
+  background-color: white;
+}
+.audio_label_wrapper_landing_page{
+  bottom:30px;
+}
+.film_label_wrapper_landing_page{
+  bottom: 90px;
+}
+.label_wrapper:hover{
+  background-color: white;
+}
+.audio-film_label_landing_page{
+  color:#27282D;
+  position:relative;
+  top:14px;
+  left:0.5px;
+  font-size: 20px;
+
+}
+.audio_label_wrapper:hover > .audio-film_label{
+  /*color: #ffc21c;*/
+}

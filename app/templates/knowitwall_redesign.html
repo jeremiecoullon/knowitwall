@@ -330,6 +330,14 @@
   <header style="background:linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)), url('{{ audiodocs[0].topic_image }}'); background-size:cover; background-position: 0px 77px;">
     <div class="container">
       <div class="row">
+
+        <div class="label_wrapper_landing_page audio_label_wrapper_landing_page">
+          <i class="fa fa-volume-up audio-film_label_landing_page" aria-hidden="true" style="font-size:20px;"></i>
+        </div>
+        <div class="label_wrapper_landing_page film_label_wrapper_landing_page">
+          <i class="fa fa-film audio-film_label_landing_page" aria-hidden="true"  style="font-size:20px;"></i>
+        </div>
+
         <div class="col-lg-10 col-lg-offset-1 text-center">
           <a href="episodes/{{audiodocs[0].url}}" class="episode-title">
             {{audiodocs[0].topic_name | safe}}
@@ -371,6 +379,12 @@
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                 <!-- homepage_hidden_info -->
+                <!-- <a href="episodes/{{elem.url}}#episodes"> -->
+                  <div class="label_wrapper audio_label_wrapper">
+                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                  </div>
+                <!-- </a> -->
+
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
                    {{elem.topic_name | safe}}
@@ -394,6 +408,14 @@
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                 <!-- homepage_hidden_info -->
+                  <div class="label_wrapper audio_label_wrapper">
+                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                  </div>
+                  <div class="label_wrapper film_label_wrapper">
+                    <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                  </div>
+
+
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
                    {{elem.topic_name | safe}}
@@ -417,13 +439,19 @@
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                 <!-- homepage_hidden_info -->
+                <!-- <a href="episodes/{{elem.url}}#episodes"> -->
+                  <div class="label_wrapper audio_label_wrapper">
+                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                  </div>
+                <!-- </a> -->
+
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
                    {{elem.topic_name | safe}}
                  </p>
                </a>
                <p class="homepage_box_by-in">
-                 <i>by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                 <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                </p>
              <div class="homepage_hidden_info">
                <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
