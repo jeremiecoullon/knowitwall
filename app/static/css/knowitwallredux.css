@@ -370,7 +370,6 @@ text-align: left;
 
 .navbar-default .navbar-nav>li>a {
     color:#d2d2d2;
-
 }
 /* this makes the navbar tabs light up when you scroll to their respective section */
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {

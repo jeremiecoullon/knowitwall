@@ -116,3 +116,8 @@ body{background-color: #f8f8f8}
 .homepage_box_by-in{
   font-size: 17px;
 }
+#all_episodes{
+  background-color: #ffc21c;
+  border-radius: 5px;
+  color: #27282D;
+}
