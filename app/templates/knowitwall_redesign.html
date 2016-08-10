@@ -337,6 +337,7 @@
         <div class="label_wrapper_landing_page film_label_wrapper_landing_page">
           <i class="fa fa-film audio-film_label_landing_page" aria-hidden="true"  style="font-size:20px;"></i>
         </div>
+        <div class="btn btn-secondary latest_landing_page" style="">LATEST EPISODE</div>
 
         <div class="col-lg-10 col-lg-offset-1 text-center">
           <a href="episodes/{{audiodocs[0].url}}" class="episode-title">
@@ -379,11 +380,9 @@
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
                 <!-- homepage_hidden_info -->
-                <!-- <a href="episodes/{{elem.url}}#episodes"> -->
-                  <div class="label_wrapper audio_label_wrapper">
+                  <!-- <div class="label_wrapper audio_label_wrapper">
                     <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                  </div>
-                <!-- </a> -->
+                  </div> -->
 
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
@@ -395,6 +394,10 @@
                </p>
              <div class="homepage_hidden_info">
                <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+               <!-- audio label -->
+               <div class="label_wrapper audio_label_wrapper">
+                 <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+               </div>
               </div>
             </div>
           </div>
@@ -407,15 +410,6 @@
           <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
-                <!-- homepage_hidden_info -->
-                  <div class="label_wrapper audio_label_wrapper">
-                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                  </div>
-                  <div class="label_wrapper film_label_wrapper">
-                    <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                  </div>
-
-
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
                    {{elem.topic_name | safe}}
@@ -426,6 +420,13 @@
                </p>
              <div class="homepage_hidden_info">
                <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
+               <div class="label_wrapper audio_label_wrapper">
+                 <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+               </div>
+               <div class="label_wrapper film_label_wrapper">
+                 <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+               </div>
               </div>
             </div>
           </div>
@@ -438,13 +439,6 @@
           <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
               <div class="homepage_overlay">
-                <!-- homepage_hidden_info -->
-                <!-- <a href="episodes/{{elem.url}}#episodes"> -->
-                  <div class="label_wrapper audio_label_wrapper">
-                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                  </div>
-                <!-- </a> -->
-
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
                  <p class="box_episode_title">
                    {{elem.topic_name | safe}}
@@ -455,6 +449,9 @@
                </p>
              <div class="homepage_hidden_info">
                <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+               <div class="label_wrapper audio_label_wrapper">
+                 <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+               </div>
               </div>
             </div>
           </div>

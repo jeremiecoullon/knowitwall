@@ -26,6 +26,7 @@ browser for some reason.. */
     display: block;
     border-radius: 6px;
 }
+
 .homepage_hidden_info{
   display: none;
 }
@@ -127,13 +128,16 @@ body{background-color: #f8f8f8}
   border-radius:50px;
   height:35px;
   width:35px;
-  background-color: white;
+  /*background-color: white;*/
+  background-color: transparent;
+  border: 2px solid white;
 }
 
+
 .audio-film_label{
-  color:#27282D;
+  color: white;
   position:relative;
-  top:7px;
+  top:5px;
   left:0.5px;
 }
 .audio_label_wrapper{
@@ -148,7 +152,9 @@ body{background-color: #f8f8f8}
   border-radius:50px;
   height:46px;
   width:46px;
-  background-color: white;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
 }
 .audio_label_wrapper_landing_page{
   bottom:30px;
@@ -156,17 +162,19 @@ body{background-color: #f8f8f8}
 .film_label_wrapper_landing_page{
   bottom: 90px;
 }
-.label_wrapper:hover{
-  background-color: white;
-}
 .audio-film_label_landing_page{
-  color:#27282D;
   position:relative;
-  top:14px;
+  top:11px;
   left:0.5px;
   font-size: 20px;
-
 }
-.audio_label_wrapper:hover > .audio-film_label{
-  /*color: #ffc21c;*/
+.latest_landing_page{
+  position:absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color:transparent;
+  color:white;
+  border: 2px solid white;
+  font-size:12px;
+  cursor: auto;
 }
