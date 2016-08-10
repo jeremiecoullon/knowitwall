@@ -148,30 +148,30 @@ body{background-color: #f8f8f8}
 }
 .label_wrapper_landing_page{
   position: absolute;
-  left: 40px;
+  left: 36px;
   border-radius:50px;
-  height:46px;
-  width:46px;
+  height:40px;
+  width:40px;
+  /*background-color: white;*/
   background-color: transparent;
-  color: white;
   border: 2px solid white;
 }
 .audio_label_wrapper_landing_page{
-  bottom:30px;
+  bottom:35px;
 }
 .film_label_wrapper_landing_page{
-  bottom: 90px;
+  bottom: 86px;
 }
 .audio-film_label_landing_page{
+  color: white;
   position:relative;
-  top:11px;
+  top:8px;
   left:0.5px;
-  font-size: 20px;
 }
 .latest_landing_page{
   position:absolute;
   right: 50px;
-  bottom: 50px;
+  bottom: 36px;
   background-color:transparent;
   color:white;
   border: 2px solid white;

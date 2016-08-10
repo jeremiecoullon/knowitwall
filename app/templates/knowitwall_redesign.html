@@ -359,7 +359,7 @@
       <div class="row homepage_box_row">
         {% for elem in audiodocs[1:2] %}
           <div class="col-md-{{loop.cycle('12','5')}} homepage_box_col">
-            <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+            <div style="background:url('{{elem.topic_image}}'); background-size:cover; height:500px" class='homepage_box_episode'>
               <div class="homepage_overlay">
                 <!-- homepage_hidden_info -->
                   <!-- <div class="label_wrapper audio_label_wrapper">
@@ -367,19 +367,23 @@
                   </div> -->
 
                <a a href="episodes/{{elem.url}}" target="_blank" class="">
-                 <p class="box_episode_title">
+                 <p class="box_episode_title" style="margin-top:112px;font-size:34px">
                    {{elem.topic_name | safe}}
                  </p>
                </a>
-               <p class="homepage_box_by-in">
+               <p class="homepage_box_by-in" style="font-size:19px;">
                  <i>by</i> <a href="episodes/{{elem.url}}#author" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                </p>
              <div class="homepage_hidden_info">
-               <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+               <p class="homepage_box_abstract" style="font-size:17px;">{{elem.topic_description | safe}}</p>
                <!-- audio label -->
-               <div class="label_wrapper audio_label_wrapper">
-                 <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+               <div class="label_wrapper_landing_page audio_label_wrapper_landing_page">
+                 <i class="fa fa-volume-up audio-film_label_landing_page" aria-hidden="true" style="font-size:18px;"></i>
                </div>
+               <div class="label_wrapper_landing_page film_label_wrapper_landing_page">
+                 <i class="fa fa-film audio-film_label_landing_page" aria-hidden="true" style="font-size:18px;"></i>
+               </div>
+               <div class="btn btn-secondary latest_landing_page" style="">LATEST EPISODE</div>
               </div>
             </div>
           </div>
