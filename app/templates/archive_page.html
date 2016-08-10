@@ -414,7 +414,7 @@
 
 
 <!-- VERSION 2: alternate 2 and 3 boxes per row -->
-      <div class="row homepage_box_row">
+      <!-- <div class="row homepage_box_row">
         {% for elem in audiodocs[0:2] %}
           <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
             <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
@@ -612,10 +612,12 @@
             </div>
           </div>
           {% endfor %}
-        </div>
+        </div> -->
+
+
 
 <!-- VERSION 3: only rows of 2 -->
-        <!-- <div class="row homepage_box_row">
+        <div class="row homepage_box_row">
           {% for elem in audiodocs[0:2] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
@@ -813,7 +815,7 @@
             </div>
           </div>
           {% endfor %}
-        </div> -->
+        </div>
 
 
   <!-- </div> -->
