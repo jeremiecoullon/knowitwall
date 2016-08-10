@@ -32,7 +32,7 @@
 }
 .knowit_button{
   border: 1.5px solid black;
-  border-radius: 7px;
+  border-radius: 50px;
   width: 25px;
   height: 25px;
   cursor: pointer;
