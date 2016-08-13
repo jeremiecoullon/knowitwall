@@ -305,44 +305,55 @@
 <!-- If the episode has a video -->
 {% if audiodocs[0].video_embed %}
 
-<!-- <header id="header_no_player" class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;"> -->
-<!-- padding-left:100px;padding-right:100px; -->
-  <header id="header_no_player" class="audiodoc_header" style="background-color:black">
+<!-- header version 1 -->
+<header id="header_no_player" class="audiodoc_header" style="background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)), url('{{ audiodocs[0].topic_image }}'); background-repeat: no-repeat; background-size:cover;">
 
-    <!-- <div class="container container_video"> -->
+<!-- header version 2 -->
+  <!-- <header id="header_no_player" class="audiodoc_header" style="padding-left:150px;padding-right:150px;background-color:black"> -->
+
+<!-- container version 1 -->
+    <div class="container container_video" style="padding-bottom:230px;padding-top:300px">
+
+<!-- container version 2 -->
  <!-- linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)), -->
-    <div class="container_video" style="background:url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; height:745px;">
+    <!-- <div class="container_video" style="background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)),url('{{ audiodocs[0].topic_image }}'); background-repeat: no-repeat; background-size:cover; height:700px;"> -->
       <div class="row">
 
-        <div style="margin-bottom:50px;">
-          <svg width = "130px" height="130px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
+        <div style="margin-bottom:30px;">
+          <svg width = "100px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
           <style type="text/css">
             .st0{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-miterlimit:10;}
+            .st1{fill:white}
           </style>
-          <polygon class="st0" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
+          <polygon class="st0 st1" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
           <circle class="st0" cx="597.4" cy="597.4" r="587.4"></circle>
           </svg>
         </div>
 
 
         <div class="col-lg-10 col-lg-offset-1 text-center">
-          <div class="episode-title">
+
+           <!-- <div class="episode-title" style="font-size:35px;"> -->
+             <div class="episode-title" style="font-size:42px; background-color:transparent; color:white">
+          <!-- <div class="episode-title"> -->
             {{audiodocs[0].topic_name | safe}}
           </div>
         </div>
 
-        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
-           <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
+        <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%;font-size:18px">
+          <!-- {{audiodocs[0].by_in_colour}} -->
+           <i style="color: white">by</i> <span class="highlight" style="background-color:transparent;color:white">{{audiodocs[0].author_name | safe}}</span> <i style="color: white">in</i> <span style="background-color:transparent; color:white"class="highlight">{{audiodocs[0].discipline}} </span>
+           <!-- <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <span class="highlight" >{{audiodocs[0].author_name | safe}}</span> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span> -->
 
       </div>
     </div>
-      <div class="row arrow_row">
+      <!-- <div class="row arrow_row">
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
-          <!-- <a class="arrow-wrap a_arrow" href="#episodes">
+          <a class="arrow-wrap a_arrow" href="#episodes">
           <span class="arrow"></span>
-          </a> -->
+          </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </header>
   <!-- header with the video player. JQuery inserts the iframe -->

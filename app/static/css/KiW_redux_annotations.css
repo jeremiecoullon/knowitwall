@@ -613,10 +613,11 @@ padding:40px;
 
 /*contains the video player*/
 .video_div{
-  padding-left: 100px;
-  padding-right:100px;
+  padding-left: 150px;
+  padding-right:150px;
   background-color:black;
-  height: 745px;
+  /*height: 800px;*/
+  height: 700px;
 }
 
 
@@ -666,7 +667,7 @@ padding:40px;
         font-size: 1.75em;
     }
     header .container_video{
-      padding-top: 180px;
+      padding-top: 230px;
       cursor:pointer;
     }
 }
