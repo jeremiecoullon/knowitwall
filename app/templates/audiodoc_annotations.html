@@ -35,7 +35,6 @@
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic" rel="stylesheet" type="text/css">
-
 </head>
 
 <body id="page-top">
@@ -297,9 +296,23 @@
     </div>
   </nav>
 
+<!-- If the episode has a video -->
+{% if audiodocs[0].video_embed %}
   <header id="header_no_player" class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; position:relative;">
-    <div class="container" >
+    <div class="container container_video">
       <div class="row">
+
+        <div style="margin-bottom:50px;">
+          <svg width = "130px" height="130px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-miterlimit:10;}
+          </style>
+          <polygon class="st0" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
+          <circle class="st0" cx="597.4" cy="597.4" r="587.4"></circle>
+          </svg>
+        </div>
+
+
         <div class="col-lg-10 col-lg-offset-1 text-center">
           <div class="episode-title">
             {{audiodocs[0].topic_name | safe}}
@@ -320,14 +333,36 @@
       </div>
     </div>
   </header>
+  <!-- header with the video player. JQuery inserts the iframe -->
+<header style="display:none;" id="header_player" data-video="{{audiodocs[0].video_embed}}">
+</header>
 
+<!-- else if there's no video -->
+{% else %}
+<header class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; position:relative;">
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 text-center">
+        <div class="episode-title">
+          {{audiodocs[0].topic_name | safe}}
+        </div>
+      </div>
 
+      <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+         <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
 
-<header style="display:none;" id="header_player">
-  <div style="padding-left: 100px;padding-right:100px; background-color:black;position:relative;top:45px; height: 700px;">
-<iframe src="https://www.youtube.com/embed/3fK5Vlyi9Yc?autoplay=1" style=" width:100%; height:100%;" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+    <div class="row arrow_row">
+      <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
+        <a class="arrow-wrap a_arrow" href="#episodes">
+        <span class="arrow"></span>
+        </a>
+      </div>
+    </div>
   </div>
 </header>
+{% endif %}
 
   <section id="episodes" >
     <div class="container image_credits">
@@ -500,11 +535,14 @@ jQuery(function ($) {
                });
 </script>
 
-<!-- to play header on click -->
+<!-- To view the video player on click -->
 <script type="text/javascript">
 $('#header_no_player').click(function(){
   $('#header_no_player').css('display','none');
   $('#header_player').css('display','block');
+  var data_video = $('#header_player').attr('data-video');
+  var video_div = '<div class = "video_div"><iframe src="' + data_video + '" style="width:100%; height:100%;" frameborder="0" allowfullscreen></iframe></div>';
+  $('#header_player').html(video_div);
 });
 </script>
 

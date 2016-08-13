@@ -611,6 +611,15 @@ padding:40px;
   border-color: #fff;
 }
 
+/*contains the video player*/
+.video_div{
+  padding-left: 100px;
+  padding-right:100px;
+  background-color:black;
+  position:relative;
+  top:45px;
+  height: 700px;
+}
 
 
 .navbar-brand {
@@ -657,6 +666,10 @@ padding:40px;
     }
     header .intro-text .skills {
         font-size: 1.75em;
+    }
+    header .container_video{
+      padding-top: 180px;
+      cursor:pointer;
     }
 }
 @media(min-width:768px) {
@@ -1001,12 +1014,6 @@ footer .footer-below {
     color: #44F;
 }
 
-/*This affected the circular player (don't what why this is here anyways..)*/
-/*audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline;
-  max-height: 150px;
-}*/
 
 .top-border-ireg {
 

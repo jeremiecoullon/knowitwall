@@ -17,5 +17,6 @@
     "music_credits": "Kai Engel and Lee Rosevere",
     "narration_credits": "Angus Waite",
     "transcript": "app/static/texts/flying_spying_transcript.html",
-    "audio_mp3": "http://knowitwall.com/audio/flying_spying.mp3"
+    "audio_mp3": "http://knowitwall.com/audio/flying_spying.mp3",
+    "video_embed": "https://www.youtube.com/embed/3fK5Vlyi9Yc?autoplay=1"
 }
