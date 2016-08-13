@@ -238,6 +238,9 @@
         <ul class="nav navbar-nav">
 
           <li class="page-scroll">
+            <a href="#header_video_hidden_div">Watch</a>
+          </li>
+          <li class="page-scroll">
             <a href="#episodes">Listen</a>
           </li>
           <li class="page-scroll-offset">
@@ -296,10 +299,19 @@
     </div>
   </nav>
 
+<div id="header_video_hidden_div" style="display:hidden">
+  fds
+</div>
 <!-- If the episode has a video -->
 {% if audiodocs[0].video_embed %}
-  <header id="header_no_player" class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; position:relative;">
-    <div class="container container_video">
+
+<!-- <header id="header_no_player" class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;"> -->
+<!-- padding-left:100px;padding-right:100px; -->
+  <header id="header_no_player" class="audiodoc_header" style="background-color:black">
+
+    <!-- <div class="container container_video"> -->
+ <!-- linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)), -->
+    <div class="container_video" style="background:url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; height:745px;">
       <div class="row">
 
         <div style="margin-bottom:50px;">
@@ -326,9 +338,9 @@
     </div>
       <div class="row arrow_row">
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
-          <a class="arrow-wrap a_arrow" href="#episodes">
+          <!-- <a class="arrow-wrap a_arrow" href="#episodes">
           <span class="arrow"></span>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
@@ -339,7 +351,7 @@
 
 <!-- else if there's no video -->
 {% else %}
-<header class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover; position:relative;">
+<header class="audiodoc_header" style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;">
   <div class="container" >
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -364,9 +376,10 @@
 </header>
 {% endif %}
 
+
   <section id="episodes" >
     <div class="container image_credits">
-      <div class="row ">
+      <div class="row " id="image_credits">
         <p>
           {{audiodocs[0].image_credits | safe}}
         </p>
@@ -538,11 +551,17 @@ jQuery(function ($) {
 <!-- To view the video player on click -->
 <script type="text/javascript">
 $('#header_no_player').click(function(){
+  // hide landing page header
   $('#header_no_player').css('display','none');
+  // display video player header
   $('#header_player').css('display','block');
+  // get youtube embed URL and insert in the video player header
   var data_video = $('#header_player').attr('data-video');
-  var video_div = '<div class = "video_div"><iframe src="' + data_video + '" style="width:100%; height:100%;" frameborder="0" allowfullscreen></iframe></div>';
+  var video_div = '<div class = "video_div"><iframe src="' + data_video + '" style=" width:100%; height:100%;" frameborder="0" allowfullscreen></iframe></div>';
   $('#header_player').html(video_div);
+
+  // hide image credits
+  $('#image_credits').css('display','none');
 });
 </script>
 
