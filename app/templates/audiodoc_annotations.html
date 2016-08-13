@@ -25,7 +25,7 @@
   <link href="/static/css/circular_player.css" rel="stylesheet">
   <link href="/static/css/KiW_redux_annotations.css" rel="stylesheet">
   <link href="/static/css/audiodoc_page.css" rel="stylesheet">
-
+  <link href="/static/css/jquery.fancybox.css" rel="stylesheet"/>
 
   <!-- annotator -->
   <link href="/static/css/annotator-KIW.css" rel="stylesheet" type="text/css">
@@ -446,6 +446,27 @@
   <script src="/static/js/contact_me.js"></script>
   <script src="/static/js/knowitwall.js"></script>
   <script src="/static/js/switching_audioplayers.js"></script>
+  <script src="/static/js/jquery.fancybox.pack.js"></script>
+
+  <!-- fancybox for transcript images -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox_transcript").fancybox({
+            helpers : {
+                overlay : {
+                    css : {
+                        'background' : 'rgba(119, 119, 119, 0.95)'
+                    }
+                },
+                title : {
+                  type: 'inside'
+                }
+            }
+        });
+    });
+
+    </script>
+
 
   <!-- showdown library -->
   <!-- <script src="/static/js/showdown.min.js"></script> -->
@@ -453,8 +474,6 @@
   <!-- annotator.js -->
   <script src="/static/js/annotator-full-1.2.7-modified.js"></script>
   <script src="/static/js/annotator-extensions.js"></script>
-
-</script>
 
 <!-- previous version of annotator script. Has persistent storage.
     todo:  Need to rewrite this, but adding the plugins individually (like the proper version
@@ -472,108 +491,6 @@ jQuery(function ($) {
                );
                });
 </script>
-
-
-
-<!-- <script type="text/javascript">
-  jQuery(function ($) {
-    var annotator = $('body').annotator().data('annotator');
-
-    // Store plugin
-    annotator.addPlugin('Store', {
-      // The endpoint of the store on your server.
-      prefix: 'http://annotateit.org/api',
-
-      // Attach the uri of the current page to all annotations to allow search.
-      annotationData: {
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      },
-
-      // This will perform a "search" action when the plugin loads. Will
-      // request the last 20 annotations for the current url.
-      // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
-      loadFromSearch: {
-        'limit': 20,
-        'uri': 'http://localhost:5000/audiodoc/stegosaurus'
-      }
-    });
-
-    // Auth plugin
-    annotator.addPlugin('Auth',{
-      tokenUrl: 'http://localhost:5000/api/token'
-    });
-    //register callback to run when we get a token
-		annotator.plugins.Auth.withToken(function(token){
-			//just pass the token to the permissions plugin
-			annotator.plugins.Permissions.setUser(token);
-		});
-
-    // Permissions plugin
-    annotator.addPlugin('Permissions',{
-
-    })
-  })
-</script> -->
-
-
-
-<!-- below is the proper version of the annotator script (with Ian's addition).
-    It doesn't have persistent storage for some reason though.
- -->
-  <!-- <script type="text/javascript">
-	jQuery(function ($) {
-		var annotator = $('body').annotator().data('annotator'),
-			anonymousToken = {
-				userId: '0',
-				displayName: 'anonymous'
-			}
-      ;
-
-		//add auth plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/auth.html)
-		annotator.addPlugin('Auth', {
-			autoFetch: true,
-			tokenUrl: 'http://localhost:5000/api/token'
-		});
-
-		//register callback to run when we get a token
-		annotator.plugins.Auth.withToken(function(token){
-			//just pass the token to the permissions plugin
-			annotator.plugins.Permissions.setUser(token);
-		});
-
-	// 	add permissions plugin (docs: http://docs.annotatorjs.org/en/v1.2.x/plugins/permissions.html)
-	// 	note that we're using a modified version of annotator which introduces a 'create' permission
-		annotator.addPlugin('Permissions', {
-			//initialise with the anonymous token
-			user: anonymousToken,
-			userId: function (user) {
-				return (user || anonymousToken).userId;
-			},
-			userString: function (user) {
-				return (user || anonymousToken).displayName;
-			},
-			userAuthorize: function(action, annotation, user) {
-				user = user || anonymousToken;
-
-				//user not logged in (ie: 'anonymous user'):
-				if(user.userId === "0"){
-					//can view annotations, cannot create/edit annotations
-					return action === 'read';
-				}
-				//admin logged in: can edit/create/delete all annotations
-				if(user.isAdmin){
-					return true;
-				}
-
-				//user logged in: can create annotations (and read them)
-				return action === 'create' || action === 'read';
-			},
-		});
-	});
-  </script> -->
-
-
-
 
 
 <!-- share buttons-->
