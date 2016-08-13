@@ -668,8 +668,10 @@ padding:40px;
     }
     header .container_video{
       padding-top: 230px;
-      cursor:pointer;
     }
+}
+#header_no_player{
+  cursor:pointer;
 }
 @media(min-width:768px) {
 /* this says how  the nav bar transition happens, but not when */
