@@ -173,6 +173,7 @@ label {
 body {
     overflow-x: hidden;
 	color:#33353d;
+  background-color: white;
 }
 
 p {

@@ -21,18 +21,14 @@ browser for some reason.. */
   padding-left: 21px;
   padding-right: 21px;
 }
-.about_hidden_anchor{
+#about_hidden_anchor{
   visibility:hidden;
   position: relative;
-  bottom: 86px;
+  bottom: 140px;
 }
 /*darken homepage box images on hover */
 .homepage_box_episode:hover > .homepage_overlay {
-    /*position: absolute;*/
-    /*top: 1px;*/
-    /*width:100%;*/
     height:100%;
-    /*left: 1px;*/
     background: rgba(0, 0, 0, 0.6);
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
@@ -41,11 +37,9 @@ browser for some reason.. */
     display: block;
     border-radius: 6px;
 }
-
 .homepage_hidden_info{
   display: none;
 }
-body{background-color: #f8f8f8}
 .homepage_box_episode:hover > div > .homepage_hidden_info{
   display:inline;
 }
@@ -70,11 +64,7 @@ body{background-color: #f8f8f8}
     padding-top: 60px;
   }
 }
-@media(max-width:768px){
-  .homepage_box_first_col{
-    padding-top: 40px;
-  }
-}
+
 @media(max-width:767px){
   .episode_section_1{
     padding-top: 0px
@@ -116,6 +106,17 @@ body{background-color: #f8f8f8}
   margin-left: 10px;
   margin-right: 10px;
 }
+.box_episode_title:hover{
+  /* ie: the same color as when you don't hover */
+  color: #33353d;
+}
+.box_episode_title_first{
+  margin-top:112px;
+  font-size:34px;
+}
+.homepage_box_by-in_first{
+  font-size: 19px;
+}
 /* change the font size for the bigger boxes on the homepage */
 .box_episode_title_bigger{
   font-size: 28px;
@@ -131,19 +132,15 @@ body{background-color: #f8f8f8}
   text-align: center;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
-  border-radius:6px
+  border-radius:6px;
 }
-.homepage_box_more_episodes{
-  height:400px;
-  text-align: center;
-  background-image:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('/static/Images/all_episodes_centered.jpg');
-  background-size:cover;
+.homepage_box_episode_first{
+  height: 500px;
 }
-.homepage_box_more_episodes h2{
-  padding-top: 30px;
-   padding-top:160px;
-   font-size:60px;
-   font-weight:300;
+@media(max-width:991px){
+  .homepage_box_episode_first{
+    height:400px;
+  }
 }
 .more_episodes_redirect{
   color: inherit;
@@ -154,6 +151,10 @@ body{background-color: #f8f8f8}
   margin: 6.5% 18% 0px 18%;
   text-align: center;
   line-height: 23px;
+}
+.homepage_box_abstract_first{
+  font-size: 17px;
+  line-height: 26px;
 }
 .homepage_box_by-in{
   font-size: 17px;
@@ -216,4 +217,71 @@ body{background-color: #f8f8f8}
   border: 2px solid white;
   font-size:12px;
   cursor: auto;
+}
+/* Show abstracts on mobile, and remove film/audio tags */
+/* ipad */
+@media(max-width:768px){
+  .homepage_overlay {
+      height:100%;
+      background: rgba(0, 0, 0, 0.6);
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      display: block;
+      border-radius: 6px;
+  }
+  .homepage_hidden_info{
+    display: inline;
+  }
+  .label_wrapper, .latest_landing_page, .label_wrapper_landing_page{
+    display: none;
+  }
+  .box_episode_title{
+    font-size: 25px;
+  }
+  .box_episode_title_first{
+    margin-top: 25px
+  }
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
+    margin-top: 9%;
+  }
+  .homepage_box_by-in{
+    font-size: 15px;
+  }
+  .homepage_box_by-in_first{
+    font-size: 15px;
+  }
+}
+@media(max-width:414px){
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 17px;
+    margin-top: 9%;
+    line-height: 26px;
+  }
+}
+@media(max-width:375px){
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 6%;
+    margin-right:6%;
+    margin-top: 5%;
+    font-size: 17px;
+  }
+}
+@media(max-width:360px){
+  .box_episode_title{
+    margin-top: 28px;
+  }
+}
+@media(max-width:320px){
+  .homepage_box_abstract{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 15px;
+  }
 }
