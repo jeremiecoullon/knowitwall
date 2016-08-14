@@ -556,7 +556,7 @@ text-align: left;
 
 .transcript{
   padding: 40px;
-  text-align: justify;
+  /*text-align: justify;*/
   background-color: white;
 }
 @media(min-width: 768px){
@@ -611,6 +611,14 @@ padding:40px;
   border-color: #fff;
 }
 
+/*contains the video player*/
+.video_div{
+  padding-left: 150px;
+  padding-right:150px;
+  background-color:black;
+  /*height: 800px;*/
+  height: 700px;
+}
 
 
 .navbar-brand {
@@ -658,6 +666,12 @@ padding:40px;
     header .intro-text .skills {
         font-size: 1.75em;
     }
+    header .container_video{
+      padding-top: 230px;
+    }
+}
+#header_no_player{
+  cursor:pointer;
 }
 @media(min-width:768px) {
 /* this says how  the nav bar transition happens, but not when */
@@ -1001,12 +1015,6 @@ footer .footer-below {
     color: #44F;
 }
 
-/*This affected the circular player (don't what why this is here anyways..)*/
-/*audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline;
-  max-height: 150px;
-}*/
 
 .top-border-ireg {
 
