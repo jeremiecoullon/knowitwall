@@ -236,10 +236,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-
+          {% if audiodocs[0].video_embed %}
           <li class="page-scroll">
             <a href="#header_video_hidden_div">Watch</a>
           </li>
+          {% endif %}
           <li class="page-scroll">
             <a href="#episodes">Listen</a>
           </li>
@@ -249,7 +250,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/newsletter" id="newsletter">Newsletter</a>
+            <a href="/all_episodes" id="all_episodes">All Episodes</a>
           </li>
           <li>
             <a href="https://twitter.com/KnowitWall" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
