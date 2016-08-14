@@ -2,6 +2,21 @@
 
 /* container with a small padding for the episodes section, otherwise the content spills out of the
 browser for some reason.. */
+/* overrides knowitwallredux.css padding on the #episodes section */
+.episode_section_2{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.episode_section_1{
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+#about{
+  margin-top:12px;
+  border-radius:6px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
 .episodes_container{
   padding-left: 21px;
   padding-right: 21px;
@@ -42,10 +57,36 @@ body{background-color: #f8f8f8}
   padding-left: 6px;
   padding-right: 6px;
 }
-/* overrides knowitwallredux.css padding on the #episodes section */
-#episodes{
-  padding-top: 0px;
-  padding-bottom: 0px;
+.homepage_box_first_col{
+  /*padding-top: 12px;*/
+}
+@media(max-width:991px){
+  .homepage_box_col_2{
+    padding-top: 12px;
+  }
+}
+@media(max-width:1198px){
+  .homepage_box_first_col{
+    padding-top: 60px;
+  }
+}
+@media(max-width:768px){
+  .homepage_box_first_col{
+    padding-top: 40px;
+  }
+}
+@media(max-width:767px){
+  .episode_section_1{
+    padding-top: 0px
+  }
+  .homepage_box_first_col{
+    padding-top: 60px;
+  }
+}
+@media(min-width:401px) and (max-width:478px){
+  .navbar-brand{
+    padding-right: 0px
+  }
 }
 .homepage_box_about{
   color: #fff;
@@ -132,8 +173,6 @@ body{background-color: #f8f8f8}
   background-color: transparent;
   border: 2px solid white;
 }
-
-
 .audio-film_label{
   color: white;
   position:relative;
