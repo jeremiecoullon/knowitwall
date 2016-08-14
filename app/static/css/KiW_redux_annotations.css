@@ -325,7 +325,7 @@ header .container {
   /*background-color: #FDFDFD;*/
   background-color: #F9F9F9;
 }
-@media(min-width:768px){
+@media(min-width:1200px){
   .audiodoc_page_box{
     width:1100px;
     /*background-color: #FDFDFD;*/
@@ -569,9 +569,12 @@ text-align: left;
   line-height: 170%;
   }
 
-@media(max-width:991px) {
+@media(max-width:992px) {
   .transcript{
-  padding: 4px;
+  padding: 50px 120px 25px 10px;
+  }
+  .image_credits{
+    margin-left: 15px;
   }
   .transcript p {
     line-height: 140%;
@@ -580,7 +583,13 @@ text-align: left;
 }
 @media(max-width:599px){
   .transcript{
+    padding: 24px 10px 10px 10px;
     text-align: left;
+  }
+}
+@media(max-width:320px){
+  .transcript{
+    padding-left: 5px;
   }
 }
 
@@ -619,12 +628,28 @@ padding:40px;
   /*height: 800px;*/
   height: 700px;
 }
-
-
+header .container_video{
+  /*padding-bottom:230px;*/
+  padding-top:300px;
+}
+@media(max-width:768px){
+  .video_div{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 500px
+  }
+  header .container_video{
+    padding-top: 70px;
+  }
+}
+@media(max-width:414px){
+  .video_div{
+    height: 250px
+  }
+}
 .navbar-brand {
   padding: 0px 100px 20.5px 20px;
 }
-
 /* this is added to the audiodoc page navbar to position the links properly */
 .navbarADpage {
   padding: 0px 339px 20.5px 20px;
@@ -632,8 +657,12 @@ padding:40px;
 .navbarADpage_video {
   padding: 0px 250px 20.5px 20px;
 }
-
-@media(max-width: 700px){
+@media(max-width: 1200px) and (min-width:992px){
+  .navbarADpage {
+    padding: 0px 100px 20.5px 20px;
+  }
+}
+@media(max-width: 991px){
   .navbarADpage {
     padding: 0px 0px 20.5px 20px;
   }
@@ -669,8 +698,8 @@ padding:40px;
     header .intro-text .skills {
         font-size: 1.75em;
     }
-    header .container_video{
-      padding-top: 230px;
+    /*header .container_video{
+      padding-top: 230px;*/
     }
 }
 #header_no_player{
