@@ -278,7 +278,12 @@ footer .footer-info{
     padding-top: 30px;
   }
 }
-@@media(max-width:320px) {
+@media(max-width:768px) and (min-width:600px){
+  .archive_abstract{
+    padding-top: 40px;
+  }
+}
+@media(max-width:320px) {
   .archive_abstract{
     top: 50%;
   }
@@ -332,4 +337,17 @@ footer .footer-info{
 .episodes_container{
   padding-left: 21px;
   padding-right: 21px;
+}
+.homepage_overlay {
+    height:100%;
+    background: rgba(0, 0, 0, 0.6);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    display: block;
+    border-radius: 6px;
+}
+.homepage_hidden_info{
+  display: inline;
 }

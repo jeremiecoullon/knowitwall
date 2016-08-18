@@ -17,6 +17,14 @@ browser for some reason.. */
   margin-left: 12px;
   margin-right: 12px;
 }
+@media(max-width: 415px){
+  #about p{
+    font-size: 17px;
+  }
+  #about{
+    padding-top: 0px;
+  }
+}
 .episodes_container{
   padding-left: 21px;
   padding-right: 21px;
@@ -241,6 +249,9 @@ browser for some reason.. */
   }
   .label_wrapper, .latest_landing_page, .label_wrapper_landing_page{
     display: none;
+  }
+  #about-left{
+    padding-right: 0px;
   }
   .box_episode_title{
     font-size: 25px;
