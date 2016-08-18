@@ -511,7 +511,7 @@
                      {{elem.topic_name | safe}}
                    </p>
                  <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i style="color: {{elem.by_in_colour}}"id="bige">by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i style="color: {{elem.by_in_colour}}">in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
