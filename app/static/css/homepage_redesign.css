@@ -18,7 +18,7 @@ browser for some reason.. */
   margin-right: 12px;
 }
 @media(max-width: 415px){
-  #about p{
+  p{
     font-size: 17px;
   }
   #about{
