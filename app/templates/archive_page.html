@@ -37,44 +37,6 @@
 
 
 
-
-
-  <style>
-  /** {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  }*/
-
-  .item {
-  width:  50px;
-  height: 50px;
-  float: left;
-  background: #2296DD;
-  border: 2px solid #333;
-  margin-bottom: 20px;
-  }
-
-  .item.thumbnail {
-  width:  100px;
-  height: 100px;
-  background: #cfcfcf
-  }
-
-  .item.medium {
-  width:  150px;
-  height: 50px;
-  background: #A6E392
-  }
-
-  .item.large {
-  width:  200px;
-  height: 100px;
-  background: #D092E3
-  }
-  </style>
-
-
 </head>
 
 <body id="page-top">
@@ -296,7 +258,7 @@
       </h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row archive_mobile">
       <div class="col-md-4 col-md-offset-4 archive_filter">
         <ul>
           <li>
@@ -320,305 +282,439 @@
   </div>
 </section>
 
-<!-- Archive -->
-<section>
 
-  <!-- MOBILE STUFF! DON'T DELETE! -->
-  <!-- <div class="container"> -->
-
-    <!-- <div class="row archive_row">
-      <div class="col-md-6 archive_episode_list_column">
-        <div class="col-md-12 archive_episode_list">
-          <p>
-             {{titles_list | safe}}
-          </p>
-          <h2 class="archive_category">
-            All Episodes
-          </h2>
-          {% for audiodoc in audiodocs %}
-          <div class="archive_episode_category_{{audiodoc.category}}">
-            <a class="archive_title_click" href="#{{audiodoc.url}}">
-              <p class="archive_topic_name">
-                {{audiodoc.topic_name | safe}}
-              </p>
-            </a>
-            <a class="archive_title_click_mobile" href="episodes/{{audiodoc.url}}" target="_blank">
-              <p class="archive_topic_name">
-                {{audiodoc.topic_name | safe}}
-              </p>
-            </a>
-            <p class="archive_title_info">
-              <i>by</i> {{audiodoc.author_name | safe}} <i>in</i> {{audiodoc.discipline}}
+  <!-- Archive on mobile-->
+  <section class="archive_mobile">
+    <div class="container container_mobile">
+      <div class="row archive_row">
+        <div class="col-md-6 archive_episode_list_column">
+          <div class="col-md-12 archive_episode_list">
+            <p>
+               {{titles_list | safe}}
             </p>
+            <h2 class="archive_category">
+              All Episodes
+            </h2>
+            {% for audiodoc in audiodocs %}
+            <div class="archive_episode_category_{{audiodoc.category}}">
+              <a class="archive_title_click" href="#{{audiodoc.url}}">
+                <p class="archive_topic_name">
+                  {{audiodoc.topic_name | safe}}
+                </p>
+              </a>
+              <a class="archive_title_click_mobile" href="episodes/{{audiodoc.url}}" target="_blank">
+                <p class="archive_topic_name">
+                  {{audiodoc.topic_name | safe}}
+                </p>
+              </a>
+              <p class="archive_title_info">
+                <i>by</i> {{audiodoc.author_name | safe}} <i>in</i> {{audiodoc.discipline}}
+              </p>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
+        <div class="col-md-6 archive_image_list_column">
+          <div class="col-md-12 archive_image_list">
+            <h2 class="archive_category archive_category_image_mobile">
+              All Episodes
+            </h2>
+            {% for audiodoc in audiodocs %}
+            <div class="archive_episode_category_{{audiodoc.category}}">
+              <div id="{{audiodoc.url}}" class="archive_hidden_anchor"></div>
+              <a href="episodes/{{audiodoc.url}}" target="_blank">
+                <div class="archive_image_padding">
+
+                <a href="episodes/{{audiodoc.url}}" target="_blank">
+                  <div class="archive_image_element" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('{{ audiodoc.topic_image }}');background-size:cover;">
+                    <p class="episode-title archive_episode_title" target="_blank">
+                      {{audiodoc.topic_name | safe}}
+                    </p>
+                    <div class="archive_wrapper">
+                    <i>by</i> <span class="highlight">{{audiodoc.author_name | safe}}</span> <i>in</i> <span class="highlight">{{audiodoc.discipline}} </span>
+                    <p class="archive_abstract">
+                      {{audiodoc.topic_description | safe}}
+                    </p>
+                  </div>
+                  </div>
+                </a>
+
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
       </div>
-    </div> -->
-    <div class="container" style="width:100%; margin-left:0px;margin-right:0px;padding-left:100px;padding-right:100px;">
+
+    </div>
+  </section>
+
+
+
+  <!-- Archive on desktop -->
+  <section class="archive_desktop">
+    <div class="container desktop_archive" style="width:100%; margin-left:0px;margin-right:0px;padding-left:100px;padding-right:100px;">
       <div class="episodes_container" style="border:1px solid #bdbdbd;background-color:white;border-radius:6px">
 
-        <!-- <div id='masonry'>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-          <div class="item thumbnail"></div>
-        </div> -->
-
-<!-- VERSION 3: only rows of 2 -->
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[2:4] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-                 </a>
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
 
         <div class="row homepage_box_row">
           {% for elem in audiodocs[0:2] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
+
         <div class="row homepage_box_row">
           {% for elem in audiodocs[2:4] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
         <div class="row homepage_box_row">
           {% for elem in audiodocs[4:6] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
+
         <div class="row homepage_box_row">
           {% for elem in audiodocs[6:8] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
         <div class="row homepage_box_row">
           {% for elem in audiodocs[8:10] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
+
         <div class="row homepage_box_row">
           {% for elem in audiodocs[10:12] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
         <div class="row homepage_box_row">
           {% for elem in audiodocs[12:14] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col">
+            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
+          </div>
+          {% endfor %}
+        </div>
+
+
+        <div class="row homepage_box_row">
+          {% for elem in audiodocs[14:16] %}
+            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
+              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+                <div class="homepage_overlay">
+
+                   <p class="box_episode_title">
+                     {{elem.topic_name | safe}}
+                   </p>
+
+                 <p class="homepage_box_by-in">
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                 </p>
+               <div class="homepage_hidden_info">
+                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
+                 <div class="label_wrapper audio_label_wrapper">
+                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
+                </div>
+              </div>
+            </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
         <div class="row homepage_box_row">
-          {% for elem in audiodocs[14:16] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col">
+          {% for elem in audiodocs[16:18] %}
+            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
-                 <a a href="episodes/{{elem.url}}" target="_blank" class="">
+
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
                    </p>
-                 </a>
+
                  <p class="homepage_box_by-in">
-                   <i>by</i> <a href="episodes/{{elem.url}}#episodes" class="highlight">{{elem.author_name | safe}}</a> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
+             </a>
           </div>
           {% endfor %}
         </div>
 
+
+        <div class="row homepage_box_row">
+          {% for elem in audiodocs[18:20] %}
+            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
+
+              <a href="episodes/{{elem.url}}" target="_blank">
+              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+                <div class="homepage_overlay">
+
+                   <p class="box_episode_title">
+                     {{elem.topic_name | safe}}
+                   </p>
+
+                 <p class="homepage_box_by-in">
+                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
+                 </p>
+               <div class="homepage_hidden_info">
+                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+
+                 <div class="label_wrapper audio_label_wrapper">
+                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% if elem.video_embed %}
+                 <div class="label_wrapper film_label_wrapper">
+                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                 </div>
+                 {% endif %}
+                </div>
+              </div>
+            </div>
+             </a>
+          </div>
+          {% endfor %}
+        </div>
+
+
       </div>
-    </div>
-</section>
+    </div> <!-- end of desktop_archive container -->
+  </section>
 
 {% endblock %}
 <!-- the footer is in base.html -->
 {% block jsscripts %}
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-  <div class="scroll-top visible-xs visble-sm">
+  <div class="scroll-top visible-xs visble-sm mobile_titles_filter">
     <!-- <a class="btn btn-primary" href="#page-top">
       <i class="fa fa-chevron-up"></i>
     </a> -->

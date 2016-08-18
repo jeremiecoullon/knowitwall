@@ -1,14 +1,26 @@
 body{
+  /*background-color: #f5f5f5;*/
+}
+.archive_desktop{
+  padding-top: 50px;
   background-color: #f5f5f5;
+}
+.archive_mobile{
+  display: none;
+}
+.container_mobile{
+  margin-bottom: 40px;
 }
 .archive_header{
   margin-top: 70px;
   text-align: center;
+  background-color: #f5f5f5;
 }
+
 .archive_title{
   font-size: 57px;
   border-bottom: 5px solid rgba(255, 194, 28, 0.8);
-  padding-bottom: 25px;
+  padding-bottom: 60px;
   width: 90%;
   margin: auto;
 }
@@ -82,6 +94,7 @@ body{
 .archive_topic_name{
   font-style: italic;
   margin-bottom: 0px;
+  line-height: 27px;
 }
 
 .archive_title_info{
@@ -123,13 +136,13 @@ body{
 }
 .archive_image_padding{
   padding-bottom: 20px;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
 }
 /* darken the episode images */
 .archive_image_element {
   height: 350px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 .archive_episode_title{
   font-size: 20px;
@@ -181,8 +194,18 @@ footer .footer-info{
 .archive_category_image_mobile{
   display: none;
 }
+
 /* Image boxes only */
 @media(max-width:768px){
+  .mobile_titles_filter{
+    display: inline !important;
+  }
+  .archive_mobile{
+    display: inline;
+  }
+  .archive_desktop{
+    display: none;
+  }
   .archive_category_image_mobile{
     display: block;
   }
@@ -220,6 +243,10 @@ footer .footer-info{
     padding-right: 30px;
     font-size: 13px;
   }
+  .archive_filter{
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
   #button_Sciences{
     padding-left: 20px;
     padding-right: 20px;
@@ -247,6 +274,8 @@ footer .footer-info{
   }
   .archive_header{
     padding-bottom: 0px;
+    background-color: white;
+    padding-top: 30px;
   }
 }
 @@media(max-width:320px) {
