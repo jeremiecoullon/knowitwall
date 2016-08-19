@@ -236,9 +236,18 @@ browser for some reason.. */
   font-size:12px;
   cursor: auto;
 }
+#header_image_mobile{
+  /*display: none;*/
+}
 /* Show abstracts on mobile, and remove film/audio tags */
 /* ipad */
 @media(max-width:768px){
+  #header_image_desktop{
+    /*display: none;*/
+  }
+  #header_image_mobile{
+    /*display: block;*/
+  }
   .homepage_overlay {
       height:100%;
       background: rgba(0, 0, 0, 0.6);

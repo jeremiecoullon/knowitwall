@@ -343,8 +343,10 @@
             <a href="episodes/{{elem.url}}" target="_blank">
 
 
-              <div style="background:url('{{elem.topic_image_latest}}'); background-size:cover;" class='homepage_box_episode homepage_box_episode_first'>
+                <!-- for mobile: normal topic_image -->
+<!-- {{elem.topic_image_latest}} -->
 
+              <div id="header_image_desktop" data-image= "{{elem.topic_image}}" style="background:url('{{elem.topic_image_latest}}');background-size:cover;background-attachment:scroll" class='homepage_box_episode homepage_box_episode_first'>
 
                 <div class="homepage_overlay">
 
@@ -383,7 +385,7 @@
           <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
             <a href="episodes/{{elem.url}}" target="_blank">
-            <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+            <div style="background:url('{{elem.topic_image}}'); background-size:cover;background-attachment:scroll" class='homepage_box_episode'>
               <div class="homepage_overlay">
 
                  <p class="box_episode_title">
@@ -442,7 +444,7 @@
           <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
             <a href="episodes/{{elem.url}}" target="_blank">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+              <div style="background:url('{{elem.topic_image}}'); background-size:cover;background-attachment:scroll" class='homepage_box_episode'>
                 <div class="homepage_overlay">
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
@@ -473,7 +475,7 @@
           <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
             <a href="episodes/{{elem.url}}" target="_blank" class="">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+              <div style="background:url('{{elem.topic_image}}'); background-size:cover;background-attachment:scroll" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
                    <p class="box_episode_title">
@@ -505,7 +507,7 @@
           <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
             <a href="episodes/{{elem.url}}" target="_blank" class="">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
+              <div style="background:url('{{elem.topic_image}}'); background-size:cover;background-attachment:scroll" class='homepage_box_episode'>
                 <div class="homepage_overlay">
                    <p class="box_episode_title">
                      {{elem.topic_name | safe}}
@@ -682,6 +684,23 @@ episode url: {{bige.url}}
     $('#about-f').text(function (_,txt) {
         return txt.slice(0, -1);
     });
+  </script>
+
+  <script type="text/javascript">
+  var header_image_switch = function(){
+    var width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+      if (width <= 768) {
+        var mobile_image = $('#header_image_desktop').attr('data-image');
+        console.log(mobile_image);
+
+        $('#header_image_desktop').css({'background':'url("' + mobile_image + '")', 'background-size':'cover','background-attachment':'scroll'});
+      }
+
+  }
+  header_image_switch();
+
   </script>
 
 </body>
