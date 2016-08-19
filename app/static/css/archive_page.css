@@ -291,13 +291,16 @@ footer .footer-info{
 #button_titles, #button_images{
   border-radius: 7px;
 }
+#button_titles{
+  padding-left: 43px;
+  padding-right:43px;
+}
 
-/* Mobile filter (between images and titles): Choose default button when you load the page */
- /*#button_titles{
-   background-color: rgba(255, 194, 28, 0.8);
- }*/
+/* archive mobile filter: choose default button on pageload */
  #button_images{
    background-color: rgba(255, 194, 28, 0.8);
+   padding-left: 19px;
+   padding-right: 19px;
  }
 .archive_hidden_anchor{
   visibility:hidden;
