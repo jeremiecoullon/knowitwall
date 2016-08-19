@@ -25,6 +25,11 @@ browser for some reason.. */
     padding-top: 0px;
   }
 }
+@media(max-width:320px){
+  #about > .container > .row > .col-md-6 > .vertical-line > .justify, #contribute > .container > .row > .col-md-8 > .vertical-line > .justify{
+  text-align: left;
+  }
+}
 .episodes_container{
   padding-left: 21px;
   padding-right: 21px;
