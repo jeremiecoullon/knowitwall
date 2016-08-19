@@ -116,6 +116,13 @@ a:hover.a_arrow{
     padding-top: 60px;
   }
 }
+@media(min-width:768px){
+  #all_episodes{
+    background-color: #ffc21c;
+    border-radius: 5px;
+    color: #27282D;
+  }
+}
 /* end of scroll down arrow */
 /**/
 /* take off padding for the header (because there's the arrow on this page) */

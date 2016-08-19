@@ -177,10 +177,12 @@ browser for some reason.. */
 .homepage_box_by-in{
   font-size: 17px;
 }
-#all_episodes{
-  background-color: #ffc21c;
-  border-radius: 5px;
-  color: #27282D;
+@media(min-width:768px){
+  #all_episodes{
+    background-color: #ffc21c;
+    border-radius: 5px;
+    color: #27282D;
+  }
 }
 .label_wrapper{
   position: absolute;
@@ -313,5 +315,8 @@ browser for some reason.. */
     margin-left: 5%;
     margin-right: 5%;
     font-size: 15px;
+  }
+  #about-left > h2{
+    text-align: left;
   }
 }

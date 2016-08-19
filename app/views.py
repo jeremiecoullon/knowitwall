@@ -157,7 +157,7 @@ def index():
 
     audiodocs = ad_fun(audiodoc_list)
 
-    return render_template('knowitwall.html', audiodocs=audiodocs)
+    return render_template('knowitwall_redesign.html', audiodocs=audiodocs)
 
 
 "----------------------------------------------------------------------------------------------------"
