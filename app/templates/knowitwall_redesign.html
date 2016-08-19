@@ -513,7 +513,7 @@
                      {{elem.topic_name | safe}}
                    </p>
                  <p class="homepage_box_by-in">
-                   <i style="color: {{elem.by_in_colour}}"id="bige">by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i style="color: {{elem.by_in_colour}}">in</i> <span class="highlight">{{elem.discipline}} </span>
+                   <i style="color: {{elem.by_in_colour}}">by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i style="color: {{elem.by_in_colour}}">in</i> <span class="highlight">{{elem.discipline}} </span>
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
@@ -700,7 +700,16 @@ episode url: {{bige.url}}
 
   }
   header_image_switch();
-
+  var by_in_mobile = function(){
+    // makes all mobile 'by-in' white (as they're darkened all the time)
+    var width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+    if (width <= 768){
+      $('.homepage_box_by-in > i').css('color','white');
+      }
+  };
+  by_in_mobile();
   </script>
 
 </body>
