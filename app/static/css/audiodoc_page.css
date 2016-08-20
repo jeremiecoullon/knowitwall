@@ -167,3 +167,36 @@ footer .btn-social{
 footer .footer-info{
   color: #F5F5F5;
 }
+
+/*contains the video player*/
+.video_div{
+  padding-left: 150px;
+  padding-right:150px;
+  background-color:black;
+  /*height: 800px;*/
+  height: 700px;
+}
+header .container_video{
+  /*padding-bottom:230px;*/
+  padding-top:300px;
+}
+#header_no_player{
+  cursor:pointer;
+}
+@media(max-width:768px){
+  .video_div{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 500px
+  }
+  header .container_video{
+    padding-top: 70px;
+  }
+}
+@media(max-width:414px){
+  .video_div{
+    height: 250px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

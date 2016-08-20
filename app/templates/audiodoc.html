@@ -46,7 +46,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand navbarADpage" href=" {{url_for('index')}}">   <!-- for audiodoc, the logo goes back to home page-->
+        <a class="navbar-brand navbarADpage {% if audiodocs[0].video_embed %}navbarADpage_video{% endif %}" href=" {{url_for('index')}}">   <!-- for audiodoc, the logo goes back to home page-->
 
     <!-- svg shizzle -->
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -234,7 +234,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-
+          {% if audiodocs[0].video_embed %}
+          <li class="page-scroll">
+            <a href="#header_video_hidden_div">Watch</a>
+          </li>
+          {% endif %}
           <li class="page-scroll">
             <a href="#episodes">Listen</a>
           </li>
@@ -258,6 +262,46 @@
     </div>
   </nav>
 
+  <div id="header_video_hidden_div" style="display:hidden">
+    fds
+  </div>
+  <!-- If the episode has a video -->
+  {% if audiodocs[0].video_embed %}
+
+
+  <header id="header_no_player" style="background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)), url('{{ audiodocs[0].topic_image }}'); background-repeat: no-repeat; background-size:cover;">
+      <div class="container container_video" style="padding-bottom:230px">
+        <div class="row">
+
+          <div style="margin-bottom:30px;">
+            <svg width = "100px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-miterlimit:10;}
+              .st1{fill:white}
+            </style>
+            <polygon class="st0 st1" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
+            <circle class="st0" cx="597.4" cy="597.4" r="587.4"></circle>
+            </svg>
+          </div>
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+               <div class="episode-title" style="font-size:42px; background-color:transparent; color:white">
+              {{audiodocs[0].topic_name | safe}}
+            </div>
+          </div>
+
+          <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%;font-size:18px">
+             <i style="color: white">by</i> <span class="highlight" style="background-color:transparent;color:white">{{audiodocs[0].author_name | safe}}</span> <i style="color: white">in</i> <span style="background-color:transparent; color:white"class="highlight">{{audiodocs[0].discipline}} </span>
+
+        </div>
+      </div>
+      </div>
+    </header>
+    <!-- header with the video player. JQuery inserts the iframe -->
+  <header style="display:none;" id="header_player" data-video="{{audiodocs[0].video_embed}}">
+  </header>
+
+  <!-- else if there's no video -->
+  {% else %}
   <header style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;background-attachment:scroll">
     <div class="container">
       <div class="row">
@@ -266,10 +310,8 @@
             {{audiodocs[0].topic_name | safe}}
           </div>
         </div>
-
         <div class="col-lg-10 col-lg-offset-1 text-center page-scroll" style="color: black; font-size:125%">
            <i style="color: {{audiodocs[0].by_in_colour}}">by</i> <a href="#author" class="highlight">{{audiodocs[0].author_name | safe}}</a> <i style="color: {{audiodocs[0].by_in_colour}}">in</i> <span class="highlight">{{audiodocs[0].discipline}} </span>
-
       </div>
     </div>
     <div class="row arrow_row">
@@ -281,11 +323,11 @@
     </div>
   </div>
   </header>
-
+{% endif %}
 
   <section id="episodes" >
     <div class="container image_credits">
-      <div class="row ">
+      <div class="row " id="image_credits">
         <p>
           {{audiodocs[0].image_credits | safe}}
         </p>
@@ -406,6 +448,23 @@
   });
 
   </script>
+  <!-- To view the video player on click -->
+  <script type="text/javascript">
+  $('#header_no_player').click(function(){
+    // hide landing page header
+    $('#header_no_player').css('display','none');
+    // display video player header
+    $('#header_player').css('display','block');
+    // get youtube embed URL and insert in the video player header
+    var data_video = $('#header_player').attr('data-video');
+    var video_div = '<div class = "video_div"><iframe src="' + data_video + '" style=" width:100%; height:100%;" frameborder="0" allowfullscreen></iframe></div>';
+    $('#header_player').html(video_div);
+
+    // hide image credits
+    $('#image_credits').css('display','none');
+  });
+  </script>
+
 
 </body>
 {% endblock %}

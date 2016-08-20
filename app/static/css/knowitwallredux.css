@@ -600,6 +600,13 @@ padding:40px;
 .navbar-brand {
   padding: 0px 100px 20.5px 20px;
 }
+/* this is added to the audiodoc page navbar to position the links properly */
+.navbarADpage {
+  padding: 0px 400px 20.5px 20px;
+}
+.navbarADpage_video {
+  padding: 0px 250px 20.5px 20px;
+}
 @media(max-width: 1200px) and (min-width:767px){
   .navbar-brand {
     padding: 0px 0px 20.5px 20px;
@@ -607,10 +614,6 @@ padding:40px;
   .navbarADpage {
     padding: 0px 0px 20.5px 20px;
   }
-}
-/* this is added to the audiodoc page navbar to position the links properly */
-.navbarADpage {
-  padding: 0px 400px 20.5px 20px;
 }
 @media(max-width: 1200px) and (min-width:768px){
   .navbar-brand {
