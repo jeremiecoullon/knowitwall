@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row footer-info">
         <div class="col-lg-4">
-          Copyright &copy; Know it Wall 2016
+          Copyright &copy; Know it Wall <span id="copyright_year"></span>
         </div>
         <div class="col-lg-4">
           team@knowitwall.com
@@ -52,4 +52,12 @@
 
 {% block jsscripts %}{% endblock %}
 
+<script type="text/javascript">
+  // replace copyright year with current year
+  var copyright_year = function(){
+    var current_year = new Date().getFullYear();
+    $('#copyright_year').html(current_year);
+  };
+  copyright_year();
+</script>
 </html>
