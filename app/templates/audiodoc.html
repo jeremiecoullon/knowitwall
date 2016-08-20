@@ -11,7 +11,7 @@
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
-  <meta property="og:title" content="{{audiodocs[0].og_name}}" />
+  <meta property="og:title" content="{{audiodocs[0].og_name}} {% if audiodocs[0].video_embed %}[Video]{% endif %}" />
   <meta property="og:description" content="{{audiodocs[0].og_description}}" />
   <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
   <meta property=”og:type” content=”website” />
