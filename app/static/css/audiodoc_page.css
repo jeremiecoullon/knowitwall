@@ -177,11 +177,14 @@ footer .footer-info{
   height: 700px;
 }
 header .container_video{
-  /*padding-bottom:230px;*/
   padding-top:300px;
+  padding-bottom:230px;
 }
 #header_no_player{
   cursor:pointer;
+}
+.episode-title_video{
+  font-size:42px;
 }
 @media(max-width:768px){
   .video_div{
@@ -190,7 +193,8 @@ header .container_video{
     height: 500px
   }
   header .container_video{
-    padding-top: 70px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 @media(max-width:414px){
@@ -198,5 +202,15 @@ header .container_video{
     height: 250px;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .episode-title_video{
+    font-size:25px;
+  }
+  header .container_video{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  #image_credits{
+    padding-left: 10px; 
   }
 }
