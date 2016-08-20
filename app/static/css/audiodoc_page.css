@@ -186,6 +186,14 @@ header .container_video{
 .episode-title_video{
   font-size:42px;
 }
+.video_button_wrapper{
+  margin-bottom:30px;
+  height:100px
+}
+.video_author_info{
+  color: black;
+  font-size:18px
+}
 @media(max-width:768px){
   .video_div{
     padding-left: 15px;
@@ -198,6 +206,12 @@ header .container_video{
   }
 }
 @media(max-width:414px){
+  .video_button_wrapper{
+    height:60px
+  }
+  .video_author_info{
+    font-size:15px
+  }
   .video_div{
     height: 250px;
     padding-left: 0px;
@@ -211,6 +225,6 @@ header .container_video{
     padding-bottom: 60px;
   }
   #image_credits{
-    padding-left: 10px; 
+    padding-left: 10px;
   }
 }
