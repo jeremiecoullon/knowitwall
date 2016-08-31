@@ -322,8 +322,10 @@ header .container {
   padding-bottom: 20px;
 }
 .audiodoc_page_box{
-  /*background-color: #FDFDFD;*/
+  /*good one*/
   background-color: #F9F9F9;
+  /*for screencapture (tmp)*/
+  /*background-color: #f3f3f3;*/
 }
 @media(min-width:1200px){
   .audiodoc_page_box{
