@@ -34,7 +34,7 @@
   at the highest energies ever achieved. These collisions allow the LHC to function
   as the world’s most powerful microscope, probing the structure of matter at the
   tiniest distances, potentially looking inside fundamental particles like quarks
-  and electrons – so far thought to not made up of even smaller particles – as
+  and electrons — so far thought to not made up of even smaller particles — as
   well as potentially creating new particles, and discovering new forces between them.
 </p>
 <p>
@@ -49,8 +49,8 @@
   This worked from a mathematical point of view, but it is a big leap to propose
   that such a quantum field really exists just based on theory. Some experimental
   evidence was required. The only direct way of obtaining such evidence would be
-  to hit this background field of the universe so hard that a ripple – a quantum
-  excitation – is created in the field. This would manifest itself as a new
+  to hit this background field of the universe so hard that a ripple — a quantum
+  excitation — is created in the field. This would manifest itself as a new
   particle: the Higgs boson. This is one of the things the LHC was designed to do,
   and in 2012, the new Higgs boson particle was discovered.
 </p>
@@ -98,13 +98,13 @@
   these are statistically insignificant. That's when you have to keep calm and
   carry on with the experiment, despite the tension. You collect more data. In the
   meantime, you try all kinds of tricks to make sure you are measuring the mass of
-  the photon pairs correctly – you calibrate the detector. How sure are you of
+  the photon pairs correctly — you calibrate the detector. How sure are you of
   where on the horizontal axis a given photon pair should appear?
 </p>
 <p>
   Watch the distribution. Eventually it gets smoother, all except for a glitch
   around 125 GeV, which gets more and more significant until in the end there is
-  a clear bump – this is the sign of a new particle.
+  a clear bump — this is the sign of a new particle.
 </p>
 <p>
   In parallel, the other major distribution currently being shown in Animation 2
@@ -122,7 +122,7 @@
   different kind of exercise in statistics and in patience watching this distribution
   build up. There are two expected peaks: one from the Z boson (which carries the
   weak nuclear force and has a mass of 90 GeV) and one from the threshold at which a
-  pair of Z bosons can be made (starting at about twice the Z mass – 180 GeV).
+  pair of Z bosons can be made (starting at about twice the Z mass — 180 GeV).
   However, as we see the distribution build up, a peak in between the Z bosons
   begins to form. This is, again, the sign of a new particle: the Higgs boson.
 </p>

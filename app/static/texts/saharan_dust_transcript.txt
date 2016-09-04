@@ -1,6 +1,6 @@
 <html>
   <p>
-    Our atmosphere is dirty. I’m not talking about greenhouse gases – those are a
+    Our atmosphere is dirty. I’m not talking about greenhouse gases — those are a
     story for another day. I’m talking about tiny particles, just a few microns
     in size, known as aerosols. They’re so small that you can’t see them, but the
     evidence is everywhere: from the black residue when you blow your nose after
@@ -16,8 +16,8 @@
     The Sahara is the source of about half the mineral dust in the atmosphere,
     emitting on average over a hundred million tonnes per year. Some 50% of this
     dust comes from one single spot, in the southwest corner of Chad, called the
-    Bodélé Depression. This depression – a topographic low in the surrounding
-    landscape – is part of a vast dry lake bed. As recently as 6000 years ago,
+    Bodélé Depression. This depression — a topographic low in the surrounding
+    landscape — is part of a vast dry lake bed. As recently as 6000 years ago,
     the whole area was submerged beneath the surface of Lake Mega Chad. Less a
     lake and more an inland sea, Lake Mega Chad was once larger than all of North
     America’s Great Lakes combined. As the world’s climate changed, the Sahara
@@ -38,7 +38,7 @@
     relatively, much heavier sand particles.
   </p>
   <p>
-    Secondly, the Bodélé lies directly downwind of two Saharan mountain ranges –
+    Secondly, the Bodélé lies directly downwind of two Saharan mountain ranges —
     the Tibesti and the Ennedi. These mountains not only channel the prevailing
     northeasterly wind directly onto the exposed diatomite surface, but this
     channelling effect also accelerates the surface wind, ensuring that it is
@@ -59,7 +59,7 @@
     surface temperatures beneath the dust cloud during the day, with drops in
     temperature of over 10&deg;C not uncommon during extremely big dust outbreaks.
     Although such extreme effects are short-lived and localised, mineral dust
-    actually has a cooling effect on <i>global</i> climate – albeit a very weak one in
+    actually has a cooling effect on <i>global</i> climate — albeit a very weak one in
     comparison to the warming caused by humans.
   </p>
   <p>
@@ -74,7 +74,7 @@
     Compared to regular desert sand, diatomite is turbo-charged with iron and
     phosphorous, two essential plant nutrients. In an average year, 20 million
     tonnes of Saharan dust is dumped on the Amazon basin, quite literally washed
-    out of the sky by rain. Around 20,000 tonnes of this is phosphorous – the
+    out of the sky by rain. Around 20,000 tonnes of this is phosphorous — the
     same amount that is washed out of the Amazon basin by floodwaters each year.
   </p>
   <p>

@@ -94,6 +94,7 @@ def send_file_partial(path):
 @app.route('/audio/Dante_750.mp3')
 @app.route('/audio/sport_society.mp3')
 @app.route('/audio/US_constitution.mp3')
+@app.route('/audio/spanish_forger.mp3')
 def static_from_root():
     return send_file_partial(request.path[1:])
 
@@ -104,7 +105,7 @@ def static_from_root():
 "audiodoc function "
 
 # complete list of audiodocs
-all_audiodocs = ['US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'flying_spying.json','blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'flying_spying.json','blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):

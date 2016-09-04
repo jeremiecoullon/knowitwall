@@ -7,12 +7,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{audiodocs[0].og_description}}">
+  <meta name="description" content="{{audiodocs[0].topic_description}}">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
-  <meta property="og:title" content="{{audiodocs[0].og_name}} {% if audiodocs[0].video_embed %}[Video]{% endif %}" />
-  <meta property="og:description" content="{{audiodocs[0].og_description}}" />
+  <meta property="og:title" content="{{audiodocs[0].topic_name | safe}} {% if audiodocs[0].video_embed %}[Video]{% endif %}" />
+  <meta property="og:description" content="{{audiodocs[0].topic_description | safe}}" />
   <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="http://knowitwall.com/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">

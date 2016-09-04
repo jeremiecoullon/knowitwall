@@ -1,7 +1,7 @@
 <html>
 <p>From the point of view of the universe, our everyday concerns, goals, failures and achievements are uneventful occurrences.
 Until fairly recently, at the beginning of the 20th century, we thought that the Milky Way galaxy made up everything that there is,
-the entire universe. We thought that its 100+ <i>billion</i> stars – of which the Sun is but one – exhausted the number of stars that there are in space.
+the entire universe. We thought that its 100+ <i>billion</i> stars — of which the Sun is but one — exhausted the number of stars that there are in space.
 It turns out that today we know the Milky Way is but one of over 100 billion <i>galaxies</i> that populate the universe. This vastness is overwhelming,
 overwhelming to the point of frightening us. This fear is understandable, however. The universe is so great that the rise of a civilization like
 ours might not be a one-off event, but an event that occurs all the time. The emergence and persistence of life, including intelligent life,
@@ -17,7 +17,7 @@ may be no rarity. The universe may be rippling with life. But if that’s the ca
   Hence, there could be a certain depth where it gets hot enough for water to exist in its liquid form.
   The problem then becomes: how can you detect liquid water that’s covered by a large layer of ice? </p>
 <p> The answer is electricity. Our oceans are excellent conductors of electrical currents.
-  (This is why swimming during a storm is a really bad idea – you might be electrocuted!)
+  (This is why swimming during a storm is a really bad idea — you might be electrocuted!)
   On Earth, electrical currents on the water surface produce oscillations in the magnetic field
   that spread upwards and can be picked up by instruments on orbiting satellites. If a satellite picks
    up these signals, we can suspect that there is an ocean below it, potentially harbouring life.</p>
