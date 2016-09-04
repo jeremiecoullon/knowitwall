@@ -308,7 +308,7 @@ hidden
                   {{audiodoc.topic_name | safe}}
                 </p>
               </a>
-              <a class="archive_title_click_mobile" href="episodes/{{audiodoc.url}}" target="_blank">
+              <a class="archive_title_click_mobile" href="episodes/{{audiodoc.url}}">
                 <p class="archive_topic_name">
                   {{audiodoc.topic_name | safe}}
                 </p>
@@ -328,12 +328,12 @@ hidden
             {% for audiodoc in audiodocs %}
             <div class="archive_episode_category_{{audiodoc.category}}">
               <div id="{{audiodoc.url}}" class="archive_hidden_anchor"></div>
-              <a href="episodes/{{audiodoc.url}}" target="_blank">
+              <a href="episodes/{{audiodoc.url}}">
                 <div class="archive_image_padding">
 
-                <a href="episodes/{{audiodoc.url}}" target="_blank">
+                <a href="episodes/{{audiodoc.url}}">
                   <div class="archive_image_element" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('{{ audiodoc.topic_image }}');background-size:cover;">
-                    <p class="episode-title archive_episode_title" target="_blank">
+                    <p class="episode-title archive_episode_title">
                       {{audiodoc.topic_name | safe}}
                     </p>
                     <div class="archive_wrapper">
@@ -369,7 +369,7 @@ hidden
           {% for elem in audiodocs[0:2] %}
             <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -404,7 +404,7 @@ hidden
           {% for elem in audiodocs[2:4] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -438,7 +438,7 @@ hidden
           {% for elem in audiodocs[4:6] %}
             <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -473,7 +473,7 @@ hidden
           {% for elem in audiodocs[6:8] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -507,7 +507,7 @@ hidden
           {% for elem in audiodocs[8:10] %}
             <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -542,7 +542,7 @@ hidden
           {% for elem in audiodocs[10:12] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -576,7 +576,7 @@ hidden
           {% for elem in audiodocs[12:14] %}
             <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -611,7 +611,7 @@ hidden
           {% for elem in audiodocs[14:16] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -645,7 +645,7 @@ hidden
           {% for elem in audiodocs[16:18] %}
             <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
@@ -680,7 +680,7 @@ hidden
           {% for elem in audiodocs[18:20] %}
             <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
 
-              <a href="episodes/{{elem.url}}" target="_blank">
+              <a href="episodes/{{elem.url}}">
               <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
                 <div class="homepage_overlay">
 
