@@ -173,7 +173,7 @@ footer .footer-info{
   padding-left: 150px;
   padding-right:150px;
   background-color:black;
-  /*height: 800px;*/
+  padding-top: 58px;
   height: 700px;
 }
 header .container_video{
@@ -216,6 +216,7 @@ header .container_video{
     height: 250px;
     padding-left: 0px;
     padding-right: 0px;
+    padding-top: 40px;
   }
   .episode-title_video{
     font-size:25px;
