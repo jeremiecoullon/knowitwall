@@ -368,7 +368,6 @@ text-align: left;
 
 
 
-
 .navbar-default .navbar-nav>li>a {
     color:#d2d2d2;
 }
@@ -1048,4 +1047,9 @@ opacity: 1;
 .overflow {
   overflow-x:hidden;
   background-color: white;
+}
+/* for twitter and facebook buttons on navabar */
+.nav>li>a.navbar_social{
+  padding-left: 8px;
+  padding-right: 8px;
 }

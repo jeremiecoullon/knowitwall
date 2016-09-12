@@ -182,8 +182,15 @@ browser for some reason.. */
     background-color: #ffc21c;
     border-radius: 5px;
     color: #27282D;
+
   }
 }
+@media(min-width:900px){
+  #all_episodes{
+    margin-right: 27px;
+  }
+}
+
 .label_wrapper{
   position: absolute;
   left: 20px;
