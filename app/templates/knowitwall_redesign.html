@@ -283,9 +283,11 @@
             <a href="/all_episodes" id="all_episodes">All Episodes</a>
           </li>
           <li>
-            <a href="https://twitter.com/KnowitWall" target="_blank" class="navbar_social"><i class="fa fa-fw fa-twitter"></i></a>
+            <a href="https://twitter.com/KnowitWall" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
           </li>
-          <!-- TODO: fix navbar when adding facebook icon. Need to resize the logo (which is svg): https://css-tricks.com/scale-svg/ -->
+          <!-- TODO: fix navbar when adding facebook icon. Need to resize the logo (which is svg): https://css-tricks.com/scale-svg/
+                Note: `navbar_social` changes to padding to the buttons to that they're close together
+                      'homepage_redesign.css' at line 190 has and `#all_episodes` media query with a margin for 'all episodes' buttons -->
           <li style="display:none">
             <a href="https://www.facebook.com/KnowitWall/" target="_blank" class="navbar_social"><i class="fa fa-fw fa-facebook"></i></a>
           </li>
