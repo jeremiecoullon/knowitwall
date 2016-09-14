@@ -10,15 +10,15 @@ To get Knowitwall running locally:
 - install packages in `requirements.txt`
 - run `run.py`
 
-## Development milestones
+# Development milestones
 
-### Content management stuff
+## Content management stuff
 
 - team & 'about' page: we need an entire page for this - design & code up
 - [all episodes](http://knowitwall.com/all_episodes): need a button that filters episodes by discipline (like on mobile). However the blocks need to re-arrange themselves to still be in the current pattern after the clicking on the filter. Maybe [Masonry](http://masonry.desandro.com/) will be useful here ?
 - [Episode pages](http://knowitwall.com/episodes/spanish_forger): need to design and code an audioplayer like Soundcloud. Namely, a player that is in a sticky footer and that keeps playing as you navigate to different pages within the site.
 
-### Annotations
+## Annotations
 
 #### What are they ?
 
