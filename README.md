@@ -10,6 +10,10 @@ To get Knowitwall running locally:
 - install packages in `requirements.txt`
 - run `run.py`
 
+# Contributing
+
+Drop me an email at jeremie.coullon@gmail.com if you're interested in contributing. Most of the stuff to do (in the list below) have a design component which needs to be discussed before coding !
+
 # Development milestones
 
 ## Content management stuff
