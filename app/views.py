@@ -162,22 +162,6 @@ def index():
 
 
 "----------------------------------------------------------------------------------------------------"
-"home page redesign"
-
-@app.route('/homepage_redesign')
-def index_redesign():
-
-
-    # audiodoc_list = ['flying_spying.json','US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'flying_spying.json','blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
-    audiodoc_list = all_audiodocs
-
-    audiodocs = ad_fun(audiodoc_list)
-
-    return render_template('knowitwall_redesign.html', audiodocs=audiodocs)
-
-
-
-"----------------------------------------------------------------------------------------------------"
 " audiodoc page"
 
 @app.route('/episodes/<url>')

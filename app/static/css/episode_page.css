@@ -1,0 +1,56 @@
+/* CSS for episode page */
+
+
+@media(max-width:991px) {
+.author-name{
+padding:60px 0 20px 0;
+text-align: left;
+}
+}
+.author-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media(min-width:1200px) {
+  .author-image {
+    width: 70%;
+    margin-left:60px;
+  }
+}
+@media only screen and (max-width:991px) {
+  .author-image {
+    display:none;
+  }
+}
+
+/* TODO: This is the bit with with the abstract. I need to rename it and structure that
+whole bit better (so that a single css attribute gives the grey box its colour) */
+.previous-audiodoc{
+  background-color: #F0F0F0;    /* #F8F8F8 */
+  padding-top: 30px;
+}
+
+
+.transcript{
+padding: 40px;
+text-align: justify;
+}
+.transcript p {
+  line-height: 170%;
+  }
+
+@media(max-width:991px) {
+  .transcript{
+  padding: 4px;
+  }
+  .transcript p {
+    line-height: 140%;
+    font-size: 1.2em;
+    }
+}
+@media(max-width:599px){
+  .transcript{
+    text-align: left;
+  }
+}

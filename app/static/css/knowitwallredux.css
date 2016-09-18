@@ -38,7 +38,7 @@
   font-weight: 300;
 }
 /* boxes on homepage: topic images */
-
+/* NOTE: this isn't actually being used!! */
 .box_image{
   background-size: cover;
   height:250px;
@@ -208,6 +208,7 @@ h6 {
     font-weight: 300;
 }
 
+/* useless stuff: START*/
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
@@ -257,6 +258,9 @@ hr.star-primary:after {
 .img-centered {
     margin: 0 auto;
 }
+/* useless stuff: END */
+
+
 
 /*--AUDIO DOC--*/
 
@@ -290,6 +294,7 @@ text-align: left;
   }
 }
 
+/* useless stuff: START */
 header {
   text-align: center;
   color: #fff;
@@ -297,39 +302,35 @@ header {
   background-size: cover;
   background-color: #5C5D62;
 }
-
 .drop-downs{
   padding:60px 0 60px 0;
-
-
 }
-
 /*--HEADER--*/
 
 #header-bg {
-
-
   color: #7B9699;
   padding-top: 150px;
   background: linear-gradient( rgba(12, 86, 95, 1), rgba(12, 86, 95, 1) ), bottom, url("/static/Images/header-image.png");
   background-color: #FFF;
-
 }
-
 header .container {
     padding-top: 300px;
     padding-bottom: 300px;
 }
+/* useless stuff: END */
+
+
 .previous-audiodoc{
   background-color: #F0F0F0;    /* #F8F8F8 */
   padding-top: 30px;
 }
 }
+
+/* useless stuff: START */
 header img {
     display: block;
     margin: 0 auto 20px;
 }
-
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
@@ -337,12 +338,10 @@ header .intro-text .name {
     font-size: 2em;
     font-weight: 700;
 }
-
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
 }
-
 #tagline-1 {
 
  font-size:3.2em;
@@ -350,10 +349,6 @@ header .intro-text .skills {
  font-size: 300;
  color:#33353d;
  background-color: rgba(255, 194, 28, 0.8);
-
-
-
-
 }
 
 #tagline-2 {
@@ -365,7 +360,7 @@ text-align: left;
   margin-left: 4%;
   margin-top: 20px;
 }
-
+/* useless stuff: END */
 
 
 .navbar-default .navbar-nav>li>a {
@@ -379,6 +374,7 @@ text-align: left;
   }
 
 
+/* useless stuff: START */
   @media(max-width:440px) {
 
 #tagline-1 {
@@ -401,6 +397,8 @@ text-align: left;
 }
 }
 
+/* useless stuff: END */
+
 /*--ABOUT--*/
 #about-left {
     text-align:right;
@@ -414,6 +412,8 @@ text-align: left;
  font-size: 1em;
 }
 }
+
+/* useless stuff: START */
 .comments-button {
     width:90%;
     margin-right: auto;
@@ -431,12 +431,11 @@ text-align: left;
   background-color: #FFFFFF;
   border-color: #454654;
 }
-
+/* useless stuff: END */
 
 
 
 /*--CONTRIBUTE--*/
-
 #contribute {
 
     color:#fff;
@@ -485,8 +484,8 @@ text-align: left;
 }
 
 
+/* useless stuff: START */
 /* to center the last boxes on the homepage */
-
 .last_boxes_center{
   margin-left: 0%;
 }
@@ -495,6 +494,7 @@ text-align: left;
     margin-left: 0%;
   }
 }
+
 /* for the description in the boxes (on the homepage) */
 .episode-description{
   background-color:#F0F0F0;
@@ -511,8 +511,10 @@ text-align: left;
     min-height: 100px
   }
 }
-.contact-title {
+/* useless stuff: END */
 
+
+.contact-title {
   font-size: 1.5em;
   color: #33353d;
   background-color: rgba(255, 194, 28, 1);
@@ -520,8 +522,6 @@ text-align: left;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-
-
 }
 
 @media(max-width:768px) {
@@ -531,8 +531,9 @@ text-align: left;
 }
 }
 
-/*--BUTTONS--*/
 
+/* useless stuff: START */
+/*--BUTTONS--*/
 .btn-info {
   color: #33353D;
   background: none;
@@ -543,6 +544,8 @@ text-align: left;
   text-align: center;
   font-size: 1.5em;
 }
+/* useless stuff: END */
+
 
 .transcript{
 padding: 40px;
@@ -567,6 +570,7 @@ text-align: justify;
   }
 }
 
+/* useless stuff: START */
 #layout {
 padding:40px;
 }
@@ -577,7 +581,10 @@ padding:40px;
   border-color: #33353D;
 
 }
+/* useless stuff: END */
 
+
+/* button in contact form on homepage */
 .btn-success {
   color: #33353D;
   background-color: transparent;
@@ -586,16 +593,14 @@ padding:40px;
   border-radius: 0;
 
 }
-
 .btn-success:hover, .btn-success:focus {
-
-    color: #ffffff;
+  color: #ffffff;
   background-color: #33353d;
   border-color: #fff;
 }
 
 
-
+/* CSS CLEANUP STOPPED HERE */
 .navbar-brand {
   padding: 0px 100px 20.5px 20px;
 }

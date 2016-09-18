@@ -1,0 +1,77 @@
+/* CSS for the homepage */
+
+/* feedback form title not in caps lock*/
+.feedbackform {
+  text-transform: none;
+  font-size: 220%;
+}
+
+/* 'About' section */
+#about-left {
+  text-align:right;
+  font-size:1.5em;
+  margin-top:50px;
+  margin-bottom:50px;
+  padding-right:40px;
+}
+ @media(max-width:768px) {
+  #about-left {
+   font-size: 1em;
+  }
+}
+
+/* contribute section */
+#contribute {
+    color:#fff;
+    background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ),
+    bottom, url("/static/Images/contribute-bg.jpg");
+    background-size:cover;
+}
+
+#contribute-left {
+    text-align:right;
+    font-size:1.5em;
+    margin-top:50px;
+    margin-bottom:50px;
+    padding-right:40px;
+}
+
+@media(max-width:768px) {
+  #contribute-left {
+      font-size:1em;
+      margin-top:0px;
+  }
+}
+
+/* contact form on homepage */
+.contact-title {
+  font-size: 1.5em;
+  color: #33353d;
+  background-color: rgba(255, 194, 28, 1);
+  margin-bottom: 20px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media(max-width:768px) {
+.contact-title {
+  font-size: 1em;
+  width:100%;
+}
+}
+
+
+/* button in contact form on homepage */
+.btn-success {
+  color: #33353D;
+  background-color: transparent;
+  border-color: #33353D;
+  border-width: 3px;
+  border-radius: 0;
+}
+.btn-success:hover, .btn-success:focus {
+  color: #ffffff;
+  background-color: #33353d;
+  border-color: #fff;
+}
