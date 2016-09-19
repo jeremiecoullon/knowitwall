@@ -5,12 +5,14 @@ KiW takes 1,000-word scripts that academics write on research worth sharing with
 
 The overarching aim is use these documentaries as a starting point for interactive storytelling. Checkout the `user_login_OAuth` branch for some info about annotations (in development)
 
+# Contributing
+
+
 To get Knowitwall running locally:
 
 - install packages in `requirements.txt`
 - run `run.py`
 
-# Contributing
 
 Drop me an email at jeremie.coullon@gmail.com if you're interested in contributing. Most of the stuff to do (in the list below) have a design component which needs to be discussed before coding !
 
@@ -19,7 +21,7 @@ Drop me an email at jeremie.coullon@gmail.com if you're interested in contributi
 ## Content management stuff
 
 - team & 'about' page: we need an entire page for this - design & code up
-- [all episodes](http://knowitwall.com/all_episodes): need a button that filters episodes by discipline (like on mobile). However the blocks need to re-arrange themselves to still be in the current pattern after the clicking on the filter. Having this happen client side might be the best solution ([Angular 2](https://angular.io/)?) 
+- [all episodes](http://knowitwall.com/all_episodes): need a button that filters episodes by discipline (like on mobile). However the blocks need to re-arrange themselves to still be in the current pattern after the clicking on the filter. Having this happen client side might be the best solution ([Angular 2](https://angular.io/)?)
 - [Episode pages](http://knowitwall.com/episodes/spanish_forger): need to design and code an audioplayer like Soundcloud. Namely, a player that is in a sticky footer and that keeps playing as you navigate to different pages within the site.
 
 ## Annotations
