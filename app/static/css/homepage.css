@@ -144,3 +144,338 @@ form .row:first-child .floating-label-form-group {
   overflow-x:hidden;
   background-color: white;
 }
+
+/* STUFF FROM THE REDESIGN */
+
+/* container with a small padding for the episodes section, otherwise the content spills out of the
+browser for some reason.. */
+/* overrides knowitwallredux.css padding on the #episodes section */
+.episode_section_2{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.episode_section_1{
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+#about{
+  margin-top:12px;
+  border-radius:6px;
+  margin-left: 12px;
+  margin-right: 12px;
+  /* to make the 'About' description vertically centered */
+  padding-bottom: 74px;
+}
+.about_description{
+  font-size: 11px;
+}
+@media(max-width: 415px){
+  p{
+    font-size: 17px;
+  }
+  #about{
+    padding-top: 0px;
+  }
+}
+@media(max-width:320px){
+  #about > .container > .row > .col-md-6 > .vertical-line > .justify, #contribute > .container > .row > .col-md-8 > .vertical-line > .justify{
+  text-align: left;
+  }
+}
+.episodes_container{
+  padding-left: 21px;
+  padding-right: 21px;
+}
+#about_hidden_anchor{
+  visibility:hidden;
+  position: relative;
+  bottom: 140px;
+}
+/*darken homepage box images on hover */
+.homepage_box_episode:hover > .homepage_overlay {
+    height:100%;
+    background: rgba(0, 0, 0, 0.6);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    display: block;
+    border-radius: 6px;
+}
+.homepage_hidden_info{
+  display: none;
+}
+.homepage_box_episode:hover > div > .homepage_hidden_info{
+  display:inline;
+}
+/* homepage boxes: rows and column styling (to override bootstrap) */
+.homepage_box_row{
+  padding-top: 12px
+}
+.homepage_box_col{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+@media(max-width:991px){
+  .homepage_box_col_2{
+    padding-top: 12px;
+  }
+}
+/* to make the nav bar fit on one line */
+@media(max-width: 853px) and (min-width:769px){
+  .nav>li>a{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media(min-width:768px) and (max-width:992px){
+  .container_nav_bar{
+    width: inherit;
+  }
+}
+
+@media(max-width:767px){
+  .episode_section_1{
+    padding-top: 0px
+  }
+  .homepage_box_first_col{
+    padding-top: 60px;
+  }
+}
+@media(min-width:401px) and (max-width:478px){
+  .navbar-brand{
+    padding-right: 0px
+  }
+}
+.homepage_box_about{
+  color: #fff;
+  background: #33353d;
+  height:400px;
+}
+.homepage_box_about h2{
+  padding-top: 40px;
+  font-size: 50px;
+}
+.homepage_box_about p{
+  text-align: justify;
+  font-size: 15px;
+  padding-top: 15px;
+  line-height: 25px;
+}
+.homepage_About_description{
+  border-top: 3px solid #ffc21c;
+  margin: 45px 100px;
+  padding-top: 23px;
+}
+/*TODO: add this to the class in redux!*/
+.box_episode_title{
+  text-align: center;
+  margin-top: 64px;
+  font-size: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.box_episode_title:hover{
+  /* ie: the same color as when you don't hover */
+  color: #33353d;
+}
+.box_episode_title_first{
+  margin-top:112px;
+  font-size:40px;
+}
+.homepage_box_by-in_first{
+  font-size: 19px;
+}
+/* change the font size for the bigger boxes on the homepage */
+.box_episode_title_bigger{
+  font-size: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#contribute{
+  margin-top: 12px;
+}
+/* Episode boxes on the homepage */
+.homepage_box_episode{
+  height: 400px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  border-radius:6px;
+}
+.homepage_box_episode_first{
+  height: 500px;
+}
+@media(max-width:991px){
+  .homepage_box_episode_first{
+    height:400px;
+  }
+}
+.more_episodes_redirect{
+  color: inherit;
+}
+.homepage_box_abstract{
+  color: white;
+  font-size: 16px;
+  margin: 6.5% 18% 0px 18%;
+  text-align: center;
+  line-height: 23px;
+}
+.homepage_box_abstract_first{
+  font-size: 17px;
+  line-height: 26px;
+}
+.homepage_box_by-in{
+  font-size: 17px;
+}
+@media(min-width:768px){
+  #all_episodes{
+    background-color: #ffc21c;
+    border-radius: 5px;
+    color: #27282D;
+
+  }
+}
+@media(min-width:900px){
+  #all_episodes{
+    /*margin-right: 27px;*/
+  }
+}
+
+.label_wrapper{
+  position: absolute;
+  left: 20px;
+  border-radius:50px;
+  height:35px;
+  width:35px;
+  /*background-color: white;*/
+  background-color: transparent;
+  border: 2px solid white;
+}
+.audio-film_label{
+  color: white;
+  position:relative;
+  top:5px;
+  left:0.5px;
+}
+.audio_label_wrapper{
+  bottom:20px;
+}
+.film_label_wrapper{
+  bottom:65px;
+}
+.label_wrapper_landing_page{
+  position: absolute;
+  left: 36px;
+  border-radius:50px;
+  height:40px;
+  width:40px;
+  /*background-color: white;*/
+  background-color: transparent;
+  border: 2px solid white;
+}
+.audio_label_wrapper_landing_page{
+  bottom:35px;
+}
+.film_label_wrapper_landing_page{
+  bottom: 86px;
+}
+.audio-film_label_landing_page{
+  color: white;
+  position:relative;
+  top:8px;
+  left:0.5px;
+}
+.latest_landing_page{
+  position:absolute;
+  right: 50px;
+  bottom: 36px;
+  background-color:transparent;
+  color:white;
+  border: 2px solid white;
+  font-size:12px;
+  cursor: auto;
+}
+#header_image_mobile{
+  /*display: none;*/
+}
+/* Show abstracts on mobile, and remove film/audio tags */
+/* ipad */
+@media(max-width:768px){
+  #header_image_desktop{
+    /*display: none;*/
+  }
+  #header_image_mobile{
+    /*display: block;*/
+  }
+  .homepage_overlay {
+      height:100%;
+      background: rgba(0, 0, 0, 0.6);
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      display: block;
+      border-radius: 6px;
+  }
+  .homepage_hidden_info{
+    display: inline;
+  }
+  .label_wrapper, .latest_landing_page, .label_wrapper_landing_page{
+    display: none;
+  }
+  #about-left{
+    padding-right: 0px;
+  }
+  .box_episode_title{
+    font-size: 25px;
+  }
+  .box_episode_title_first{
+    margin-top: 25px
+  }
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
+    margin-top: 9%;
+  }
+  .homepage_box_by-in{
+    font-size: 15px;
+  }
+  .homepage_box_by-in_first{
+    font-size: 15px;
+  }
+}
+@media(max-width:414px){
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 17px;
+    margin-top: 9%;
+    line-height: 26px;
+  }
+}
+@media(max-width:375px){
+  .homepage_box_abstract, .homepage_box_abstract_first{
+    margin-left: 6%;
+    margin-right:6%;
+    margin-top: 5%;
+    font-size: 17px;
+  }
+}
+@media(max-width:360px){
+  .box_episode_title{
+    margin-top: 28px;
+  }
+}
+@media(max-width:320px){
+  .homepage_box_abstract{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 15px;
+  }
+  #about-left > h2{
+    text-align: left;
+  }
+}
