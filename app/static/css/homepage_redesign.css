@@ -16,6 +16,11 @@ browser for some reason.. */
   border-radius:6px;
   margin-left: 12px;
   margin-right: 12px;
+  /* to make the 'About' description vertically centered */
+  padding-bottom: 74px;
+}
+.about_description{
+  font-size: 11px;
 }
 @media(max-width: 415px){
   p{
@@ -130,7 +135,7 @@ browser for some reason.. */
 }
 .box_episode_title_first{
   margin-top:112px;
-  font-size:34px;
+  font-size:40px;
 }
 .homepage_box_by-in_first{
   font-size: 19px;
