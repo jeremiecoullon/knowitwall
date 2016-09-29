@@ -1,4 +1,4 @@
-/* CSS for episode page */
+/* new CSS for episode page */
 
 
 @media(max-width:991px) {
@@ -204,6 +204,18 @@ a:hover.a_arrow{
 /* take off padding for the header (because there's the arrow on this page) */
 header .container {
     padding-bottom: 0px;
+    padding-top: 300px;
+}
+@media(max-width:768px) {
+    header .container {
+        padding-top: 150px;
+    }
+}
+@media(max-width:440px) {
+  header .container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  }
 }
 /* image credits stuff */
 /* take of padding of section id=episodes (for image credits) */

@@ -1,4 +1,4 @@
-/* CSS for the homepage */
+/* new CSS for the homepage */
 
 /* feedback form title not in caps lock*/
 .feedbackform {
@@ -268,7 +268,38 @@ browser for some reason.. */
   margin: 45px 100px;
   padding-top: 23px;
 }
-/*TODO: add this to the class in redux!*/
+
+/* directly from old knowitwallredux.css: START */
+.box_episode_title {
+  margin-top: 20%;
+  font-size:1.2em;
+  font-family: 'Lato';
+  font-weight: 300;
+  color:#33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+  margin-bottom: 30px;
+  display: inline-block;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
+  border-radius: 3px;
+}
+.box_episode_title:hover{
+  color: #999999;
+}
+
+@media(max-width:561px) {
+  .box_episode_title {
+    margin-top: 20%;
+    font-size:1.6em;
+    white-space: normal;
+    padding: 0em;
+    /*margin-top: 0.4em;*/
+  }
+}
+/* directly from old knowitwallredux.css: END */
+
+
+/* this affects the homepage title boxes (not the latest one though)*/
 .box_episode_title{
   text-align: center;
   margin-top: 64px;
