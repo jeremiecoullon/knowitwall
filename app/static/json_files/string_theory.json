@@ -1,0 +1,20 @@
+{
+    "url": "string_theory",
+    "unique_id": "Yang-Hui_He",
+    "topic_name": "String theory: Must it be so?",
+    "topic_image": "/static/Images/TI_string_theory.jpg",
+    "topic_image_latest": "/static/Images/TI_string_theory_latest.jpg",
+    "topic_image_box": "/static/Images/TI_string_theory.jpg",
+    "image_credits": "",
+    "by_in_colour":"",
+    "discipline": "Theoretial Physics",
+    "category": "Sciences",
+    "topic_description": "",
+    "author_name": "Yang-Hui He",
+    "author_image": "/static/Images/author_Yang-Hui_He.jpg",
+    "author_bio": "app/static/texts/string_theory_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "Peter Shatwell",
+    "transcript": "app/static/texts/string_theory_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/string_theory.mp3"
+}
