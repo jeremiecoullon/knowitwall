@@ -11,7 +11,7 @@
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="http://knowitwall.com/{{ audiodocs[0].topic_image }}" />
-  <meta property="og:title" content="{{audiodocs[0].topic_name | safe}} {% if audiodocs[0].video_embed %}[Video]{% else %}[Audio]{% endif %}" />
+  <meta property="og:title" content="{{audiodocs[0].topic_name | safe}}{% if audiodocs[0].video_embed %} [Video]{% elif audiodocs[0].audio_mp3 %} [Audio]{% else %}{% endif %}"/>
   <meta property="og:description" content="{{audiodocs[0].topic_description | safe}}" />
   <meta property="og:url" content="http://knowitwall.com/audiodoc/{{audiodocs.url}}" />
   <meta property=”og:type” content=”website” />
@@ -39,7 +39,10 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
+      <!-- HACK: disgusting inline style the moves the 'READ' button on the navbar to the right if the episode has audio.
+                Put this in a class once the CSS cleanup is done -->
+      <!-- TODO: this doesn't work for mobile! -->
+      <div class="navbar-header page-scroll" style="{% if not audiodocs[0].audio_mp3 %}margin-right:110px{%endif%}">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -239,10 +242,12 @@
             <a href="#header_video_hidden_div">Watch</a>
           </li>
           {% endif %}
+          {% if audiodocs[0].audio_mp3 %}
           <li class="page-scroll">
             <a href="#episodes">Listen</a>
           </li>
-          <li class="page-scroll-offset">
+          {% endif %}
+          <li class="page-scroll-offset" style="">
             <a href="#read">Read</a>
           </li>
         </ul>
@@ -335,13 +340,16 @@
     </div>
     <div class="container previous-audiodoc">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center" >
+        <div class="col-lg-10 col-lg-offset-1 text-center" style=" {% if not audiodocs[0].audio_mp3 %} margin-bottom:41px; {%endif%}">
           <p class="audiodoc_abstact">{{audiodocs[0].topic_description | safe}}</p>
+          {% if audiodocs[0].audio_mp3 %}
           <p class="audiodoc_narrate-credits">narrated by {{ audiodocs[0].narration_credits }}</p>
           <p class="audiodoc_narrate-credits">music by {{ audiodocs[0].music_credits }}</p>
+          {% endif %}
         </div>
       </div>
 
+      {% if audiodocs[0].audio_mp3 %}
       <div class="row">
         <!-- these 2 divs are used to get the variable audio & TI_box for the players -->
         <div id="audioplayer_source_mp3" style="display:none">
@@ -352,6 +360,7 @@
         </div>
         <div id="switching_audioplayers" class="col-lg-12"></div>
       </div>
+      {% endif %}
 
 
       <div class="row">
