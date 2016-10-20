@@ -229,3 +229,25 @@ header .container_video{
     padding-left: 10px;
   }
 }
+/* for text-only episodes */
+.container > .text-only-margin{
+  margin-right:110px;
+}
+@media(max-width:992px){
+  .container > .text-only-margin{
+    margin-right:0px;
+  }
+}
+.text-only-abstract{
+   margin-bottom:41px;
+}
+@media(max-width:991px){
+  .text-only-abstract{
+    margin-bottom:0px;
+  }
+}
+@media(max-width:991px) {
+  .text-only-author-name{
+  padding-top:10px;
+  }
+}

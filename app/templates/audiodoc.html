@@ -42,7 +42,7 @@
       <!-- HACK: disgusting inline style the moves the 'READ' button on the navbar to the right if the episode has audio.
                 Put this in a class once the CSS cleanup is done -->
       <!-- TODO: this doesn't work for mobile! -->
-      <div class="navbar-header page-scroll" style="{% if not audiodocs[0].audio_mp3 %}margin-right:110px{%endif%}">
+      <div class="navbar-header page-scroll {% if not audiodocs[0].audio_mp3 %}text-only-margin{%endif%}">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -340,7 +340,7 @@
     </div>
     <div class="container previous-audiodoc">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center" style=" {% if not audiodocs[0].audio_mp3 %} margin-bottom:41px; {%endif%}">
+        <div class="col-lg-10 col-lg-offset-1 text-center {% if not audiodocs[0].audio_mp3 %}text-only-abstract{%endif%}">
           <p class="audiodoc_abstact">{{audiodocs[0].topic_description | safe}}</p>
           {% if audiodocs[0].audio_mp3 %}
           <p class="audiodoc_narrate-credits">narrated by {{ audiodocs[0].narration_credits }}</p>
@@ -371,7 +371,7 @@
               <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "{{audiodocs[0].author_name | safe}}">
             </div>
             <div class="col-md-3">
-              <div class="author-name">
+              <div class="author-name {% if not audiodocs[0].audio_mp3 %}text-only-author-name{%endif%}">
               <h2 style="text-align:right; font-size: {{ audiodocs[0].name_font_size }};"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
             </div>
