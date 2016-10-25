@@ -27,13 +27,17 @@
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- old stylesheets -->
-  <!-- <link href="/static/css/knowitwallredux.css" rel="stylesheet">
-  <link href="/static/css/homepage_redesign.css" rel="stylesheet"> -->
+  <!-- Custom CSS -->
+  <!-- <link href="/static/css/knowitwallredux.css" rel="stylesheet"> -->
+
+  <!-- homepage redesign: TODO: put these changes nicely in knowitwallredux.css -->
+  <!-- <link href="/static/css/homepage_redesign.css" rel="stylesheet"> -->
+
 
   <!-- new stylesheet -->
   <link href="/static/css/knowitwall_base.css" rel="stylesheet">
   <link href="/static/css/homepage.css" rel="stylesheet">
+
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic," rel="stylesheet" type="text/css">
@@ -332,10 +336,12 @@
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract homepage_box_abstract_first">{{elem.topic_description | safe}}</p>
+                 {% if elem.audio_mp3 %}
                  <!-- audio label -->
                  <div class="label_wrapper_landing_page audio_label_wrapper_landing_page">
                    <i class="fa fa-volume-up audio-film_label_landing_page" aria-hidden="true" style="font-size:18px;"></i>
                  </div>
+                 {% endif %}
                  {% if elem.video_embed %}
                  <div class="label_wrapper_landing_page film_label_wrapper_landing_page">
                    <i class="fa fa-film audio-film_label_landing_page" aria-hidden="true" style="font-size:18px;"></i>
@@ -369,10 +375,11 @@
                </p>
              <div class="homepage_hidden_info">
                <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-
+                {% if elem.audio_mp3 %}
                <div class="label_wrapper audio_label_wrapper">
                  <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                </div>
+               {% endif %}
                {% if elem.video_embed %}
                <div class="label_wrapper film_label_wrapper">
                  <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
@@ -426,9 +433,11 @@
                    </p>
                  <div class="homepage_hidden_info">
                    <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+                   {% if elem.audio_mp3 %}
                    <div class="label_wrapper audio_label_wrapper">
                      <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                    </div>
+                   {% endif %}
                    {% if elem.video_embed %}
                    <div class="label_wrapper film_label_wrapper">
                      <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
@@ -458,9 +467,11 @@
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+                 {% if elem.audio_mp3 %}
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% endif %}
                  {% if elem.video_embed %}
                  <div class="label_wrapper film_label_wrapper">
                    <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
@@ -489,9 +500,11 @@
                  </p>
                <div class="homepage_hidden_info">
                  <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
+                 {% if elem.audio_mp3 %}
                  <div class="label_wrapper audio_label_wrapper">
                    <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
                  </div>
+                 {% endif %}
                  {% if elem.video_embed %}
                  <div class="label_wrapper film_label_wrapper">
                    <i class="fa fa-film audio-film_label" aria-hidden="true"></i>

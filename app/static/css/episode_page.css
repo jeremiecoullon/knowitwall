@@ -202,6 +202,9 @@ a:hover.a_arrow{
 /* end of scroll down arrow */
 /**/
 /* take off padding for the header (because there's the arrow on this page) */
+header{
+  text-align: center;
+}
 header .container {
     padding-bottom: 0px;
     padding-top: 300px;
