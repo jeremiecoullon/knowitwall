@@ -409,10 +409,9 @@ hidden
             {% endmacro %}
 
 
-<!-- loop episode box over all episodes -->
-<!-- HACK: I just put the end of the range manually at 22. This should rather be the lenght of the list `audiodocs` -->
-      {% for ep_num in range(0,22,2) %}
-        {{ episode_box(episode_1=ep_num)}}
+      <!-- Here we use the correct range of integers passed by the server (because Jinja2 is terrible at this..) -->
+      {% for ep_num in audiodoc_range %}
+        {{ episode_box( episode_1=ep_num ) }}
       {% endfor %}
 
 
