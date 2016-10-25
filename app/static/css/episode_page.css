@@ -216,8 +216,8 @@ header .container {
 }
 @media(max-width:440px) {
   header .container {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  /*padding-top: 150px;
+  padding-bottom: 150px;*/
   }
 }
 /* image credits stuff */
