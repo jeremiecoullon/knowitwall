@@ -1,0 +1,19 @@
+{
+    "url": "string_theory",
+    "unique_id": "Yang-Hui_He",
+    "topic_name": "String theory: Must it be so?",
+    "topic_image": "/static/Images/TI_string_theory.jpg",
+    "topic_image_latest": "/static/Images/TI_string_theory.jpg",
+    "topic_image_box": "/static/Images/TI_string_theory.jpg",
+    "image_credits": "Strings. By <a href='https://www.flickr.com/photos/vlastimil_koutecky/11805910915/in/photolist-iZfo1c-2EVzjp-vBQ36-p3B3q-m63n1-nWdm-4mEURz-m6bRf-diKrMv-5fgbw2-7okCCR-2hu2L-bCbDt4-p58ug-4FXL49-7QGkRA-7n6rL-8md4bx-8gu4X3-7QD2qt-7QGko7-oXWafa-7QGkyQ-pyJnpW-685anQ-7QGjPQ-9F15PA-7CGG4o-4FXNa3-8eRBnZ-4nwkHG-efmqtU-p4EuYq-2nB59p-EJf46-pKL82r-5X8daw-bjg1XV-5V9c2Y-eFKHW-b4gUcv-ecWmQu-A6T38o-6ZHngL-3aUK4f-6sWBg-5iKssW-4teoz9-y6d9A-r3XJ5S' target='_blank'> Vlastimil Koutecký</a> [<a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a>]",
+    "by_in_colour":"white",
+    "discipline": "Physics",
+    "category": "Sciences",
+    "topic_description": "Could there be a theory that describes all of the fundamental laws of nature, a Theory of Everything? Einstein thought so but he never managed to prove it. Mathematical physicist Yang-Hui He guides us through the quest to fulfil Einstein's dream.",
+    "author_name": "Yang-Hui He",
+    "author_image": "/static/Images/author_Yang-Hui_He.jpg",
+    "author_bio": "app/static/texts/string_theory_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "Peter Shatwell",
+    "transcript": "app/static/texts/string_theory_transcript.html"
+}
