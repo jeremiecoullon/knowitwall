@@ -31,7 +31,6 @@
   <link href="/static/css/archive_extra.css" rel="stylesheet">
 
   <link href="/static/css/archive_page.css" rel="stylesheet">
-<script src='/static/js/masonry.pkgd.min.js'></script>
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
@@ -358,19 +357,22 @@ hidden
   </section>
 
 
-
+{% if box_1=='5' %} {% set box_2 = '7' %} {% else %} {% set box_2 = '5' %} {% endif %}
 
   <section class="archive_desktop">
     <div class="container desktop_archive" style="width:100%; margin-left:0px;margin-right:0px;padding-left:100px;padding-right:100px;">
       <div class="episodes_container" style="border:1px solid #bdbdbd;background-color:white;border-radius:6px">
             {% macro episode_box(episode_1 = 0) %}
             <!-- Macro for 1 row of episode boxes.
-            Parameters: episode_1: id of the first episode.
+                Parameters: episode_1: id of the first episode.
+                            Note: this should always be an even number (starting at 0)
               -->
-              <!-- If episode_1 is divisible by 4, then set box_1='5', else set it to '7' -->
-              {% if episode_1 % 4 ==0 %} {% set box_1 = '5' %} {% else %} {% set box_1 = '7' %} {% endif %}
-              <!-- Then define box_2 based on box_1 -->
-            {% if box_1=='5' %} {% set box_2 = '7' %} {% else %} {% set box_2 = '5' %} {% endif %}
+            <!-- If episode_1 is divisible by 4, then set box_1='5' and box_2='7', else set them to '7' and '5' -->
+            {% if episode_1 % 4 ==0 %}
+              {% set box_1 = '5' %}{% set box_2 = '7' %}
+              {% else %}
+              {% set box_1 = '7' %}{% set box_2 = '5' %}
+            {% endif %}
 
             <div class="row homepage_box_row">
               {% for elem in audiodocs[episode_1:episode_1+2] %}
@@ -409,369 +411,10 @@ hidden
             {% endmacro %}
 
 
-      <!-- Here we use the correct range of integers passed by the server (because Jinja2 is terrible at this..) -->
-      {% for ep_num in audiodoc_range %}
-        {{ episode_box( episode_1=ep_num ) }}
+      <!-- We need to pass in the episode number but only if it's a multiple of 2 -->
+      {% for ep_num in audiodocs[::2] %}
+        {{ episode_box( episode_1=2*(loop.index-1) ) }}
       {% endfor %}
-
-
-
-<!--
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[0:2] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[2:4] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                  {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[4:6] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                  {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[6:8] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[8:10] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[10:12] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[12:14] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[14:16] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[16:18] %}
-            <div class="col-md-{{loop.cycle('5','7')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div>
-
-
-        <div class="row homepage_box_row">
-          {% for elem in audiodocs[18:20] %}
-            <div class="col-md-{{loop.cycle('7','5')}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
-
-              <a href="episodes/{{elem.url}}">
-              <div style="background:url('{{elem.topic_image}}'); background-size:cover;" class='homepage_box_episode'>
-                <div class="homepage_overlay">
-
-                   <p class="box_episode_title">
-                     {{elem.topic_name | safe}}
-                   </p>
-
-                 <p class="homepage_box_by-in">
-                   <i>by</i> <span class="highlight">{{elem.author_name | safe}}</span> <i>in</i> <span class="highlight">{{elem.discipline}} </span>
-                 </p>
-               <div class="homepage_hidden_info">
-                 <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                 {% if elem.audio_mp3 %}
-                 <div class="label_wrapper audio_label_wrapper">
-                   <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                 {% if elem.video_embed %}
-                 <div class="label_wrapper film_label_wrapper">
-                   <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                 </div>
-                 {% endif %}
-                </div>
-              </div>
-            </div>
-             </a>
-          </div>
-          {% endfor %}
-        </div> -->
-
 
       </div>
     </div>
@@ -805,18 +448,6 @@ hidden
 <script src="/static/js/knowitwall.js"></script>
 <script src="/static/js/archive_filter.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
-<!-- Masonry -->
-
-<script>
-var container = document.querySelector('#masonry');
-var masonry = new Masonry(container, {
-    columnWidth: 200,
-    itemSelector: '.item'
-  });
-</script>
-
-<!-- TEST: bootstrap toggle -->
-<!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
 
 </body>
 {% endblock %}

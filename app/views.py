@@ -213,9 +213,7 @@ def archive():
     # sort the episodes alphabetically by title
     audiodocs_alphabetical = sorted(audiodocs, key=lambda k: k['topic_name'])
 
-    audiodoc_range = range(0,len(audiodocs),2)
-
-    return render_template('archive_page.html', audiodocs = audiodocs_alphabetical, audiodoc_range=audiodoc_range)
+    return render_template('archive_page.html', audiodocs = audiodocs_alphabetical)
 
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "
