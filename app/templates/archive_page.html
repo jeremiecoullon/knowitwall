@@ -362,18 +362,17 @@ hidden
   <section class="archive_desktop">
     <div class="container desktop_archive" style="width:100%; margin-left:0px;margin-right:0px;padding-left:100px;padding-right:100px;">
       <div class="episodes_container" style="border:1px solid #bdbdbd;background-color:white;border-radius:6px">
-            {% macro episode_box(episode_1 = 0) %}
             <!-- Macro for 1 row of episode boxes.
                 Parameters: episode_1: id of the first episode.
                             Note: this should always be an even number (starting at 0)
               -->
             <!-- If episode_1 is divisible by 4, then set box_1='5' and box_2='7', else set them to '7' and '5' -->
+            {% macro episode_box(episode_1 = 0) %}
             {% if episode_1 % 4 ==0 %}
               {% set box_1 = '5' %}{% set box_2 = '7' %}
               {% else %}
               {% set box_1 = '7' %}{% set box_2 = '5' %}
             {% endif %}
-
             <div class="row homepage_box_row">
               {% for elem in audiodocs[episode_1:episode_1+2] %}
                 <div class="col-md-{{loop.cycle(box_1,box_2)}} homepage_box_col {{loop.cycle('', 'homepage_box_col_2')}}">
