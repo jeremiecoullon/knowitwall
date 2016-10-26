@@ -295,16 +295,41 @@
       left: e.pageX - offset.left
     };
   };
-  // KiW modif: this sets the position of the annotation only for screen size > 768px, fix annotation on the right
+  // KiW modif: this sets the position of the annotation only for screen size > 769px, fix annotation on the right
+  // different cases for different screen sizes
   Util.annotationPosition = function(e, offsetEl) {
     var offset;
     offset = $(offsetEl).position();
-    if ($(document).width() < 768) {
+    if ($(document).width() < 769) {
       return {
         top: e.pageY - offset.top + 80,
         left: '8px'
       };
     }
+    // get this to work! Different sizes:
+    // mobile =< 768 --> left: 8px
+    // 768 < small screens < 1440 --> left: 12%
+    // 1440 <= medium screens < 1700 --> left: 544px
+    // big screens >= 1700 --> left: 644px
+
+    // else if ($(document).width() < 1440 && $(document).width() >= 769) {
+    //   return {
+    //     top: e.pageY - offset.top + 80,
+    //     left: '12%',
+    //   };
+    // }
+    // else if ($(document).width() >= 1700) {
+    //   return {
+    //     top: e.pageY - offset.top,
+    //     right: '644px',
+    //   };
+    // }
+    // else if ($(document).width() >= 1440 && $(document).width() < 1700) {
+    //   return {
+    //     top: e.pageY - offset.top,
+    //     left: '544px',
+    //   };
+    // }
     return {
       top: e.pageY - offset.top,
       right: '544px',
