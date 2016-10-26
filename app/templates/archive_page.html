@@ -411,7 +411,7 @@ hidden
 
       <!-- We need to pass in the episode number but only if it's a multiple of 2
           So we check whether the index (which should start at 0) is a multiple of 2 -->
-      {% for ep_num in audiodocs %}
+      {% for episode in audiodocs %}
         {% set my_index = loop.index-1 %}
         {% if my_index is divisibleby(2) %}
           {{ episode_box( episode_1=my_index ) }}
