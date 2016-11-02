@@ -306,33 +306,26 @@
         left: '8px'
       };
     }
-    // get this to work! Different sizes:
     // mobile =< 768 --> left: 8px
     // 768 < small screens < 1440 --> left: 12%
-    // 1440 <= medium screens < 1700 --> left: 544px
-    // big screens >= 1700 --> left: 644px
-
-    // else if ($(document).width() < 1440 && $(document).width() >= 769) {
-    //   return {
-    //     top: e.pageY - offset.top + 80,
-    //     left: '12%',
-    //   };
-    // }
-    // else if ($(document).width() >= 1700) {
-    //   return {
-    //     top: e.pageY - offset.top,
-    //     right: '644px',
-    //   };
-    // }
-    // else if ($(document).width() >= 1440 && $(document).width() < 1700) {
-    //   return {
-    //     top: e.pageY - offset.top,
-    //     left: '544px',
-    //   };
-    // }
+    // 1440 <= medium screens < 1700 --> right: 544px
+    // big screens >= 1700 --> right: 644px
+    else if ($(document).width() >= 769 && $(document).width() < 1440) {
+      return {
+        top: e.pageY - offset.top + 80,
+        left: '12%',
+      };
+    }
+    else if ($(document).width() >= 1440 && $(document).width() < 1700) {
+      return {
+        top: e.pageY - offset.top,
+        right: '544px',
+      };
+    }
+  // final case: if width >= 1700
     return {
       top: e.pageY - offset.top,
-      right: '544px',
+      right: '644px',
     };
   };
   Util.preventEventDefault = function(event) {
