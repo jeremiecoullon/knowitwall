@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{audiodocs[0].og_description}}">
+  <meta name="description" content="Browse through all the Knowitwall episodes">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="https://pbs.twimg.com/profile_banners/3297484981/1450923489/1500x500" />
@@ -357,7 +357,6 @@ hidden
   </section>
 
 
-{% if box_1=='5' %} {% set box_2 = '7' %} {% else %} {% set box_2 = '5' %} {% endif %}
 
   <section class="archive_desktop">
     <div class="container desktop_archive" style="width:100%; margin-left:0px;margin-right:0px;padding-left:100px;padding-right:100px;">
@@ -410,9 +409,13 @@ hidden
             {% endmacro %}
 
 
-      <!-- We need to pass in the episode number but only if it's a multiple of 2 -->
-      {% for ep_num in audiodocs[::2] %}
-        {{ episode_box( episode_1=2*(loop.index-1) ) }}
+      <!-- We need to pass in the episode number but only if it's a multiple of 2
+          So we check whether the index (which should start at 0) is a multiple of 2 -->
+      {% for episode in audiodocs %}
+        {% set my_index = loop.index-1 %}
+        {% if my_index is divisibleby(2) %}
+          {{ episode_box( episode_1=my_index ) }}
+        {% endif %}
       {% endfor %}
 
       </div>
