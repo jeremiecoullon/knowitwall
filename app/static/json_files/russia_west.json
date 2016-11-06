@@ -1,0 +1,19 @@
+{
+    "url": "russia_west",
+    "unique_id": "Elisabeth_Schimpfossl",
+    "topic_name": "Russia’s new rich and their attitudes to the West",
+    "topic_image": "/static/Images/TI_.jpg",
+    "topic_image_latest": "/static/Images/TI_.jpg",
+    "topic_image_box": "/static/Images/TI_.jpg",
+    "image_credits": "",
+    "by_in_colour":"",
+    "discipline": "Sociology",
+    "category": "Arts",
+    "topic_description": "",
+    "author_name": "Elisabeth Schimpfossl",
+    "author_image": "/static/Images/author_Elisabeth_Schimpfossl.jpg",
+    "author_bio": "app/static/texts/russia_west_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "app/static/texts/russia_west_transcript.html"
+}
