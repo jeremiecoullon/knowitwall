@@ -349,7 +349,7 @@
     <div class="container previous-audiodoc">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center {% if not audiodocs[0].audio_mp3 %}text-only-abstract{%endif%}">
-          <p class="audiodoc_abstact">{{audiodocs[0].topic_description | safe}}</p>
+          <p class="audiodoc_abstact">{% if not audiodocs[0].audio_mp3 %}<i>{% endif %}{{audiodocs[0].topic_description | safe}}{% if not audiodocs[0].audio_mp3 %}</i>{% endif %}</p>
           {% if audiodocs[0].audio_mp3 %}
           <p class="audiodoc_narrate-credits">narrated by {{ audiodocs[0].narration_credits }}</p>
           <p class="audiodoc_narrate-credits">music by {{ audiodocs[0].music_credits }}</p>
