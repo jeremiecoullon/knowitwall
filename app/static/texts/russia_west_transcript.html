@@ -1,46 +1,106 @@
 <html>
 <style media="screen">
+.fancybox-image{
+  border-radius: 4px;
+}
+.figure_transcript_double{
+  text-align:center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom:0.8em;
+  margin-left: 9%;
+  margin-right:9%;
+  background-color: white;
+  padding-left: 30px;
+  padding-right:30px;
+  border-radius: 5px;
+}
 
-  .fancybox-image{
-    border-radius: 4px;
+.tr_image_double{
+  width:100%;
+  height:100%;
+  border-radius: 3px;
+}
+@media only screen and (max-width:991px) {
+
+  .figure_transcript_double{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right:15px;
+    padding-left: 15px;
+  }
+}
+
+.figure_transcript_middle{
+  text-align:center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom:0.8em;
+  margin-left: 16%;
+  margin-right:16%;
+  background-color: white;
+  border-radius: 5px;
+}
+.tr_image_left{
+  height:400px;
+  margin-bottom:1em;
+  border-radius: 3px;
+}
+.tr_image_middle{
+  width:80%;
+  height:80%;
+  margin-bottom:9px;
+  border-radius: 8px;
+}
+@media only screen and (max-width:991px) {
+  .figure_transcript_middle{
+    margin-left: 0%;
+    margin-right: 0%;
   }
   .tr_image_left{
-    height:400px;
-    margin-bottom:1em;
-    border-radius: 3px;
+    width: 90%;
+    height: auto;
   }
-  @media only screen and (max-width:991px) {
-    .tr_image_left{
-      width: 90%;
-      height: auto;
-    }
-  }
+}
+
+
+.figure_transcript_left{
+  float: left;
+  margin: 2em 4em 2em 0;
+  background-color:white;
+  padding-top: 2em;
+  padding-right:2em;
+  padding-left:2em;
+  padding-bottom:1.5em;
+  text-align:center;
+  max-width: 700px;
+  border-radius: 5px;
+}
+.Betrothal_figcaption{
+  padding: 0px 52px;
+}
+@media(max-width:420px){
   .figure_transcript_left{
-    float: left;
-    margin: 2em 4em 2em 0;
-    background-color:white;
-    padding-top: 2em;
-    padding-right:2em;
-    padding-left:2em;
-    padding-bottom:1.5em;
-    text-align:center;
-    max-width: 400px;
-    border-radius: 5px;
+    margin-right: 0%;
+    margin-left: 0%;
+    padding-right:1em;
+    padding-left:1em;
   }
-  @media(max-width:420px){
-    .figure_transcript_left{
-      margin-right: 0%;
-      margin-left: 0%;
-      padding-right:1em;
-      padding-left:1em;
-    }
+  .Betrothal_figcaption{
+    padding: 0px;
   }
- @media(max-width: 730px){
-   .figure_transcript_left{
-     float:none;
-     margin:auto;
-   }
+}
+@media(max-width: 730px){
+ .after_image{
+   clear:both;
  }
+ .figure_transcript_left{
+   float:none;
+   margin:auto;
+ }
+}
 </style>
 <p>
   Every Russian knows Dmitry Kiselyov’s face. Many technocrats in Brussels and Washington do so as well. In May 2014, the European Union included Kiselyov on their sanctions list published after the death of 298 people on board a Malaysia Airlines plane destroyed over eastern Ukraine. In 2013, Putin appointed the balding energetic man as the head of <i>Rossiya Segodnya</i>, Russia’s biggest international news agency and an important government mouthpiece.
@@ -48,6 +108,19 @@
 <p>
   Dmitry Kiselyov’s biography is in many ways symbolic and representative for post-Soviet history. In the 1990s, the then soft-spoken graduate in Scandinavian studies was, both in his journalism and his tastes, an exemplary European. He not only embraced everything Western, but promoted it and brought it to the country via ‘Window to Europe’, a TV programme aired on Russia’s first channel. He even took an English wife, a woman from Cambridge. They were married for six years.
 </p>
+<!-- <figure class="figure_transcript_middle">
+  <a class="fancybox_transcript" href="/static/Images/tr_image_russia_west.png" title="">
+  <img src="/static/Images/tr_image_russia_west.png" class="tr_image_middle" alt="">
+</a>
+  <figcaption></figcaption>
+</figure> -->
+<figure class="figure_transcript_left" style="text-align:center;">
+  <a class="fancybox_transcript" href="/static/Images/tr_image_russia_west.png" title="">
+  <img src="/static/Images/tr_image_russia_west.png" class="tr_image_left" alt="">
+</a>
+  <figcaption></figcaption>
+</figure>
+
 <p>
   Kiselyov’s rapid absorption of Western norms in the 1990s was followed by a fierce rejection of them. This was not only caused by the unpleasant personal experiences he  had with Westerners, starting with his failed marriage, but also by the humiliation Dmitry felt in relation to the West. His negative emotions for the West came in very handy when the Kremlin needed someone to forcefully beat their drums. Dmitry was more than up for the job. Russia’s ‘chief propagandist’, as <i>The Economist</i> called him, has become notorious for his ferocious anti-Western attitudes and homophobic statements, the latter including the demand that gays should be barred from donating sperm or blood and their hearts should be buried or burned rather than used for organ donation. On the day of the Crimea referendum in March 2014, he reminded the world that Russia is the only country in the world capable of ‘turning the USA into radioactive dust’.
 </p>
@@ -72,12 +145,5 @@
 <p>
   Hence, Western education, lifestyle and permanent residence don’t necessarily have a great influence on this view; on the contrary, they can rather cement it. The Western schooling Russians are presented with as gospel truth couldn’t deviate more from what they have heard from relatives, seen on Russian television and read in Russian textbooks. Patriotism — and with it nostalgia for Russia’s lost status as a superpower — is such a strong component of national identity that Western takes on history aren’t perceived as pluralistic views, but as a sharp knife stabbed into Russia’s heart. Those full of pride in their culture and history (and this is to some extent almost every Russian) will necessarily defiantly reject an unsubtle Western understanding of their country and society. Westerners should be more aware of this, if we are to better understand and get along with Russia.
 </p>
-
-<!-- <figure class="figure_transcript_left" style="text-align:center;">
-  <a class="fancybox_transcript" href="/static/Images/.jpg" title="">
-  <img src="/static/Images/.jpg" class="tr_image_left" alt="">
-</a>
-  <figcaption></figcaption>
-</figure> -->
 
 </html>
