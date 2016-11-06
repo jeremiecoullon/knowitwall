@@ -107,7 +107,7 @@ def static_from_root():
 
 # complete list of audiodocs
 # 'russia_west.json',
-all_audiodocs = ['russia_west.json','string_theory.json','quantum_life.json','flying_spying.json','spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
+all_audiodocs = ['russia_west.json','russia_west.json','string_theory.json','quantum_life.json','flying_spying.json','spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
 
 # input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
 def ad_fun(audiodoc_list):
