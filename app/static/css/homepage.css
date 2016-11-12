@@ -368,11 +368,6 @@ browser for some reason.. */
 
   }
 }
-@media(min-width:900px){
-  #all_episodes{
-    /*margin-right: 27px;*/
-  }
-}
 
 .label_wrapper{
   position: absolute;
