@@ -150,6 +150,11 @@ label {
 .navbar .navbar-nav {
     letter-spacing: 1px;
 }
+@media(max-width:767px){
+  .nav > li.navbar_hamburger{
+    display: none;
+  }
+}
 
 .navbar .navbar-nav li a:focus {
     outline: 0;

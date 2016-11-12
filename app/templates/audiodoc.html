@@ -245,16 +245,16 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           {% if audiodocs[0].video_embed %}
-          <li class="page-scroll">
+          <li class="page-scroll navbar_hamburger">
             <a href="#header_video_hidden_div">Watch</a>
           </li>
           {% endif %}
           {% if audiodocs[0].audio_mp3 %}
-          <li class="page-scroll">
+          <li class="page-scroll navbar_hamburger">
             <a href="#episodes">Listen</a>
           </li>
 
-          <li class="page-scroll-offset" style="">
+          <li class="page-scroll-offset navbar_hamburger">
             <a href="#read">Read</a>
           </li>
           {% endif %}
@@ -264,8 +264,8 @@
             <!-- <a href="/all_episodes">All Episodes</a> -->
             <a href="/all_episodes" id="all_episodes">All Episodes</a>
           </li>
-          <li>
-            <a href="https://twitter.com/KnowitWall" target="_blank" class=""><i class="fa fa-fw fa-twitter"></i></a>
+          <li class="navbar_hamburger">
+            <a href="https://www.facebook.com/KnowitWall/" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
           </li>
 
         </ul>
