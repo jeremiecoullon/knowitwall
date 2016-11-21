@@ -346,7 +346,7 @@
         </p>
       </div>
     </div>
-    <div class="container previous-audiodoc">
+    <div class="container previous-audiodoc {% if not audiodocs[0].audio_mp3 %}text-only-previous-audiodoc{%endif%}">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center {% if not audiodocs[0].audio_mp3 %}text-only-abstract{%endif%}">
           <p class="audiodoc_abstact">{% if not audiodocs[0].audio_mp3 %}<i>{% endif %}{{audiodocs[0].topic_description | safe}}{% if not audiodocs[0].audio_mp3 %}</i>{% endif %}</p>
@@ -393,7 +393,7 @@
         </div>
       </div>
     </div>
-    
+
       <div class="container">
       <div class="row">
         <div class="col-md-12" id="read">

@@ -33,6 +33,10 @@ whole bit better (so that a single css attribute gives the grey box its colour) 
   background-color: #F9F9F9;    /* #F8F8F8 */
   padding-top: 30px;
   border-radius: 15px;
+  padding-bottom: 17px;
+}
+.text-only-previous-audiodoc{
+  padding-bottom: 25px
 }
 
 
