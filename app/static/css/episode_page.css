@@ -17,6 +17,9 @@ text-align: left;
     width: 70%;
     margin-left:60px;
   }
+  .previous-audiodoc{
+    width: 1100px;
+  }
 }
 @media only screen and (max-width:991px) {
   .author-image {
@@ -27,14 +30,17 @@ text-align: left;
 /* TODO: This is the bit with with the abstract. I need to rename it and structure that
 whole bit better (so that a single css attribute gives the grey box its colour) */
 .previous-audiodoc{
-  background-color: #F0F0F0;    /* #F8F8F8 */
+  background-color: #F9F9F9;    /* #F8F8F8 */
   padding-top: 30px;
+  border-radius: 15px;
 }
 
 
 .transcript{
-padding: 40px;
-text-align: justify;
+  padding: 40px;
+  text-align: justify;
+  width: 1000px;
+  margin: auto;
 }
 .transcript p {
   line-height: 170%;
