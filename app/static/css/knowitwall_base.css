@@ -344,3 +344,9 @@ footer .footer-below {
   padding-left: 1em;
   }
 }
+a.footer-unclickeable{
+  color: white;
+}
+a.footer-clickeable{
+  color: white;
+}
