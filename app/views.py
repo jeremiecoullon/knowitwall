@@ -174,7 +174,7 @@ def audiodoc(url):
     audiodoc_list = [url+'.json']  # list only has the selected audiodoc
     audiodocs = ad_fun(audiodoc_list)
 
-    return render_template('episode_page.html', audiodocs=audiodocs)
+    return render_template('audiodoc.html', audiodocs=audiodocs)
 
 
 "----------------------------------------------------------------------------------------------------"
