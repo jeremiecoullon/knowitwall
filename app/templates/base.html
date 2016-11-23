@@ -52,14 +52,14 @@
   <div class="footer-below">
     <div class="container">
       <div class="row footer-info">
-        <div class="col-lg-4">
+        <div class="col-lg-4 footer-unclickeable">
           Copyright &copy; Know it Wall <span id="copyright_year"></span>
         </div>
         <div class="col-lg-4">
-          <a href="mailto:team@knowitwall.com">team@knowitwall.com</a> 
+          <a class="footer-clickeable" href="mailto:team@knowitwall.com">team@knowitwall.com</a>
         </div>
         <div class="col-lg-4">
-          <a href="{{url_for('terms')}}" target='_blank' class="footer-info">Terms of Use</a>
+          <a class="footer-clickeable" href="{{url_for('terms')}}" target='_blank' class="footer-info">Terms of Use</a>
         </div>
       </div>
     </div>
