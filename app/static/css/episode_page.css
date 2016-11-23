@@ -43,25 +43,35 @@ whole bit better (so that a single css attribute gives the grey box its colour) 
 .transcript{
   padding: 40px;
   text-align: justify;
-  width: 1000px;
   margin: auto;
 }
 .transcript p {
   line-height: 170%;
   }
 
+@media(min-width:1200px){
+  .transcript{
+    width: 1000px;
+  }
+}
 @media(max-width:991px) {
   .transcript{
-  padding: 4px;
+    padding: 10px 35px;
   }
   .transcript p {
     line-height: 140%;
     font-size: 1.2em;
     }
 }
+@media(max-width:768px){
+  .transcript{
+    padding: 10px 60px;
+  }
+}
 @media(max-width:599px){
   .transcript{
     text-align: left;
+    padding: 4px
   }
 }
 /* this is added to the audiodoc page navbar to position the links properly */
