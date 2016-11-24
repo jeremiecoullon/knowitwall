@@ -34,8 +34,12 @@
     background-repeat: no-repeat
 }
 
+/* annotation default colour: light orange */
 .annotator-hl {
-    background: #FFC21C
+  background: rgba(255, 194, 28, 0.3)
+}
+.annotator-hl:hover{
+  background: rgba(255, 194, 28, 0.8)
 }
 
 .annotator-hl-temporary {
@@ -147,7 +151,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    border-left: 4px solid #ffc21c;
+    /*border-left: 4px solid #ffc21c;*/
 }
 
 .annotator-widget::after {
@@ -242,6 +246,8 @@
    opacity: 1;
    width: 100%;
    height: 100%;
+   padding-left: 20px;
+   padding-right: 20px;
  }
  .annotator-viewer .knowit_title{
    font-size: 19px;

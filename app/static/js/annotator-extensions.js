@@ -4,8 +4,8 @@ $(window.vent).on('showViewerCompleted', function() {
     // 1. parses message as html
     var text = $('.annotator-annotation div').text();
 
-    var knowit_title = "<img src='/static/Images/know-it.png' class='knowit_img'>"
-    $('.annotator-annotation div').html(knowit_title+text);
+    // var knowit_title = "<img src='/static/Images/know-it.png' class='knowit_img'>"
+    $('.annotator-annotation div').html(text);
     // -----------------------
 
     // 2. Find and replace text URLs into hyperlinks.

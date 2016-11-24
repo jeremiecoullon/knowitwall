@@ -201,7 +201,7 @@ def audiodoc_annotations(url):
     else:
         read_only = 'true'
 
-    return render_template('audiodoc_annotations.html', audiodocs=audiodocs, read_only=read_only)
+    return render_template('episode_page_annotations.html', audiodocs=audiodocs, read_only=read_only)
 
 
 "----------------------------------------------------------------------------------------------------"
