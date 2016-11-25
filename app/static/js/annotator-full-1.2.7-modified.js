@@ -306,27 +306,37 @@
         left: '8px'
       };
     }
+    return {
+      top: e.pageY - offset.top + 80,
+      left: '12%',
+    };
     // mobile =< 768 --> left: 8px
     // 768 < small screens < 1440 --> left: 12%
     // 1440 <= medium screens < 1700 --> right: 544px
     // big screens >= 1700 --> right: 644px
-    else if ($(document).width() >= 769 && $(document).width() < 1440) {
-      return {
-        top: e.pageY - offset.top + 80,
-        left: '12%',
-      };
-    }
-    else if ($(document).width() >= 1440 && $(document).width() < 1700) {
-      return {
-        top: e.pageY - offset.top,
-        right: '544px',
-      };
-    }
+
+  // ------------------------------
+    // else if ($(document).width() >= 769 && $(document).width() < 1440) {
+    //   return {
+    //     top: e.pageY - offset.top + 80,
+    //     left: '12%',
+    //   };
+    // }
+  // ------------------------------
+    // else if ($(document).width() >= 1440 && $(document).width() < 1700) {
+    //   return {
+    //     top: e.pageY - offset.top,
+    //     right: '544px',
+    //   };
+    // }
+  // ------------------------------
   // final case: if width >= 1700
-    return {
-      top: e.pageY - offset.top,
-      right: '644px',
-    };
+    // return {
+    //   top: e.pageY - offset.top,
+    //   right: '644px',
+    // };
+  // ------------------------------
+
   };
   Util.preventEventDefault = function(event) {
     return event != null ? typeof event.preventDefault === "function" ? event.preventDefault() : void 0 : void 0;
