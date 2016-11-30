@@ -10,13 +10,14 @@
 #about-left {
   text-align:right;
   font-size:1.5em;
-  margin-top:50px;
+  margin-top:78px;
   margin-bottom:50px;
   padding-right:40px;
 }
  @media(max-width:768px) {
   #about-left {
    font-size: 1em;
+   margin-top: 20px;
   }
 }
 
@@ -164,7 +165,8 @@ browser for some reason.. */
   margin-left: 12px;
   margin-right: 12px;
   /* to make the 'About' description vertically centered */
-  padding-bottom: 74px;
+  padding-bottom: 49px;
+  padding-top: 45px;
 }
 .about_description{
   font-size: 11px;
