@@ -308,7 +308,8 @@
     }
     return {
       top: e.pageY - offset.top + 80,
-      left: '12%',
+      // left: '12%',
+      left: e.pageX - offset.left
     };
     // mobile =< 768 --> left: 8px
     // 768 < small screens < 1440 --> left: 12%
