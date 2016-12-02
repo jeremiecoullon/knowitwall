@@ -1,6 +1,9 @@
 /* Base CSS for Knowitwall */
 
-
+/* Logo fill colours in footer. Should be white for all pages except the homepage */
+.footer_logo_fill{
+  fill:#27282D;
+}
 
 /* BASIC STUFF (from the default bootstrap theme) */
 body {

@@ -1,11 +1,15 @@
-/* new CSS for the homepage */
+/* CSS for the homepage */
+
+/* on homepage, footer logos are white */
+.footer_logo_fill{
+  fill: white;
+}
 
 /* feedback form title not in caps lock*/
 .feedbackform {
   text-transform: none;
   font-size: 220%;
 }
-
 /* 'About' section */
 #about-left {
   text-align:right;
