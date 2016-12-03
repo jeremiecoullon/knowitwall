@@ -3,7 +3,12 @@
 /* Logo fill colours in footer. Should be white for all pages except the homepage */
 .footer_logo_fill{
   fill:#27282D;
+  /*fill: white;*/
 }
+#UCLe_logo:hover > .footer_logo_fill{
+  fill: white
+}
+
 
 /* BASIC STUFF (from the default bootstrap theme) */
 body {
