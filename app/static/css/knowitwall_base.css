@@ -5,11 +5,14 @@
   fill:#27282D;
   /*fill: white;*/
 }
-#UCLe_logo:hover > .footer_logo_fill{
+/*.footer_logo_fill > .footer_logo_fill{
   fill: white
+}*/
+@media(max-width:561px){
+  .footer_follow_us{
+    margin-bottom: 8px;
+  }
 }
-
-
 /* BASIC STUFF (from the default bootstrap theme) */
 body {
   overflow-x: hidden;
