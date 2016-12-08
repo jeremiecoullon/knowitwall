@@ -1,5 +1,7 @@
 /* Base CSS for Knowitwall */
-
+.sponsors-row{
+  padding-top: 20px;
+}
 /* Logo fill colours in footer. Should be white for all pages except the homepage */
 .footer_logo_fill{
   fill:#27282D;
