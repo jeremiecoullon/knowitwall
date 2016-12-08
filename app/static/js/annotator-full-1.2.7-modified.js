@@ -296,9 +296,8 @@
     };
   };
   // KiW modif: this sets the position of the annotation only for screen size > 769px, fix annotation on the right
-  // different cases for different screen sizes
   Util.annotationPosition = function(e, offsetEl) {
-    var offset;
+    var offset, offset_knowit;
     offset = $(offsetEl).position();
     if ($(document).width() < 769) {
       return {
@@ -306,37 +305,21 @@
         left: '8px'
       };
     }
+    if (e.pageX < $(document).width()/2) {
+      offset_knowit = 200
+    }
+    else {
+      offset_knowit = 250
+    }
+    // debugging:
+    // console.log("window width is:" + $(document).width());
+    // console.log("offset left is: "+e.pageX);
+    // console.log("offset_knowit: " + offset_knowit );
     return {
       top: e.pageY - offset.top + 80,
-      left: '12%',
+      // left: '12%',
+      left: e.pageX - offset_knowit//- offset.left
     };
-    // mobile =< 768 --> left: 8px
-    // 768 < small screens < 1440 --> left: 12%
-    // 1440 <= medium screens < 1700 --> right: 544px
-    // big screens >= 1700 --> right: 644px
-
-  // ------------------------------
-    // else if ($(document).width() >= 769 && $(document).width() < 1440) {
-    //   return {
-    //     top: e.pageY - offset.top + 80,
-    //     left: '12%',
-    //   };
-    // }
-  // ------------------------------
-    // else if ($(document).width() >= 1440 && $(document).width() < 1700) {
-    //   return {
-    //     top: e.pageY - offset.top,
-    //     right: '544px',
-    //   };
-    // }
-  // ------------------------------
-  // final case: if width >= 1700
-    // return {
-    //   top: e.pageY - offset.top,
-    //   right: '644px',
-    // };
-  // ------------------------------
-
   };
   Util.preventEventDefault = function(event) {
     return event != null ? typeof event.preventDefault === "function" ? event.preventDefault() : void 0 : void 0;
@@ -3104,7 +3087,7 @@
         tokenUrl: config.tokenUrl || 'http://annotateit.org/api/token'
       },
       Store: {
-        prefix: config.storeUrl || 'http://annotateit.org/api',
+        prefix: config.storeUrl || 'http://localhost:8080/', //http://annotateit.org/api',
         annotationData: {
           uri: uri
         },
