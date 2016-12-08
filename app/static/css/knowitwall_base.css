@@ -3,11 +3,13 @@
 /* Logo fill colours in footer. Should be white for all pages except the homepage */
 .footer_logo_fill{
   fill:#27282D;
-  /*fill: white;*/
 }
-/*.footer_logo_fill > .footer_logo_fill{
-  fill: white
-}*/
+#Jisc_logo:hover .footer_logo_fill{
+  fill:white;
+}
+#UCLe_logo:hover .footer_logo_fill{
+  fill:white;
+}
 @media(max-width:561px){
   .footer_follow_us{
     margin-bottom: 8px;
