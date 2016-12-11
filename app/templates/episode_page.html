@@ -278,11 +278,21 @@
   <div id="header_video_hidden_div" style="display:hidden">
     fds
   </div>
+
+  <!-- You can assign a modified image for the episode page header
+      which will be different from the image in the archive page -->
+  {% if audiodocs[0].topic_image_header %}
+    {% set topic_image = audiodocs[0].topic_image_header %}
+  {% else %}
+    {% set topic_image = audiodocs[0].topic_image %}
+  {% endif %}
+
+
   <!-- If the episode has a video -->
   {% if audiodocs[0].video_embed %}
 
 
-  <header id="header_no_player" style="background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)), url('{{ audiodocs[0].topic_image }}'); background-repeat: no-repeat; background-size:cover;">
+  <header id="header_no_player" style="background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)), url('{{ topic_image }}'); background-repeat: no-repeat; background-size:cover;">
       <div class="container container_video" style="">
         <div class="row">
 
@@ -315,7 +325,7 @@
 
   <!-- else if there's no video -->
   {% else %}
-  <header style="background: url('{{ audiodocs[0].topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;background-attachment:fixed">
+  <header style="background: url('{{ topic_image }}') fixed; background-repeat: no-repeat; background-size:cover;background-attachment:fixed">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 text-center">
