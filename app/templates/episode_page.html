@@ -389,7 +389,7 @@
               <img class="author-image"class="img-responsive" src="{{audiodocs[0].author_image}}"  alt = "{{audiodocs[0].author_name | safe}}">
             </div>
             <div class="col-md-3">
-              <div class="author-name {% if not audiodocs[0].audio_mp3 %}text-only-author-name{%endif%}">
+              <div class="author-name {% if not audiodocs[0].audio_mp3 %}text-only-author-name{%endif%}" >
               <h2 style="text-align:right; font-size: {{ audiodocs[0].name_font_size }};"> {{ audiodocs[0].author_name | safe}} </h2>
               </div>
             </div>

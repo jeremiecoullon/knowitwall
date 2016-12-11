@@ -1,11 +1,18 @@
 /* new CSS for episode page */
 
-
-@media(max-width:991px) {
+/* for authors with long names: they're now always right-aligned */
 .author-name{
-padding:60px 0 20px 0;
-text-align: left;
+  width: 110%;
+  position:relative;
+  right: 20px;
 }
+@media(max-width:991px) {
+  .author-name{
+  padding:60px 0 20px 0;
+  text-align: left;
+  right: 0px;
+  width: 100%
+  }
 }
 .author-image {
   margin-left: auto;
