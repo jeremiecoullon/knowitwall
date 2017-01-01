@@ -14,6 +14,7 @@
     "author_image": "/static/Images/author_Elisabeth_Schimpfossl.jpg",
     "author_bio": "app/static/texts/russia_west_author_bio.html",
     "music_credits": "",
-    "narration_credits": "",
-    "transcript": "app/static/texts/russia_west_transcript.html"
+    "narration_credits": "Charlotte Holtum",
+    "transcript": "app/static/texts/russia_west_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/russia_west.mp3"
 }
