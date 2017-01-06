@@ -10,8 +10,9 @@ from flask import render_template, request, send_from_directory, Response
 from flask.ext.login import login_user, logout_user, current_user, login_required, AnonymousUserMixin
 from app import app, db, lm, oid
 from .forms import LoginForm
-from .models import User
+from .models import User, Episode
 from oauth import OAuthSignIn
+import time
 
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
@@ -105,46 +106,17 @@ def static_from_root():
 
 
 "----------------------------------------------------------------------------------------------------"
-"audiodoc function "
-
-# complete list of audiodocs
-all_audiodocs = ['earth_habitable.json','modify_genome.json','russia_west.json','string_theory.json','quantum_life.json','flying_spying.json','spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json', 'migrant_crisis.json', 'blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json', 'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json', 'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json']
-
-# input list of json files, outputs list of dictionaries of variables paths & unicode to pass to templates
-def ad_fun(audiodoc_list):
-    """
-    Extract all information about the episodes from a list of json files and outputs
-    a list of dictionaries
-
-    Parameters
-    ---------
-    audiodoc_list : list
-        List of json files. All json files has the information for an episodes
-        (topic_image, transcript, author_bio, etc)
-
-    Returns
-    -------
-    audiodoc : list
-        List of dictionaries. Each dictionary has all the attributes necessary for each episode
-        (topic image, transcript, author_bio, etc). The transcript and author_bio are decoded
-        (as they have html tags)
-    """
-    audiodocs =[]
-    for audiodoc_json in audiodoc_list:
-
-        with open('app/static/json_files/' + audiodoc_json, "r") as json_file:
-            ad_dictionary = json.load(json_file)
-
-        with open(ad_dictionary.get('author_bio', 'no author bio found'), "r") as f:
-            author_bio = f.read().decode('utf-8')
-        ad_dictionary['author_bio'] = author_bio
-
-        with open(ad_dictionary.get('transcript', 'no transcript found'), "r") as f:
-            transcript = f.read().decode('utf-8')
-        ad_dictionary['transcript'] = transcript
-
-        audiodocs.append(ad_dictionary.copy())
-    return audiodocs
+"""
+To create a new audio-doc, create a new json file with the links to images,audio etc..
+Then add it to the audiodoc_list
+"""
+all_audiodocs = [
+    'earth_habitable.json','modify_genome.json','russia_west.json','string_theory.json','quantum_life.json',
+    'flying_spying.json','spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json',
+    'migrant_crisis.json', 'blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json',
+    'neural_cartography.json', 'saharan_dust.json', 'viral_pandemics.json', 'memory_bike.json',
+    'antartica_discovery.json', 'stegosaurus.json', 'ganymede.json', 'tate.json'
+    ]
 
 "VIEWS"
 "----------------------------------------------------------------------------------------------------"
@@ -152,15 +124,7 @@ def ad_fun(audiodoc_list):
 
 @app.route('/')
 def index():
-
-    """
-    To change audio-doc, simply create a new json file with the links to images,audio etc..
-    Then add it to the audiodoc_list
-    """
-    audiodoc_list = all_audiodocs
-
-    audiodocs = ad_fun(audiodoc_list)
-
+    audiodocs = [Episode(ad) for ad in all_audiodocs[:9]]
     return render_template('knowitwall.html', audiodocs=audiodocs)
 
 
@@ -170,11 +134,7 @@ def index():
 @app.route('/episodes/<url>')
 @app.route('/audiodoc/<url>')
 def audiodoc(url):
-
-    # put all audiodoc information in the variable audiodoc
-    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-    audiodocs = ad_fun(audiodoc_list)
-
+    audiodocs = [Episode(url+'.json')]
     return render_template('episode_page.html', audiodocs=audiodocs)
 
 
@@ -183,10 +143,8 @@ def audiodoc(url):
 
 @app.route('/audiodoc_annotations/<url>')
 def audiodoc_annotations(url):
-
     # put all audiodoc information in the variable audiodoc
-    audiodoc_list = [url+'.json']  # list only has the selected audiodoc
-    audiodocs = ad_fun(audiodoc_list)
+    audiodocs = [Episode(url+'.json')]
 
     # read_only permission
     # set user_nickname variable
@@ -210,10 +168,9 @@ def audiodoc_annotations(url):
 
 @app.route('/all_episodes')
 def archive():
-
-    audiodocs = ad_fun(all_audiodocs)
+    audiodocs = [Episode(ad) for ad in all_audiodocs]
     # sort the episodes alphabetically by title
-    audiodocs_alphabetical = sorted(audiodocs, key=lambda k: k['topic_name'])
+    audiodocs_alphabetical = sorted(audiodocs, key=lambda k: k.topic_name)
 
     return render_template('archive_page.html', audiodocs = audiodocs_alphabetical)
 
