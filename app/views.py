@@ -217,7 +217,7 @@ def contactform():
     # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
     le_username = 'emailtoknowitwall'
     le_password = 'Ilovepasswords'
-    yagmail.Connect(le_username, le_password).send([jeremie], subject, body)
+    yagmail.Connect(le_username, le_password).send([jeremie,miguel,angus,KIW], subject, body)
     return name
 
 
