@@ -1,0 +1,19 @@
+{
+    "url": "emotional_expression",
+    "unique_id": "Eva_Krumhuber_emotional_expression",
+    "topic_name": "What can facial movement tell us about emotional expression?",
+    "topic_image": "/static/Images/TI_emotional_expression.jpg",
+    "topic_image_latest": "/static/Images/TI_emotional_expression.jpg",
+    "topic_image_box": "/static/Images/TI_emotional_expression.jpg",
+    "image_credits": "Photographs from <i>Mécanisme de la physionomie humaine</i>, a 19th-century work on facial expressions by French neurologist Duchenne de Boulogne",
+    "by_in_colour":"white",
+    "discipline": "Psychology",
+    "category": "Sciences",
+    "topic_description": "One of the most complex and finely-tuned aspects of communicating emotion in humans are facial expressions. Social psychologist Eva Krumhuber fills us in on the latest research and takes us from the Oscars to the quest to create ever more realistic robots.",
+    "author_name": "Eva Krumhuber",
+    "author_image": "/static/Images/author_Eva_Krumhuber.jpg",
+    "author_bio": "app/static/texts/emotional_expression_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "app/static/texts/emotional_expression_transcript.html"
+}

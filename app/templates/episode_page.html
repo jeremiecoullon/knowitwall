@@ -478,6 +478,25 @@
       });
   });
 
+  $(".fancybox_videos").fancybox({
+  maxWidth	: 800,
+  maxHeight	: 600,
+  fitToView	: false,
+  width		: '70%',
+  height		: '70%',
+  autoSize	: false,
+  closeClick	: false,
+  openEffect	: 'none',
+  closeEffect	: 'none',
+  helpers: {
+    overlay: {
+      css : {
+          'background' : 'rgba(119, 119, 119, 0.95)'
+      }
+    }
+  }
+});
+
   </script>
   <!-- To view the video player on click -->
   <script type="text/javascript">
