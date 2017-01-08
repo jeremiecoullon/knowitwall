@@ -21,5 +21,5 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
 # mail stuff
-le_username = os.environ.get('KiW_MAIL_USERNAME', '')
-le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
+KiW_MAIL_USERNAME = os.environ.get('KiW_MAIL_USERNAME', '')
+KiW_MAIL_PASSWORD = os.environ.get('KiW_MAIL_PASSWORD', '')
