@@ -13,6 +13,7 @@ from .forms import LoginForm
 from .models import User, Episode
 from oauth import OAuthSignIn
 import time
+from config import le_username, le_password
 
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
@@ -209,10 +210,10 @@ def contactform():
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
     body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
-    le_username = os.environ.get('KiW_MAIL_USERNAME', '')
-    le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
-    # KiW_MAIL_USERNAME = 'emailtoknowitwall'
-    # KiW_MAIL_PASSWORD = 'Ilovepasswords'
+    # le_username = os.environ.get('KiW_MAIL_USERNAME', '')
+    # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
+    # le_username = 'emailtoknowitwall'
+    # le_password = 'Ilovepasswords'
     yagmail.Connect(le_username, le_password).send([jeremie], subject, body)
     return name
 
