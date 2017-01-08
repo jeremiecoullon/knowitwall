@@ -209,7 +209,7 @@ def contactform():
     KIW = 'team@knowitwall.com'
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
-    body = 'KiW_MAIL_USERNAME: {}, KiW_MAIL_PASSWORD: {}'.format(KiW_MAIL_USERNAME,KiW_MAIL_PASSWORD)
+    body = 'KiW_MAIL_USERNAME: {}, KiW_MAIL_PASSWORD: {}. test: jeremie: {}'.format(KiW_MAIL_USERNAME,KiW_MAIL_PASSWORD, jeremie)
     # body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     # le_username = os.environ.get('KiW_MAIL_USERNAME', '')
     # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
