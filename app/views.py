@@ -211,8 +211,8 @@ def contactform():
     subject = 'Knowitwall contact form, message by: '+str(name)
     username_test = os.environ.get('KiW_MAIL_USERNAME', '')
     password_test = os.environ.get('KiW_MAIL_PASSWORD', '')
-    body = 'KiW_MAIL_USERNAME: {0}\n KiW_MAIL_PASSWORD: {1}\n TEST: jeremie: {2}.\n username_os:{3}.\n password_os:{4}'.format(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD, jeremie, username_test, password_test)
-    # body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
+    # body = 'KiW_MAIL_USERNAME: {0}\n KiW_MAIL_PASSWORD: {1}\n TEST: jeremie: {2}.\n username_os:{3}.\n password_os:{4}'.format(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD, jeremie, username_test, password_test)
+    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     # le_username = os.environ.get('KiW_MAIL_USERNAME', '')
     # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
     le_username = 'emailtoknowitwall'
