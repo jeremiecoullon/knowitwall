@@ -209,7 +209,9 @@ def contactform():
     angus = 'anguswaite@gmail.com'
     subject = 'Knowitwall contact form, message by: '+str(name)
     body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
-    yagmail.Connect('emailtoknowitwall', 'Ilovepasswords').send([jeremie, miguel, KIW, angus], subject, body)
+    KiW_MAIL_USERNAME = os.environ.get(KiW_MAIL_USERNAME)
+    KiW_MAIL_PASSWORD = os.environ.get(KiW_MAIL_PASSWORD)
+    yagmail.Connect(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD).send([jeremie], subject, body)
     return name
 
 
