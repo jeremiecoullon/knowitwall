@@ -176,6 +176,10 @@ def archive():
 
     return render_template('archive_page.html', audiodocs = audiodocs_alphabetical)
 
+@app.route('/bige')
+def le_bige_fun():
+    le_string = "KiW_MAIL_USERNAME: {}".format(KiW_MAIL_USERNAME)
+    return le_string
 "----------------------------------------------------------------------------------------------------"
 " terms and conditions "
 
