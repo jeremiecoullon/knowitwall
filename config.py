@@ -25,7 +25,7 @@ SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 # KiW_MAIL_USERNAME = os.environ.get('KiW_MAIL_USERNAME', '')
 # KiW_MAIL_PASSWORD = os.environ.get('KiW_MAIL_PASSWORD', '')
 
-# HACK, as os.environ.get isn't reading the environment variables for some reason
+# HACK: as os.environ.get isn't reading the environment variables for some reason
 with open('../email_stuff.txt','r') as f:
     email_stuff = f.read().split('\n')
 KiW_MAIL_USERNAME = email_stuff[0]
