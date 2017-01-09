@@ -216,9 +216,8 @@ def contactform():
     body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
     # le_username = os.environ.get('KiW_MAIL_USERNAME', '')
     # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
-    le_username = 'emailtoknowitwall'
-    le_password = 'Ilovepasswords'
-    yagmail.Connect(le_username, le_password).send([jeremie,miguel,angus,KIW], subject, body)
+    # ,miguel,angus,KIW
+    yagmail.Connect(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD).send([jeremie], subject, body)
     return name
 
 
