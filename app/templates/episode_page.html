@@ -515,6 +515,36 @@
   });
   </script>
 
+  {% if audiodocs[0].url == 'emotional_expression' %}
+  <script type="text/javascript">
+  $(function() {
+    var width = $( window ).width();
+    if (width > 768){
+         $("#polanski_gif").hover(
+             function() {
+                 $(this).attr("src", "/static/Images/tr_image_emotional_expression_Scorsese_gif.gif");
+             },
+             function() {
+                 $(this).attr("src", "/static/Images/tr_image_emotional_expression_Scorsese_static.jpg");
+             }
+         );
+       }
+    else {
+      $('#polanski_gif').on({
+       'click': function() {
+            var src = ($(this).attr('src') === '/static/Images/tr_image_emotional_expression_Scorsese_gif.gif')
+               ? '/static/Images/tr_image_emotional_expression_Scorsese_static.jpg'
+               : '/static/Images/tr_image_emotional_expression_Scorsese_gif.gif';
+            $(this).attr('src', src);
+       }
+   });
+    }
+   });
+
+
+
+  </script>
+  {% endif %}
 
 </body>
 {% endblock %}
