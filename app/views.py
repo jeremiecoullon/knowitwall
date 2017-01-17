@@ -14,6 +14,7 @@ from .models import User, Episode
 from oauth import OAuthSignIn
 import time
 from config import KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD
+from .emails import user_feedback_email
 
 """----------------------------------------------------------------------------------------------------
 To change audio-doc:
@@ -190,34 +191,14 @@ def terms():
 
 @app.route('/contactform', methods=['POST'])
 def contactform():
-
     """
-    regular expression to remove html tag from ad_name, otherwise the sent message
-    is all on one line
+    Send email to KiW team containing the user feedback
     """
-    TAG_RE = re.compile(r'<[^>]+>')
-    def remove_tags(text):
-        return TAG_RE.sub('', text)
-
-
-    name =  request.form['name'];
-    email = request.form['email'];
+    user_name =  request.form['name'];
+    user_email = request.form['email'];
     feedback_overall = request.form['feedback_overall'];
-    ad_name_html = request.form['ad_name'];
-    ad_name = remove_tags(ad_name_html)
-    jeremie ='jeremie.coullon@gmail.com'
-    miguel = 'mfdsantos86@gmail.com'
-    KIW = 'team@knowitwall.com'
-    angus = 'anguswaite@gmail.com'
-    subject = 'Knowitwall contact form, message by: '+str(name)
-    username_test = os.environ.get('KiW_MAIL_USERNAME', '')
-    password_test = os.environ.get('KiW_MAIL_PASSWORD', '')
-    # body = 'KiW_MAIL_USERNAME: {0}\n KiW_MAIL_PASSWORD: {1}\n TEST: jeremie: {2}.\n username_os:{3}.\n password_os:{4}'.format(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD, jeremie, username_test, password_test)
-    body = "Le feedack! Here's their info: \n \n--------------------------------------------------------\naudiodoc name: \n"+ str(ad_name)+"\n\n \nname: " + str(name) + "\nemail: " + str(email) + "\n\n \n feedback: \n" + str(feedback_overall) + "\n\n \n--------------------------------------------------------"
-    # le_username = os.environ.get('KiW_MAIL_USERNAME', '')
-    # le_password = os.environ.get('KiW_MAIL_PASSWORD', '')
-    yagmail.Connect(KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD).send([jeremie,miguel,angus,KIW], subject, body)
-    return name
+    user_feedback_email(user_name=user_name, user_email=user_email, feedback_overall=feedback_overall)
+    return 'user feedback email sent'
 
 
 

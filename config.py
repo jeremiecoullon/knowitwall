@@ -20,13 +20,20 @@ OAUTH_CREDENTIALS = {
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
-# mail stuff
-# it doesn't work online though for some reason..
-# KiW_MAIL_USERNAME = os.environ.get('KiW_MAIL_USERNAME', '')
-# KiW_MAIL_PASSWORD = os.environ.get('KiW_MAIL_PASSWORD', '')
-
+# email server
+MAIL_SERVER = 'smtp.googlemail.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
 # HACK: as os.environ.get isn't reading the environment variables for some reason
 with open('../email_stuff.txt','r') as f:
     email_stuff = f.read().split('\n')
 KiW_MAIL_USERNAME = email_stuff[0]
 KiW_MAIL_PASSWORD = email_stuff[1]
+
+MAIL_USERNAME = email_stuff[0]
+MAIL_PASSWORD = email_stuff[1]
+# administrator list
+ADMINS = ['emailtoknowitwall@gmail.com']
+KIW_TEAM = ['jeremie.coullon@gmail.com']
+# KIW_TEAM = ['jeremie.coullon@gmail.com', 'mfdsantos86@gmail.com','anguswaite@gmail.com', 'team@knowitwall.com']
