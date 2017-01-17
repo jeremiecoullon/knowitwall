@@ -26,4 +26,3 @@ six==1.9.0
 sqlalchemy-migrate==0.9.7
 sqlparse==0.1.16
 wsgiref==0.1.2
-yagmail==0.3.1

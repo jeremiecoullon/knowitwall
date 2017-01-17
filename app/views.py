@@ -2,7 +2,6 @@
 import mimetypes
 import re
 import os
-import yagmail
 import datetime
 import jwt
 from flask import json, url_for, send_file, flash, redirect, session, g
