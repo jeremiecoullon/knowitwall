@@ -16,6 +16,8 @@ OAUTH_CREDENTIALS = {
         'secret': 'lUjEtyqRIb1d5Le0MruxQZGJIzj7eaLxN5jA8hc0rGNM6mgIyL'
     }}
 
+AWS_URL = "https://s3.eu-west-2.amazonaws.com/knowitwall"
+
 # SQLalchemy stuff
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')

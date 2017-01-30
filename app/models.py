@@ -2,6 +2,7 @@ from app import app, db
 from app import UserMixin
 from flask import json
 import os.path
+from config import AWS_URL
 
 class Episode(object):
     """
@@ -22,7 +23,13 @@ class Episode(object):
 
         for key, val in self.ad_dictionary.iteritems():
             if key not in ['transcript', 'author_bio']:
-                setattr(self, key, val)
+                if key in ['topic_image', 'topic_image_box', 'author_image','topic_image_latest']:
+                    setattr(self, key, AWS_URL+val)
+                elif key in ['audio_mp3']:
+                    audio_path = os.path.join(AWS_URL+'/static/audio', val.split('/')[-1])
+                    setattr(self, key, audio_path)
+                else:
+                    setattr(self, key, val)
 
     @property
     def transcript(self):
