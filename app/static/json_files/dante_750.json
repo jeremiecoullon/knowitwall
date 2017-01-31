@@ -13,9 +13,9 @@
     "topic_description": "As the legendary Italian poet Dante turns 750, what can he tell us about the human experience? Dante scholar John Took takes us through his timeless angst and joy ridden ponderings on love, despair and existence.",
     "author_name": "John Took",
     "author_image": "/static/Images/author_John_Took.jpg",
-    "author_bio": "app/static/texts/Dante_750_author_bio.txt",
+    "author_bio": "texts/Dante_750_author_bio.txt",
     "music_credits": "Advent Chamber Orchestra, Kai Engel, Tales, Spin Day, Ars Sonor & XXIXI, and Kevin MacLeod",
     "narration_credits": "John Took",
-    "transcript": "app/static/texts/Dante_750_transcript.html",
+    "transcript": "texts/Dante_750_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/Dante_750.mp3"
 }

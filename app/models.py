@@ -1,6 +1,6 @@
 from app import app, db
 from app import UserMixin
-from flask import json
+from flask import json, render_template
 import os.path
 from config import AWS_URL
 
@@ -33,15 +33,18 @@ class Episode(object):
 
     @property
     def transcript(self):
-        with open(self.ad_dictionary.get('transcript', 'no transcript found'), "r") as f:
-            transcript_data = f.read().decode('utf-8')
-        return transcript_data
+        return render_template(self.ad_dictionary.get('transcript', 'no transcript found'))
+        # return render_template('texts/real_shakespeare_transcript.html')
+        # with open(self.ad_dictionary.get('transcript', 'no transcript found'), "r") as f:
+        #     transcript_data = f.read().decode('utf-8')
+        # return transcript_data
 
     @property
     def author_bio(self):
-        with open(self.ad_dictionary.get('author_bio', 'no author bio found'), "r") as f:
-            author_bio_data = f.read().decode('utf-8')
-        return author_bio_data
+        return render_template(self.ad_dictionary.get('author_bio', 'no author bio found'))
+        # with open(self.ad_dictionary.get('author_bio', 'no author bio found'), "r") as f:
+        #     author_bio_data = f.read().decode('utf-8')
+        # return author_bio_data
 
 
 class User(UserMixin, db.Model):

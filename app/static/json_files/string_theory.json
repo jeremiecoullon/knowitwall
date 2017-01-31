@@ -12,9 +12,9 @@
     "topic_description": "Could there be a theory that describes all of the fundamental laws of nature, a Theory of Everything? Einstein thought so but he never managed to prove it. Mathematical physicist Yang-Hui He guides us through the quest to fulfil Einstein's dream.",
     "author_name": "Yang-Hui He",
     "author_image": "/static/Images/author_Yang-Hui_He.jpg",
-    "author_bio": "app/static/texts/string_theory_author_bio.html",
+    "author_bio": "texts/string_theory_author_bio.html",
     "music_credits": "Jon Luc Hefferman, Neil Cross, James Joshua Otto and Jason Donnelly",
     "narration_credits": "Vidish Athavale",
-    "transcript": "app/static/texts/string_theory_transcript.html",
+    "transcript": "texts/string_theory_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/string_theory.mp3"
 }

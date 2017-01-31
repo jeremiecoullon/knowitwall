@@ -14,9 +14,9 @@
     "topic_description": "Warfare has given rise to an invisible killer, one that was first discovered in World War I, attacking soldiers even after they had returned home to their families. Historian of science Emily Mayhew takes us through the story so far.",
     "author_name": "Emily Mayhew",
     "author_image": "/static/Images/author_Emily_Mayhew.jpg",
-    "author_bio": "app/static/texts/blast_injury_author_bio.html",
+    "author_bio": "texts/blast_injury_author_bio.html",
     "music_credits": "Kai Engel",
     "narration_credits": "Vidish Athavale",
-    "transcript": "app/static/texts/blast_injury_transcript.html",
+    "transcript": "texts/blast_injury_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/blast_injury.mp3"
 }

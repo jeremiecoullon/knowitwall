@@ -13,8 +13,8 @@
     "topic_description": "The Earth is over 4 billion years old, but land animals have only existed on our planet for the past 500 million years. Why didn't animal life on land emerge sooner? And why did it emerge at all? The Earth scientist Philip Pogge von Strandmann has the answers.",
     "author_name": "Philip Pogge von Strandmann",
     "author_image": "/static/Images/author_PPvStrandmann.jpg",
-    "author_bio": "app/static/texts/earth_habitable_author_bio.html",
+    "author_bio": "texts/earth_habitable_author_bio.html",
     "music_credits": "",
     "narration_credits": "",
-    "transcript": "app/static/texts/earth_habitable_transcript.html"
+    "transcript": "texts/earth_habitable_transcript.html"
 }

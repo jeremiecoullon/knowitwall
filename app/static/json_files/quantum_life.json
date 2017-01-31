@@ -12,9 +12,9 @@
     "topic_description": "The extraordinary complexity of life has puzzled scientists for a long time. But underneath the apparent randomness of life lies a deeply rooted order at the quantum scale. Geneticist Johnjoe McFadden takes us to the world where biology meets quantum mechanics.",
     "author_name": "Johnjoe McFadden",
     "author_image": "/static/Images/author_Johnjoe_McFadden.jpg",
-    "author_bio": "app/static/texts/quantum_life_author_bio.html",
+    "author_bio": "texts/quantum_life_author_bio.html",
     "music_credits": " Sergey Cheremisinov, Alasdair Cooper, Jon Luc Hefferman and James Joshua Otto",
     "narration_credits": "Vidish Athavale",
-    "transcript": "app/static/texts/quantum_life_transcript.html",
+    "transcript": "texts/quantum_life_transcript.html",
     "audio_mp3": "http://knowitwall.com/audio/quantum_life.mp3"
 }
