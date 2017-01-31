@@ -24,10 +24,10 @@ class Episode(object):
         for key, val in self.ad_dictionary.iteritems():
             if key not in ['transcript', 'author_bio']:
                 if key in ['topic_image', 'topic_image_box', 'author_image','topic_image_latest']:
-                    setattr(self, key, AWS_URL+val)
+                    setattr(self, key, os.path.join(AWS_URL, val))
                 elif key in ['audio_mp3']:
                     mp3_file = val.split('/')[-1]
-                    audio_path = os.path.join(AWS_URL+'/static/audio', mp3_file)
+                    audio_path = os.path.join(AWS_URL,'static/audio', mp3_file)
                     setattr(self, key, audio_path)
                 else:
                     setattr(self, key, val)
