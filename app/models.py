@@ -18,7 +18,7 @@ class Episode(object):
         Reads and parses the author_bio as html
     """
     def __init__(self, json_name):
-        with open(os.path.join(app.static_folder, 'json_files/', json_name), "r") as json_file:
+        with open(os.path.join('app/json_files/', json_name), "r") as json_file:
             self.ad_dictionary = json.load(json_file)
 
         for key, val in self.ad_dictionary.iteritems():
