@@ -13,9 +13,9 @@ class Episode(object):
     All attributes in json files containing episode info
 
     transcript :
-        Reads and parses the transcript as html
+        renders the transcript
     author_bio :
-        Reads and parses the author_bio as html
+        renders the author_bio
     """
     def __init__(self, json_name):
         with open(os.path.join('app/json_files/', json_name), "r") as json_file:
@@ -26,7 +26,8 @@ class Episode(object):
                 if key in ['topic_image', 'topic_image_box', 'author_image','topic_image_latest']:
                     setattr(self, key, AWS_URL+val)
                 elif key in ['audio_mp3']:
-                    audio_path = os.path.join(AWS_URL+'/static/audio', val.split('/')[-1])
+                    mp3_file = val.split('/')[-1]
+                    audio_path = os.path.join(AWS_URL+'/static/audio', mp3_file)
                     setattr(self, key, audio_path)
                 else:
                     setattr(self, key, val)
@@ -34,17 +35,10 @@ class Episode(object):
     @property
     def transcript(self):
         return render_template(self.ad_dictionary.get('transcript', 'no transcript found'))
-        # return render_template('texts/real_shakespeare_transcript.html')
-        # with open(self.ad_dictionary.get('transcript', 'no transcript found'), "r") as f:
-        #     transcript_data = f.read().decode('utf-8')
-        # return transcript_data
 
     @property
     def author_bio(self):
         return render_template(self.ad_dictionary.get('author_bio', 'no author bio found'))
-        # with open(self.ad_dictionary.get('author_bio', 'no author bio found'), "r") as f:
-        #     author_bio_data = f.read().decode('utf-8')
-        # return author_bio_data
 
 
 class User(UserMixin, db.Model):
