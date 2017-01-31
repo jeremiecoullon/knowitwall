@@ -29,7 +29,7 @@
 #contribute {
     color:#fff;
     background: linear-gradient( rgba(51, 53, 61, 0.74),rgba(51, 53, 61, 0.6) ),
-    bottom, url("/static/Images/contribute-bg.jpg");
+    bottom, url('https://s3.eu-west-2.amazonaws.com/knowitwall/static/Images/contribute-bg.jpg');
     background-size:cover;
 }
 
