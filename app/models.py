@@ -23,7 +23,7 @@ class Episode(object):
 
         for key, val in self.ad_dictionary.iteritems():
             if key not in ['transcript', 'author_bio']:
-                if key in ['topic_image', 'topic_image_box', 'author_image','topic_image_latest']:
+                if key in ['topic_image', 'topic_image_box', 'author_image','topic_image_latest','topic_image_header']:
                     setattr(self, key, AWS_URL+ val)
                 elif key in ['audio_mp3']:
                     mp3_file = os.path.split(val)[-1]

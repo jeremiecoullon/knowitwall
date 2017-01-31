@@ -24,10 +24,6 @@
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/css/circular_player.css" rel="stylesheet">
 
-  <!-- old stylesheets -->
-  <!-- <link href="/static/css/knowitwallredux.css" rel="stylesheet"> -->
-  <!-- <link href="/static/css/audiodoc_page.css" rel="stylesheet"> -->
-
   <!-- new stylesheets -->
   <link href="/static/css/knowitwall_base.css" rel="stylesheet">
   <link href="/static/css/episode_page.css" rel="stylesheet">
@@ -522,10 +518,10 @@
     if (width > 768){
          $("#polanski_gif").hover(
              function() {
-                 $(this).attr("src", "/static/Images/tr_image_emotional_expression_Scorsese_gif.gif");
+                 $(this).attr("src", "{{config.AWS_URL}}/static/Images/tr_image_emotional_expression_Scorsese_gif.gif");
              },
              function() {
-                 $(this).attr("src", "/static/Images/tr_image_emotional_expression_Scorsese_static.jpg");
+                 $(this).attr("src", "{{config.AWS_URL}}/static/Images/tr_image_emotional_expression_Scorsese_static.jpg");
              }
          );
          $('#emotional_expression_gif').html('hover');
@@ -533,9 +529,9 @@
     else {
       $('#polanski_gif').on({
        'click': function() {
-            var src = ($(this).attr('src') === '/static/Images/tr_image_emotional_expression_Scorsese_gif.gif')
-               ? '/static/Images/tr_image_emotional_expression_Scorsese_static.jpg'
-               : '/static/Images/tr_image_emotional_expression_Scorsese_gif.gif';
+            var src = ($(this).attr('src') === '{{config.AWS_URL}}/static/Images/tr_image_emotional_expression_Scorsese_gif.gif')
+               ? '{{config.AWS_URL}}/static/Images/tr_image_emotional_expression_Scorsese_static.jpg'
+               : '{{config.AWS_URL}}/static/Images/tr_image_emotional_expression_Scorsese_gif.gif';
             $(this).attr('src', src);
        }
    });
