@@ -16,9 +16,9 @@ To get Knowitwall running locally:
 
 Drop me an email at jeremie.coullon@gmail.com if you're interested in contributing. Most of the stuff to do (in the list below) have a design component which needs to be discussed before coding !
 
-# Development milestones
+# Development milestones
 
-## Content management stuff
+## Content management stuff
 
 - team & 'about' page: we need an entire page for this - design & code up
 - [all episodes](http://knowitwall.com/all_episodes): need a button that filters episodes by discipline (like on mobile). However the blocks need to re-arrange themselves to still be in the current pattern after the clicking on the filter. Having this happen client side might be the best solution (Ajax and [nunjucks](https://mozilla.github.io/nunjucks/) sounds good). 
