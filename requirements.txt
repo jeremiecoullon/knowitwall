@@ -17,7 +17,6 @@ decorator==4.0.2
 gunicorn==19.0.0
 itsdangerous==0.24
 keyring==5.3
-lxml==3.4.4
 pbr==1.6.0
 python-openid==2.2.5
 rauth==0.7.1

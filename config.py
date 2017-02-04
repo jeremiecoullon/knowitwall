@@ -37,4 +37,5 @@ MAIL_USERNAME = email_stuff[0]
 MAIL_PASSWORD = email_stuff[1]
 # administrator list
 ADMINS = ['emailtoknowitwall@gmail.com']
-KIW_TEAM = ['jeremie.coullon@gmail.com', 'mfdsantos86@gmail.com','anguswaite@gmail.com', 'team@knowitwall.com']
+KIW_TEAM = ['jeremie.coullon@gmail.com']
+# KIW_TEAM = ['jeremie.coullon@gmail.com', 'mfdsantos86@gmail.com','anguswaite@gmail.com', 'team@knowitwall.com']
