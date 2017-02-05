@@ -1,0 +1,135 @@
+<html>
+<style media="screen">
+
+  .fancybox-image{
+    border-radius: 4px;
+  }
+
+  .figure_transcript_middle{
+    text-align:center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom:0.8em;
+    margin-left: 16%;
+    margin-right:16%;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+  }
+  .tr_image_left{
+    height:400px;
+    margin-bottom:1em;
+    border-radius: 3px;
+  }
+  .tr_image_middle{
+    width:80%;
+    height:80%;
+    margin-bottom:9px;
+    border-radius: 8px;
+  }
+  @media only screen and (max-width:991px) {
+    .figure_transcript_middle{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .tr_image_left{
+      width: 90%;
+      height: auto;
+    }
+  }
+
+
+  .figure_transcript_left{
+    float: left;
+    margin: 1em 2em 1em 0;
+    background-color:#F9F9F9;
+    padding-top: 2em;
+    padding-right:2em;
+    padding-left:2em;
+    padding-bottom:1.5em;
+    text-align:center;
+    max-width: 400px;
+    border-radius: 5px;
+  }
+  .Betrothal_figcaption{
+    padding: 0px 52px;
+  }
+  @media(max-width:420px){
+    .figure_transcript_left{
+      margin-right: 0%;
+      margin-left: 0%;
+      padding-right:1em;
+      padding-left:1em;
+    }
+    .Betrothal_figcaption{
+      padding: 0px;
+    }
+  }
+ @media(max-width: 730px){
+   .after_image{
+     clear:both;
+   }
+   .figure_transcript_left{
+     float:none;
+     margin:auto;
+   }
+ }
+
+</style>
+
+<p>
+  We live in the age of electronic devices: smart phones, computers, tablets, smart watches, to name but a few. Year-after-year each of these devices come out with more, better, and faster functionalities. Not only do these devices get smarter, they also become easier to use. Even very young children can use tablets in a very intuitive way. Contrary to the 1980s, when the first PCs started to appear in our homes and a minimum understanding of computer programming was needed to do anything with them, we can now use electronic devices without ever thinking about how they truly work. These improvements to electronic devices are all due to the amazing levels of miniaturisation that electronic components have reached over the past decades.
+</p>
+
+<p>
+  But before any computer could be built, somebody had to find an answer to the question: How do we humans manage to communicate with a collection of electronic components wrapped in a nice plastic cover? Electronic devices require electricity to work (so yes, unfortunately we have to recharge our phones from time to time!), and no matter how complicated individual components of a device are, they can essentially be in one of two states: either an electric current is flowing through it — making it “on” — or it is not — making it “off”. Each of the components are essentially small switches that switch on and off as the device does what we are asking it to do. Scientists usually call these values 0 (for no current, or “off”) or 1 (for current, or “on”). In computer science, 0 and 1 are called bits, which stands for binary information unit, and are the building blocks of any information that is processed by any electronic device. So, whenever we write an e-mail or browse, our actions get translated into a sequence of 0s and 1s, which the device then interprets and acts upon.
+</p>
+
+<!-- <figure class="figure_transcript_middle">
+  <a class="fancybox_transcript" href="{{config.AWS_URL}}/static/Images/quantum_computers/.jpg" title="">
+  <img src="{{config.AWS_URL}}/static/Images/quantum_computers/.jpg" class="tr_image_middle" alt="">
+</a>
+  <figcaption class="Betrothal_figcaption"></figcaption>
+</figure> -->
+
+<p>
+  Doing anything on an electronic device means typing something, which is always a combination of letters (like a, b, c), symbols (like ?, *, %) and numbers (like 1, 2, 3). So how do all these letters, symbols, and numbers get transformed into sequences of 0s and 1s? To answer this question, we can first look at whole numbers. Let us take the number 53, for example. The number 53 can be expressed as the sum of 32, 16, 4 and 1, which are all powers of 2. Therefore, the number 53 can be written as the sum of 25, which is 32,  24, which is 16, 22, which is 4,  and 20, which is 1. Mathematically, this can be also represented by the sequence 110101, where two to the power of 5 appears once (1), the power 4 appears once (1), the power 3 does not appear (0), the power 2 appears once (1), the power 1 does not appear (0) and the power 0 appears once (1). This means that every time we type the number 53 on a computer screen, the computer reads this number as the sequence 110101.
+</p>
+
+<p>
+In fact, any whole number can be broken down into powers of two, and written as a sum of these numbers where no powers of two are ever repeated. Moreover,  this binary representation is unique;  that is, no two numbers will correspond to the same sequence of 0s and 1s.
+</p>
+
+
+<!-- <figure class="figure_transcript_left" style="text-align:center;">
+  <a class="fancybox_transcript" href="{{config.AWS_URL}}/static/Images/quantum_computers/.jpg" title="Belle da Costa Greene. Photograph. Library of the Congress, Washington, D.C.">
+  <img src="{{config.AWS_URL}}/static/Images/quantum_computers/.jpg" class="tr_image_left" alt="">
+</a>
+  <figcaption></figcaption>
+</figure> -->
+
+<p>
+  Similarly, whenever we type letters of symbols on a computer’s screen, they are also translated into sequences of 0s and 1s. This happens through the use of the American Standard Code for Information Interchange, ASCII code, which is a dictionary computers use to associate a precise number to any letters and symbols. For example, the lower-case letter “a” corresponds to the number 97 in ASCII code. The computer can then use the power-of-two method to express 97 in terms of 0s and 1s.
+</p>
+
+<p>
+  At present, most electronic devices use 0s and 1s to perform computational tasks. However, scientists have long been thinking about different ways to design computers and other electronic devices. Many believe that our future computers will be Quantum Computers. They will process information not through electric currents representing 0s and 1s, but by exploiting the unique properties of microscopic particles of matter such as atoms, electrons and protons. These properties are famously described by one of the most revolutionary physical theories of the 20th century: Quantum Mechanics.
+</p>
+
+<p>
+  The famous Nobel-prize winning physicist Richard Feynman was one of the first to suggest that future computers could be built using the unique features of quantum mechanical objects to process information. Quantum Mechanics is a notoriously counterintuitive theory in that it predicts very strange behaviours for anything on an atomic scale. It  predicts that an atom can be in different energetically distinct “states” but can also be in a “mixture” of any such states, with certain probabilities corresponding to each state. This is called the principle of quantum superposition. So, if an atom has two basic states (let’s call them 0 and 1 as before) it may be “prepared” in either of these states but also in any possible superposition thereof.
+</p>
+
+<p>
+  According to this quantum superposition of atoms, we can replace bits in a conventional computer by quantum bits, or “qubits”. Whereas bits can only be either a 1 or 0 at any given time, qubits can be in any superposition of the states 1 or 0 and can thus carry twice the amount of information. This feature alone means that a quantum computer with 10 qubits has as much processing power as a standard computer with 210 bits. The difference between these two numbers is huge and grows exponentially with the number of qubits. This means that many tasks that are impossible for today’s computers would be easy to perform on a quantum computer. This would revolutionize many areas of human endeavour, from the development of new medicines, to fighting cyber-crime, to developing new ways of encrypting information.
+</p>
+
+<p>
+  Scientists understand the problems a quantum computer could solve and how fast it could solve them very well. However, building an actual quantum computer is technologically very challenging. The main challenge is that it requires a great amount of control over atoms, which are microscopic and extremely sensitive to their environment. This generally means qubits need to be kept at extremely low temperatures (close to absolute zero). Nonetheless, much research is currently in progress in this area and there are already several products in the market which either employ some element of quantum computing or are described directly as quantum computers (such as the D-Wave computer).
+</p>
+
+<p>
+  It will certainly be years before any of us are carrying an affordable quantum device in our pocket, but the potential for such technology to positively change our world is enormous and there is much to look forward to in the world of quantum computing!
+</p>
+
+</html>

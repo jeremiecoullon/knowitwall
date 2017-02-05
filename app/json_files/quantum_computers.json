@@ -1,0 +1,19 @@
+{
+    "url": "quantum_computers",
+    "unique_id": "Olalla_Castro_Alvaredo",
+    "topic_name": "Quantum computers: from zeroes and ones to atoms",
+    "topic_image": "/static/Images/quantum_computers/TI_quantum_computers.jpg",
+    "topic_image_latest": "/static/Images/quantum_computers/TI_quantum_computers.jpg",
+    "topic_image_box": "/static/Images/quantum_computers/TI_quantum_computers.jpg",
+    "image_credits": "Nanoscience High-Performance Computing Facility (Carbon) by <a target='_blank' href='https://www.flickr.com/photos/35734278@N05/3404663653/'>Argonne National Laboratory</a> [<a target='_blank' href='https://creativecommons.org/licenses/by-nc-sa/2.0/'>CC BY-NC-SA 2.0</a>]",
+    "by_in_colour":"white",
+    "discipline": "Physics",
+    "category": "Sciences",
+    "topic_description": "",
+    "author_name": "Olalla Castro Alvaredo",
+    "author_image": "/static/Images/quantum_computers/author_Olalla_Alvaredo.jpg",
+    "author_bio": "texts/quantum_computers_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "texts/quantum_computers_transcript.html"
+}
