@@ -58,6 +58,14 @@ def index():
     audiodocs = [Episode(ad) for ad in all_audiodocs[:9]]
     return render_template('knowitwall.html', audiodocs=audiodocs)
 
+"----------------------------------------------------------------------------------------------------"
+"about page"
+
+@app.route('/about')
+def about():
+    return render_template('about_page.html')
+
+
 
 "----------------------------------------------------------------------------------------------------"
 " audiodoc page"

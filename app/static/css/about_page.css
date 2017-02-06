@@ -1,0 +1,88 @@
+#about-block_1{
+  margin-top:12px;
+  border-radius:6px;
+  margin-left: 12px;
+  margin-right: 12px;
+  /* to make the 'About' description vertically centered */
+  padding-bottom: 49px;
+  padding-top: 45px;
+}
+
+#about_page-left #about_page-right{
+    text-align:center;
+    font-size:1.5em;
+    margin-top:50px;
+    margin-bottom:50px;
+    /*padding-right:40px;*/
+}
+#about_page-right{
+  padding-top: 30px;
+}
+ @media(max-width:768px) {
+  #about_page-left #about_page-right{
+   font-size: 1em;
+  }
+}
+body{
+  background-color: #f9f9f9
+}
+
+.about_block_1 {
+    color: #fff;
+    background: #33353d;
+}
+.about_block_2 {
+    color: #33353d;
+    background: #ffc21c;
+}
+h3{
+  text-transform: none;
+  font-size: 40px;
+  text-align: center;
+}
+.vertical-line_right{
+  border-right: thick solid rgba(51, 53, 61, 0.9);
+  padding-right: 4em;
+}
+.vertical-line_left{
+  border-left: thick solid #ffc21c;
+  padding-left: 4em;
+}
+.flash_sem_episode-title{
+  font-size: 3em;
+  font-family: 'Lato';
+  font-weight: 300;
+  color: #33353d;
+  background-color: rgba(255, 194, 28, 0.8);
+  margin-bottom: 30px;
+  display: inline-block;
+  line-height: 110%;
+  padding: 0.3em 0.4em;
+  border-radius: 10px;
+}
+.flash_sem_wrapper{
+  text-align: center;
+}
+.flash_sem_description{
+  color: #3e3e3e;
+  text-align: center;
+}
+.flash_sem_sessions{
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+}
+.flash_sem_sessions_title{
+  text-transform: none;
+  font-style: italic;
+  text-align: center;
+  font-size: 26px;
+}
+.flash_sem_session_info{
+  text-align: center;
+  margin: 0 25px;
+}
+.flash_sem_session_date-place > p{
+  font-style: italic;
+  font-size: 15px;
+}
