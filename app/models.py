@@ -40,6 +40,24 @@ class Episode(object):
     def author_bio(self):
         return render_template(self.ad_dictionary.get('author_bio', 'no author bio found'))
 
+class Flash_Seminars(object):
+    """
+    Class for Flash Seminars info
+
+    Attributes:
+    ----------
+    The keys in the flash seminar json files
+    """
+    def __init__(self, json_name):
+        with open(os.path.join('app/json_files/flash_seminars', json_name), "r") as json_file:
+            self.ad_dictionary = json.load(json_file)
+        for key, val in self.ad_dictionary.iteritems():
+            if key == 'author_image':
+                setattr(self, key, AWS_URL+val)
+            else:
+                setattr(self, key, val)
+
+
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'

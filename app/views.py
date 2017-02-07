@@ -9,7 +9,7 @@ from flask import render_template, request, send_from_directory, Response
 from flask.ext.login import login_user, logout_user, current_user, login_required, AnonymousUserMixin
 from app import app, db, lm, oid
 from .forms import LoginForm
-from .models import User, Episode
+from .models import User, Episode, Flash_Seminars
 from oauth import OAuthSignIn
 import time
 from config import KiW_MAIL_USERNAME, KiW_MAIL_PASSWORD
@@ -63,7 +63,8 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about_page.html')
+    flash_seminars = [Flash_Seminars('flash_sem_migrant_crisis.json')]
+    return render_template('about_page.html', flash_seminars=flash_seminars)
 
 
 

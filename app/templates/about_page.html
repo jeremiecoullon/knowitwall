@@ -7,18 +7,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse through all the Knowitwall episodes">
+  <meta name="description" content="About Know it Wall">
   <meta name="keywords" content="Knowitwall, Know It Wall, audio-documentary, audiodoc, outreach, academia, insightful, science, humanities">
   <meta name="author" content="">
   <meta property="og:image" content="{{config.AWS_URL}}/static/Images/KiW_banner.jpg" />
-  <meta property="og:title" content="Knowitwall episodes" />
-  <meta property="og:description" content="Browse through all the Knowitwall episodes" />
+  <meta property="og:title" content="About Know it Wall" />
+  <meta property="og:description" content="About Know it Wall" />
   <meta property="og:url" content="http://knowitwall.com/all_episodes" />
   <meta property=”og:type” content=”website” />
   <link rel="icon" href="{{config.AWS_URL}}/static/Images/KIW-thumbnail_logo.png" type="image/gif" sizes="16x16">
 <!-- pens -->
 
-  <title>All episodes | Know it Wall</title>
+  <title>About | Know it Wall</title>
 
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/css/knowitwallredux.css" rel="stylesheet">
@@ -242,7 +242,7 @@ hidden
 
         <ul class="nav navbar-nav navbar-right">
           <li class="page-scroll">
-            <a href="#page-top" >All Episodes</a>
+            <a href="/all_episodes" >All Episodes</a>
           </li>
           <li class="navbar_hamburger">
             <a href="https://www.facebook.com/KnowitWall/" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
@@ -259,7 +259,7 @@ hidden
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2 class="archive_title">
-        Know it Wall episodes
+        About <br> Know it Wall
       </h2>
       </div>
     </div>
@@ -292,9 +292,9 @@ hidden
     <div class="row">
       <div class="col-md-8">
         <div class="vertical-line_right about_description">
-        <p class = 'justify'>Know it Wall (KiW) is a place for inquisitive minds. From sciences to arts, let world-class researchers excite your curiosity.</p>
+        <p class = 'justify'>Know it Wall blablabla words so many lorem words on repeat so many lorem words on repeat so many lorem words on repeat so lelelolo many lorem words on repeat</p>
         <br>
-        <p class = 'justify'>Based at UCL and Imperial College London, KiW works with academics to make audio and video documentaries, as well as short articles, that explain what is cool or interesting about the subjects they dedicate their lives to. From <i>Stegosaurus</i> to Shakespeare, protons to pandemics, there’s no limit to what you could encounter!</p>
+        <p class = 'justify'>Based at UCL and other places lalal alala moar words on repeat alala moar words on repeat alala moar words on repeat alala moar stuff stuff repeat alala moar words on repeat </p>
         </div>
       </div>
       <div class="col-md-4 text-center">
@@ -307,41 +307,55 @@ hidden
 </section>
 
 <section class="">
+  <div class="container">
 
-<div class="row">
-  <div class="col-md-4 col-md-offset-4 flash_sem_wrapper">
-    <h2 class="flash_sem_episode-title">Flash Seminars</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <p class="flash_sem_description">
-      Flash seminars are one-off discussion that bring together residents and students of London to explore thought-provoking topics
-      featured on Know it Wall. They aim to provide creative, welcoming, and collaborative learning spaces for learning in the city.
-    </p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-8 col-md-offset-2 flash_sem_sessions">
-    <h4 class="flash_sem_sessions_title">The Migrant Crisis: have we seen this before?</h4>
     <div class="row">
-      <div class="col-md-2 col-md-offset-3">
-        <img class="author-image"class="img-responsive" src="{{ config.AWS_URL }}/static/Images/author_Alexander_Samson.jpg"  alt = "Alexander Samson">
+      <div class="col-md-4 col-md-offset-4 flash_sem_wrapper">
+        <h2 class="flash_sem_episode-title">Flash Seminars</h2>
       </div>
-      <div class="col-md-4 flash_sem_session_info">
-        <div>
-          <p>Dr Alexander Samson</p>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <p class="flash_sem_description">
+          Flash seminars are one-off discussion that bring together residents and students of London to explore thought-provoking topics
+          featured on Know it Wall. They aim to provide creative, welcoming, and collaborative learning spaces for learning in the city.
+        </p>
+      </div>
+    </div>
+
+    <p class="upcoming_session">Upcoming Session:</p>
+
+    <div class="flash_sem_sessions">
+      <div>
+        <h4 class="flash_sem_sessions_title">{{ flash_seminars[0].title }}</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+          <img class="flash_sem_author_image"class="img-responsive" src="{{ flash_seminars[0].author_image }}"  alt = "Alexander Samson">
         </div>
-        <div class="flash_sem_session_date-place">
-          <p>23rd February (Thursday), 7pm</p>
-          <p>Jeremy Bentham Pub, WC1E 6JL</p>
+        <div class="col-md-4 flash_sem_session_info">
+          <div>
+            <p>{{ flash_seminars[0].author_name }}</p>
+          </div>
+          <div class="flash_sem_session_date-place">
+            <p>{{ flash_seminars[0].date }}</p>
+            <p>{{ flash_seminars[0].location }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 flash_sem_topic_description">
+          <p>
+            {{ flash_seminars[0].description }}
+          </p>
         </div>
       </div>
     </div>
 
+
   </div>
 
-</div>
+
 
 </section>
 
