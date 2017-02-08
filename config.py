@@ -27,14 +27,16 @@ MAIL_SERVER = 'smtp.googlemail.com'
 MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
+KiW_MAIL_USERNAME = 'username'
+KiW_MAIL_PASSWORD = 'password'
 # HACK: as os.environ.get isn't reading the environment variables for some reason
-with open('../email_stuff.txt','r') as f:
-    email_stuff = f.read().split('\n')
-KiW_MAIL_USERNAME = email_stuff[0]
-KiW_MAIL_PASSWORD = email_stuff[1]
-
-MAIL_USERNAME = email_stuff[0]
-MAIL_PASSWORD = email_stuff[1]
+# with open('../email_stuff.txt','r') as f:
+#     email_stuff = f.read().split('\n')
+# KiW_MAIL_USERNAME = email_stuff[0]
+# KiW_MAIL_PASSWORD = email_stuff[1]
+#
+# MAIL_USERNAME = email_stuff[0]
+# MAIL_PASSWORD = email_stuff[1]
 # administrator list
 ADMINS = ['emailtoknowitwall@gmail.com']
 KIW_TEAM = ['jeremie.coullon@gmail.com']
