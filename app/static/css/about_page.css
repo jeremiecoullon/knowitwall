@@ -1,3 +1,22 @@
+.about_header{
+  margin-top: 70px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.about_title{
+  font-size: 57px;
+  border-bottom: 5px solid rgba(255, 194, 28, 0.8);
+  padding-bottom: 60px;
+  width: 90%;
+  margin: auto;
+}
+.about_title_1{
+  margin-top: 47px;
+}
+
+.about_description {
+    font-size: 11px;
+}
 #about-block_1{
   margin-top:12px;
   border-radius:6px;
@@ -104,4 +123,52 @@ h3{
   text-decoration: underline;
   color: rgba(51, 53, 61, 0.62);
   margin: 25px 10%
+}
+footer .footer-above{
+  background-color: #FFC21C;
+}
+footer .footer-below{
+  background-color: #FFC21C;
+}
+
+@media (min-width: 1200px){
+  .container {
+      width: 1200px;
+  }
+}
+@media(max-width:768px){
+  /*.navbar-brand {
+    padding: 0px;
+    margin-bottom: 5px;
+  }*/
+  .vertical-line_right {
+    border-right: none;
+  }
+  .about_title_1{
+    margin-top: 0px;
+  }
+  .about_description{
+    font-size: 3px;
+    margin-top: 35px;
+  }
+  .flash_sem_author_image {
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 25px;
+  }
+  .flash_sem_topic_description {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .flash_sem_sessions{
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media(max-width:500px){
+  .flash_sem_author_image {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
