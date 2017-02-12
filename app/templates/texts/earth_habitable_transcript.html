@@ -23,6 +23,10 @@
     height:100%;
     border-radius: 3px;
   }
+  .geo_clock{
+    /*width: 600px;*/
+    width: 95%;
+  }
   @media only screen and (max-width:991px) {
 
     .figure_transcript_double{
@@ -33,10 +37,9 @@
     }
   }
 
-  .image_transcript_full-screen{
-    width: 100%;
-  }
   .figure_transcript_middle{
+    width: 70%;
+    margin-left: 15%;
     text-align:center;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -62,6 +65,7 @@
     .figure_transcript_middle{
       margin-left: 0%;
       margin-right: 0%;
+      width: 100%;
     }
     .figure_transcript_full-screen{
       margin-left: 0%;
@@ -113,10 +117,11 @@
  The numbers involved are too vast for us to comprehend, but we can think of them as the time on a 12-hour clock. Let’s imagine the Earth is formed at 12 o’clock noon, and today’s date, 4.56 billion years later, is 12 midnight. Land animals would appear as the hour hand passes 10 o’clock, with dinosaurs tromping over the Earth between 11:00 and 11:30. However, life in the Earth’s oceans has existed for considerably longer: since around 4,000 million years ago, or at around 2 o’clock on the clockface. This means that the Earth has been inhabited by life for almost 90% of its existence, with land animals existing for 10%, and we humans for less than 0.04%.
 </p>
 
-
 <figure class="figure_transcript_middle">
- <img src="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable_2.svg" class="image_transcript_full-screen" alt="">
- <figcaption>Geological Time clock</figcaption>
+  <a class="fancybox_transcript" href="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable_2.png" title="">
+  <img src="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable_2.png" class="tr_image geo_clock" alt="">
+</a>
+  <figcaption>Geological time clock</figcaption>
 </figure>
 
 <p>
@@ -149,10 +154,10 @@
 
 
 <figure class="figure_transcript_left">
-  <a class="fancybox_transcript" href="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable1.png" title="Representation of the Earth’s weathering thermostat that stabilises climate temperatures.">
+  <a class="fancybox_transcript" href="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable1.png" title="Representation of the Earth’s weathering thermostat that stabilises climate temperatures">
   <img src="{{config.AWS_URL}}/static/Images/tr_image_earth_habitable1.png" class="tr_image_middle" alt="">
 </a>
-  <figcaption>Representation of the Earth’s weathering thermostat that stabilises climate temperatures.</figcaption>
+  <figcaption>Representation of the Earth’s weathering thermostat that stabilises climate temperatures</figcaption>
 </figure>
 
 
