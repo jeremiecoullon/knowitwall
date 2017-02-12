@@ -14,7 +14,8 @@
     "author_name": "Philip Pogge von Strandmann",
     "author_image": "/static/Images/author_PPvStrandmann.jpg",
     "author_bio": "texts/earth_habitable_author_bio.html",
-    "music_credits": "",
-    "narration_credits": "",
-    "transcript": "texts/earth_habitable_transcript.html"
+    "music_credits": "Alasdair Cooper and Lee Rosevere",
+    "narration_credits": "Vidish Athavale",
+    "transcript": "texts/earth_habitable_transcript.html",
+    "audio_mp3": "/static/audio/earth_habitable.mp3"
 }
