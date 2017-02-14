@@ -511,7 +511,7 @@ browser for some reason.. */
     text-align: left;
   }
 }
-.about_read-more{
+/*.about_read-more{
   font-size: 23px;
   font-style: italic;
   margin-left: 80%;
@@ -524,4 +524,7 @@ a.about_read-more:hover{
   .about_read-more{
     margin-left: 20%;
   }
+}*/
+.about_read-more{
+  color: #ffc21c
 }

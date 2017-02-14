@@ -30,8 +30,8 @@
   margin-left: 12px;
   margin-right: 12px;
   /* to make the 'About' description vertically centered */
-  padding-bottom: 49px;
-  padding-top: 45px;
+  padding-bottom: 70px;
+  padding-top: 70px;
 }
 
 #about_page-left #about_page-right{
@@ -48,6 +48,9 @@
   #about_page-left #about_page-right{
    font-size: 1em;
   }
+}
+.about_page-left_wrapper{
+  padding-right: 0px;
 }
 body{
   background-color: #f9f9f9
