@@ -12,11 +12,17 @@
   margin: auto;
 }
 .about_title_1{
-  margin-top: 47px;
+  margin-top: 90px;
 }
 
 .about_description {
     font-size: 11px;
+}
+/* flash seminar section */
+@media(min-width:768px){
+  #flash_seminars{
+    padding-top: 100px;
+  }
 }
 #about-block_1{
   margin-top:12px;
@@ -36,7 +42,7 @@
     /*padding-right:40px;*/
 }
 #about_page-right{
-  padding-top: 30px;
+  padding-top: 10px;
 }
  @media(max-width:768px) {
   #about_page-left #about_page-right{
@@ -61,11 +67,11 @@ h3{
   text-align: center;
 }
 .vertical-line_right{
-  border-right: thick solid rgba(51, 53, 61, 0.9);
-  padding-right: 4em;
+  border-right: thick solid #ffc21c;
+  /*padding-right: 4em;*/
 }
 .vertical-line_left{
-  border-left: thick solid #ffc21c;
+  border-left: thick solid rgba(51, 53, 61, 0.9);
   padding-left: 4em;
 }
 .flash_sem_episode-title{
