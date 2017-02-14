@@ -68,7 +68,7 @@ h3{
 }
 .vertical-line_right{
   border-right: thick solid #ffc21c;
-  /*padding-right: 4em;*/
+  padding-right: 4em;
 }
 .vertical-line_left{
   border-left: thick solid rgba(51, 53, 61, 0.9);
@@ -145,10 +145,9 @@ footer .footer-below{
   }
 }
 @media(max-width:768px){
-  /*.navbar-brand {
-    padding: 0px;
-    margin-bottom: 5px;
-  }*/
+  .vertical-line_right{
+    padding-right: 0em;
+  }
   .vertical-line_right {
     border-right: none;
   }
