@@ -511,3 +511,17 @@ browser for some reason.. */
     text-align: left;
   }
 }
+.about_read-more{
+  font-size: 23px;
+  font-style: italic;
+  margin-left: 80%;
+  color: white;
+}
+a.about_read-more:hover{
+  color: rgba(255, 194, 28, 0.72);
+}
+@media(max-width:768px){
+  .about_read-more{
+    margin-left: 20%;
+  }
+}
