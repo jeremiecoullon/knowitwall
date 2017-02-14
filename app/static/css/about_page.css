@@ -12,11 +12,12 @@
   margin: auto;
 }
 .about_title_1{
-  margin-top: 90px;
+  margin-top: 140px;
 }
 
 .about_description {
     font-size: 11px;
+    line-height: 34px;
 }
 /* flash seminar section */
 @media(min-width:768px){
@@ -59,6 +60,7 @@ body{
 .about_block_1 {
     color: #fff;
     background: #33353d;
+    line-height:33px;
 }
 .about_block_2 {
     color: #33353d;
@@ -95,6 +97,7 @@ h3{
 .flash_sem_description{
   color: #3e3e3e;
   text-align: center;
+  line-height: 31px;
 }
 .flash_sem_sessions{
   background-color: white;
@@ -125,6 +128,7 @@ h3{
   width: 80%;
   margin-left: 10%;
   text-align: justify;
+  line-height: 31px;
 }
 
 .flash_sem_author_image{
@@ -181,4 +185,10 @@ footer .footer-below{
     width: 60%;
     margin-left: 20%;
   }
+}
+.flash_sem_author_link{
+  color: #33353d;
+}
+.flash_sem_author_link:hover{
+  color: rgba(255, 194, 28, 0.75);
 }

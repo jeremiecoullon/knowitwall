@@ -337,7 +337,8 @@ hidden
         </div>
         <div class="col-md-4 flash_sem_session_info">
           <div>
-            <p>{{ flash_seminars[0].author_name }}</p>
+            <p><a class="flash_sem_author_link" href="episodes/{{ flash_seminars[0].episode_link }}#episodes">{{ flash_seminars[0].author_name }}</a></p>
+            <!-- <p>{{ flash_seminars[0].author_name }}</p> -->
           </div>
           <div class="flash_sem_session_date-place">
             <p>{{ flash_seminars[0].date }}</p>
