@@ -1,3 +1,6 @@
+#about_page-left >h3, #about_page-right > h3{
+  text-transform: uppercase;
+}
 .about_header{
   margin-top: 70px;
   text-align: center;
@@ -31,8 +34,8 @@
   margin-left: 12px;
   margin-right: 12px;
   /* to make the 'About' description vertically centered */
-  padding-bottom: 70px;
-  padding-top: 70px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 #about_page-left #about_page-right{
