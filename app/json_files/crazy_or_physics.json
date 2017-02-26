@@ -1,0 +1,19 @@
+{
+    "url": "crazy_or_physics",
+    "unique_id": "Katy_Clough",
+    "topic_name": "Am I crazy or is it physics?",
+    "topic_image": "/static/Images/crazy_or_physics/TI_crazy_or_physics.jpg",
+    "topic_image_latest": "/static/Images/crazy_or_physics/TI_crazy_or_physics_latest.jpg",
+    "topic_image_box": "/static/Images/crazy_or_physics/TI_crazy_or_physics.jpg",
+    "image_credits": "",
+    "by_in_colour":"white",
+    "discipline": "Physics",
+    "category": "Sciences",
+    "topic_description": "How can physicists know what will happen in situations that are untested? How sure can we be that physical laws are constant? Katy Clough explains how we are pushing the limits of what we know about the Universe.",
+    "author_name": "Katy Clough",
+    "author_image": "/static/Images/crazy_or_physics/author_Katy_Clough.jpg",
+    "author_bio": "texts/crazy_or_physics_author_bio.html",
+    "music_credits": "",
+    "narration_credits": "",
+    "transcript": "texts/crazy_or_physics_transcript.html"
+}

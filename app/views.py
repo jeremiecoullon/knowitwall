@@ -41,7 +41,7 @@ To create a new audio-doc, create a new json file with the links to images,audio
 Then add it to the audiodoc_list
 """
 all_audiodocs = [
-    'migrant_crisis.json', 'earth_habitable.json', 'quantum_computers.json', 'emotional_expression.json',
+    'crazy_or_physics.json', 'migrant_crisis.json', 'earth_habitable.json', 'quantum_computers.json', 'emotional_expression.json',
     'modify_genome.json','russia_west.json','string_theory.json','quantum_life.json',
     'flying_spying.json','spanish_forger.json','US_constitution.json', 'sport_society.json','dante_750.json',
     'blast_injury.json', 'human_language.json', 'higgs_boson.json', 'real_shakespeare.json',
