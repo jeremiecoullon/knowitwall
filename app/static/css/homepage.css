@@ -211,8 +211,7 @@ browser for some reason.. */
 .homepage_hidden_info{
   display: none;
 }
-/*.homepage_box_episode:hover > div > */
-.homepage_hidden_info{
+.homepage_box_episode:hover > div > .homepage_hidden_info{
   display:inline;
 }
 /* homepage boxes: rows and column styling (to override bootstrap) */
