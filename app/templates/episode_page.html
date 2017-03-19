@@ -248,6 +248,8 @@
           <li class="page-scroll navbar_hamburger">
             <a href="#episodes">Listen</a>
           </li>
+          {% endif %}
+          {% if audiodocs[0].audio_mp3 or audiodocs[0].video_embed %}
 
           <li class="page-scroll-offset navbar_hamburger">
             <a href="#read">Read</a>
