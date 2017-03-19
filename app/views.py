@@ -56,7 +56,7 @@ all_audiodocs = [
 
 @app.route('/')
 def index():
-    audiodocs = [Episode(ad) for ad in all_audiodocs[:11]]
+    audiodocs = [Episode(ad) for ad in all_audiodocs[:13]]
     return render_template('knowitwall.html', audiodocs=audiodocs)
 
 "----------------------------------------------------------------------------------------------------"
