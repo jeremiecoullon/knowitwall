@@ -392,16 +392,20 @@ hidden
                      </p>
                    <div class="homepage_hidden_info">
                      <p class="homepage_box_abstract">{{elem.topic_description | safe}}</p>
-                     {% if elem.audio_mp3 %}
-                     <div class="label_wrapper audio_label_wrapper">
-                       <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+
+                     <div class="audio_video_tag_div">
+                       {% if elem.video_embed %}
+                       <div class="label_wrapper film_label_wrapper">
+                         <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
+                       </div>
+                       {% endif %}
+                       {% if elem.audio_mp3 %}
+                       <div class="label_wrapper audio_label_wrapper">
+                         <i class="fa fa-volume-up audio-film_label" aria-hidden="true"></i>
+                       </div>
+                       {% endif %}
                      </div>
-                     {% endif %}
-                     {% if elem.video_embed %}
-                     <div class="label_wrapper film_label_wrapper">
-                       <i class="fa fa-film audio-film_label" aria-hidden="true"></i>
-                     </div>
-                     {% endif %}
+
                     </div>
                   </div>
                 </div>

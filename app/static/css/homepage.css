@@ -211,7 +211,8 @@ browser for some reason.. */
 .homepage_hidden_info{
   display: none;
 }
-.homepage_box_episode:hover > div > .homepage_hidden_info{
+/*.homepage_box_episode:hover > div > */
+.homepage_hidden_info{
   display:inline;
 }
 /* homepage boxes: rows and column styling (to override bootstrap) */
@@ -376,8 +377,8 @@ browser for some reason.. */
 }
 
 .label_wrapper{
-  position: absolute;
-  left: 20px;
+  /*position: absolute;*/
+  /*left: 20px;*/
   border-radius:50px;
   height:35px;
   width:35px;
@@ -392,14 +393,29 @@ browser for some reason.. */
   left:0.5px;
 }
 .audio_label_wrapper{
-  bottom:20px;
+  margin-top: 10px;
+  /*bottom:20px;*/
 }
 .film_label_wrapper{
-  bottom:65px;
+  /*bottom:65px;*/
+}
+.audio_video_tag_div{
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  /*height:100px;*/
+  width:60px;
+}
+.audio_video_tag_div_landing_page{
+  position: absolute;
+  bottom: 26px;
+  left: 36px;
+  /*height:100px;*/
+  width:60px;
 }
 .label_wrapper_landing_page{
-  position: absolute;
-  left: 36px;
+  /*position: absolute;*/
+  /*left: 36px;*/
   border-radius:50px;
   height:40px;
   width:40px;
@@ -408,10 +424,12 @@ browser for some reason.. */
   border: 2px solid white;
 }
 .audio_label_wrapper_landing_page{
-  bottom:35px;
+  margin-top: 12px;
+  /*bottom:35px;*/
 }
 .film_label_wrapper_landing_page{
-  bottom: 86px;
+  /*margin-bottom: 12px;*/
+  /*bottom: 86px;*/
 }
 .audio-film_label_landing_page{
   color: white;

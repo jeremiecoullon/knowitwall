@@ -195,10 +195,16 @@ browser for some reason.. */
     /*margin-right: 27px;*/
   }
 }
-
-.label_wrapper{
+.audio_video_tag_div{
   position: absolute;
+  bottom: 15px;
   left: 20px;
+  /*height:100px;*/
+  width:60px;
+}
+.label_wrapper{
+  /*position: absolute;
+  left: 20px;*/
   border-radius:50px;
   height:35px;
   width:35px;
@@ -213,10 +219,9 @@ browser for some reason.. */
   left:0.5px;
 }
 .audio_label_wrapper{
-  bottom:20px;
+  margin-top: 10px
 }
 .film_label_wrapper{
-  bottom:65px;
 }
 .label_wrapper_landing_page{
   position: absolute;

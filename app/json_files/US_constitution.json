@@ -9,12 +9,12 @@
     "by_in_colour":"white",
     "discipline": "History",
     "category": "Arts",
-    "topic_description": "From the Civil Rights movement to the modern efforts to legalize gay marriage, the 14th Amendment to the US Constitution has been central to many of the most important issues in American history. UCL historian Adam Smith takes us through its significance.",
+    "topic_description": "Civil rights? Gay rights? Transgender rights? All have, at one point or another, been confirmed or dismissed upon the wording of the 14th Amendment of the US Constitution. Adam Smith discusses the past and future of the most hated and loved passage in the Constitution.",
     "author_name": "Adam Smith",
     "author_image": "/static/Images/author_Adam_Smith.jpg",
     "author_bio": "texts/US_constitution_author_bio.html",
     "music_credits": "Sergey Cheremisinov and Kai Engel",
     "narration_credits": "Adam Smith and Vidish Athavale",
     "transcript": "texts/US_constitution_transcript.html",
-    "audio_mp3": "http://knowitwall.com/audio/US_constitution.mp3"
+    "video_embed": "https://www.youtube.com/embed/vS0Kjlp_bfM?autoplay=1"
 }
