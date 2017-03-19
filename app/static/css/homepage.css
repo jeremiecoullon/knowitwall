@@ -335,7 +335,7 @@ browser for some reason.. */
 }
 /* Episode boxes on the homepage */
 .homepage_box_episode{
-  height: 400px;
+  height: 420px;
   text-align: center;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
@@ -346,7 +346,7 @@ browser for some reason.. */
 }
 @media(max-width:991px){
   .homepage_box_episode_first{
-    height:400px;
+    height:450px;
   }
 }
 .more_episodes_redirect{
