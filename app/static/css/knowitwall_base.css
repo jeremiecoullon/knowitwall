@@ -364,3 +364,16 @@ a.footer-unclickeable{
 a.footer-clickeable{
   color: white;
 }
+
+/* Flashy red "PREVIEWED EPISODE" */
+.preview_episode_admin{
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid red;
+  margin: auto;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.preview_episode_admin > p{
+  margin: 0px;
+}
