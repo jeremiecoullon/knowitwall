@@ -13,7 +13,8 @@
     "author_name": "Gabriele Lignani",
     "author_image": "/static/Images/author_Gabriele_Lignani.jpg",
     "author_bio": "texts/modify_genome_author_bio.html",
-    "music_credits": "",
-    "narration_credits": "",
-    "transcript": "texts/modify_genome_transcript.html"
+    "music_credits": "Dexter Britain, Léo Delibes, Lloyd Rodgers and Jon Luc Hefferman",
+    "narration_credits": "Angus Waite",
+    "transcript": "texts/modify_genome_transcript.html",
+    "audio_mp3": "http://knowitwall.com/audio/modify_genome.mp3"
 }
