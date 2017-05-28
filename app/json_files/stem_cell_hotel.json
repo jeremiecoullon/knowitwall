@@ -1,0 +1,17 @@
+{
+    "url": "stem_cell_hotel",
+    "unique_id": "Davide_Danovi_stem_cell_hotel",
+    "topic_name": "The stem cell hotel",
+    "topic_image": "/static/Images/stem_cell_hotel/TI_stem_cell_hotel.jpg",
+    "topic_image_latest": "/static/Images/stem_cell_hotel/TI_stem_cell_hotel.jpg",
+    "topic_image_box": "/static/Images/stem_cell_hotel/TI_stem_cell_hotel.jpg",
+    "image_credits": "",
+    "by_in_colour":"white",
+    "discipline": "Medicine",
+    "category": "Sciences",
+    "topic_description": "",
+    "author_name": "Davide Danovi",
+    "author_image": "/static/Images/stem_cell_hotel/author_Davide_Danovi.png",
+    "author_bio": "texts/stem_cell_hotel_author_bio.html",
+    "transcript": "texts/stem_cell_hotel_transcript.html"
+}
