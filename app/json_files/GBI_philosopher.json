@@ -1,0 +1,17 @@
+{
+    "url": "GBI_philosopher",
+    "unique_id": "Hillel_Steiner_GBI_philosopher",
+    "topic_name": "Why do we have a brain?",
+    "topic_image": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
+    "topic_image_latest": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
+    "topic_image_box": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
+    "image_credits": "",
+    "by_in_colour":"white",
+    "discipline": "Philosophy and Economics",
+    "category": "Arts",
+    "topic_description": "",
+    "author_name": "Hillel Steiner",
+    "author_image": "/static/Images/GBI_philosopher/author_Hillel_Steiner.png",
+    "author_bio": "texts/GBI_philosopher_author_bio.html",
+    "transcript": "texts/GBI_philosopher_transcript.html"
+}
