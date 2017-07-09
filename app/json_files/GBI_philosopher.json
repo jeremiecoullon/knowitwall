@@ -1,7 +1,7 @@
 {
     "url": "GBI_philosopher",
     "unique_id": "Hillel_Steiner_GBI_philosopher",
-    "topic_name": "Why do we have a brain?",
+    "topic_name": "A philosopher’s take on Global Basic Income",
     "topic_image": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
     "topic_image_latest": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
     "topic_image_box": "/static/Images/GBI_philosopher/TI_GBI_philosopher.jpg",
@@ -9,7 +9,7 @@
     "by_in_colour":"white",
     "discipline": "Philosophy and Economics",
     "category": "Arts",
-    "topic_description": "",
+    "topic_description": "Inequality and poverty are bad — almost everyone agrees on that. The solution? A basic income guaranteed to everyone on Earth. Renowned political philosopher Hillel Steiner explains why and how we should do this.",
     "author_name": "Hillel Steiner",
     "author_image": "/static/Images/GBI_philosopher/author_Hillel_Steiner.png",
     "author_bio": "texts/GBI_philosopher_author_bio.html",
