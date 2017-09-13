@@ -1,7 +1,7 @@
 {
     "url": "carbon_cycle",
     "unique_id": "Heather_Graven_carbon_cycle",
-    "topic_name": "The Global Carbon Cycle in a Changing Climate",
+    "topic_name": "The global carbon cycle in a changing climate",
     "topic_image": "/static/Images/carbon_cycle/TI_carbon_cycle.jpg",
     "topic_image_latest": "/static/Images/carbon_cycle/TI_carbon_cycle_latest.jpg",
     "topic_image_box": "/static/Images/carbon_cycle/TI_carbon_cycle.jpg",
@@ -9,7 +9,7 @@
     "by_in_colour":"white",
     "discipline": "Climate Science",
     "category": "Sciences and bige",
-    "topic_description": "Humans have increased the amount of CO<sub>2</sub> in our atmosphere; that, at least, everyone agrees on. What is less widely acknowledged are the many ways that CO<sub>2</sub> affects our planet. From acidifying oceans destroying coral reefs to \"heat stress\" in plants causing drought (and don't forget global warming), the global carbon cycle is worth understanding.",
+    "topic_description": "Humans have increased the amount of CO<sub>2</sub> in our atmosphere; that is clear. This CO<sub>2</sub> is the main cause of global warming, but what is less widely acknowledged are the many ways that CO<sub>2</sub> affects our planet. Imperial College physicist Heather Graven tells us about them.",
     "author_name": "Heather Graven",
     "author_image": "/static/Images/carbon_cycle/author_Heather_Graven.png",
     "author_bio": "texts/carbon_cycle_author_bio.html",
