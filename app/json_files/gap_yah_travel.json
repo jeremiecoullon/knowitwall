@@ -1,0 +1,17 @@
+{
+    "url": "gap_yah_travel",
+    "unique_id": "Emma_Pauncefort_gap_yah_travel",
+    "topic_name": "Young Travels of Self-Discovery: Past and Present",
+    "topic_image": "/static/Images/gap_yah_travel/TI_gap_yah_travel.jpg",
+    "topic_image_latest": "/static/Images/gap_yah_travel/TI_gap_yah_travel.jpg",
+    "topic_image_box": "/static/Images/gap_yah_travel/TI_gap_yah_travel.jpg",
+    "image_credits": "",
+    "by_in_colour":"white",
+    "discipline": "French Literature and History",
+    "category": "Arts",
+    "topic_description": "Whilst the gap year has come to enjoy increasing popularity in recent years, it is no new phenomenon. During the early modern period, the young elite of England and France undertook travels to and from the European continent, broadening their cultural horizons whilst reaffirming their patriotic superiority. What did these ‘Grand Tours’ look like, and what can they tell us about the modern ‘gap year’?",
+    "author_name": "Emma Pauncefort",
+    "author_image": "/static/Images/gap_yah_travel/author_Emma_Pauncefort.png",
+    "author_bio": "texts/gap_yah_travel_author_bio.html",
+    "transcript": "texts/gap_yah_travel_transcript.html"
+}
