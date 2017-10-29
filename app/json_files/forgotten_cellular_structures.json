@@ -1,7 +1,7 @@
 {
     "url": "forgotten_cellular_structures",
     "unique_id": "Martin_Knight_forgotten_cellular_structures",
-    "topic_name": "Primary Cilia - Forgotten cellular structures controlling health and  disease",
+    "topic_name": "Primary cilia: Forgotten cellular structures controlling health and  disease",
     "topic_image": "/static/Images/forgotten_cellular_structures/TI_forgotten_cellular_structures.jpg",
     "topic_image_latest": "/static/Images/forgotten_cellular_structures/TI_forgotten_cellular_structures_latest.jpg",
     "topic_image_box": "/static/Images/forgotten_cellular_structures/TI_forgotten_cellular_structures.jpg",
@@ -9,7 +9,7 @@
     "by_in_colour":"white",
     "discipline": "Bioengineering",
     "category": "Sciences",
-    "topic_description": "There's so much yet to be understood about the cells that make up our own bodies. Martin Knight talks us through one aspect of them, the Primary Cilia, where potentially life changing discoveries are being made.",
+    "topic_description": "There's so much yet to be understood about the cells that make up our own bodies. Martin Knight talks us through one aspect of them, the Primary cilia, where potentially life changing discoveries are being made.",
     "author_name": "Martin Knight",
     "author_image": "/static/Images/forgotten_cellular_structures/author_Martin_Knight.png",
     "author_bio": "texts/forgotten_cellular_structures_author_bio.html",
